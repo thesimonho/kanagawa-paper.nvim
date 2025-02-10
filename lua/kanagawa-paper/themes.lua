@@ -1,3 +1,4 @@
+
 ---@class SyntaxElements
 ---@field string ColorSpec
 ---@field variable ColorSpec
@@ -71,7 +72,6 @@
 ---@field bg_search ColorSpec
 ---@field bg_cursorline ColorSpec
 ---@field bg_visual ColorSpec
----@field bg_tabline ColorSpec
 ---@field bg_statusline ColorSpec
 ---@field special ColorSpec SpecialKey
 ---@field nontext ColorSpec LineNr, NonText
@@ -81,8 +81,16 @@
 ---@field indent_scope ColorSpec Indent scope character
 ---@field picker ColorSpec Color of picker letters e.g. bufferline pick buffer
 ---@field scrollbar ColorSpec Color of scrollbar
+---@field tabline TabElements
 ---@field pmenu MenuElements
 ---@field float FloatElements
+
+---@class TabElements
+---@field bg ColorSpec
+---@field fg_selected ColorSpec
+---@field bg_selected ColorSpec
+---@field fg_inactive ColorSpec
+---@field bg_inactive ColorSpec
 
 ---@class FloatElements
 ---@field fg ColorSpec
@@ -136,7 +144,6 @@ return function(palette)
 			fg_dark = palette.dragonBlack3,
 			fg_dim = palette.dragonBlack5,
 			fg_reverse = palette.waveBlue1,
-
 			bg_m4 = palette.sumiInkn1,
 			bg_m3 = palette.sumiInk0,
 			bg_m2 = palette.sumiInk1,
@@ -149,18 +156,22 @@ return function(palette)
 			bg_search = palette.springViolet1,
 			bg_cursorline = palette.sumiInk5,
 			bg_visual = palette.lotusInk0,
-			bg_tabline = palette.sumiInk0,
 			bg_statusline = palette.sumiInk4,
-
 			special = palette.springViolet1,
 			nontext = palette.sumiInk6,
 			whitespace = palette.sumiInk6,
-
 			win_separator = palette.dragonViolet,
 			indent = palette.sumiInk5,
 			indent_scope = palette.dragonViolet,
 			picker = palette.dragonRed,
 			scrollbar = palette.fujiGray,
+			tabline = {
+				bg = palette.sumiInk0,
+				fg_selected = palette.sumiInk3,
+				bg_selected = palette.dragonYellow,
+				fg_inactive = palette.fujiGray,
+				bg_inactive = palette.sumiInk4,
+			},
 			pmenu = {
 				fg = palette.fujiWhite,
 				fg_sel = "none", -- This is important to make highlights pass-through
