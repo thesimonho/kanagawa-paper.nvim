@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.8.1](https://github.com/thesimonho/kanagawa-paper.nvim/compare/v1.8.0...v1.8.1) (2025-02-13)
+
+
+### Bug Fixes
+
+* **tabline:** make tabline colors easier to read ([9e93947](https://github.com/thesimonho/kanagawa-paper.nvim/commit/9e93947b4fc7bec733e8beaa6f2f18b55050aaac))
+* **ts-context:** improve style of context window ([793dbbd](https://github.com/thesimonho/kanagawa-paper.nvim/commit/793dbbd14c48642a4ae2a8a7b56961f0b0091f15))
+
 ## [1.8.0](https://github.com/thesimonho/kanagawa-paper.nvim/compare/v1.7.0...v1.8.0) (2025-02-08)
 
 
