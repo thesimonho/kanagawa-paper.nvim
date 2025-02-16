@@ -1,38 +1,31 @@
 local colors = require("kanagawa-paper.colors").setup({ theme = "canvas" })
 local theme = colors.theme
 
-local M = {}
-
-M.normal = {
-	a = { bg = "#ffffff", fg = theme.ui.bg_m3 },
-	b = { bg = theme.ui.bg_p2, fg = theme.modes.insert },
-	c = { bg = theme.ui.bg_statusline, fg = theme.ui.fg_gray },
+return {
+	normal = {
+		a = { bg = theme.modes.normal, fg = theme.ui.bg_m3 },
+		b = { bg = theme.ui.bg_p2, fg = theme.modes.normal },
+		c = { bg = theme.ui.bg_statusline, fg = theme.ui.fg_gray },
+	},
+	insert = {
+		a = { bg = theme.modes.insert, fg = theme.ui.bg },
+		b = { bg = theme.ui.bg_p2, fg = theme.modes.insert },
+	},
+	command = {
+		a = { bg = theme.modes.command, fg = theme.ui.bg },
+		b = { bg = theme.ui.bg_p2, fg = theme.modes.command },
+	},
+	visual = {
+		a = { bg = theme.modes.visual, fg = theme.ui.bg },
+		b = { bg = theme.ui.bg_p2, fg = theme.modes.visual },
+	},
+	replace = {
+		a = { bg = theme.modes.replace, fg = theme.ui.bg },
+		b = { bg = theme.ui.bg_p2, fg = theme.modes.replace },
+	},
+	inactive = {
+		a = { bg = theme.ui.bg_m4, fg = theme.ui.fg_gray },
+		b = { bg = theme.ui.bg_m4, fg = theme.ui.fg_gray, gui = "bold" },
+		c = { bg = theme.ui.bg_m4, fg = theme.ui.fg_gray },
+	},
 }
-
-M.insert = {
-	a = { bg = theme.modes.normal, fg = theme.ui.bg },
-	b = { bg = theme.ui.bg_p2, fg = theme.modes.normal },
-}
-
-M.command = {
-	a = { bg = theme.modes.command, fg = theme.ui.bg },
-	b = { bg = theme.ui.bg_p2, fg = theme.modes.command },
-}
-
-M.visual = {
-	a = { bg = theme.modes.visual, fg = theme.ui.bg },
-	b = { bg = theme.ui.bg_p2, fg = theme.modes.visual },
-}
-
-M.replace = {
-	a = { bg = theme.modes.replace, fg = theme.ui.bg },
-	b = { bg = theme.ui.bg_p2, fg = theme.modes.replace },
-}
-
-M.inactive = {
-	a = { bg = theme.ui.bg_m4, fg = theme.ui.fg_gray },
-	b = { bg = theme.ui.bg_m4, fg = theme.ui.fg_gray, gui = "bold" },
-	c = { bg = theme.ui.bg_m4, fg = theme.ui.fg_gray },
-}
-
-return M
