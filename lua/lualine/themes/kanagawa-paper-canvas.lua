@@ -3,9 +3,9 @@ local theme = colors.theme
 
 return {
 	normal = {
-		a = { bg = theme.modes.normal, fg = theme.ui.bg_m3 },
+		a = { bg = theme.modes.normal, fg = theme.ui.bg_p2 },
 		b = { bg = theme.ui.bg_p2, fg = theme.modes.normal },
-		c = { bg = theme.ui.bg_statusline, fg = theme.ui.fg_gray },
+		c = { bg = theme.ui.bg_statusline, fg = theme.ui.fg },
 	},
 	insert = {
 		a = { bg = theme.modes.insert, fg = theme.ui.bg },

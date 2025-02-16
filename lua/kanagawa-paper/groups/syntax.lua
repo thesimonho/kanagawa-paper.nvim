@@ -54,7 +54,10 @@ function M.setup(colors, opts)
 		--  Typedef	A typedef
 
 		-- *Special	any special symbol
-		Special = { fg = theme.syn.special1 },
+		Special = { link = "Special1" },
+		Special1 = { fg = theme.syn.special1 },
+		Special2 = { fg = theme.syn.special2 },
+		Special3 = { fg = theme.syn.special3 },
 		--  SpecialChar	special character in a constant
 		--  Tag		you can use CTRL-] on this
 		--  Delimiter	character that needs attention

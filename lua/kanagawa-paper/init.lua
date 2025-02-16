@@ -7,6 +7,7 @@ function M.load(opts)
 	if opts then
 		config.extend(opts)
 	end
+
 	-- only needed to clear when not the default colorscheme
 	if vim.g.colors_name then
 		vim.cmd("hi clear")
@@ -14,6 +15,7 @@ function M.load(opts)
 
 	vim.o.termguicolors = true
 	vim.g.colors_name = "kanagawa-paper-" .. config.options.theme
+
 	if config.options.theme == "ink" then
 		vim.o.background = "dark"
 	elseif config.options.theme == "canvas" then

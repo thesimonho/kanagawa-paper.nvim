@@ -8,7 +8,7 @@ local palette = {
 	sumiInk3 = "#1F1F28",
 	sumiInk4 = "#2A2A37",
 	sumiInk5 = "#363646",
-	sumiInk6 = "#54546D", --fg
+	sumiInk6 = "#54546D",
 
 	-- Popup and Floats
 	waveBlue1 = "#223249",
@@ -36,17 +36,12 @@ local palette = {
 
 	oniViolet = "#957FB8",
 	oniViolet2 = "#b8b4d0",
-	crystalBlue = "#7E9CD8",
 	springViolet1 = "#938AA9",
 	springViolet2 = "#9CABCA",
 	springBlue = "#7FB4CA",
-	lightBlue = "#A3D4D5", -- unused yet
-	waveAqua2 = "#7AA89F", -- improve lightness: desaturated greenish Aqua
-
-	-- waveAqua2  = "#68AD99",
-	-- waveAqua4  = "#7AA880",
-	-- waveAqua5  = "#6CAF95",
-	-- waveAqua3  = "#68AD99",
+	crystalBlue = "#7E9CD8",
+	lightBlue = "#A3D4D5",
+	waveAqua2 = "#7AA89F",
 
 	springGreen = "#98BB6C",
 	boatYellow1 = "#938056",
@@ -82,8 +77,7 @@ local palette = {
 	dragonAqua = "#8ea4a2",
 	dragonAsh = "#737c73",
 	dragonTeal = "#949fb5",
-	dragonYellow = "#c4b28a", --"#a99c8b",
-	-- "#8a9aa3",
+	dragonYellow = "#c4b28a",
 
 	lotusInk0 = "#3d3d5e",
 	lotusInk1 = "#545464",
@@ -126,6 +120,49 @@ local palette = {
 	lotusTeal2 = "#6693bf",
 	lotusTeal3 = "#5a7785",
 	lotusCyan = "#d7e3d8",
+
+	canvasAqua = "#637975",
+	canvasAqua2 = "#6a827c",
+	canvasBlue1 = "#c9d7de",
+	canvasBlue2 = "#b6cbd2",
+	canvasBlue3 = "#a3b5c5",
+	canvasBlue4 = "#596989",
+	canvasBlue5 = "#5f5a8d",
+	canvasCyan = "#609e70",
+	canvasGray = "#d6d4c3",
+	canvasGray2 = "#a29f92",
+	canvasGray3 = "#929188",
+	canvasGray4 = "#676767",
+	canvasGreen = "#768664",
+	canvasGreen2 = "#778e6e",
+	canvasGreen3 = "#abc5a2",
+	canvasInk0 = "#3e3e5a",
+	canvasInk1 = "#54546b",
+	canvasInk2 = "#444466",
+	canvasOrange = "#b77754",
+	canvasOrange2 = "#cf946b",
+	canvasPink = "#976575",
+	canvasRed = "#ad5760",
+	canvasRed2 = "#bb5f60",
+	canvasRed3 = "#c35353",
+	canvasRed4 = "#cea99e",
+	canvasTeal1 = "#698996",
+	canvasTeal2 = "#6a8aae",
+	canvasTeal3 = "#63767f",
+	canvasViolet1 = "#c8cbd3",
+	canvasViolet2 = "#a09baf",
+	canvasViolet3 = "#756c8d",
+	canvasViolet4 = "#6a558c",
+	canvasWhite0 = "#cdc9ba",
+	canvasWhite1 = "#d5d1c1",
+	canvasWhite2 = "#d9d9d1",
+	canvasWhite3 = "#e1e1de", -- main bg
+	canvasWhite4 = "#e9e9e0",
+	canvasWhite5 = "#ecece8",
+	canvasYellow = "#a4743e",
+	canvasYellow2 = "#bd8b51",
+	canvasYellow3 = "#cea678",
+	canvasYellow4 = "#ddbe7a",
 }
 
 local M = {}

@@ -3,150 +3,150 @@ local M = {}
 M.get = function(opts, palette)
 	return {
 		modes = {
-			normal = palette.dragonYellow,
-			insert = palette.dragonRed,
-			visual = palette.springViolet1,
-			replace = palette.dragonRed,
-			command = palette.dragonYellow,
+			normal = palette.canvasTeal2,
+			insert = palette.canvasRed,
+			visual = palette.canvasBlue5,
+			replace = palette.canvasRed,
+			command = palette.canvasTeal2,
 		},
 		ui = {
-			fg = palette.lotusInk1,
-			fg_gray = palette.fujiGray,
-			fg_dark = palette.lotusInk0,
-			fg_dim = palette.lotusInk2,
-			fg_reverse = palette.lotusGray,
-			bg_m4 = palette.lotusGray3,
-			bg_m3 = palette.lotusWhite0,
-			bg_m2 = palette.lotusWhite1,
-			bg_m1 = palette.lotusWhite2,
-			bg = palette.lotusGray,
-			bg_p1 = palette.lotusGray2,
-			bg_p2 = palette.lotusGray3,
-			bg_dim = palette.lotusWhite1,
-			bg_gutter = opts.gutter and palette.lotusWhite4 or "none",
-			bg_search = palette.lotusBlue2,
-			bg_cursorline = palette.lotusViolet5,
-			bg_visual = palette.lotusViolet3,
-			bg_statusline = palette.lotusInk1,
-			header1 = palette.lotusViolet1,
-			header2 = palette.lotusOrange,
-			special = palette.lotusViolet2,
-			nontext = palette.lotusViolet1,
-			whitespace = palette.lotusViolet1,
-			win_separator = palette.lotusViolet,
-			indent = palette.lotusInk2,
-			indent_scope = palette.lotusViolet,
-			picker = palette.lotusRed,
-			mark = palette.lotusGreen2,
-			scrollbar = palette.lotusGray2,
+			fg = palette.canvasInk1,
+			fg_gray = palette.canvasWhite5,
+			fg_dark = palette.canvasInk0,
+			fg_dim = palette.canvasInk2,
+			fg_reverse = palette.canvasGray,
+			bg_m4 = palette.canvasGray3,
+			bg_m3 = palette.canvasWhite0,
+			bg_m2 = palette.canvasWhite1,
+			bg_m1 = palette.canvasWhite2,
+			bg_dim = palette.canvasWhite2,
+			bg = palette.canvasWhite3,
+			bg_p1 = palette.canvasWhite4,
+			bg_p2 = palette.canvasWhite5,
+			bg_gutter = opts.gutter and palette.canvasWhite4 or "none",
+			bg_search = palette.canvasViolet1,
+			bg_cursorline = palette.canvasWhite1,
+			bg_visual = palette.canvasViolet1,
+			bg_statusline = palette.canvasWhite0,
+			header1 = palette.canvasViolet1,
+			header2 = palette.canvasOrange,
+			special = palette.canvasTeal1,
+			nontext = palette.canvasGray2,
+			whitespace = palette.canvasViolet1,
+			win_separator = palette.canvasViolet1,
+			indent = palette.canvasViolet1,
+			indent_scope = palette.canvasViolet3,
+			picker = palette.canvasRed,
+			mark = palette.canvasGreen3,
+			scrollbar = palette.canvasGray2,
 			tabline = {
-				bg = palette.lotusWhite4,
-				fg_selected = palette.lotusInk0,
-				bg_selected = palette.lotusGray,
-				fg_inactive = palette.lotusGray2,
-				bg_inactive = palette.lotusWhite4,
-				fg_alternate = palette.lotusPink,
-				bg_alternate = palette.lotusWhite4,
-				indicator = palette.lotusBlue3,
+				bg = palette.canvasWhite1,
+				fg_selected = palette.canvasInk0,
+				bg_selected = palette.canvasWhite3,
+				fg_inactive = palette.canvasGray2,
+				bg_inactive = palette.canvasWhite1,
+				fg_alternate = palette.canvasPink,
+				bg_alternate = palette.canvasWhite1,
+				indicator = palette.canvasBlue3,
 			},
 			pmenu = {
-				fg = palette.lotusInk2,
+				fg = palette.canvasInk1,
 				fg_sel = "none", -- This is important to make highlights pass-through
-				bg = palette.lotusBlue1,
-				bg_sel = palette.lotusBlue3,
-				bg_sbar = palette.lotusBlue1,
-				bg_thumb = palette.lotusBlue2,
+				bg = palette.canvasWhite2,
+				bg_sel = palette.canvasViolet1,
+				bg_sbar = palette.canvasWhite2,
+				bg_thumb = palette.canvasBlue2,
 			},
 			float = {
-				fg = palette.lotusInk2,
-				bg = palette.lotusWhite0,
-				fg_border = palette.lotusGray2,
-				bg_border = "none",
+				fg = palette.canvasInk1,
+				bg = palette.canvasWhite3,
+				fg_border = palette.canvasGray3,
+				bg_border = palette.canvasWhite3,
 			},
 		},
 		accent = {
-			accent1 = palette.lotusBlue3,
-			accent2 = palette.lotusOrange,
-			accent3 = palette.waveAqua1,
-			accent4 = palette.lotusGray3,
-			accent5 = palette.lotusRed,
+			accent1 = palette.canvasBlue3,
+			accent2 = palette.canvasOrange,
+			accent3 = palette.canvasAqua,
+			accent4 = palette.canvasGreen2,
+			accent5 = palette.canvasRed,
 		},
 		rainbow = {
-			rainbow1 = palette.lotusRed,
-			rainbow2 = palette.lotusYellow,
-			rainbow3 = palette.lotusBlue4,
-			rainbow4 = palette.lotusOrange2,
-			rainbow5 = palette.lotusGreen,
-			rainbow6 = palette.lotusAqua,
-			rainbow7 = palette.lotusTeal2,
+			rainbow1 = palette.canvasRed,
+			rainbow2 = palette.canvasYellow,
+			rainbow3 = palette.canvasBlue4,
+			rainbow4 = palette.canvasOrange2,
+			rainbow5 = palette.canvasGreen,
+			rainbow6 = palette.canvasAqua,
+			rainbow7 = palette.canvasTeal2,
 		},
 		syn = {
-			string = palette.lotusGreen,
+			string = palette.canvasGreen,
 			variable = "none",
-			member = palette.lotusGray2,
-			number = palette.lotusPink,
-			constant = palette.lotusOrange,
-			identifier = palette.lotusYellow,
-			parameter = palette.lotusBlue5,
-			attribute = palette.lotusYellow,
-			fun = palette.lotusBlue4,
-			statement = palette.lotusViolet4,
-			keyword = palette.lotusViolet4,
-			operator = palette.lotusYellow2,
-			preproc = palette.lotusRed,
-			type = palette.lotusAqua,
-			regex = palette.lotusYellow2,
-			deprecated = palette.lotusGray3,
-			punct = palette.lotusTeal1,
-			comment = palette.lotusGray3,
-			special1 = palette.lotusTeal2,
-			special2 = palette.lotusRed,
-			special3 = palette.lotusBlue1,
+			member = palette.canvasGray4,
+			number = palette.canvasPink,
+			constant = palette.canvasGreen2,
+			identifier = palette.canvasYellow,
+			parameter = palette.canvasInk2,
+			attribute = palette.canvasYellow,
+			fun = palette.canvasTeal2,
+			statement = palette.canvasViolet,
+			keyword = palette.canvasPink,
+			operator = palette.canvasRed,
+			preproc = palette.canvasRed,
+			type = palette.canvasAqua,
+			regex = palette.canvasRed,
+			deprecated = palette.canvasGray2,
+			punct = palette.canvasGray3,
+			comment = palette.canvasGray3,
+			special1 = palette.canvasTeal2,
+			special2 = palette.canvasRed,
+			special3 = palette.canvasBlue5,
 		},
 		vcs = {
-			added = palette.lotusGreen2,
+			added = palette.canvasGreen2,
 			addedDark = palette.autumnGreen,
-			removed = palette.lotusRed2,
+			removed = palette.canvasRed2,
 			removedDark = palette.autumnRed,
-			changed = palette.lotusYellow3,
+			changed = palette.canvasYellow2,
 			changedDark = palette.autumnYellow,
 		},
 		diff = {
-			add = palette.lotusGreen3,
+			add = palette.canvasGreen3,
 			addDark = palette.autumnGreen,
-			delete = palette.lotusRed4,
+			delete = palette.canvasRed4,
 			deleteDark = palette.autumnRed,
-			change = palette.lotusCyan,
+			change = palette.canvasYellow2,
 			changeDark = palette.autumnYellow,
-			text = palette.lotusYellow4,
-			textDark = palette.waveAqua1,
+			text = palette.canvasTeal1,
+			textDark = palette.canvasTeal3,
 		},
 		diag = {
-			error = palette.lotusRed3,
-			ok = palette.lotusGreen,
-			warning = palette.lotusOrange2,
-			info = palette.lotusTeal3,
-			hint = palette.lotusAqua2,
+			error = palette.canvasRed3,
+			ok = palette.canvasGreen,
+			warning = palette.canvasOrange2,
+			info = palette.canvasTeal3,
+			hint = palette.canvasAqua2,
 		},
 		term = {
-			palette.lotusInk0, -- black
-			palette.lotusRed, -- red
-			palette.lotusGreen, -- green
-			palette.lotusYellow, -- yellow
-			palette.lotusBlue4, -- blue
-			palette.lotusPink, -- magenta
-			palette.lotusAqua, -- cyan
-			palette.lotusInk1, -- white
-			palette.lotusGray3, -- bright black
-			palette.lotusRed2, -- bright red
-			palette.lotusGreen2, -- bright green
-			palette.lotusYellow2, -- bright yellow
-			palette.lotusTeal2, -- bright blue
-			palette.lotusViolet4, -- bright magenta
-			palette.lotusAqua2, -- bright cyan
-			palette.lotusInk2, -- bright white
-			palette.lotusOrange2, -- extended color 1
-			palette.lotusRed3, -- extended color 2
+			palette.canvasInk0, -- black
+			palette.canvasRed, -- red
+			palette.canvasGreen, -- green
+			palette.canvasYellow, -- yellow
+			palette.canvasBlue4, -- blue
+			palette.canvasPink, -- magenta
+			palette.canvasAqua, -- cyan
+			palette.canvasInk1, -- white
+			palette.canvasGray3, -- bright black
+			palette.canvasRed2, -- bright red
+			palette.canvasGreen2, -- bright green
+			palette.canvasYellow2, -- bright yellow
+			palette.canvasTeal2, -- bright blue
+			palette.canvasViolet4, -- bright magenta
+			palette.canvasAqua2, -- bright cyan
+			palette.canvasInk2, -- bright white
+			palette.canvasOrange2, -- extended color 1
+			palette.canvasRed3, -- extended color 2
 		},
 	}
 end
