@@ -43,8 +43,17 @@ end
 
 ---@param options? KanagawaConfig user configuration
 function M.extend(options)
-	M.options = vim.tbl_deep_extend("force", {}, M.options or defaults, options or {})
+	M.options = vim.tbl_deep_extend("force", {}, M.options, options or {})
+	return M.options
 end
+
+setmetatable(M, {
+	__index = function(_, k)
+		if k == "options" then
+			return M.defaults
+		end
+	end,
+})
 
 M.setup()
 

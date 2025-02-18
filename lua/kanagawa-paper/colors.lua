@@ -174,7 +174,8 @@ local M = {}
 ---@param opts? {theme: string, colors?: table }
 ---@return { theme: ThemeColors, palette: PaletteColors}
 function M.setup(opts)
-	opts = opts or {}
+	opts = require("kanagawa-paper.config").extend(opts) or {}
+
 	local override_colors = opts.colors or require("kanagawa-paper.config").options.colors
 
 	-- Add to and/or override palette_colors
