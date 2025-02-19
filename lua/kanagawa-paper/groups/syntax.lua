@@ -15,13 +15,13 @@ function M.setup(colors, opts)
 		--  String		a string constant: "this is a string"
 		String = { fg = theme.syn.string },
 		--  Character	a character constant: 'c', '\n'
-		Character = { link = "String" },
+		Character = { fg = theme.syn.string },
 		--  Number		a number constant: 234, 0xff
 		Number = { fg = theme.syn.number },
 		--  Boolean	a boolean constant: TRUE, false
 		Boolean = { fg = theme.syn.constant, bold = true },
 		--  Float		a floating point constant: 2.3e10
-		Float = { link = "Number" },
+		Float = { fg = theme.syn.number },
 
 		-- *Identifier	any variable name
 		Identifier = { fg = theme.syn.identifier },
@@ -38,7 +38,7 @@ function M.setup(colors, opts)
 		--  Keyword	any other keyword
 		Keyword = vim.tbl_extend("force", { fg = theme.syn.keyword }, opts.keywordStyle),
 		--  Exception	try, catch, throw
-		Exception = { fg = theme.syn.special2 },
+		Exception = { fg = theme.diag.error },
 
 		-- *PreProc	generic Preprocessor
 		PreProc = { fg = theme.syn.preproc },
@@ -71,7 +71,7 @@ function M.setup(colors, opts)
 		Italic = { italic = true },
 
 		-- *Ignore		left blank, hidden  |hl-Ignore|
-		Ignore = { link = "NonText" },
+		Ignore = { fg = theme.ui.nontext },
 
 		-- *Error		any erroneous construct
 		Error = { fg = theme.diag.error },
@@ -96,7 +96,7 @@ function M.setup(colors, opts)
 		-- markdownLinkText = {},
 		markdownCode = { fg = theme.syn.string },
 		markdownCodeBlock = { fg = theme.syn.string },
-		markdownEscape = { fg = "NONE" },
+		markdownEscape = { fg = theme.syn.symbol },
 		markdownH1 = { fg = theme.rainbow.rainbow1 },
 		markdownH2 = { fg = theme.rainbow.rainbow2 },
 		markdownH3 = { fg = theme.rainbow.rainbow3 },

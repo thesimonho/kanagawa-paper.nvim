@@ -8,55 +8,55 @@ function M.setup(colors, opts)
 		LspReferenceText = { bg = "None", fg = theme.ui.fg, bold = true },
 		LspReferenceRead = { link = "LspReferenceText" },
 		LspReferenceWrite = { bg = "None", fg = theme.ui.fg, bold = true, underline = true },
-		LspInlayHint = { fg = theme.syn.comment, bg = "None", italic = true },
-		LspSignatureActiveParameter = { fg = theme.diag.warning },
+		LspInlayHint = { fg = theme.syn.comment, bg = theme.ui.bg_dim, italic = true },
+		LspSignatureActiveParameter = { fg = theme.diag.hint },
 		LspCodeLens = { fg = theme.syn.comment, bg = "None", italic = false },
 
 		-- ["@lsp.type.class"] = { link = "Structure" },
 		-- ["@lsp.type.decorator"] = { link = "Function" },
 		-- ["@lsp.type.enum"] = { link = "Structure" },
 		-- ["@lsp.type.enumMember"] = { link = "Constant" },
-		-- ["@lsp.type.function"] = { link = "Function" },
 		-- ["@lsp.type.interface"] = { link = "Structure" },
-		["@lsp.type.macro"] = { link = "Macro" },
-		["@lsp.type.method"] = { link = "@function.method" }, -- Function
-		["@lsp.type.namespace"] = { link = "@module" }, -- Structure
-		["@lsp.type.parameter"] = { link = "@variable.parameter" }, -- Identifier
+		["@lsp.type.function"] = { fg = theme.syn.fun },
+		["@lsp.type.macro"] = { fg = theme.syn.preproc },
+		["@lsp.type.method"] = { fg = theme.syn.fun }, -- Function
+		["@lsp.type.namespace"] = { fg = theme.syn.keyword }, -- Structure
+		["@lsp.type.parameter"] = { fg = theme.syn.parameter }, -- Identifier
 		-- ["@lsp.type.property"] = { link = "Identifier" },
 		-- ["@lsp.type.struct"] = { link = "Structure" },
 		-- ["@lsp.type.type"] = { link = "Type" },
 		-- ["@lsp.type.typeParameter"] = { link = "TypeDef" },
-		["@lsp.type.variable"] = { fg = "none" }, -- Identifier
-		["@lsp.type.comment"] = { fg = "none" }, -- Comment
-		["@lsp.type.const"] = { link = "Constant" },
-		["@lsp.type.comparison"] = { link = "Operator" },
-		["@lsp.type.bitwise"] = { link = "Operator" },
-		["@lsp.type.punctuation"] = { link = "Delimiter" },
-		["@lsp.type.lifetime"] = { link = "Operator" },
+		["@lsp.type.variable"] = { fg = theme.syn.variable }, -- Identifier
+		["@lsp.type.comment"] = { fg = theme.syn.comment }, -- Comment
+		["@lsp.type.const"] = { fg = theme.syn.constant },
+		["@lsp.type.punctuation"] = { fg = theme.syn.punct },
+		["@lsp.type.comparison"] = { fg = theme.syn.operator },
+		["@lsp.type.bitwise"] = { fg = theme.syn.operator },
+		["@lsp.type.lifetime"] = { fg = theme.syn.operator },
 
-		["@lsp.type.selfParameter"] = { link = "@variable.builtin" },
-		["@lsp.type.builtinConstant"] = { link = "@constant.builtin" },
-		["@lsp.type.magicFunction"] = { link = "@function.builtin" },
+		["@lsp.type.selfParameter"] = { fg = theme.syn.constant },
+		["@lsp.type.builtinConstant"] = { fg = theme.syn.constant },
+		["@lsp.type.magicFunction"] = { fg = theme.syn.special1 },
 
-		["@lsp.mod.readonly"] = { link = "Constant" },
-		["@lsp.mod.typeHint"] = { link = "Type" },
-		["@lsp.mod.defaultLibrary"] = { link = "Special" },
-		["@lsp.mod.builtin"] = { link = "Special" },
+		["@lsp.mod.readonly"] = { fg = theme.syn.constant },
+		["@lsp.mod.typeHint"] = { fg = theme.syn.type },
+		["@lsp.mod.defaultLibrary"] = { fg = theme.syn.keyword },
+		["@lsp.mod.builtin"] = { fg = theme.syn.constant },
 
-		["@lsp.typemod.operator.controlFlow"] = { link = "@keyword.exception" },
-		["@lsp.typemod.keyword.documentation"] = { link = "Special" },
+		["@lsp.typemod.operator.controlFlow"] = { fg = theme.syn.operator },
+		["@lsp.typemod.keyword.documentation"] = { fg = theme.syn.keyword },
 
-		["@lsp.typemod.variable.global"] = { link = "Constant" },
-		["@lsp.typemod.variable.static"] = { link = "Constant" },
-		["@lsp.typemod.variable.defaultLibrary"] = { link = "Special" },
+		["@lsp.typemod.variable.global"] = { fg = theme.syn.constant },
+		["@lsp.typemod.variable.static"] = { fg = theme.syn.constant },
+		["@lsp.typemod.variable.defaultLibrary"] = { fg = theme.syn.keyword },
 
-		["@lsp.typemod.function.builtin"] = { link = "@function.builtin" },
-		["@lsp.typemod.function.defaultLibrary"] = { link = "@function.builtin" },
-		["@lsp.typemod.method.defaultLibrary"] = { link = "@function.builtin" },
+		["@lsp.typemod.function.builtin"] = { fg = theme.syn.fun },
+		["@lsp.typemod.function.defaultLibrary"] = { fg = theme.syn.fun },
+		["@lsp.typemod.method.defaultLibrary"] = { fg = theme.syn.keyword },
 
-		["@lsp.typemod.operator.injected"] = { link = "Operator" },
-		["@lsp.typemod.string.injected"] = { link = "String" },
-		["@lsp.typemod.variable.injected"] = { link = "@variable" },
+		["@lsp.typemod.operator.injected"] = { fg = theme.syn.operator },
+		["@lsp.typemod.string.injected"] = { fg = theme.syn.string },
+		["@lsp.typemod.variable.injected"] = { fg = theme.syn.variable },
 
 		["@lsp.typemod.function.readonly"] = { fg = theme.syn.fun, bold = true },
 	}

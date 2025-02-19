@@ -1,5 +1,6 @@
 ---@class SyntaxElements
 ---@field string ColorSpec
+---@field symbol ColorSpec
 ---@field variable ColorSpec
 ---@field member ColorSpec
 ---@field number ColorSpec

@@ -8,9 +8,9 @@ function M.setup(colors, opts)
 
 	return {
 		-- @variable                       various variable names
-		["@variable"] = { fg = theme.ui.fg },
+		["@variable"] = { fg = theme.syn.variable },
 		-- @variable.builtin (Special)     built-in variable names (e.g. `this`, `self`)
-		["@variable.builtin"] = { fg = theme.syn.special2, italic = true },
+		["@variable.builtin"] = { fg = theme.syn.constant, italic = true },
 		-- @variable.parameter             parameters of a function
 		["@variable.parameter"] = { fg = theme.syn.parameter },
 		-- @variable.parameter.builtin     special parameters (e.g. `_`, `it`)
@@ -33,10 +33,10 @@ function M.setup(colors, opts)
 		["@string.escape"] = { fg = theme.syn.regex, bold = true },
 		-- @string.special         other special strings (e.g. dates)
 		-- @string.special.symbol  symbols or atoms
-		["@string.special.symbol"] = { fg = theme.syn.identifier },
+		["@string.special.symbol"] = { fg = theme.syn.symbol },
 		-- @string.special.path    filenames
 		-- @string.special.url (Underlined)     URIs (e.g. hyperlinks)
-		["@string.special.url"] = { fg = theme.syn.special1, sp = theme.syn.special1, underline = true },
+		["@string.special.url"] = { fg = theme.syn.special3, sp = theme.syn.special3, underline = true },
 		-- @character              character literals
 		-- @character.special      special characters (e.g. wildcards)
 		--
@@ -49,7 +49,7 @@ function M.setup(colors, opts)
 		-- @type.definition        identifiers in type definitions (e.g. `typedef <type> <identifier>` in C)
 		--
 		-- @attribute              attribute annotations (e.g. Python decorators, Rust lifetimes)
-		["@attribute"] = { link = "Constant" },
+		["@attribute"] = { fg = theme.syn.attribute },
 		-- @attribute.builtin      builtin annotations (e.g. `@property` in Python)
 		-- @property               the key in key/value pairs
 		--
@@ -61,11 +61,10 @@ function M.setup(colors, opts)
 		-- @function.method        method definitions
 		-- @function.method.call   method calls
 		--
-		-- @constructor            constructor calls and definitions
-		["@constructor"] = { fg = theme.syn.special1 },
-		["@constructor.lua"] = { fg = theme.syn.keyword },
+		-- @constructor            constructor calls and type instantiations
+		["@constructor"] = { fg = theme.syn.type },
 		-- @operator               symbolic operators (e.g. `+`, `*`)
-		["@operator"] = { link = "Operator" },
+		["@operator"] = { fg = theme.syn.operator },
 		--
 		-- @keyword                keywords not fitting into specific categories
 		-- @keyword.coroutine      keywords related to coroutines (e.g. `go` in Go, `async/await` in Python)
@@ -73,7 +72,7 @@ function M.setup(colors, opts)
 		-- @keyword.operator       operators that are English words (e.g. `and`, `or`)
 		["@keyword.operator"] = { fg = theme.syn.operator, bold = true },
 		-- @keyword.import         keywords for including modules (e.g. `import`, `from` in Python)
-		["@keyword.import"] = { link = "PreProc" },
+		["@keyword.import"] = { fg = theme.syn.preproc },
 		-- @keyword.type           keywords defining composite types (e.g. `struct`, `enum`)
 		-- @keyword.modifier       keywords defining type modifiers (e.g. `const`, `static`, `public`)
 		-- @keyword.repeat         keywords related to loops (e.g. `for`, `while`)
@@ -83,8 +82,6 @@ function M.setup(colors, opts)
 		-- @keyword.exception      keywords related to exceptions (e.g. `throw`, `catch`)
 		["@keyword.exception"] = vim.tbl_extend("force", { fg = theme.syn.keyword }, opts.statementStyle),
 
-		["@keyword.luap"] = { link = "@string.regex" },
-		--
 		-- @keyword.conditional         keywords related to conditionals (e.g. `if`, `else`)
 		-- @keyword.conditional.ternary ternary operator (e.g. `?`, `:`)
 		--
@@ -96,7 +93,7 @@ function M.setup(colors, opts)
 		-- @punctuation.bracket    brackets (e.g. `()`, `{}`, `[]`)
 		["@punctuation.bracket"] = { fg = theme.syn.punct },
 		-- @punctuation.special    special symbols (e.g. `{}` in string interpolation)
-		["@punctuation.special"] = { fg = theme.syn.special1 },
+		["@punctuation.special"] = { fg = theme.syn.symbol },
 		--
 		-- @comment                line and block comments
 		-- @comment.documentation  comments documenting code
@@ -119,26 +116,26 @@ function M.setup(colors, opts)
 		["@markup.underline"] = { underline = true },
 		--
 		-- @markup.heading         headings, titles (including markers)
-		["@markup.heading"] = { link = "Function" },
-		-- @markup.heading.1       top-level heading
-		-- @markup.heading.2       section heading
+		["@markup.heading"] = { fg = theme.ui.special },
+		["@markup.heading.1"] = { fg = theme.ui.header1 },
+		["@markup.heading.2"] = { fg = theme.ui.header2 },
 		-- @markup.heading.3       subsection heading
 		-- @markup.heading.4       and so on
 		-- @markup.heading.5       and so forth
 		-- @markup.heading.6       six levels ought to be enough for anybody
 		--
 		-- @markup.quote           block quotes
-		["@markup.quote"] = { link = "@variable.parameter" },
+		["@markup.quote"] = { fg = theme.syn.punct },
 		-- @markup.math            math environments (e.g. `$ ... $` in LaTeX)
-		["@markup.math"] = { link = "Constant" },
+		["@markup.math"] = { fg = theme.syn.constant },
 		-- @markup.environment     environments (e.g. in LaTeX)
-		["@markup.environment"] = { link = "Keyword" },
+		["@markup.environment"] = { fg = theme.syn.keyword },
 		--
-		["@markup.link"] = { link = "@string.special.url" },
-		["@markup.link.url"] = { link = "@string.special.url" },
+		["@markup.link"] = { fg = theme.syn.special3 },
+		["@markup.link.url"] = { fg = theme.syn.special3 },
 		-- @markup.link.label      link, reference descriptions
 		-- @markup.raw             literal or verbatim text (e.g. inline code)
-		["@markup.raw"] = { link = "String" },
+		["@markup.raw"] = { fg = theme.syn.string },
 		-- @markup.raw.block       literal or verbatim text as a stand-alone block
 		--
 		-- @markup.list            list markers
