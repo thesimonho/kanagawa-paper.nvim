@@ -17,24 +17,24 @@ background = '#766b90'
 foreground = '#9e9b93'
 
 [colors.normal]
-black = '#0d0c0c'
+black = '#393836'
 red = '#c4746e'
-green = '#8a9a7b'
+green = '#699469'
 yellow = '#c4b28a'
-blue = '#8ba4b0'
+blue = '#435965'
 magenta = '#a292a3'
-cyan = '#8ea4a2'
+cyan = '#8ea49e'
 white = '#C8C093'
 
 [colors.bright]
-black = '#a6a69c'
-red = '#E46876'
-green = '#98BB6C'
-yellow = '#E6C384'
-blue = '#7FB4CA'
-magenta = '#938AA9'
-cyan = '#7AA89F'
-white = '#c5c9c5'
+black = '#aca9a4'
+red = '#cc928e'
+green = '#72a072'
+yellow = '#d4c196'
+blue = '#698a9b'
+magenta = '#b4a7b5'
+cyan = '#96ada7'
+white = '#d5cd9d'
 
 [[colors.indexed_colors]]
 index = 16

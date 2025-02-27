@@ -13,28 +13,28 @@ cursor_fg = "#1F1F28"
 selection_bg = "#766b90"
 selection_fg = "#393836"
 split = "#8992a7"
-compose_cursor = "#8ea4a2"
+compose_cursor = "#8ea49e"
 scrollbar_thumb = "#363646"
 
 ansi = [
-  "#0d0c0c",
+  "#393836",
   "#c4746e",
-  "#8a9a7b",
+  "#699469",
   "#c4b28a",
-  "#8ba4b0",
+  "#435965",
   "#a292a3",
-  "#8ea4a2",
+  "#8ea49e",
   "#C8C093",
 ]
 brights = [
-  "#a6a69c",
-  "#E46876",
-  "#98BB6C",
-  "#E6C384",
-  "#7FB4CA",
-  "#938AA9",
-  "#7AA89F",
-  "#c5c9c5",
+  "#aca9a4",
+  "#cc928e",
+  "#72a072",
+  "#d4c196",
+  "#698a9b",
+  "#b4a7b5",
+  "#96ada7",
+  "#d5cd9d",
 ]
 
 [colors.indexed]
