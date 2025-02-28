@@ -1,4 +1,4 @@
-*kanagawa-paper.nvim.txt*     For NVIM v0.8.0    Last change: 2025 February 24
+*kanagawa-paper.nvim.txt*     For NVIM v0.8.0    Last change: 2025 February 28
 
 ==============================================================================
 Table of Contents                      *kanagawa-paper.nvim-table-of-contents*
@@ -17,7 +17,7 @@ Table of Contents                      *kanagawa-paper.nvim-table-of-contents*
 ==============================================================================
 1. kanagawa-paper.nvim               *kanagawa-paper.nvim-kanagawa-paper.nvim*
 
-Remixed Kanagawa colourscheme with muted colors. For Neovim.
+Remixed light and dark Kanagawa colourscheme with muted colors. For Neovim.
 
 
 MOTIVATION                                    *kanagawa-paper.nvim-motivation*
@@ -114,28 +114,35 @@ CONFIGURATION                              *kanagawa-paper.nvim-configuration*
     require("kanagawa-paper").setup({
      theme = "ink", -- one of "ink" or "canvas"
     
+     -- features and appearance
      undercurl = true,
      transparent = false,
      gutter = false,
      diagBackground = true, -- background for diagnostic virtual text
      dimInactive = true, -- disabled when transparent
      terminalColors = true,
+     brightnessOffset = 0, -- adjust brightness of the theme [-1, 1]
+     saturationOffset = 0, -- adjust saturation of the theme [-1, 1]
     
+     -- style options
      commentStyle = { italic = true },
      functionStyle = { italic = false },
      keywordStyle = { italic = false, bold = false },
      statementStyle = { italic = false, bold = false },
      typeStyle = { italic = false },
     
+     -- color overrides
      colors = { palette = {}, theme = {ink = {}, canvas = {}} }, -- override default palette and theme colors
      overrides = function() -- override highlight groups
       return {}
      end,
     
-     all_plugins = true, -- enable highlights for all the plugins
+     -- enable/disable plugins
+     auto_plugins = true, -- uses lazy.nvim, if installed, to automatically enable needed plugins
+     all_plugins = package.loaded.lazy == nil, -- enable highlights for all plugins (disabled if using lazy.nvim)
      plugins = {
       -- manually enable/disable individual plugins
-      -- check the groups/plugins directory for the exact names
+      -- check the `groups/plugins` directory for the exact names
       -- examples:
       -- rainbow_delimiters = true
       -- which_key = false
