@@ -4,6 +4,7 @@
 local color = require("kanagawa-paper.lib.color")
 local util = require("kanagawa-paper.lib.util")
 local M = {}
+M.plugins = {}
 
 ---@param hex ColorSpec
 ---@param offset number
@@ -75,6 +76,28 @@ function M.highlight(groups, colors, config)
 	end
 end
 
+-- Get and store all available plugins
+function M.get_all_plugins()
+	local plugin_dir = vim.api.nvim_get_runtime_file("**/kanagawa-paper/groups/plugins", false)
+	if #plugin_dir > 0 then
+		local plugin_root = plugin_dir[1]
+		local scan = vim.uv.fs_scandir(plugin_root)
+		if scan then
+			while true do
+				local name, type = vim.uv.fs_scandir_next(scan)
+				if not name then
+					break
+				end
+				-- each plugin spec is assumed to be a lua file
+				if type == "file" then
+					local basename = vim.fn.fnamemodify(name, ":t:r")
+					M.plugins[#M.plugins + 1] = basename
+				end
+			end
+		end
+	end
+end
+
 ---@param colors KanagawaColors
 ---@param opts? KanagawaConfig
 ---@return KanagawaGroups
@@ -93,27 +116,27 @@ function M.setup(colors, opts)
 	end
 
 	-- determine plugin groups based on user config
+	M.get_all_plugins()
 	local enabled_plugins = {}
 	if opts.all_plugins then
-		local plugin_dir = vim.api.nvim_get_runtime_file("**/kanagawa-paper/groups/plugins", false)
-		if #plugin_dir > 0 then
-			local plugin_root = plugin_dir[1]
-			local scan = vim.uv.fs_scandir(plugin_root)
-			if scan then
-				while true do
-					local name, type = vim.uv.fs_scandir_next(scan)
-					if not name then
-						break
-					end
-					-- each plugin spec is assumed to be a lua file
-					if type == "file" then
-						local basename = vim.fn.fnamemodify(name, ":t:r")
-						enabled_plugins[basename] = true
-					end
-				end
+		for _, plugin in ipairs(M.plugins) do
+			enabled_plugins[plugin] = true
+		end
+	elseif opts.auto_plugins and package.loaded.lazy then
+		local installed = {}
+		for plugin, _ in pairs(require("lazy.core.config").plugins) do
+			table.insert(installed, plugin)
+		end
+		local installed_string = table.concat(installed, "|")
+
+		for _, plugin in ipairs(M.plugins) do
+			local renamed = plugin:gsub("_", "-")
+			if string.find(installed_string, renamed, 1, true) then
+				enabled_plugins[plugin] = true
 			end
 		end
 	end
+
 	enabled_plugins = vim.tbl_extend("force", enabled_plugins, opts.plugins)
 
 	-- add groups

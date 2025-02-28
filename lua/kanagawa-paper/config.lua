@@ -46,7 +46,8 @@ M.defaults = {
 	end,
 
 	-- enable/disable plugins
-	all_plugins = true, -- enable highlights for all the plugins
+	auto_plugins = true, -- uses lazy.nvim, if installed, to automatically enable needed plugins
+	all_plugins = package.loaded.lazy == nil, -- enable highlights for all plugins (disabled if using lazy.nvim)
 	plugins = {
 		-- manually enable/disable individual plugins
 		-- check the `groups/plugins` directory for the exact names
