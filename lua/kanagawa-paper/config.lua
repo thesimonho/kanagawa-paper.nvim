@@ -29,6 +29,7 @@ M.defaults = {
 	dimInactive = true, -- disabled when transparent
 	terminalColors = true,
 	brightnessOffset = 0, -- adjust brightness of the theme [-1, 1]
+	saturationOffset = 0, -- adjust saturation of the theme [-1, 1]
 
 	-- style options
 	commentStyle = { italic = true },

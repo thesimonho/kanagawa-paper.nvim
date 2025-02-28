@@ -5,13 +5,28 @@ local color = require("kanagawa-paper.lib.color")
 local util = require("kanagawa-paper.lib.util")
 local M = {}
 
----@param spec ColorSpec
+---@param hex ColorSpec
 ---@param offset number
 ---@return ColorSpec
-local function apply_offset(spec, offset)
+local function apply_brightness(hex, offset)
+	if offset == 0 then
+		return hex
+	end
 	local clamped_offset = util.clamp(offset, -1, 1)
-	local rescaled_offset = util.scale_exponential(clamped_offset, 5)
-	return color(spec):brighten(rescaled_offset):to_hex()
+	local rescaled_offset = util.scale_log(clamped_offset, 3, 0.2)
+	return color(hex):brighten(rescaled_offset):to_hex()
+end
+
+---@param hex ColorSpec
+---@param offset number
+---@return ColorSpec
+local function apply_saturation(hex, offset)
+	if offset == 0 then
+		return hex
+	end
+	local clamped_offset = util.clamp(offset, -1, 1)
+	local rescaled_offset = util.scale_log_asymmetric(clamped_offset, 3, 0.2, 0.5)
+	return color(hex):saturate(rescaled_offset):to_hex()
 end
 
 ---@param groups KanagawaGroups
@@ -20,8 +35,9 @@ end
 function M.highlight(groups, colors, config)
 	for hl, spec in pairs(groups) do
 		for _, field in ipairs({ "bg", "fg", "sp" }) do
-			if spec[field] and config.options.brightnessOffset ~= 0 then
-				spec[field] = apply_offset(spec[field], config.options.brightnessOffset)
+			if spec[field] then
+				spec[field] = apply_saturation(spec[field], config.options.saturationOffset)
+				spec[field] = apply_brightness(spec[field], config.options.brightnessOffset)
 			end
 		end
 		vim.api.nvim_set_hl(0, hl, spec)
@@ -49,7 +65,12 @@ function M.highlight(groups, colors, config)
 			"indexed2",
 		}
 		for i, key in ipairs(ordered_keys) do
-			vim.g["terminal_color_" .. (i - 1)] = apply_offset(colors.theme.term[key], config.options.brightnessOffset)
+			vim.g["terminal_color_" .. (i - 1)] = function()
+				local c = colors.theme.term[key]
+				c = apply_saturation(c, config.options.saturationOffset)
+				c = apply_brightness(c, config.options.brightnessOffset)
+				return c
+			end
 		end
 	end
 end
