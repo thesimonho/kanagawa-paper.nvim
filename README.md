@@ -81,28 +81,33 @@ require("lualine").setup({
 require("kanagawa-paper").setup({
  theme = "ink", -- one of "ink" or "canvas"
 
+ -- features and appearance
  undercurl = true,
  transparent = false,
  gutter = false,
  diagBackground = true, -- background for diagnostic virtual text
  dimInactive = true, -- disabled when transparent
  terminalColors = true,
+ brightnessOffset = 0, -- adjust brightness of the theme [-1, 1]
 
+ -- style options
  commentStyle = { italic = true },
  functionStyle = { italic = false },
  keywordStyle = { italic = false, bold = false },
  statementStyle = { italic = false, bold = false },
  typeStyle = { italic = false },
 
+ -- color overrides
  colors = { palette = {}, theme = {ink = {}, canvas = {}} }, -- override default palette and theme colors
  overrides = function() -- override highlight groups
   return {}
  end,
 
+ -- enable/disable plugins
  all_plugins = true, -- enable highlights for all the plugins
  plugins = {
   -- manually enable/disable individual plugins
-  -- check the groups/plugins directory for the exact names
+  -- check the `groups/plugins` directory for the exact names
   -- examples:
   -- rainbow_delimiters = true
   -- which_key = false

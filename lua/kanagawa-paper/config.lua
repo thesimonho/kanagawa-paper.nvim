@@ -4,6 +4,7 @@ local M = {}
 ---@field theme string
 ---@field undercurl? boolean
 ---@field transparent? boolean
+---@field brightnessOffset? number
 ---@field gutter? boolean
 ---@field diagBackground? boolean
 ---@field dimInactive? boolean
@@ -18,27 +19,36 @@ local M = {}
 ---@field all_plugins? boolean
 ---@field plugins? table<string, boolean>
 M.defaults = {
-	theme = "ink",
+	theme = "ink", -- one of "ink" or "canvas"
+
+	-- features and appearance
 	undercurl = true,
 	transparent = false,
 	gutter = false,
 	diagBackground = true, -- background for diagnostic virtual text
 	dimInactive = true, -- disabled when transparent
 	terminalColors = true,
+	brightnessOffset = 0, -- adjust brightness of the theme [-1, 1]
+
+	-- style options
 	commentStyle = { italic = true },
 	functionStyle = { italic = false },
 	keywordStyle = { italic = false, bold = false },
 	statementStyle = { italic = false, bold = false },
 	typeStyle = { italic = false },
-	colors = { palette = {}, theme = { ink = {}, canvas = {} } },
+
+	-- color overrides
+	colors = { palette = {}, theme = { ink = {}, canvas = {} } }, -- override default palette and theme colors
 	---@type fun(colors: KanagawaColors): table<string, vim.api.keyset.highlight>
-	overrides = function()
+	overrides = function() -- override highlight groups
 		return {}
 	end,
+
+	-- enable/disable plugins
 	all_plugins = true, -- enable highlights for all the plugins
 	plugins = {
 		-- manually enable/disable individual plugins
-		-- check the groups/plugins directory for the exact names
+		-- check the `groups/plugins` directory for the exact names
 		-- examples:
 		-- rainbow_delimiters = true
 		-- which_key = false

@@ -29,8 +29,7 @@ function M.load(opts)
 	local colors = require("kanagawa-paper.colors").setup(config.options)
 	local groups = require("kanagawa-paper.groups").setup(colors, config.options)
 
-	-- create terminal highlights
-	require("kanagawa-paper.groups").highlight(groups, config.options.terminalColors and colors.theme.term or {})
+	require("kanagawa-paper.groups").highlight(groups, colors, config)
 
 	return colors, groups, config
 end

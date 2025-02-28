@@ -1,16 +1,33 @@
 ---@class KanagawaGroups
 ---@field [string] vim.api.keyset.highlight
 
+local color = require("kanagawa-paper.lib.color")
+local util = require("kanagawa-paper.lib.util")
 local M = {}
 
+---@param spec ColorSpec
+---@param offset number
+---@return ColorSpec
+local function apply_offset(spec, offset)
+	local clamped_offset = util.clamp(offset, -1, 1)
+	local rescaled_offset = util.scale_exponential(clamped_offset, 5)
+	return color(spec):brighten(rescaled_offset):to_hex()
+end
+
 ---@param groups KanagawaGroups
----@param termcolors TermColors
-function M.highlight(groups, termcolors)
+---@param colors KanagawaColors
+---@param config { defaults?: KanagawaConfig, options: KanagawaConfig }
+function M.highlight(groups, colors, config)
 	for hl, spec in pairs(groups) do
+		for _, field in ipairs({ "bg", "fg", "sp" }) do
+			if spec[field] and config.options.brightnessOffset ~= 0 then
+				spec[field] = apply_offset(spec[field], config.options.brightnessOffset)
+			end
+		end
 		vim.api.nvim_set_hl(0, hl, spec)
 	end
 
-	if termcolors and next(termcolors) then
+	if config.options.terminalColors and next(colors.theme.term) then
 		local ordered_keys = {
 			"black",
 			"red",
@@ -32,7 +49,7 @@ function M.highlight(groups, termcolors)
 			"indexed2",
 		}
 		for i, key in ipairs(ordered_keys) do
-			vim.g["terminal_color_" .. (i - 1)] = termcolors[key]
+			vim.g["terminal_color_" .. (i - 1)] = apply_offset(colors.theme.term[key], config.options.brightnessOffset)
 		end
 	end
 end
