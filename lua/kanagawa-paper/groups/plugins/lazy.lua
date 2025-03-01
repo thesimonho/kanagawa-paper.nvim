@@ -5,6 +5,7 @@ function M.get(colors, opts)
 
 	return {
 		LazyProgressTodo = { fg = theme.ui.nontext },
+		LazyButtonActive = { link = "IncSearch" },
 	}
 end
 
