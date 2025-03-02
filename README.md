@@ -1,16 +1,16 @@
 # 🌊 kanagawa-paper.nvim
 
-Remixed light and dark Kanagawa colourscheme with muted colors. For Neovim.
+Remixed light and dark Kanagawa color scheme with muted colors. For Neovim.
 
 ![screenshot](https://github.com/thesimonho/kanagawa-paper.nvim/assets/5199715/cf75d935-d8b4-430c-a1d8-04f453151924)
 
 ## 💡 Motivation
 
-I love the original [kanagawa.nvim](https://github.com/rebelot/kanagawa.nvim) colourscheme, but I found some of the colours of the dark themes a bit too bright and distracting. What I wanted was a more muted theme overall, combining the less saturated syntax colours of the dragon theme, while keeping the blue background of the wave theme.
+I love the original [kanagawa.nvim](https://github.com/rebelot/kanagawa.nvim) color scheme, but I found some of the colors of the dark themes a bit too bright and distracting. What I wanted was a more muted theme overall, using less saturated colors inspired by the original theme.
 
-kanagawa-paper combines both the dragon and wave themes, with a few additions and tweaks to work better with certain plugins.
+kanagawa-paper provides 2 theme variants; `canvas` for sunny days and `ink` for late nights.
 
-I have also ported the colourscheme to VSCode, which you can find here: [kanagawa-paper.vscode](https://github.com/thesimonho/kanagawa-paper.vscode)
+I have also ported the color scheme to VSCode, which you can find here: [kanagawa-paper.vscode](https://github.com/thesimonho/kanagawa-paper.vscode)
 
 ## ⚡️ Requirements
 
@@ -36,50 +36,29 @@ Install the theme with your preferred package manager, such as [lazy.nvim](https
 
 ```vim
 colorscheme kanagawa-paper
+colorscheme kanagawa-paper-ink
+colorscheme kanagawa-paper-canvas
 ```
 
 ### Lua
 
 ```lua
 vim.cmd("colorscheme kanagawa-paper")
-```
-
-### External Plugins
-
-#### [Lualine](https://github.com/nvim-lualine/lualine.nvim)
-
-```lua
-local kanagawa_paper = require("lualine.themes.kanagawa-paper-ink")
--- local kanagawa_paper = require("lualine.themes.kanagawa-paper-canvas")
-
-require("lualine").setup({
- options = {
-  theme = kanagawa_paper,
-  -- ... your lualine config
- },
-})
-```
-
-If you want to set the lualine theme dynamically to match the Neovim theme, you can do something like this:
-
-```lua
-require("lualine").setup({
- options = {
-  theme = function()
-   return require("lualine.themes." .. vim.g.colors_name)
-  end,
-  -- ...
- },
-})
+vim.cmd("colorscheme kanagawa-paper-ink")
+vim.cmd("colorscheme kanagawa-paper-canvas")
 ```
 
 ## ⚙️ Configuration
 
-> ❗️ Set the configuration **BEFORE** loading the color scheme with `colorscheme kanagawa-paper`.
+> [!IMPORTANT]
+> Set the configuration **BEFORE** loading the color scheme with `colorscheme kanagawa-paper`.
 
 ```lua
 require("kanagawa-paper").setup({
- theme = "ink", -- one of "ink" or "canvas"
+  --- "ink" : dark theme
+  --- "canvas" : light theme
+  --- "kanagawa-paper" : automatically set theme based on background color
+ theme = "kanagawa-paper",
 
  -- features and appearance
  undercurl = true,
@@ -100,7 +79,7 @@ require("kanagawa-paper").setup({
 
  -- color overrides
  colors = { palette = {}, theme = {ink = {}, canvas = {}} }, -- override default palette and theme colors
- overrides = function() -- override highlight groups
+ overrides = function(colors) -- override highlight groups
   return {}
  end,
 
@@ -120,7 +99,60 @@ require("kanagawa-paper").setup({
 vim.cmd("colorscheme kanagawa-paper")
 ```
 
-The code that defines the default configuration can be found [here](lua/kanagawa-paper/config.lua)
+The default configuration can be found [here](lua/kanagawa-paper/config.lua)
+
+If you want to switch between light and dark themes within a Neovim session, you can set the theme to `kanagawa-paper` and change `vim.o.background` to `light` or `dark`.
+
+This can also be mapped to the time of day via an autocommand or dynamically setting `vim.o.background` at startup. For example:
+
+```lua
+local hour = os.date("*t").hour
+vim.o.background = (hour >= 7 and hour < 19) and "light" or "dark"
+```
+
+## [Lualine](https://github.com/nvim-lualine/lualine.nvim)
+
+This color scheme comes with matching Lualine themes for both `ink` and `canvas` variants. This will set the theme at startup:
+
+```lua
+local kanagawa_paper = require("lualine.themes.kanagawa-paper") -- switches based on vim.o.background
+-- local kanagawa_paper = require("lualine.themes.kanagawa-paper-ink")
+-- local kanagawa_paper = require("lualine.themes.kanagawa-paper-canvas")
+
+require("lualine").setup({
+ options = {
+  theme = kanagawa_paper,
+  -- ... your lualine config
+ },
+})
+```
+
+For a more advanced use case you can make use of the stored global variable `vim.g.colors_name` to dynamically set the Lualine theme:
+
+```lua
+require("lualine").setup({
+ options = {
+  theme = function()
+    if vim.g.colors_name then
+      -- pcall to handle the case of theme switching/previewing
+      local ok, t = pcall(require, "lualine.themes." .. vim.g.colors_name)
+      if ok then
+        return t
+      end
+    end
+    -- default fallback
+    return require("lualine.themes.kanagawa-paper")
+  end,
+  -- ...
+ },
+})
+```
+
+Examples of situations where this might be useful:
+
+- You want to change the theme mid-session
+- You want to change background color mid-session (either by manually setting `vim.o.background` or with something like dark background toggle in LazyVim)
+- You use a plugin for live previews of color schemes
 
 ## 🔧 Customizing Colors
 

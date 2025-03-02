@@ -2,36 +2,23 @@ local config = require("kanagawa-paper.config")
 
 local M = {}
 
---- load the colorscheme
+-- BUG: user theme choice is not respected. its overriden by the background color selection
 ---@param opts? KanagawaConfig
 ---@return KanagawaColors, KanagawaGroups, KanagawaConfig
 function M.load(opts)
-	if opts then
-		config.extend(opts)
+	opts = require("kanagawa-paper.config").extend(opts)
+	local bg = vim.o.background
+	local theme_bg = opts.theme == "canvas" and "light" or "dark"
+
+	if bg ~= theme_bg then
+		if vim.g.colors_name == "kanagawa-paper-" .. opts.theme then
+			opts.theme = bg == "light" and "canvas" or "ink"
+		else
+			vim.o.background = theme_bg
+		end
 	end
 
-	-- only needed to clear when not the default colorscheme
-	if vim.g.colors_name then
-		vim.cmd("hi clear")
-	end
-
-	vim.o.termguicolors = true
-	vim.g.colors_name = "kanagawa-paper-" .. config.options.theme
-
-	if config.options.theme == "ink" then
-		vim.o.background = "dark"
-	elseif config.options.theme == "canvas" then
-		vim.o.background = "light"
-	else
-		vim.notify("Invalid theme: " .. config.options.theme, vim.log.levels.ERROR)
-	end
-
-	local colors = require("kanagawa-paper.colors").setup(config.options)
-	local groups = require("kanagawa-paper.groups").setup(colors, config.options)
-
-	require("kanagawa-paper.groups").highlight(groups, colors, config)
-
-	return colors, groups, config
+	return require("kanagawa-paper.themes").setup(opts)
 end
 
 M.setup = config.setup
