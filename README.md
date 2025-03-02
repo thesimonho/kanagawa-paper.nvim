@@ -257,7 +257,20 @@ end,
 - [wezterm tabline](extras/wezterm_tabline) (guide: [tabline.wez](https://github.com/michaelbrusegard/tabline.wez))
 - [windows terminal](extras/windows_terminal) (guide: [Color schemes in Windows Terminal](https://learn.microsoft.com/en-us/windows/terminal/customize-settings/color-schemes))
 
-PRs are welcome if you want to add an extra for a specific application.
+## 🔥 Contributing
+
+Pull requests are welcome for theme fixes, new features, and new extras.
+
+For the [extras](extras/), we use a simple template system that can be used to generate styles for the different themes.
+
+How to add a new extra template:
+
+1. Create a new template file in [lua/kanagawa-paper/extras](lua/kanagawa-paper/extras).
+2. Add the name and output file extension to the `extras` table in [lua/kanagawa-paper/extras/init.lua](lua/kanagawa-paper/extras/init.lua).
+3. To check that your template compiles properly, run `./scripts/build.sh` and check the newly compiled styles in the root [extras](extras/) directory.
+
+> [!IMPORTANT]
+> Please DO NOT commit the compiled files, as they are already automatically built by the CI.
 
 ## 👏 Acknowledgements
 
