@@ -1,4 +1,4 @@
----@class PaletteColors
+---@type PaletteColors
 local palette = {
 	-- Bg Shades
 	sumiInkn1 = "#0f0f15",
@@ -168,10 +168,6 @@ local palette = {
 	canvasYellow3 = "#d3a56b",
 	canvasYellow4 = "#e0be6d",
 }
-
----@class KanagawaColors
----@field palette PaletteColors
----@field theme ThemeColors
 
 local M = {}
 ---@param opts KanagawaConfig

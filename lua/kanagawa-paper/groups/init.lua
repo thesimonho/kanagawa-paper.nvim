@@ -1,6 +1,3 @@
----@class KanagawaGroups
----@field [string] vim.api.keyset.highlight
-
 local color = require("kanagawa-paper.lib.color")
 local util = require("kanagawa-paper.lib.util")
 local M = {}

@@ -1,23 +1,5 @@
 local M = {}
 
----@class KanagawaConfig
----@field theme string
----@field undercurl? boolean
----@field transparent? boolean
----@field brightnessOffset? number
----@field gutter? boolean
----@field diagBackground? boolean
----@field dimInactive? boolean
----@field terminalColors? boolean
----@field commentStyle? vim.api.keyset.highlight
----@field functionStyle? vim.api.keyset.highlight
----@field keywordStyle? vim.api.keyset.highlight
----@field statementStyle? vim.api.keyset.highlight
----@field typeStyle? vim.api.keyset.highlight
----@field colors? KanagawaColors
----@field overrides? fun(colors: KanagawaColors): table<string, vim.api.keyset.highlight>
----@field all_plugins? boolean
----@field plugins? table<string, boolean>
 M.defaults = {
 	theme = "ink", -- one of "ink" or "canvas"
 
