@@ -41,7 +41,7 @@ M.defaults = {
 		},
 	},
 	-- adjust overall color balance for each theme [-1, 1]
-	colorOffset = {
+	colorBalance = {
 		ink = { brightness = 0, saturation = 0 },
 		canvas = { brightness = 0, saturation = 0 },
 	},

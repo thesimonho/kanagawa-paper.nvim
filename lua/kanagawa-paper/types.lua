@@ -14,7 +14,7 @@
 ---@field statementStyle? vim.api.keyset.highlight
 ---@field typeStyle? vim.api.keyset.highlight
 ---@field colors? {palette: PaletteColors, theme: {ink: ThemeColors, canvas: ThemeColors}}
----@field colorOffset? table<string, ColorOffset>
+---@field colorBalance? table<string, ColorOffset>
 ---@field overrides? fun(colors: KanagawaColors): table<string, vim.api.keyset.highlight>
 ---@field all_plugins? boolean
 ---@field auto_plugins? boolean
