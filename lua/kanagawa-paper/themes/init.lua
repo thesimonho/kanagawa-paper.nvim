@@ -26,7 +26,7 @@ function M.setup(opts)
 	opts = require("kanagawa-paper.config").extend(opts)
 
 	local colors = require("kanagawa-paper.colors").setup(opts)
-	local groups = require("kanagawa-paper.groups").setup(colors, opts)
+	local groups, _ = require("kanagawa-paper.groups").setup(colors, opts)
 
 	-- only needed to clear when not the default colorscheme
 	if vim.g.colors_name then

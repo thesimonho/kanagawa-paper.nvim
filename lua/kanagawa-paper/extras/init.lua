@@ -3,9 +3,9 @@ local Util = require("kanagawa-paper.lib.util")
 local M = {}
 
 -- map of plugin name to plugin extension
---- @type table<string, {ext:string, url:string, label:string, subdir?: string, sep?:string}>
+--- @type table<string, {ext:string, url:string, label?:string, subdir?: string, sep?:string}>
 -- stylua: ignore
-M.extras = {
+M.mapping = {
   alacritty        = { ext = "toml", url = "https://github.com/alacritty/alacritty", label = "Alacritty" },
   fzf              = { ext = "sh", url = "https://github.com/junegunn/fzf/tree/master#environment-variables", label = "Fzf" },
   ghostty          = { ext = "", url = "https://github.com/ghostty-org/ghostty", label = "Ghostty" },
@@ -30,11 +30,11 @@ function M.setup()
 	}
 
 	---@type string[]
-	local names = vim.tbl_keys(M.extras)
+	local names = vim.tbl_keys(M.mapping)
 	table.sort(names)
 
 	for _, extra in ipairs(names) do
-		local info = M.extras[extra]
+		local info = M.mapping[extra]
 		local plugin = require("kanagawa-paper.extras." .. extra)
 		for theme, theme_name in pairs(themes) do
 			local colors, groups, opts = kanagawa.load({ theme = theme, all_plugins = true })

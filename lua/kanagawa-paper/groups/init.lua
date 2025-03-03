@@ -21,7 +21,7 @@ end
 
 ---@param colors KanagawaColors
 ---@param opts? KanagawaConfig
----@return KanagawaGroups
+---@return KanagawaGroups, table
 function M.setup(colors, opts)
 	opts = opts or require("kanagawa-paper.config").options
 
@@ -82,8 +82,7 @@ function M.setup(colors, opts)
 		end
 		groups[hl] = vim.tbl_extend("force", groups[hl] or {}, spec)
 	end
-
-	return groups
+	return groups, enabled_plugins
 end
 
 return M

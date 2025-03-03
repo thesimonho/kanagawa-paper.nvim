@@ -1,7 +1,7 @@
 ---@alias ColorSpec string RGB Hex string
 
 ---@class KanagawaConfig
----@field theme "kanagawa-paper" | "ink" | "canvas"
+---@field theme? "kanagawa-paper" | "ink" | "canvas"
 ---@field undercurl? boolean
 ---@field transparent? boolean
 ---@field gutter? boolean
