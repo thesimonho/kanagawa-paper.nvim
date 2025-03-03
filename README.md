@@ -43,9 +43,9 @@ colorscheme kanagawa-paper-canvas
 ### Lua
 
 ```lua
-vim.cmd("colorscheme kanagawa-paper")
-vim.cmd("colorscheme kanagawa-paper-ink")
-vim.cmd("colorscheme kanagawa-paper-canvas")
+vim.cmd.colorscheme("kanagawa-paper")
+vim.cmd.colorscheme("kanagawa-paper-ink")
+vim.cmd.colorscheme("kanagawa-paper-canvas")
 ```
 
 ## ⚙️ Configuration
