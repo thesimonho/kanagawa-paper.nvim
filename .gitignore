@@ -1,6 +1,6 @@
 images/
 /doc/tags
-.extras
+.tests
 /extras/**
 !/extras/README.md
 tests/languages/
