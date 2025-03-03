@@ -1,4 +1,4 @@
-*kanagawa-paper.nvim.txt*     For NVIM v0.8.0    Last change: 2025 February 28
+*kanagawa-paper.nvim.txt*      For NVIM v0.8.0      Last change: 2025 March 03
 
 ==============================================================================
 Table of Contents                      *kanagawa-paper.nvim-table-of-contents*
@@ -9,29 +9,30 @@ Table of Contents                      *kanagawa-paper.nvim-table-of-contents*
   - Installation                            |kanagawa-paper.nvim-installation|
   - Usage                                          |kanagawa-paper.nvim-usage|
   - Configuration                          |kanagawa-paper.nvim-configuration|
+  - Lualine                                      |kanagawa-paper.nvim-lualine|
   - Customizing Colors                |kanagawa-paper.nvim-customizing-colors|
   - Extras                                        |kanagawa-paper.nvim-extras|
+  - Contributing                            |kanagawa-paper.nvim-contributing|
   - Acknowledgements                    |kanagawa-paper.nvim-acknowledgements|
 2. Links                                           |kanagawa-paper.nvim-links|
 
 ==============================================================================
 1. kanagawa-paper.nvim               *kanagawa-paper.nvim-kanagawa-paper.nvim*
 
-Remixed light and dark Kanagawa colourscheme with muted colors. For Neovim.
+Remixed light and dark Kanagawa color scheme with muted colors. For Neovim.
 
 
 MOTIVATION                                    *kanagawa-paper.nvim-motivation*
 
 I love the original kanagawa.nvim <https://github.com/rebelot/kanagawa.nvim>
-colourscheme, but I found some of the colours of the dark themes a bit too
-bright and distracting. What I wanted was a more muted theme overall, combining
-the less saturated syntax colours of the dragon theme, while keeping the blue
-background of the wave theme.
+color scheme, but I found some of the colors of the dark themes a bit too
+bright and distracting. What I wanted was a more muted theme overall, using
+less saturated colors inspired by the original theme.
 
-kanagawa-paper combines both the dragon and wave themes, with a few additions
-and tweaks to work better with certain plugins.
+kanagawa-paper provides 2 theme variants; `canvas` for sunny days and `ink` for
+late nights.
 
-I have also ported the colourscheme to VSCode, which you can find here:
+I have also ported the color scheme to VSCode, which you can find here:
 kanagawa-paper.vscode <https://github.com/thesimonho/kanagawa-paper.vscode>
 
 
@@ -63,86 +64,82 @@ VIM SCRIPT ~
 
 >vim
     colorscheme kanagawa-paper
+    colorscheme kanagawa-paper-ink
+    colorscheme kanagawa-paper-canvas
 <
 
 
 LUA ~
 
 >lua
-    vim.cmd("colorscheme kanagawa-paper")
-<
-
-
-EXTERNAL PLUGINS ~
-
-
-LUALINE
-
->lua
-    local kanagawa_paper = require("lualine.themes.kanagawa-paper-ink")
-    -- local kanagawa_paper = require("lualine.themes.kanagawa-paper-canvas")
-    
-    require("lualine").setup({
-     options = {
-      theme = kanagawa_paper,
-      -- ... your lualine config
-     },
-    })
-<
-
-If you want to set the lualine theme dynamically to match the Neovim theme, you
-can do something like this:
-
->lua
-    require("lualine").setup({
-     options = {
-      theme = function()
-       return require("lualine.themes." .. vim.g.colors_name)
-      end,
-      -- ...
-     },
-    })
+    vim.cmd.colorscheme("kanagawa-paper")
+    vim.cmd.colorscheme("kanagawa-paper-ink")
+    vim.cmd.colorscheme("kanagawa-paper-canvas")
 <
 
 
 CONFIGURATION                              *kanagawa-paper.nvim-configuration*
 
 
-  Set the configuration **BEFORE** loading the color scheme with `colorscheme
-  kanagawa-paper`.
+  [!IMPORTANT] Set the configuration **BEFORE** loading the color scheme with
+  `colorscheme kanagawa-paper`.
 >lua
     require("kanagawa-paper").setup({
-     theme = "ink", -- one of "ink" or "canvas"
+     -- theme variant to use:
+     -- "ink" : dark theme
+     -- "canvas" : light theme
+     -- "kanagawa-paper" : automatically set theme based on background color
+     theme = "kanagawa-paper",
     
-     -- features and appearance
+     -- enable undercurls for underlined text
      undercurl = true,
+     -- transparent background
      transparent = false,
+     -- highlight background for the left gutter
      gutter = false,
-     diagBackground = true, -- background for diagnostic virtual text
-     dimInactive = true, -- disabled when transparent
+     -- background for diagnostic virtual text
+     diagBackground = true,
+     -- dim inactive windows. Disabled when transparent
+     dimInactive = true,
+     -- set colors for terminal buffers
      terminalColors = true,
-     brightnessOffset = 0, -- adjust brightness of the theme [-1, 1]
-     saturationOffset = 0, -- adjust saturation of the theme [-1, 1]
     
-     -- style options
+     -- style for comments
      commentStyle = { italic = true },
+     -- style for functions
      functionStyle = { italic = false },
+     -- style for keywords
      keywordStyle = { italic = false, bold = false },
+     -- style for statements
      statementStyle = { italic = false, bold = false },
+     -- style for types
      typeStyle = { italic = false },
     
-     -- color overrides
-     colors = { palette = {}, theme = {ink = {}, canvas = {}} }, -- override default palette and theme colors
-     overrides = function() -- override highlight groups
+     -- override default palette and theme colors
+     colors = {
+      palette = {},
+      theme = {
+       ink = {},
+       canvas = {},
+      },
+     },
+     -- adjust overall color balance for each theme [-1, 1]
+     colorOffset = {
+      ink = { brightness = 0, saturation = 0 },
+      canvas = { brightness = 0, saturation = 0 },
+     },
+     -- override highlight groups
+     overrides = function(colors)
       return {}
      end,
     
-     -- enable/disable plugins
-     auto_plugins = true, -- uses lazy.nvim, if installed, to automatically enable needed plugins
-     all_plugins = package.loaded.lazy == nil, -- enable highlights for all plugins (disabled if using lazy.nvim)
+     -- uses lazy.nvim, if installed, to automatically enable needed plugins
+     auto_plugins = true,
+     -- enable highlights for all plugins (disabled if using lazy.nvim)
+     all_plugins = package.loaded.lazy == nil,
+     -- manually enable/disable individual plugins.
+     -- check the `groups/plugins` directory for the exact names
      plugins = {
-      -- manually enable/disable individual plugins
-      -- check the `groups/plugins` directory for the exact names
       -- examples:
       -- rainbow_delimiters = true
       -- which_key = false
@@ -153,8 +150,66 @@ CONFIGURATION                              *kanagawa-paper.nvim-configuration*
     vim.cmd("colorscheme kanagawa-paper")
 <
 
-The code that defines the default configuration can be found here
-<lua/kanagawa-paper/config.lua>
+The default configuration can be found here <lua/kanagawa-paper/config.lua>
+
+If you want to switch between light and dark themes within a Neovim session,
+you can set the theme to `kanagawa-paper` and change `vim.o.background` to
+`light` or `dark`.
+
+This can also be mapped to the time of day via an autocommand or dynamically
+setting `vim.o.background` at startup. For example:
+
+>lua
+    local hour = os.date("*t").hour
+    vim.o.background = (hour >= 7 and hour < 19) and "light" or "dark"
+<
+
+
+LUALINE                                          *kanagawa-paper.nvim-lualine*
+
+This color scheme comes with matching Lualine themes for both `ink` and
+`canvas` variants. This will set the theme at startup:
+
+>lua
+    local kanagawa_paper = require("lualine.themes.kanagawa-paper") -- switches based on vim.o.background
+    -- local kanagawa_paper = require("lualine.themes.kanagawa-paper-ink")
+    -- local kanagawa_paper = require("lualine.themes.kanagawa-paper-canvas")
+    
+    require("lualine").setup({
+     options = {
+      theme = kanagawa_paper,
+      -- ... your lualine config
+     },
+    })
+<
+
+For a more advanced use case you can make use of the stored global variable
+`vim.g.colors_name` to dynamically set the Lualine theme:
+
+>lua
+    require("lualine").setup({
+     options = {
+      theme = function()
+        if vim.g.colors_name then
+          -- pcall to handle the case of theme switching/previewing
+          local ok, t = pcall(require, "lualine.themes." .. vim.g.colors_name)
+          if ok then
+            return t
+          end
+        end
+        -- default fallback
+        return require("lualine.themes.kanagawa-paper")
+      end,
+      -- ...
+     },
+    })
+<
+
+Examples of situations where this might be useful:
+
+- You want to change the theme mid-session
+- You want to change background color mid-session (either by manually setting `vim.o.background` or with something like dark background toggle in LazyVim)
+- You use a plugin for live previews of color schemes
 
 
 CUSTOMIZING COLORS                    *kanagawa-paper.nvim-customizing-colors*
@@ -300,8 +355,23 @@ EXTRAS                                            *kanagawa-paper.nvim-extras*
 - wezterm tabline <extras/wezterm_tabline> (guide: tabline.wez <https://github.com/michaelbrusegard/tabline.wez>)
 - windows terminal <extras/windows_terminal> (guide: Color schemes in Windows Terminal <https://learn.microsoft.com/en-us/windows/terminal/customize-settings/color-schemes>)
 
-PRs are welcome if you want to add an extra for a specific application.
 
+CONTRIBUTING                                *kanagawa-paper.nvim-contributing*
+
+Pull requests are welcome for theme fixes, new features, and new extras.
+
+For the extras <extras/>, we use a simple template system that can be used to
+generate styles for the different themes.
+
+How to add a new extra template:
+
+1. Create a new template file in lua/kanagawa-paper/extras <lua/kanagawa-paper/extras>.
+2. Add the name and output file extension to the `extras` table in lua/kanagawa-paper/extras/init.lua <lua/kanagawa-paper/extras/init.lua>.
+3. To check that your template compiles properly, run `./scripts/build.sh` and check the newly compiled styles in the root extras <extras/> directory.
+
+
+  [!IMPORTANT] Please DO NOT commit the compiled files, as they are already
+  automatically built by the CI.
 
 ACKNOWLEDGEMENTS                        *kanagawa-paper.nvim-acknowledgements*
 
