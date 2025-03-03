@@ -55,40 +55,61 @@ vim.cmd("colorscheme kanagawa-paper-canvas")
 
 ```lua
 require("kanagawa-paper").setup({
-  --- "ink" : dark theme
-  --- "canvas" : light theme
-  --- "kanagawa-paper" : automatically set theme based on background color
+ -- theme variant to use:
+ -- "ink" : dark theme
+ -- "canvas" : light theme
+ -- "kanagawa-paper" : automatically set theme based on background color
  theme = "kanagawa-paper",
 
- -- features and appearance
+ -- enable undercurls for underlined text
  undercurl = true,
+ -- transparent background
  transparent = false,
+ -- highlight background for the left gutter
  gutter = false,
- diagBackground = true, -- background for diagnostic virtual text
- dimInactive = true, -- disabled when transparent
+ -- background for diagnostic virtual text
+ diagBackground = true,
+ -- dim inactive windows. Disabled when transparent
+ dimInactive = true,
+ -- set colors for terminal buffers
  terminalColors = true,
- brightnessOffset = 0, -- adjust brightness of the theme [-1, 1]
- saturationOffset = 0, -- adjust saturation of the theme [-1, 1]
 
- -- style options
+ -- style for comments
  commentStyle = { italic = true },
+ -- style for functions
  functionStyle = { italic = false },
+ -- style for keywords
  keywordStyle = { italic = false, bold = false },
+ -- style for statements
  statementStyle = { italic = false, bold = false },
+ -- style for types
  typeStyle = { italic = false },
 
- -- color overrides
- colors = { palette = {}, theme = {ink = {}, canvas = {}} }, -- override default palette and theme colors
- overrides = function(colors) -- override highlight groups
+ -- override default palette and theme colors
+ colors = {
+  palette = {},
+  theme = {
+   ink = {},
+   canvas = {},
+  },
+ },
+ -- adjust overall color balance for each theme [-1, 1]
+ colorOffset = {
+  ink = { brightness = 0, saturation = 0 },
+  canvas = { brightness = 0, saturation = 0 },
+ },
+ -- override highlight groups
+ overrides = function(colors)
   return {}
  end,
 
- -- enable/disable plugins
- auto_plugins = true, -- uses lazy.nvim, if installed, to automatically enable needed plugins
- all_plugins = package.loaded.lazy == nil, -- enable highlights for all plugins (disabled if using lazy.nvim)
+ -- uses lazy.nvim, if installed, to automatically enable needed plugins
+ auto_plugins = true,
+ -- enable highlights for all plugins (disabled if using lazy.nvim)
+ all_plugins = package.loaded.lazy == nil,
+ -- manually enable/disable individual plugins.
+ -- check the `groups/plugins` directory for the exact names
  plugins = {
-  -- manually enable/disable individual plugins
-  -- check the `groups/plugins` directory for the exact names
   -- examples:
   -- rainbow_delimiters = true
   -- which_key = false

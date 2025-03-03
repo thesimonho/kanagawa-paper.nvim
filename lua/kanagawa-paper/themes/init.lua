@@ -40,11 +40,11 @@ function M.setup(opts)
 		spec = type(spec) == "string" and { link = spec } or spec
 		for _, field in ipairs({ "bg", "fg", "sp" }) do
 			if spec[field] then
-				if opts.saturationOffset ~= 0 then
-					spec[field] = apply_saturation(spec[field], opts.saturationOffset)
+				if opts.colorOffset[opts.theme].saturation ~= 0 then
+					spec[field] = apply_saturation(spec[field], opts.colorOffset[opts.theme].saturation)
 				end
-				if opts.brightnessOffset ~= 0 then
-					spec[field] = apply_brightness(spec[field], opts.brightnessOffset)
+				if opts.colorOffset[opts.theme].brightness ~= 0 then
+					spec[field] = apply_brightness(spec[field], opts.colorOffset[opts.theme].brightness)
 				end
 			end
 		end
@@ -62,11 +62,11 @@ end
 ---@param opts KanagawaConfig
 function M.terminal(colors, opts)
 	for hl, _ in pairs(colors.theme.term) do
-		if opts.saturationOffset ~= 0 then
-			colors.theme.term[hl] = apply_saturation(colors.theme.term[hl], opts.saturationOffset)
+		if opts.colorOffset[opts.theme].saturation ~= 0 then
+			colors.theme.term[hl] = apply_saturation(colors.theme.term[hl], opts.colorOffset[opts.theme].saturation)
 		end
-		if opts.brightnessOffset ~= 0 then
-			colors.theme.term[hl] = apply_brightness(colors.theme.term[hl], opts.brightnessOffset)
+		if opts.colorOffset[opts.theme].brightness ~= 0 then
+			colors.theme.term[hl] = apply_brightness(colors.theme.term[hl], opts.colorOffset[opts.theme].brightness)
 		end
 	end
 
