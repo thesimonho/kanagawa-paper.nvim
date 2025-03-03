@@ -3,21 +3,17 @@ M.plugins = {}
 
 -- Get and store all available plugins
 function M.get_all_plugins()
-	local plugin_dir = vim.api.nvim_get_runtime_file("**/kanagawa-paper/groups/plugins", false)
-	if #plugin_dir > 0 then
-		local plugin_root = plugin_dir[1]
-		local scan = vim.uv.fs_scandir(plugin_root)
-		if scan then
-			while true do
-				local name, type = vim.uv.fs_scandir_next(scan)
-				if not name then
-					break
-				end
-				-- each plugin spec is assumed to be a lua file
-				if type == "file" then
-					local basename = vim.fn.fnamemodify(name, ":t:r")
-					M.plugins[#M.plugins + 1] = basename
-				end
+	local plugin_dirs = vim.api.nvim_get_runtime_file("**/kanagawa-paper/groups/plugins", false)
+	if #plugin_dirs == 0 then
+		return
+	end
+
+	local plugin_root = plugin_dirs[1]
+	for name, type in vim.fs.dir(plugin_root) do
+		if type == "file" then
+			local basename = name:match("(.+)%.lua$")
+			if basename then
+				M.plugins[#M.plugins + 1] = basename
 			end
 		end
 	end
