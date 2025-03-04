@@ -3,13 +3,19 @@ on:
   workflow_dispatch:
   push:
     paths:
-      - "**/*.lua"
       - "lua/kanagawa-paper/extras/**"
+      - "lua/kanagawa-paper/themes/**"
+      - "lua/kanagawa-paper/lib/**"
+      - "lua/kanagawa-paper/colors.lua"
+      - "lua/scripts/**"
   pull_request:
     types: [closed]
     paths:
-      - "**/*.lua"
       - "lua/kanagawa-paper/extras/**"
+      - "lua/kanagawa-paper/themes/**"
+      - "lua/kanagawa-paper/lib/**"
+      - "lua/kanagawa-paper/colors.lua"
+      - "lua/scripts/**"
 jobs:
   extras:
     name: Build Extras
@@ -28,9 +34,15 @@ jobs:
         run: |
           scripts/build.sh || { echo "❌ Build script failed!"; exit 1; }
           git add -f extras/
-      - name: Pull latest changes before commit
+      - name: Stash changes if needed
+        run: |
+          git diff --quiet || git stash
+      - name: Pull latest changes with rebase
         run: |
           git pull --rebase origin ${{ github.ref_name }}
+      - name: Restore stash if needed
+        run: |
+          git stash pop || echo "No stash to pop"
       - uses: stefanzweifel/git-auto-commit-action@v5
         with:
           commit_message: "build(extras): auto build themes for extras"

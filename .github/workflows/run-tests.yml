@@ -16,6 +16,8 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - uses: leafo/gh-actions-lua@v11
+        with:
+          luaVersion: "5.1"
       - uses: leafo/gh-actions-luarocks@v5
       - uses: rhysd/action-setup-vim@v1
         with:
