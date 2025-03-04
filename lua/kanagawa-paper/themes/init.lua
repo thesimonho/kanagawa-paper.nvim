@@ -36,11 +36,7 @@ function M.setup(opts)
 
 	vim.o.termguicolors = true
 	local current_theme = util.get_current_theme(opts)
-	if opts._theme == "auto" then
-		vim.g.colors_name = "kanagawa-paper"
-	else
-		vim.g.colors_name = "kanagawa-paper-" .. opts._theme
-	end
+	vim.g.colors_name = "kanagawa-paper-" .. current_theme
 	print("set vim.g.colors_name to " .. vim.g.colors_name)
 
 	for hl, spec in pairs(groups) do
