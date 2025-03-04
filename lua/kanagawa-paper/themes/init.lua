@@ -23,7 +23,6 @@ local M = {}
 
 ---@param opts? KanagawaConfig
 function M.setup(opts)
-	print("themes init setup")
 	opts = require("kanagawa-paper.config").extend(opts)
 
 	local colors = require("kanagawa-paper.colors").setup(opts)
@@ -36,8 +35,12 @@ function M.setup(opts)
 
 	vim.o.termguicolors = true
 	local current_theme = util.get_current_theme(opts)
-	vim.g.colors_name = "kanagawa-paper-" .. current_theme
-	print("set vim.g.colors_name to " .. vim.g.colors_name)
+	if opts._theme == "auto" then
+		-- BUG: this breaks lualine
+		vim.g.colors_name = "kanagawa-paper"
+	else
+		vim.g.colors_name = "kanagawa-paper-" .. current_theme
+	end
 
 	for hl, spec in pairs(groups) do
 		spec = type(spec) == "string" and { link = spec } or spec

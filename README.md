@@ -42,7 +42,7 @@ Kanagawa Paper comes in a few variants:
 Themes can be changed in a couple of ways:
 
 - Using the `background` option:
-  If using `kanagawa-paper`, any change to the value of `vim.o.background` will select the corresponding light or dark theme. If this is unset, the theme will default to the dark theme 'ink'.
+  If using `kanagawa-paper`, any change to the value of `vim.o.background` will select the corresponding light or dark theme. If this is unset, the theme will default to the dark theme `ink`.
 - Loading the color scheme directly with:
 
 Vim:

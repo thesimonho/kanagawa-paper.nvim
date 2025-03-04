@@ -68,7 +68,6 @@ M.options = nil
 
 ---@param options? KanagawaConfig
 function M.setup(options)
-	print("config setup")
 	M.options = vim.tbl_deep_extend("force", {}, M.defaults, options or {})
 end
 

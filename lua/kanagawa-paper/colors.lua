@@ -175,7 +175,6 @@ local M = {}
 ---@param opts? KanagawaConfig
 ---@return KanagawaColors
 function M.setup(opts)
-	print("colors setup")
 	opts = require("kanagawa-paper.config").extend(opts)
 
 	-- Add to and/or override palette_colors

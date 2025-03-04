@@ -18,21 +18,21 @@ describe("auto theme respects vim.o.background", function()
 	it("defaults to dark", function()
 		vim.o.background = nil
 		vim.cmd.colorscheme("kanagawa-paper")
-		assert.same("kanagawa-paper-ink", vim.g.colors_name)
+		assert.same("kanagawa-paper", vim.g.colors_name)
 	end)
 
 	it("= dark", function()
 		vim.o.background = "dark"
 		vim.cmd.colorscheme("kanagawa-paper")
 		assert.same("dark", vim.o.background)
-		assert.same("kanagawa-paper-ink", vim.g.colors_name)
+		assert.same("kanagawa-paper", vim.g.colors_name)
 	end)
 
 	it("= light", function()
 		vim.o.background = "light"
 		vim.cmd.colorscheme("kanagawa-paper")
 		assert.same("light", vim.o.background)
-		assert.same("kanagawa-paper-canvas", vim.g.colors_name)
+		assert.same("kanagawa-paper", vim.g.colors_name)
 	end)
 
 	it("switches to light", function()
@@ -40,7 +40,7 @@ describe("auto theme respects vim.o.background", function()
 		vim.cmd.colorscheme("kanagawa-paper")
 		vim.o.background = "light"
 		assert.same("light", vim.o.background)
-		assert.same("kanagawa-paper-canvas", vim.g.colors_name)
+		assert.same("kanagawa-paper", vim.g.colors_name)
 	end)
 
 	it("switches to dark", function()
@@ -48,7 +48,7 @@ describe("auto theme respects vim.o.background", function()
 		vim.cmd.colorscheme("kanagawa-paper")
 		vim.o.background = "dark"
 		assert.same("dark", vim.o.background)
-		assert.same("kanagawa-paper-ink", vim.g.colors_name)
+		assert.same("kanagawa-paper", vim.g.colors_name)
 	end)
 
 	it("remembers dark", function()
@@ -57,7 +57,7 @@ describe("auto theme respects vim.o.background", function()
 		vim.o.background = "light"
 		vim.o.background = "dark"
 		assert.same("dark", vim.o.background)
-		assert.same("kanagawa-paper-ink", vim.g.colors_name)
+		assert.same("kanagawa-paper", vim.g.colors_name)
 	end)
 
 	it("remembers light", function()
@@ -66,7 +66,7 @@ describe("auto theme respects vim.o.background", function()
 		vim.o.background = "dark"
 		vim.o.background = "light"
 		assert.same("light", vim.o.background)
-		assert.same("kanagawa-paper-canvas", vim.g.colors_name)
+		assert.same("kanagawa-paper", vim.g.colors_name)
 	end)
 end)
 
