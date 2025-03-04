@@ -16,7 +16,7 @@ describe("auto theme respects vim.o.background", function()
 	end)
 
 	it("defaults to dark", function()
-		vim.o.background = ""
+		vim.o.background = nil
 		vim.cmd.colorscheme("kanagawa-paper")
 		assert.same("kanagawa-paper-ink", vim.g.colors_name)
 	end)
