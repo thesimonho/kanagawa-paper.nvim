@@ -36,7 +36,6 @@ function M.setup(opts)
 	vim.o.termguicolors = true
 	local current_theme = util.get_current_theme(opts)
 	if opts._theme == "auto" then
-		-- BUG: this breaks lualine
 		vim.g.colors_name = "kanagawa-paper"
 	else
 		vim.g.colors_name = "kanagawa-paper-" .. current_theme

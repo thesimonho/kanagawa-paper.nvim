@@ -37,7 +37,9 @@ Kanagawa Paper comes in a few variants:
 
 - `kanagawa-paper-ink` for late nights
 - `kanagawa-paper-canvas` for sunny days
-- `kanagawa-paper` for automatic theme selection based on `vim.o.background`
+- `kanagawa-paper` for automatic theme switching based on `vim.o.background`
+
+Most of the time you'll want to use `kanagawa-paper` for maximum flexibility.
 
 Themes can be changed in a couple of ways:
 
@@ -140,8 +142,7 @@ vim.o.background = (hour >= 7 and hour < 19) and "light" or "dark"
 This color scheme comes with matching Lualine themes for both `ink` and `canvas` variants. This will set the theme at startup:
 
 ```lua
-local kanagawa_paper = require("lualine.themes.kanagawa-paper") -- switches based on vim.o.background
--- local kanagawa_paper = require("lualine.themes.kanagawa-paper-ink")
+local kanagawa_paper = require("lualine.themes.kanagawa-paper-ink")
 -- local kanagawa_paper = require("lualine.themes.kanagawa-paper-canvas")
 
 require("lualine").setup({
@@ -152,23 +153,25 @@ require("lualine").setup({
 })
 ```
 
-For a more advanced use case you can make use of the stored global variable `vim.g.colors_name` to dynamically set the Lualine theme:
+For a more advanced use case you can make use of the background color to set the Lualine theme dynamically. This switches Lualine between light and dark themes based on background color, but only if you're using the auto-switching `kanagawa-paper` main theme.
 
 ```lua
 require("lualine").setup({
  options = {
   theme = function()
-    if vim.g.colors_name then
-      -- pcall to handle the case of theme switching/previewing
-      local ok, t = pcall(require, "lualine.themes." .. vim.g.colors_name)
-      if ok then
-        return t
-      end
+    -- pcall and fallback theme is to handle the case of theme switching/previewing
+    local ok, t = pcall(
+      require,
+      "lualine.themes." .. (vim.g.colors_name == "kanagawa-paper" and vim.o.background == "light" and "kanagawa-paper-canvas" or "kanagawa-paper-ink")
+    )
+    if ok then
+      theme = t
+    else
+      theme = require("some other fallback theme")
     end
-    -- default fallback
-    return require("lualine.themes.kanagawa-paper")
+    return theme
   end,
-  -- ...
+  -- ... your lualine config
  },
 })
 ```
