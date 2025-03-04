@@ -1,13 +1,13 @@
 local M = {
 	module = "kanagawa-paper",
 	colorscheme = "kanagawa-paper-canvas",
-	opts = { theme = "canvas", all_plugins = true },
+	opts = { _theme = "canvas", all_plugins = true },
 	globals = { vim = vim },
 	cache = {}, ---@type table<string, boolean>
 }
 
 function M.reset()
-	local colors = require("kanagawa-paper.colors").setup({ theme = M.opts.theme })
+	local colors = require("kanagawa-paper.colors").setup({ _theme = M.opts._theme })
 	M.globals.theme = colors.theme
 	M.globals.palette = colors.palette
 end

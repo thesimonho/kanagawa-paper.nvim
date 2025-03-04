@@ -12,6 +12,18 @@ function M.template(str, table)
 	)
 end
 
+--- Get the current theme
+---@param opts KanagawaConfig
+---@return "ink" | "canvas"
+function M.get_current_theme(opts)
+	if opts._theme == "auto" then
+		return vim.o.background == "dark" and "ink" or "canvas"
+	end
+
+	---@diagnostic disable-next-line
+	return opts._theme
+end
+
 -- Clamp a value between min and max
 ---@param value number
 ---@param min number

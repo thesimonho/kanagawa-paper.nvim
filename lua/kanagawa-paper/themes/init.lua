@@ -23,6 +23,7 @@ local M = {}
 
 ---@param opts? KanagawaConfig
 function M.setup(opts)
+	print("themes init setup")
 	opts = require("kanagawa-paper.config").extend(opts)
 
 	local colors = require("kanagawa-paper.colors").setup(opts)
@@ -34,17 +35,23 @@ function M.setup(opts)
 	end
 
 	vim.o.termguicolors = true
-	vim.g.colors_name = "kanagawa-paper-" .. opts.theme
+	local current_theme = util.get_current_theme(opts)
+	if opts._theme == "auto" then
+		vim.g.colors_name = "kanagawa-paper"
+	else
+		vim.g.colors_name = "kanagawa-paper-" .. opts._theme
+	end
+	print("set vim.g.colors_name to " .. vim.g.colors_name)
 
 	for hl, spec in pairs(groups) do
 		spec = type(spec) == "string" and { link = spec } or spec
 		for _, field in ipairs({ "bg", "fg", "sp" }) do
 			if spec[field] then
-				if opts.colorBalance[opts.theme].saturation ~= 0 then
-					spec[field] = apply_saturation(spec[field], opts.colorBalance[opts.theme].saturation)
+				if opts.colorBalance[current_theme].saturation ~= 0 then
+					spec[field] = apply_saturation(spec[field], opts.colorBalance[current_theme].saturation)
 				end
-				if opts.colorBalance[opts.theme].brightness ~= 0 then
-					spec[field] = apply_brightness(spec[field], opts.colorBalance[opts.theme].brightness)
+				if opts.colorBalance[current_theme].brightness ~= 0 then
+					spec[field] = apply_brightness(spec[field], opts.colorBalance[current_theme].brightness)
 				end
 			end
 		end
@@ -61,12 +68,13 @@ end
 ---@param colors KanagawaColors
 ---@param opts KanagawaConfig
 function M.terminal(colors, opts)
+	local current_theme = util.get_current_theme(opts)
 	for hl, _ in pairs(colors.theme.term) do
-		if opts.colorBalance[opts.theme].saturation ~= 0 then
-			colors.theme.term[hl] = apply_saturation(colors.theme.term[hl], opts.colorBalance[opts.theme].saturation)
+		if opts.colorBalance[current_theme].saturation ~= 0 then
+			colors.theme.term[hl] = apply_saturation(colors.theme.term[hl], opts.colorBalance[current_theme].saturation)
 		end
-		if opts.colorBalance[opts.theme].brightness ~= 0 then
-			colors.theme.term[hl] = apply_brightness(colors.theme.term[hl], opts.colorBalance[opts.theme].brightness)
+		if opts.colorBalance[current_theme].brightness ~= 0 then
+			colors.theme.term[hl] = apply_brightness(colors.theme.term[hl], opts.colorBalance[current_theme].brightness)
 		end
 	end
 

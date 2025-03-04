@@ -6,16 +6,17 @@ Remixed light and dark Kanagawa color scheme with muted colors. For Neovim.
 
 ## 💡 Motivation
 
-I love the original [kanagawa.nvim](https://github.com/rebelot/kanagawa.nvim) color scheme, but I found some of the colors of the dark themes a bit too bright and distracting. What I wanted was a more muted theme overall, using less saturated colors inspired by the original theme.
+I love the original [kanagawa.nvim](https://github.com/rebelot/kanagawa.nvim) color scheme, but I found some of the colors a bit too bright and distracting. What I wanted was a more muted theme overall, using less saturated colors inspired by the original theme.
 
-kanagawa-paper provides 2 theme variants; `canvas` for sunny days and `ink` for late nights.
+Both a light theme and a dark theme are provided.
 
 I have also ported the color scheme to VSCode, which you can find here: [kanagawa-paper.vscode](https://github.com/thesimonho/kanagawa-paper.vscode)
 
 ## ⚡️ Requirements
 
-- [Neovim](https://github.com/neovim/neovim) >=
-  [0.8.0](https://github.com/neovim/neovim/releases/tag/v0.8.0)
+- [Neovim](https://github.com/neovim/neovim) >= [0.8.0](https://github.com/neovim/neovim/releases/tag/v0.8.0)
+- truecolor terminal support
+- undercurl terminal support (optional)
 
 ## 📦 Installation
 
@@ -32,7 +33,19 @@ Install the theme with your preferred package manager, such as [lazy.nvim](https
 
 ## 🚀 Usage
 
-### Vim Script
+Kanagawa Paper comes in a few variants:
+
+- `kanagawa-paper-ink` for late nights
+- `kanagawa-paper-canvas` for sunny days
+- `kanagawa-paper` for automatic theme selection based on `vim.o.background`
+
+Themes can be changed in a couple of ways:
+
+- Using the `background` option:
+  If using `kanagawa-paper`, any change to the value of `vim.o.background` will select the corresponding light or dark theme. If this is unset, the theme will default to the dark theme 'ink'.
+- Loading the color scheme directly with:
+
+Vim:
 
 ```vim
 colorscheme kanagawa-paper
@@ -40,7 +53,7 @@ colorscheme kanagawa-paper-ink
 colorscheme kanagawa-paper-canvas
 ```
 
-### Lua
+Neovim:
 
 ```lua
 vim.cmd.colorscheme("kanagawa-paper")
@@ -51,16 +64,12 @@ vim.cmd.colorscheme("kanagawa-paper-canvas")
 ## ⚙️ Configuration
 
 > [!IMPORTANT]
-> Set the configuration **BEFORE** loading the color scheme with `colorscheme kanagawa-paper`.
+> Set the configuration **BEFORE** loading the color scheme to ensure the settings are applied, otherwise defaults will be used.
+
+The default configuration can be found [here](lua/kanagawa-paper/config.lua)
 
 ```lua
 require("kanagawa-paper").setup({
- -- theme variant to use:
- -- "ink" : dark theme
- -- "canvas" : light theme
- -- "kanagawa-paper" : automatically set theme based on background color
- theme = "kanagawa-paper",
-
  -- enable undercurls for underlined text
  undercurl = true,
  -- transparent background
@@ -115,12 +124,7 @@ require("kanagawa-paper").setup({
   -- which_key = false
  },
 })
-
--- setup must be called before loading
-vim.cmd("colorscheme kanagawa-paper")
 ```
-
-The default configuration can be found [here](lua/kanagawa-paper/config.lua)
 
 If you want to switch between light and dark themes within a Neovim session, you can set the theme to `kanagawa-paper` and change `vim.o.background` to `light` or `dark`.
 

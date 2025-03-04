@@ -1,3 +1,5 @@
+local util = require("kanagawa-paper.lib.util")
+
 ---@type PaletteColors
 local palette = {
 	-- Bg Shades
@@ -173,23 +175,19 @@ local M = {}
 ---@param opts? KanagawaConfig
 ---@return KanagawaColors
 function M.setup(opts)
+	print("colors setup")
 	opts = require("kanagawa-paper.config").extend(opts)
 
 	-- Add to and/or override palette_colors
 	local updated_palette_colors = vim.tbl_extend("force", palette, opts.colors.palette or {})
 
 	-- Generate the theme according to the updated palette colors
-	local theme
-	if opts.theme == "kanagawa-paper" then
-		theme = "kanagawa-paper.themes." .. (vim.o.background == "dark" and "ink" or "canvas")
-	else
-		theme = "kanagawa-paper.themes." .. opts.theme
-	end
-
-	local theme_colors = require(theme).get(opts, updated_palette_colors)
+	local current_theme = util.get_current_theme(opts)
+	local theme_path = "kanagawa-paper.themes." .. current_theme
+	local theme_colors = require(theme_path).get(opts, updated_palette_colors)
 
 	-- Add to and/or override theme_colors
-	local updated_theme_colors = vim.tbl_deep_extend("force", theme_colors, opts.colors.theme[opts.theme] or {})
+	local updated_theme_colors = vim.tbl_deep_extend("force", theme_colors, opts.colors.theme[current_theme] or {})
 
 	-- return palette_colors and theme_colors
 	return {

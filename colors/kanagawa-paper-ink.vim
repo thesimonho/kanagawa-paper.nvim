@@ -1,1 +1,2 @@
-lua require("kanagawa-paper").load({ theme = "ink" })
+lua print("Loading Kanagawa Paper Ink...")
+lua require("kanagawa-paper").load({ _theme = "ink" })

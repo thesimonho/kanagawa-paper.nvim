@@ -10,11 +10,15 @@ describe("plugin loads", function()
 	end)
 end)
 
-describe("loading respects vim.o.background", function()
+describe("auto theme respects vim.o.background", function()
 	before_each(function()
-		vim.o.background = "dark"
-		vim.cmd.colorscheme("default")
 		Config.setup()
+	end)
+
+	it("defaults to dark", function()
+		vim.o.background = ""
+		vim.cmd.colorscheme("kanagawa-paper")
+		assert.same("kanagawa-paper-ink", vim.g.colors_name)
 	end)
 
 	it("= dark", function()
@@ -31,62 +35,34 @@ describe("loading respects vim.o.background", function()
 		assert.same("kanagawa-paper-canvas", vim.g.colors_name)
 	end)
 
-	it("= dark with ink", function()
+	it("switches to light", function()
 		vim.o.background = "dark"
-		vim.cmd.colorscheme("kanagawa-paper-ink")
-		assert.same("dark", vim.o.background)
-		assert.same("kanagawa-paper-ink", vim.g.colors_name)
-	end)
-
-	it("= light with canvas", function()
-		vim.o.background = "light"
-		vim.cmd.colorscheme("kanagawa-paper-canvas")
-		assert.same("light", vim.o.background)
-		assert.same("kanagawa-paper-canvas", vim.g.colors_name)
-	end)
-
-	it("= dark with canvas", function()
-		vim.o.background = "dark"
-		vim.cmd.colorscheme("kanagawa-paper-canvas")
-		assert.same("light", vim.o.background)
-		assert.same("kanagawa-paper-canvas", vim.g.colors_name)
-	end)
-
-	it("= light with ink", function()
-		vim.o.background = "light"
-		vim.cmd.colorscheme("kanagawa-paper-ink")
-		assert.same("dark", vim.o.background)
-		assert.same("kanagawa-paper-ink", vim.g.colors_name)
-	end)
-
-	it(" and switches to light", function()
-		vim.o.background = "dark"
-		vim.cmd.colorscheme("kanagawa-paper-ink")
+		vim.cmd.colorscheme("kanagawa-paper")
 		vim.o.background = "light"
 		assert.same("light", vim.o.background)
 		assert.same("kanagawa-paper-canvas", vim.g.colors_name)
 	end)
 
-	it(" and switches to dark", function()
+	it("switches to dark", function()
 		vim.o.background = "light"
-		vim.cmd.colorscheme("kanagawa-paper-canvas")
+		vim.cmd.colorscheme("kanagawa-paper")
 		vim.o.background = "dark"
 		assert.same("dark", vim.o.background)
 		assert.same("kanagawa-paper-ink", vim.g.colors_name)
 	end)
 
-	it(" and remembers dark", function()
+	it("remembers dark", function()
 		vim.o.background = "dark"
-		vim.cmd.colorscheme("kanagawa-paper-ink")
+		vim.cmd.colorscheme("kanagawa-paper")
 		vim.o.background = "light"
 		vim.o.background = "dark"
 		assert.same("dark", vim.o.background)
 		assert.same("kanagawa-paper-ink", vim.g.colors_name)
 	end)
 
-	it(" and remembers light", function()
+	it("remembers light", function()
 		vim.o.background = "light"
-		vim.cmd.colorscheme("kanagawa-paper-canvas")
+		vim.cmd.colorscheme("kanagawa-paper")
 		vim.o.background = "dark"
 		vim.o.background = "light"
 		assert.same("light", vim.o.background)
@@ -94,23 +70,46 @@ describe("loading respects vim.o.background", function()
 	end)
 end)
 
-describe("loading respects user config", function()
+describe("specific themes ignore vim.o.background", function()
 	before_each(function()
-		vim.cmd.colorscheme("default")
 		Config.setup()
 	end)
 
-	it(" handles dark auto theme", function()
+	it("dark ink stays dark", function()
 		vim.o.background = "dark"
-		vim.cmd.colorscheme("kanagawa-paper")
+		vim.cmd.colorscheme("kanagawa-paper-ink")
 		assert.same("dark", vim.o.background)
 		assert.same("kanagawa-paper-ink", vim.g.colors_name)
 	end)
 
-	it(" handles light auto theme", function()
+	it("light ink stays dark", function()
 		vim.o.background = "light"
-		vim.cmd.colorscheme("kanagawa-paper")
+		vim.cmd.colorscheme("kanagawa-paper-ink")
+		assert.same("kanagawa-paper-ink", vim.g.colors_name)
+	end)
+
+	it("post light ink stays dark", function()
+		vim.cmd.colorscheme("kanagawa-paper-ink")
+		vim.o.background = "light"
+		assert.same("kanagawa-paper-ink", vim.g.colors_name)
+	end)
+
+	it("light canvas stays light", function()
+		vim.o.background = "light"
+		vim.cmd.colorscheme("kanagawa-paper-canvas")
 		assert.same("light", vim.o.background)
+		assert.same("kanagawa-paper-canvas", vim.g.colors_name)
+	end)
+
+	it("dark canvas stays light", function()
+		vim.o.background = "dark"
+		vim.cmd.colorscheme("kanagawa-paper-canvas")
+		assert.same("kanagawa-paper-canvas", vim.g.colors_name)
+	end)
+
+	it("post dark canvas stays light", function()
+		vim.cmd.colorscheme("kanagawa-paper-canvas")
+		vim.o.background = "dark"
 		assert.same("kanagawa-paper-canvas", vim.g.colors_name)
 	end)
 end)

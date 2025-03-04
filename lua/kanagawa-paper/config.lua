@@ -2,11 +2,11 @@ local M = {}
 
 ---@class KanagawaConfig
 M.defaults = {
-	-- theme variant to use:
+	-- (internal) theme variant to use:
 	-- "ink" : dark theme
 	-- "canvas" : light theme
-	-- "kanagawa-paper" : automatically set theme based on background color
-	theme = "kanagawa-paper",
+	-- "auto" : automatically set theme based on background color
+	_theme = "auto",
 
 	-- enable undercurls for underlined text
 	undercurl = true,
@@ -68,6 +68,7 @@ M.options = nil
 
 ---@param options? KanagawaConfig
 function M.setup(options)
+	print("config setup")
 	M.options = vim.tbl_deep_extend("force", {}, M.defaults, options or {})
 end
 

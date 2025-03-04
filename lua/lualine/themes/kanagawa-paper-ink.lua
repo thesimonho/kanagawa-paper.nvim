@@ -1,4 +1,4 @@
-local colors = require("kanagawa-paper.colors").setup({ theme = "ink" })
+local colors = require("kanagawa-paper.colors").setup({ _theme = "ink" })
 local theme = colors.theme
 
 return {
