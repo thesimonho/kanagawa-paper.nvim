@@ -42,7 +42,7 @@ Kanagawa Paper comes in a few variants:
 Themes can be changed in a couple of ways:
 
 - Using the `background` option:
-  If using `kanagawa-paper`, any change to the value of `vim.o.background` will select the corresponding light or dark theme. If this is unset, the theme will default to the dark theme `ink`.
+  Any change to the value of `vim.o.background` will select the corresponding light or dark theme. If this is unset, the theme will default to the dark theme `ink`.
 - Loading the color scheme directly with:
 
 Vim:
@@ -126,7 +126,7 @@ require("kanagawa-paper").setup({
 })
 ```
 
-If you want to switch between light and dark themes within a Neovim session, you can set the theme to `kanagawa-paper` and change `vim.o.background` to `light` or `dark`.
+If you want to switch between `canvas` and `ink` themes within a Neovim session, you can change `vim.o.background` to `light` or `dark`.
 
 This can also be mapped to the time of day via an autocommand or dynamically setting `vim.o.background` at startup. For example:
 

@@ -18,8 +18,12 @@ function M.load(opts)
 		theme_bg = vim.o.background
 	end
 
-	if bg ~= theme_bg and vim.g.colors_name == "kanagawa-paper" then
-		opts._theme = bg == "light" and "canvas" or "ink"
+	if bg ~= theme_bg then
+		if vim.g.colors_name == "kanagawa-paper-" .. opts._theme then
+			opts._theme = bg == "light" and "canvas" or "ink"
+		else
+			vim.o.background = theme_bg
+		end
 	end
 
 	return require("kanagawa-paper.themes").setup(opts)
