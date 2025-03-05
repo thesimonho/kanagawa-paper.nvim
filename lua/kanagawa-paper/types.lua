@@ -19,6 +19,7 @@
 ---@field all_plugins? boolean
 ---@field auto_plugins? boolean
 ---@field plugins? table<string, boolean>
+---@field integrations? {wezterm: {enabled: boolean, path: string}}
 
 ---@class ColorOffset
 ---@field brightness number [-1, 1]

@@ -63,7 +63,7 @@ vim.cmd.colorscheme("kanagawa-paper-ink")
 vim.cmd.colorscheme("kanagawa-paper-canvas")
 ```
 
-## ⚙️ Configuration
+## 🛠️ Configuration
 
 > [!IMPORTANT]
 > Set the configuration **BEFORE** loading the color scheme to ensure the settings are applied, otherwise defaults will be used.
@@ -125,6 +125,17 @@ require("kanagawa-paper").setup({
   -- rainbow_delimiters = true
   -- which_key = false
  },
+
+ -- enable integrations with other applications
+ integrations = {
+  -- automatically set wezterm theme to match the current neovim theme
+  wezterm = {
+   enabled = false,
+   -- neovim will write the theme name to this file
+   -- wezterm will read from this file to know which theme to use
+   path = "/tmp/nvim-theme",
+  },
+ },
 })
 ```
 
@@ -137,9 +148,13 @@ local hour = os.date("*t").hour
 vim.o.background = (hour >= 7 and hour < 19) and "light" or "dark"
 ```
 
-## [Lualine](https://github.com/nvim-lualine/lualine.nvim)
+## 👥 Integrations
 
-This color scheme comes with matching Lualine themes for both `ink` and `canvas` variants. This will set the theme at startup:
+### [Lualine](https://github.com/nvim-lualine/lualine.nvim)
+
+This color scheme comes with matching Lualine themes for both `ink` and `canvas` variants.
+
+This will set the theme at startup:
 
 ```lua
 local kanagawa_paper = require("lualine.themes.kanagawa-paper-ink")
@@ -181,6 +196,49 @@ Examples of situations where this might be useful:
 - You want to change the theme mid-session
 - You want to change background color mid-session (either by manually setting `vim.o.background` or with something like dark background toggle in LazyVim)
 - You use a plugin for live previews of color schemes
+
+### [WezTerm](https://wezfurlong.org/wezterm/) and [WezTerm Tabline](https://github.com/michaelbrusegard/tabline.wez)
+
+If you use WezTerm and/or WezTerm Tabline, you can use the `wezterm` integration to automatically switch themes based on the current Neovim theme. This feature requires Wezterm [automatic reload config](https://wezterm.org/config/lua/config/automatically_reload_config.html) to be turned on.
+
+There are a few things to set up for this to work:
+
+1. Enable the integration in your Neovim configuration:
+
+```lua
+require("kanagawa-paper").setup({
+ integrations = {
+  wezterm = {
+   enabled = true,
+   path = (os.getenv("TEMP") or "/tmp") .. "/nvim-theme"
+  },
+ },
+})
+```
+
+2. Place the [wezterm](extras/wezterm) and [wezterm tabline](extras/wezterm_tabline) extras in the wezterm color scheme directory. Point wezterms config to that directory:
+
+```lua
+config.color_scheme_dirs = { "~/.config/wezterm/colors" } -- or wherever you want to store the themes
+```
+
+3. Copy [theme_switcher.lua](lua/wezterm) to where your wezterm config is. Add `require("theme_switcher")` to your wezterm config to load the theme switcher.
+
+4. Update the `theme_switcher.lua` file with the correct paths to your files:
+
+```lua
+-- default colorscheme after neovim exits
+local theme_default = "kanagawa-paper-ink"
+
+-- this should match the path set in the neovim config
+-- it's best to use a temporary directory for this
+local theme_file = (os.getenv("TEMP") or "/tmp") .. "/nvim-theme"
+
+-- relative path to the directory containing the tabline themes
+-- e.g. if I have placed the tabline extra themes in ./colors/wezterm_tabline then this would be "colors.wezterm_tabline"
+-- this is treated as a relative lua module that will be required by the theme switcher
+local tabline_theme_dir = "colors.wezterm_tabline"
+```
 
 ## 🔧 Customizing Colors
 

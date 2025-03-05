@@ -1,3 +1,4 @@
+local util = require("kanagawa-paper.lib.util")
 local config = require("kanagawa-paper.config")
 
 local M = {}
@@ -23,6 +24,17 @@ function M.load(opts)
 			opts._theme = bg == "light" and "canvas" or "ink"
 		else
 			vim.o.background = theme_bg
+		end
+	end
+
+	if opts.integrations.wezterm.enabled then
+		util.write(
+			vim.fn.expand(opts.integrations.wezterm.path),
+			vim.o.background == "light" and "kanagawa-paper-canvas" or "kanagawa-paper-ink"
+		)
+	else
+		if vim.fn.filereadable(vim.fn.expand(opts.integrations.wezterm.path)) == 1 then
+			os.remove(vim.fn.expand(opts.integrations.wezterm.path))
 		end
 	end
 
