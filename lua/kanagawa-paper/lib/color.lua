@@ -1,4 +1,8 @@
-local hsluv = require("kanagawa-paper.lib.hsluv")
+local hex_to_hsluv = require("kanagawa-paper.lib.hsluv").hex_to_hsluv
+local hsluv_to_rgb = require("kanagawa-paper.lib.hsluv").hsluv_to_rgb
+local hsluv_to_hex = require("kanagawa-paper.lib.hsluv").hsluv_to_hex
+local hex_to_rgb = require("kanagawa-paper.lib.hsluv").hex_to_rgb
+local rgb_to_hsluv = require("kanagawa-paper.lib.hsluv").rgb_to_hsluv
 
 ---@class HSLuvColor
 local Color = {}
@@ -20,16 +24,16 @@ function Color.new(hex)
 	if hex:lower() == "none" then
 		return setmetatable({ H = 0, S = 0, L = 0, to_hex = none_to_hex }, Color_mt)
 	end
-	local H, S, L = unpack(hsluv.hex_to_hsluv(hex))
+	local H, S, L = unpack(hex_to_hsluv(hex))
 	return setmetatable({ H = H, S = S, L = L }, Color_mt)
 end
 
 function Color:to_rgb()
-	return hsluv.hsluv_to_rgb({ self.H, self.S, self.L })
+	return hsluv_to_rgb({ self.H, self.S, self.L })
 end
 
 function Color:to_hex()
-	return hsluv.hsluv_to_hex({ self.H, self.S, self.L })
+	return hsluv_to_hex({ self.H, self.S, self.L })
 end
 
 local function blendRGB(a, b, r)
@@ -48,8 +52,8 @@ function Color:blend(b, r)
 	if b:lower() == "none" then
 		return self
 	end
-	local c = blendRGB(self:to_rgb(), hsluv.hex_to_rgb(b), r)
-	self.H, self.S, self.L = unpack(hsluv.rgb_to_hsluv(c))
+	local c = blendRGB(self:to_rgb(), hex_to_rgb(b), r)
+	self.H, self.S, self.L = unpack(rgb_to_hsluv(c))
 	return self
 end
 
@@ -60,7 +64,7 @@ function Color:brighten(r, bg)
 	if bg and bg:lower() == "none" then
 		return self
 	end
-	local bg_lightness = bg and hsluv.hex_to_hsluv(bg)[3] or 0
+	local bg_lightness = bg and hex_to_hsluv(bg)[3] or 0
 	r = bg_lightness > 50 and -r or r
 
 	local lspace = r > 0 and 100 - self.L or self.L

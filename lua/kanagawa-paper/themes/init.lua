@@ -1,12 +1,15 @@
 local color = require("kanagawa-paper.lib.color")
 local util = require("kanagawa-paper.lib.util")
+local clamp = util.clamp
+local scale_log = util.scale_log
+local scale_log_asymmetric = util.scale_log_asymmetric
 
 ---@param hex ColorSpec
 ---@param offset number
 ---@return ColorSpec
 local function apply_brightness(hex, offset)
-	local clamped_offset = util.clamp(offset, -1, 1)
-	local rescaled_offset = util.scale_log(clamped_offset, 3, 0.2)
+	local clamped_offset = clamp(offset, -1, 1)
+	local rescaled_offset = scale_log(clamped_offset, 3, 0.2)
 	return color(hex):brighten(rescaled_offset):to_hex()
 end
 
@@ -14,8 +17,8 @@ end
 ---@param offset number
 ---@return ColorSpec
 local function apply_saturation(hex, offset)
-	local clamped_offset = util.clamp(offset, -1, 1)
-	local rescaled_offset = util.scale_log_asymmetric(clamped_offset, 3, 0.2, 0.5)
+	local clamped_offset = clamp(offset, -1, 1)
+	local rescaled_offset = scale_log_asymmetric(clamped_offset, 3, 0.2, 0.5)
 	return color(hex):saturate(rescaled_offset):to_hex()
 end
 
