@@ -1,22 +1,50 @@
+local util = require("kanagawa-paper.lib.util")
+
 local M = {}
-M.plugins = {}
+M.plugins = nil
 
 -- Get and store all available plugins
 function M.get_all_plugins()
-	local plugin_dirs = vim.api.nvim_get_runtime_file("**/kanagawa-paper/groups/plugins", false)
-	if #plugin_dirs == 0 then
-		return
+	if M.plugins then
+		return M.plugins
 	end
 
-	local plugin_root = plugin_dirs[1]
+	local cache_data = util.cache.read("plugins")
+	if cache_data and cache_data.plugin_root then
+		local stat = vim.uv.fs_stat(cache_data.plugin_root)
+		if stat and stat.mtime.sec <= cache_data.mtime then
+			return cache_data.plugins
+		end
+	end
+
+	-- cache is missing or stale
+	vim.notify("Updating plugins cache...", vim.log.levels.INFO, { title = "kanagawa-paper.nvim" })
+	local runtime_files = vim.api.nvim_get_runtime_file("**/kanagawa-paper/groups/plugins", false)
+	if #runtime_files == 0 then
+		return {}
+	end
+
+	local plugin_root = runtime_files[1]
+	local stat = vim.loop.fs_stat(plugin_root)
+	local current_mtime = stat and stat.mtime.sec or 0
+
+	local plugins = {}
 	for name, type in vim.fs.dir(plugin_root) do
 		if type == "file" then
 			local basename = name:match("(.+)%.lua$")
 			if basename then
-				M.plugins[#M.plugins + 1] = basename
+				table.insert(plugins, basename)
 			end
 		end
 	end
+
+	local new_data = {
+		plugin_root = plugin_root,
+		mtime = current_mtime,
+		plugins = plugins,
+	}
+	util.cache.write("plugins", new_data)
+	return plugins
 end
 
 ---@param colors KanagawaColors
@@ -37,7 +65,7 @@ function M.setup(colors, opts)
 	end
 
 	-- determine plugin groups based on user config
-	M.get_all_plugins()
+	M.plugins = M.get_all_plugins()
 	local enabled_plugins = {}
 	if opts.all_plugins then
 		for _, plugin in ipairs(M.plugins) do
@@ -66,7 +94,11 @@ function M.setup(colors, opts)
 			-- use pcall to avoid error if plugin doesnt exist
 			local ok, res = pcall(require, "kanagawa-paper.groups.plugins." .. plugin)
 			if not ok then
-				vim.notify("Error loading theme plugin: " .. plugin .. "\n" .. res, vim.log.levels.ERROR)
+				vim.notify(
+					"Error loading plugin: " .. plugin .. "\n" .. res,
+					vim.log.levels.ERROR,
+					{ title = "kanagawa-paper.nvim" }
+				)
 			else
 				for hl, spec in pairs(res.get(colors, opts)) do
 					groups[hl] = spec
