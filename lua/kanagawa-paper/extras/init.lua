@@ -37,7 +37,7 @@ function M.setup()
 		local info = M.mapping[extra]
 		local plugin = require("kanagawa-paper.extras." .. extra)
 		for theme, theme_name in pairs(themes) do
-			local colors, groups, opts = kanagawa.load({ theme = theme, all_plugins = true })
+			local colors, groups, opts = kanagawa.load({ _theme = theme, all_plugins = true })
 			local fname = extra
 				.. (info.subdir and "/" .. info.subdir .. "/" or "")
 				.. "/kanagawa-paper"
