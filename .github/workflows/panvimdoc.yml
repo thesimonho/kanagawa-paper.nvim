@@ -37,13 +37,13 @@ jobs:
           incrementheadinglevelby: 0 # Increment heading levels by specified number
       - name: Stash changes if needed
         run: |
-          git diff --quiet || git stash
+          git stash push
       - name: Pull latest changes with rebase
         run: |
           git pull --rebase origin ${{ github.ref_name }}
       - name: Restore stash if needed
         run: |
-          git stash pop || echo "No stash to pop"
+          git stash pop
       - uses: stefanzweifel/git-auto-commit-action@v5
         with:
           commit_message: "docs(vim): auto generate vimdoc"
