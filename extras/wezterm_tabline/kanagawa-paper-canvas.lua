@@ -8,34 +8,34 @@ local M = {}
 
 M.theme_overrides = {
   normal_mode = {
-    a = { fg = "#363646", bg = "#c4b28a" },
-    b = { fg = "#c4b28a", bg = "#363646" },
-    c = { fg = "#9e9b93", bg = "#2A2A37" },
+    a = { fg = "#ecece8", bg = "#618bb6" },
+    b = { fg = "#618bb6", bg = "#ecece8" },
+    c = { fg = "#858479", bg = "#cbc8bc" },
   },
   copy_mode = {
-    a = { fg = "#363646", bg = "#c4746e" },
-    b = { fg = "#c4746e", bg = "#363646" },
-    c = { fg = "#9e9b93", bg = "#2A2A37" },
+    a = { fg = "#ecece8", bg = "#ba4e5a" },
+    b = { fg = "#ba4e5a", bg = "#ecece8" },
+    c = { fg = "#858479", bg = "#cbc8bc" },
   },
   search_mode = {
-    a = { fg = "#363646", bg = "#938AA9" },
-    b = { fg = "#938AA9", bg = "#363646" },
-    c = { fg = "#9e9b93", bg = "#2A2A37" },
+    a = { fg = "#ecece8", bg = "#a398bf" },
+    b = { fg = "#a398bf", bg = "#ecece8" },
+    c = { fg = "#858479", bg = "#cbc8bc" },
   },
   window_mode = {
-    a = { fg = "#363646", bg = "#658594" },
-    b = { fg = "#658594", bg = "#363646" },
-    c = { fg = "#9e9b93", bg = "#2A2A37" },
+    a = { fg = "#ecece8", bg = "#526994" },
+    b = { fg = "#526994", bg = "#ecece8" },
+    c = { fg = "#858479", bg = "#cbc8bc" },
   },
   resize_mode = {
-    a = { fg = "#363646", bg = "#b6927b" },
-    b = { fg = "#b6927b", bg = "#363646" },
-    c = { fg = "#9e9b93", bg = "#2A2A37" },
+    a = { fg = "#ecece8", bg = "#b8805e" },
+    b = { fg = "#b8805e", bg = "#ecece8" },
+    c = { fg = "#858479", bg = "#cbc8bc" },
   },
   tab = {
-    active = { fg = '#c4b28a', bg = '#1F1F28', bold = true },
-    inactive = { fg = '#9e9b93', bg = '#2A2A37' },
-    inactive_hover = { fg = '#a292a3', bg = '#1F1F28' },
+    active = { fg = '#618bb6', bg = '#e1e1de', bold = true },
+    inactive = { fg = '#858479', bg = '#cbc8bc' },
+    inactive_hover = { fg = '#a85b76', bg = '#e1e1de' },
   }
 }
 
