@@ -1,4 +1,4 @@
-*kanagawa-paper.nvim.txt*      For NVIM v0.8.0      Last change: 2025 March 03
+*kanagawa-paper.nvim.txt*      For NVIM v0.8.0      Last change: 2025 March 06
 
 ==============================================================================
 Table of Contents                      *kanagawa-paper.nvim-table-of-contents*
@@ -9,7 +9,7 @@ Table of Contents                      *kanagawa-paper.nvim-table-of-contents*
   - Installation                            |kanagawa-paper.nvim-installation|
   - Usage                                          |kanagawa-paper.nvim-usage|
   - Configuration                          |kanagawa-paper.nvim-configuration|
-  - Lualine                                      |kanagawa-paper.nvim-lualine|
+  - Integrations                            |kanagawa-paper.nvim-integrations|
   - Customizing Colors                |kanagawa-paper.nvim-customizing-colors|
   - Extras                                        |kanagawa-paper.nvim-extras|
   - Contributing                            |kanagawa-paper.nvim-contributing|
@@ -25,12 +25,11 @@ Remixed light and dark Kanagawa color scheme with muted colors. For Neovim.
 MOTIVATION                                    *kanagawa-paper.nvim-motivation*
 
 I love the original kanagawa.nvim <https://github.com/rebelot/kanagawa.nvim>
-color scheme, but I found some of the colors of the dark themes a bit too
-bright and distracting. What I wanted was a more muted theme overall, using
-less saturated colors inspired by the original theme.
+color scheme, but I found some of the colors a bit too bright and distracting.
+What I wanted was a more muted theme overall, using less saturated colors
+inspired by the original theme.
 
-kanagawa-paper provides 2 theme variants; `canvas` for sunny days and `ink` for
-late nights.
+Both a light theme and a dark theme are provided.
 
 I have also ported the color scheme to VSCode, which you can find here:
 kanagawa-paper.vscode <https://github.com/thesimonho/kanagawa-paper.vscode>
@@ -38,8 +37,9 @@ kanagawa-paper.vscode <https://github.com/thesimonho/kanagawa-paper.vscode>
 
 REQUIREMENTS                                *kanagawa-paper.nvim-requirements*
 
-- Neovim <https://github.com/neovim/neovim> >=
-    0.8.0 <https://github.com/neovim/neovim/releases/tag/v0.8.0>
+- Neovim <https://github.com/neovim/neovim> >= 0.8.0 <https://github.com/neovim/neovim/releases/tag/v0.8.0>
+- truecolor terminal support
+- undercurl terminal support (optional)
 
 
 INSTALLATION                                *kanagawa-paper.nvim-installation*
@@ -59,8 +59,21 @@ Install the theme with your preferred package manager, such as lazy.nvim
 
 USAGE                                              *kanagawa-paper.nvim-usage*
 
+Kanagawa Paper comes in a few variants:
 
-VIM SCRIPT ~
+- `kanagawa-paper-ink` for late nights
+- `kanagawa-paper-canvas` for sunny days
+- `kanagawa-paper` for automatic theme switching based on `vim.o.background`
+
+Most of the time you’ll want to use `kanagawa-paper` for maximum flexibility.
+
+Themes can be changed in a couple of ways:
+
+- Using the `background` option:
+    Any change to the value of `vim.o.background` will select the corresponding light or dark theme. If this is unset, the theme will default to the dark theme `ink`.
+- Loading the color scheme directly with:
+
+Vim:
 
 >vim
     colorscheme kanagawa-paper
@@ -68,8 +81,7 @@ VIM SCRIPT ~
     colorscheme kanagawa-paper-canvas
 <
 
-
-LUA ~
+Neovim:
 
 >lua
     vim.cmd.colorscheme("kanagawa-paper")
@@ -81,16 +93,12 @@ LUA ~
 CONFIGURATION                              *kanagawa-paper.nvim-configuration*
 
 
-  [!IMPORTANT] Set the configuration **BEFORE** loading the color scheme with
-  `colorscheme kanagawa-paper`.
+  [!IMPORTANT] Set the configuration **BEFORE** loading the color scheme to
+  ensure the settings are applied, otherwise defaults will be used.
+The default configuration can be found here <lua/kanagawa-paper/config.lua>
+
 >lua
     require("kanagawa-paper").setup({
-     -- theme variant to use:
-     -- "ink" : dark theme
-     -- "canvas" : light theme
-     -- "kanagawa-paper" : automatically set theme based on background color
-     theme = "kanagawa-paper",
-    
      -- enable undercurls for underlined text
      undercurl = true,
      -- transparent background
@@ -144,17 +152,22 @@ CONFIGURATION                              *kanagawa-paper.nvim-configuration*
       -- rainbow_delimiters = true
       -- which_key = false
      },
-    })
     
-    -- setup must be called before loading
-    vim.cmd("colorscheme kanagawa-paper")
+     -- enable integrations with other applications
+     integrations = {
+      -- automatically set wezterm theme to match the current neovim theme
+      wezterm = {
+       enabled = false,
+       -- neovim will write the theme name to this file
+       -- wezterm will read from this file to know which theme to use
+       path = "/tmp/nvim-theme",
+      },
+     },
+    })
 <
 
-The default configuration can be found here <lua/kanagawa-paper/config.lua>
-
-If you want to switch between light and dark themes within a Neovim session,
-you can set the theme to `kanagawa-paper` and change `vim.o.background` to
-`light` or `dark`.
+If you want to switch between `canvas` and `ink` themes within a Neovim
+session, you can change `vim.o.background` to `light` or `dark`.
 
 This can also be mapped to the time of day via an autocommand or dynamically
 setting `vim.o.background` at startup. For example:
@@ -165,14 +178,18 @@ setting `vim.o.background` at startup. For example:
 <
 
 
-LUALINE                                          *kanagawa-paper.nvim-lualine*
+INTEGRATIONS                                *kanagawa-paper.nvim-integrations*
+
+
+LUALINE ~
 
 This color scheme comes with matching Lualine themes for both `ink` and
-`canvas` variants. This will set the theme at startup:
+`canvas` variants.
+
+This will set the theme at startup:
 
 >lua
-    local kanagawa_paper = require("lualine.themes.kanagawa-paper") -- switches based on vim.o.background
-    -- local kanagawa_paper = require("lualine.themes.kanagawa-paper-ink")
+    local kanagawa_paper = require("lualine.themes.kanagawa-paper-ink")
     -- local kanagawa_paper = require("lualine.themes.kanagawa-paper-canvas")
     
     require("lualine").setup({
@@ -183,24 +200,28 @@ This color scheme comes with matching Lualine themes for both `ink` and
     })
 <
 
-For a more advanced use case you can make use of the stored global variable
-`vim.g.colors_name` to dynamically set the Lualine theme:
+For a more advanced use case you can make use of the background color to set
+the Lualine theme dynamically. This switches Lualine between light and dark
+themes based on background color, but only if you’re using the auto-switching
+`kanagawa-paper` main theme.
 
 >lua
     require("lualine").setup({
      options = {
       theme = function()
-        if vim.g.colors_name then
-          -- pcall to handle the case of theme switching/previewing
-          local ok, t = pcall(require, "lualine.themes." .. vim.g.colors_name)
-          if ok then
-            return t
-          end
+        -- pcall and fallback theme is to handle the case of theme switching/previewing
+        local ok, t = pcall(
+          require,
+          "lualine.themes." .. (vim.g.colors_name == "kanagawa-paper" and vim.o.background == "light" and "kanagawa-paper-canvas" or "kanagawa-paper-ink")
+        )
+        if ok then
+          theme = t
+        else
+          theme = require("some other fallback theme")
         end
-        -- default fallback
-        return require("lualine.themes.kanagawa-paper")
+        return theme
       end,
-      -- ...
+      -- ... your lualine config
      },
     })
 <
@@ -210,6 +231,58 @@ Examples of situations where this might be useful:
 - You want to change the theme mid-session
 - You want to change background color mid-session (either by manually setting `vim.o.background` or with something like dark background toggle in LazyVim)
 - You use a plugin for live previews of color schemes
+
+
+WEZTERM AND WEZTERM TABLINE ~
+
+If you use WezTerm and/or WezTerm Tabline, you can use the `wezterm`
+integration to automatically switch themes based on the current Neovim theme.
+This feature requires Wezterm automatic reload config
+<https://wezterm.org/config/lua/config/automatically_reload_config.html> to be
+turned on.
+
+There are a few things to set up for this to work:
+
+1. Enable the integration in your Neovim configuration:
+
+>lua
+    require("kanagawa-paper").setup({
+     integrations = {
+      wezterm = {
+       enabled = true,
+       path = (os.getenv("TEMP") or "/tmp") .. "/nvim-theme"
+      },
+     },
+    })
+<
+
+1. Place the wezterm <extras/wezterm> and wezterm tabline <extras/wezterm_tabline> extras in the wezterm color scheme directory. Point wezterms config to that directory:
+
+>lua
+    config.color_scheme_dirs = { "~/.config/wezterm/colors" } -- or wherever you want to store the themes
+<
+
+1. Copy theme_switcher.lua <lua/wezterm> to where your wezterm config is. Add
+`require("theme_switcher")` to your wezterm config to load the theme switcher.
+
+
+2. Update the `theme_switcher.lua` file with the correct paths to your files:
+
+
+
+>lua
+    -- default colorscheme after neovim exits
+    local theme_default = "kanagawa-paper-ink"
+    
+    -- this should match the path set in the neovim config
+    -- it's best to use a temporary directory for this
+    local theme_file = (os.getenv("TEMP") or "/tmp") .. "/nvim-theme"
+    
+    -- relative path to the directory containing the tabline themes
+    -- e.g. if I have placed the tabline extra themes in ./colors/wezterm_tabline then this would be "colors.wezterm_tabline"
+    -- this is treated as a relative lua module that will be required by the theme switcher
+    local tabline_theme_dir = "colors.wezterm_tabline"
+<
 
 
 CUSTOMIZING COLORS                    *kanagawa-paper.nvim-customizing-colors*
