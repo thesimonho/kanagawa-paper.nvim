@@ -36,13 +36,13 @@ jobs:
           git add -f extras/
       - name: Stash changes if needed
         run: |
-          git stash push
+          git stash push || echo "No changes to stash"
       - name: Pull latest changes with rebase
         run: |
           git pull --rebase origin ${{ github.ref_name }}
       - name: Restore stash if needed
         run: |
-          git stash pop
+          git stash pop || echo "No changes to restore"
       - uses: stefanzweifel/git-auto-commit-action@v5
         with:
           commit_message: "build(extras): auto build themes for extras"
