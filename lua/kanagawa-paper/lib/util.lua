@@ -103,33 +103,4 @@ function M.write(file, contents)
 	fd:close()
 end
 
-M.cache = {}
-
----@param key string
----@return string
-function M.cache.file(key)
-	return vim.fn.stdpath("cache") .. "/kanagawa-paper-" .. key .. ".json"
-end
-
----@param key string
-function M.cache.read(key)
-	local ok, ret = pcall(function()
-		return vim.json.decode(M.read(M.cache.file(key)), { luanil = {
-			object = true,
-			array = true,
-		} })
-	end)
-	return ok and ret or nil
-end
-
-function M.cache.write(key, data)
-	pcall(M.write, M.cache.file(key), vim.json.encode(data))
-end
-
-function M.cache.clear()
-	for _, key in ipairs({ "plugins", "ink", "canvas" }) do
-		vim.uv.fs_unlink(M.cache.file(key))
-	end
-end
-
 return M

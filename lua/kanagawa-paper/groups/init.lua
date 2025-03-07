@@ -1,4 +1,4 @@
-local util = require("kanagawa-paper.lib.util")
+local cache = require("kanagawa-paper.lib.cache")
 
 local M = {}
 M.plugins = nil
@@ -9,7 +9,7 @@ function M.get_all_plugins()
 		return M.plugins
 	end
 
-	local cache_data = util.cache.read("plugins")
+	local cache_data = cache.read("plugins")
 	if cache_data and cache_data.plugin_root then
 		local stat = vim.uv.fs_stat(cache_data.plugin_root)
 		if stat and stat.mtime.sec <= cache_data.mtime then
@@ -18,14 +18,13 @@ function M.get_all_plugins()
 	end
 
 	-- cache is missing or stale
-	vim.notify("Updating plugins cache...", vim.log.levels.INFO, { title = "kanagawa-paper.nvim" })
 	local runtime_files = vim.api.nvim_get_runtime_file("**/kanagawa-paper/groups/plugins", false)
 	if #runtime_files == 0 then
 		return {}
 	end
 
 	local plugin_root = runtime_files[1]
-	local stat = vim.loop.fs_stat(plugin_root)
+	local stat = vim.uv.fs_stat(plugin_root)
 	local current_mtime = stat and stat.mtime.sec or 0
 
 	local plugins = {}
@@ -43,7 +42,7 @@ function M.get_all_plugins()
 		mtime = current_mtime,
 		plugins = plugins,
 	}
-	util.cache.write("plugins", new_data)
+	cache.write("plugins", new_data)
 	return plugins
 end
 

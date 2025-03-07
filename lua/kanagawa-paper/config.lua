@@ -20,6 +20,9 @@ M.defaults = {
 	dim_inactive = true,
 	-- set colors for terminal buffers
 	terminal_colors = true,
+	-- cache highlights and colors for faster startup.
+	-- turning this on will require rebuilding the cache whenever you change your config.
+	cache = false,
 
 	styles = {
 		-- style for comments

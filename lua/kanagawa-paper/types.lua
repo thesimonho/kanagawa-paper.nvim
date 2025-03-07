@@ -8,6 +8,7 @@
 ---@field diag_background? boolean
 ---@field dim_inactive? boolean
 ---@field terminal_colors? boolean
+---@field cache? boolean
 ---@field styles? {comment: vim.api.keyset.highlight, functions: vim.api.keyset.highlight, keyword: vim.api.keyset.highlight, statement: vim.api.keyset.highlight, type: vim.api.keyset.highlight,}
 ---@field colors? {palette: PaletteColors, theme: {ink: ThemeColors, canvas: ThemeColors}}
 ---@field color_balance? table<string, ColorOffset>
@@ -16,6 +17,13 @@
 ---@field auto_plugins? boolean
 ---@field plugins? table<string, boolean>
 ---@field integrations? {wezterm: {enabled: boolean, path: string}}
+
+---@class KanagawaCache
+---@field colors KanagawaColors
+---@field highlights table<string, vim.api.keyset.highlight>
+---@field termcolors table<number, ColorSpec>
+---@field opts KanagawaConfig
+---@field version string
 
 ---@class ColorOffset
 ---@field brightness number [-1, 1]

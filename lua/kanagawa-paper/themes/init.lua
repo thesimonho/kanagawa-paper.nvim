@@ -1,35 +1,11 @@
-local color = require("kanagawa-paper.lib.color")
+local cache = require("kanagawa-paper.lib.cache")
 local util = require("kanagawa-paper.lib.util")
-local clamp = util.clamp
-local scale_log = util.scale_log
-local scale_log_asymmetric = util.scale_log_asymmetric
-
----@param hex ColorSpec
----@param offset number
----@return ColorSpec
-local function apply_brightness(hex, offset)
-	local clamped_offset = clamp(offset, -1, 1)
-	local rescaled_offset = scale_log(clamped_offset, 3, 0.2)
-	return color(hex):brighten(rescaled_offset):to_hex()
-end
-
----@param hex ColorSpec
----@param offset number
----@return ColorSpec
-local function apply_saturation(hex, offset)
-	local clamped_offset = clamp(offset, -1, 1)
-	local rescaled_offset = scale_log_asymmetric(clamped_offset, 3, 0.2, 0.5)
-	return color(hex):saturate(rescaled_offset):to_hex()
-end
 
 local M = {}
 
 ---@param opts? KanagawaConfig
 function M.setup(opts)
 	opts = require("kanagawa-paper.config").extend(opts)
-
-	local colors = require("kanagawa-paper.colors").setup(opts)
-	local groups, _ = require("kanagawa-paper.groups").setup(colors, opts)
 
 	-- only needed to clear when not the default colorscheme
 	if vim.g.colors_name then
@@ -44,71 +20,48 @@ function M.setup(opts)
 		vim.g.colors_name = "kanagawa-paper-" .. current_theme
 	end
 
-	for hl, spec in pairs(groups) do
-		spec = type(spec) == "string" and { link = spec } or spec
-		for _, field in ipairs({ "bg", "fg", "sp" }) do
-			if spec[field] then
-				if opts.colorBalance[current_theme].saturation ~= 0 then
-					spec[field] = apply_saturation(spec[field], opts.colorBalance[current_theme].saturation)
-				end
-				if opts.colorBalance[current_theme].brightness ~= 0 then
-					spec[field] = apply_brightness(spec[field], opts.colorBalance[current_theme].brightness)
+	local cached = nil
+	local cache_opts = cache.get_opts(opts)
+
+	if opts.cache then
+		cached = cache.read(current_theme)
+	end
+
+	if opts.cache and cached and cache.inputs_match(cached, cache_opts) then
+		cache.apply(cached)
+		if opts.terminal_colors then
+			cache.apply_terminal(cached)
+		end
+		return cached.colors, cached.highlights, opts
+	else
+		local apply_saturation = require("kanagawa-paper.colors").apply_saturation
+		local apply_brightness = require("kanagawa-paper.colors").apply_brightness
+		local colors = require("kanagawa-paper.colors").setup(opts)
+		local groups, _ = require("kanagawa-paper.groups").setup(colors, opts)
+		local term_colors = require("kanagawa-paper.colors").terminal(colors, opts)
+
+		for hl, spec in pairs(groups) do
+			spec = type(spec) == "string" and { link = spec } or spec
+			for _, field in ipairs({ "bg", "fg", "sp" }) do
+				if spec[field] then
+					if opts.color_balance[current_theme].saturation ~= 0 then
+						spec[field] = apply_saturation(spec[field], opts.color_balance[current_theme].saturation)
+					end
+					if opts.color_balance[current_theme].brightness ~= 0 then
+						spec[field] = apply_brightness(spec[field], opts.color_balance[current_theme].brightness)
+					end
 				end
 			end
+			vim.api.nvim_set_hl(0, hl, spec)
 		end
-		vim.api.nvim_set_hl(0, hl, spec)
-	end
 
-	if opts.terminalColors then
-		M.terminal(colors, opts)
-	end
-
-	return colors, groups, opts
-end
-
----@param colors KanagawaColors
----@param opts KanagawaConfig
-function M.terminal(colors, opts)
-	local current_theme = util.get_current_theme(opts)
-	for hl, _ in pairs(colors.theme.term) do
-		if opts.colorBalance[current_theme].saturation ~= 0 then
-			colors.theme.term[hl] = apply_saturation(colors.theme.term[hl], opts.colorBalance[current_theme].saturation)
+		if opts.cache then
+			local container = cache.create_container(colors, groups, term_colors, cache_opts)
+			cache.write(current_theme, container)
 		end
-		if opts.colorBalance[current_theme].brightness ~= 0 then
-			colors.theme.term[hl] = apply_brightness(colors.theme.term[hl], opts.colorBalance[current_theme].brightness)
-		end
+
+		return colors, groups, opts
 	end
-
-	-- dark
-	vim.g.terminal_color_0 = colors.theme.term.black
-	vim.g.terminal_color_8 = colors.theme.term.black_bright
-
-	-- light
-	vim.g.terminal_color_7 = colors.theme.term.white
-	vim.g.terminal_color_15 = colors.theme.term.white_bright
-
-	-- colors
-	vim.g.terminal_color_1 = colors.theme.term.red
-	vim.g.terminal_color_9 = colors.theme.term.red_bright
-
-	vim.g.terminal_color_2 = colors.theme.term.green
-	vim.g.terminal_color_10 = colors.theme.term.green_bright
-
-	vim.g.terminal_color_3 = colors.theme.term.yellow
-	vim.g.terminal_color_11 = colors.theme.term.yellow_bright
-
-	vim.g.terminal_color_4 = colors.theme.term.blue
-	vim.g.terminal_color_12 = colors.theme.term.blue_bright
-
-	vim.g.terminal_color_5 = colors.theme.term.magenta
-	vim.g.terminal_color_13 = colors.theme.term.magenta_bright
-
-	vim.g.terminal_color_6 = colors.theme.term.cyan
-	vim.g.terminal_color_14 = colors.theme.term.cyan_bright
-
-	-- indexed
-	vim.g.terminal_color_16 = colors.theme.term.indexed1
-	vim.g.terminal_color_17 = colors.theme.term.indexed2
 end
 
 return M

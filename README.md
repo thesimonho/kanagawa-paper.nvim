@@ -84,6 +84,9 @@ require("kanagawa-paper").setup({
  dim_inactive = true,
  -- set colors for terminal buffers
  terminal_colors = true,
+ -- cache highlights and colors for faster startup.
+ -- see Cache section in README for more details.
+ cache = false,
 
  styles = {
   -- style for comments
@@ -148,6 +151,16 @@ This can also be mapped to the time of day via an autocommand or dynamically set
 local hour = os.date("*t").hour
 vim.o.background = (hour >= 7 and hour < 19) and "light" or "dark"
 ```
+
+### Cache
+
+The color scheme comes with a cache option that can be used to speed up startup time.
+
+When you set `cache = true` in your config, the theme colors and all of your edits/adjustments will be saved to a file. This is loaded at startup so colors don't need to be recomputed every time.
+
+Any changes you make to your config (e.g. overriding colors or highlight groups) should automatically invalidate the cache and build a new one.
+
+In rare cases where this doesn't happen and you notice your changes aren't being applied, you can manually rebuild the cache by running `:KanagawaPaperCache`.
 
 ## 👥 Integrations
 

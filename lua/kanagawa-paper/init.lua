@@ -1,4 +1,5 @@
 local util = require("kanagawa-paper.lib.util")
+local cache = require("kanagawa-paper.lib.cache")
 local config = require("kanagawa-paper.config")
 
 local M = {}
@@ -35,6 +36,33 @@ function M.load(opts)
 	else
 		if vim.fn.filereadable(vim.fn.expand(opts.integrations.wezterm.path)) == 1 then
 			os.remove(vim.fn.expand(opts.integrations.wezterm.path))
+		end
+	end
+
+	if opts.cache then
+		vim.api.nvim_create_user_command("KanagawaPaperCache", function()
+			for name, _ in pairs(package.loaded) do
+				if name:match("^kanagawa-paper.") then
+					package.loaded[name] = nil
+				end
+			end
+
+			local colors = require("kanagawa-paper.colors").setup(opts)
+			local groups, _ = require("kanagawa-paper.groups").setup(colors, opts)
+			local term_colors = require("kanagawa-paper.colors").terminal(colors, opts)
+			local cache_opts = cache.get_opts(opts)
+			local current_theme = util.get_current_theme(opts)
+
+			local container = cache.create_container(colors, groups, term_colors, cache_opts)
+			cache.write(current_theme, container)
+			vim.cmd.colorscheme("kanagawa-paper")
+		end, { desc = "Rebuild the cache for the current Kanagawa Paper theme" })
+	else
+		if vim.fn.filereadable(cache.file("ink")) == 1 then
+			cache.delete("ink")
+		end
+		if vim.fn.filereadable(cache.file("canvas")) == 1 then
+			cache.delete("canvas")
 		end
 	end
 
