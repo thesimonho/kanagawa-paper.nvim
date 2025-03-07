@@ -8,7 +8,7 @@ function M.setup(colors, opts)
 
 	return {
 		-- *Comment	any comment
-		Comment = vim.tbl_extend("force", { fg = theme.syn.comment }, opts.commentStyle),
+		Comment = vim.tbl_extend("force", { fg = theme.syn.comment }, opts.styles.comment),
 
 		-- *Constant	any constant
 		Constant = { fg = theme.syn.constant },
@@ -26,17 +26,17 @@ function M.setup(colors, opts)
 		-- *Identifier	any variable name
 		Identifier = { fg = theme.syn.identifier },
 		--  Function	function name (also: methods for classes)
-		Function = vim.tbl_extend("force", { fg = theme.syn.fun }, opts.functionStyle),
+		Function = vim.tbl_extend("force", { fg = theme.syn.fun }, opts.styles.functions),
 
 		-- *Statement	any statement
-		Statement = vim.tbl_extend("force", { fg = theme.syn.statement }, opts.statementStyle),
+		Statement = vim.tbl_extend("force", { fg = theme.syn.statement }, opts.styles.statement),
 		--  Conditional	if, then, else, endif, switch, etc.
 		--  Repeat		for, do, while, etc.
 		--  Label		case, default, etc.
 		--  Operator	"sizeof", "+", "*", etc.
 		Operator = { fg = theme.syn.operator },
 		--  Keyword	any other keyword
-		Keyword = vim.tbl_extend("force", { fg = theme.syn.keyword }, opts.keywordStyle),
+		Keyword = vim.tbl_extend("force", { fg = theme.syn.keyword }, opts.styles.keyword),
 		--  Exception	try, catch, throw
 		Exception = { fg = theme.diag.error },
 
@@ -48,7 +48,7 @@ function M.setup(colors, opts)
 		--  PreCondit	preprocessor #if, #else, #endif, etc.
 
 		-- *Type		int, long, char, etc.
-		Type = vim.tbl_extend("force", { fg = theme.syn.type }, opts.typeStyle),
+		Type = vim.tbl_extend("force", { fg = theme.syn.type }, opts.styles.type),
 		--  StorageClass	static, register, volatile, etc.
 		--  Structure	struct, union, enum, etc.
 		--  Typedef	A typedef

@@ -77,10 +77,10 @@ function M.setup(colors, opts)
 		-- @keyword.modifier       keywords defining type modifiers (e.g. `const`, `static`, `public`)
 		-- @keyword.repeat         keywords related to loops (e.g. `for`, `while`)
 		-- @keyword.return         keywords like `return` and `yield`
-		["@keyword.return"] = vim.tbl_extend("force", { fg = theme.syn.keyword }, opts.keywordStyle),
+		["@keyword.return"] = vim.tbl_extend("force", { fg = theme.syn.keyword }, opts.styles.keyword),
 		-- @keyword.debug          keywords related to debugging
 		-- @keyword.exception      keywords related to exceptions (e.g. `throw`, `catch`)
-		["@keyword.exception"] = vim.tbl_extend("force", { fg = theme.syn.keyword }, opts.statementStyle),
+		["@keyword.exception"] = vim.tbl_extend("force", { fg = theme.syn.keyword }, opts.styles.statement),
 
 		-- @keyword.conditional         keywords related to conditionals (e.g. `if`, `else`)
 		-- @keyword.conditional.ternary ternary operator (e.g. `?`, `:`)

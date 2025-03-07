@@ -5,16 +5,12 @@
 ---@field undercurl? boolean
 ---@field transparent? boolean
 ---@field gutter? boolean
----@field diagBackground? boolean
----@field dimInactive? boolean
----@field terminalColors? boolean
----@field commentStyle? vim.api.keyset.highlight
----@field functionStyle? vim.api.keyset.highlight
----@field keywordStyle? vim.api.keyset.highlight
----@field statementStyle? vim.api.keyset.highlight
----@field typeStyle? vim.api.keyset.highlight
+---@field diag_background? boolean
+---@field dim_inactive? boolean
+---@field terminal_colors? boolean
+---@field styles? {comment: vim.api.keyset.highlight, functions: vim.api.keyset.highlight, keyword: vim.api.keyset.highlight, statement: vim.api.keyset.highlight, type: vim.api.keyset.highlight,}
 ---@field colors? {palette: PaletteColors, theme: {ink: ThemeColors, canvas: ThemeColors}}
----@field colorBalance? table<string, ColorOffset>
+---@field color_balance? table<string, ColorOffset>
 ---@field overrides? fun(colors: KanagawaColors): table<string, vim.api.keyset.highlight>
 ---@field all_plugins? boolean
 ---@field auto_plugins? boolean

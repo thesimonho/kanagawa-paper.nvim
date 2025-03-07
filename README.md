@@ -79,23 +79,24 @@ require("kanagawa-paper").setup({
  -- highlight background for the left gutter
  gutter = false,
  -- background for diagnostic virtual text
- diagBackground = true,
+ diag_background = true,
  -- dim inactive windows. Disabled when transparent
- dimInactive = true,
+ dim_inactive = true,
  -- set colors for terminal buffers
- terminalColors = true,
+ terminal_colors = true,
 
- -- style for comments
- commentStyle = { italic = true },
- -- style for functions
- functionStyle = { italic = false },
- -- style for keywords
- keywordStyle = { italic = false, bold = false },
- -- style for statements
- statementStyle = { italic = false, bold = false },
- -- style for types
- typeStyle = { italic = false },
-
+ styles = {
+  -- style for comments
+  comment = { italic = true },
+  -- style for functions
+  functions = { italic = false },
+  -- style for keywords
+  keyword = { italic = false, bold = false },
+  -- style for statements
+  statement = { italic = false, bold = false },
+  -- style for types
+  type = { italic = false },
+ },
  -- override default palette and theme colors
  colors = {
   palette = {},
@@ -105,7 +106,7 @@ require("kanagawa-paper").setup({
   },
  },
  -- adjust overall color balance for each theme [-1, 1]
- colorOffset = {
+ color_offset = {
   ink = { brightness = 0, saturation = 0 },
   canvas = { brightness = 0, saturation = 0 },
  },
@@ -133,7 +134,7 @@ require("kanagawa-paper").setup({
    enabled = false,
    -- neovim will write the theme name to this file
    -- wezterm will read from this file to know which theme to use
-   path = "/tmp/nvim-theme",
+   path = (os.getenv("TEMP") or "/tmp") .. "/nvim-theme",
   },
  },
 })

@@ -77,7 +77,7 @@ function M.setup(colors, opts)
 		-- Normal		Normal text.
 		Normal = { fg = theme.ui.fg, bg = not opts.transparent and theme.ui.bg or "NONE" },
 		-- NormalNC	Normal text in non-current windows.
-		NormalNC = opts.dimInactive and { fg = theme.ui.fg, bg = not opts.transparent and theme.ui.bg_dim or "NONE" }
+		NormalNC = opts.dim_inactive and { fg = theme.ui.fg, bg = not opts.transparent and theme.ui.bg_dim or "NONE" }
 			or { link = "Normal" },
 		-- NormalFloat	Normal text in floating windows.
 		NormalFloat = { fg = theme.ui.float.fg, bg = theme.ui.float.bg },
@@ -144,7 +144,7 @@ function M.setup(colors, opts)
 		-- WinBar		Window bar of current window.
 		WinBar = { fg = theme.ui.fg_dim, bg = "NONE" },
 		-- WinBarNC	Window bar of not-current windows.
-		WinBarNC = { fg = theme.ui.fg_dim, bg = opts.dimInactive and theme.ui.bg_dim or "NONE" },
+		WinBarNC = { fg = theme.ui.fg_dim, bg = opts.dim_inactive and theme.ui.bg_dim or "NONE" },
 
 		DiagnosticError = { fg = theme.diag.error },
 		DiagnosticWarn = { fg = theme.diag.warning },
@@ -165,19 +165,19 @@ function M.setup(colors, opts)
 
 		DiagnosticVirtualTextError = {
 			fg = theme.diag.error,
-			bg = opts.diagBackground and theme.diag.error_light or "none",
+			bg = opts.diag_background and theme.diag.error_light or "none",
 		},
 		DiagnosticVirtualTextWarn = {
 			fg = theme.diag.warning,
-			bg = opts.diagBackground and theme.diag.warning_light or "none",
+			bg = opts.diag_background and theme.diag.warning_light or "none",
 		},
 		DiagnosticVirtualTextInfo = {
 			fg = theme.diag.info,
-			bg = opts.diagBackground and theme.diag.info_light or "none",
+			bg = opts.diag_background and theme.diag.info_light or "none",
 		},
 		DiagnosticVirtualTextHint = {
 			fg = theme.diag.hint,
-			bg = opts.diagBackground and theme.diag.hint_light or "none",
+			bg = opts.diag_background and theme.diag.hint_light or "none",
 		},
 
 		DiagnosticUnderlineError = {
