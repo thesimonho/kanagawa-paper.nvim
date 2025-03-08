@@ -2,10 +2,10 @@
 
 Remixed light and dark Kanagawa color scheme with muted colors. For Neovim.
 
-| Ink                                                                                                                   | Canvas                                                                                                                   |
-| --------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------ |
-| ![Ink](https://github.com/thesimonho/kanagawa-paper.nvim/assets/5199715/cf75d935-d8b4-430c-a1d8-04f453151924)         | ![Canvas](https://github.com/thesimonho/kanagawa-paper.nvim/assets/5199715/cf75d935-d8b4-430c-a1d8-04f453151924)         |
-| ![Ink Palette](https://github.com/thesimonho/kanagawa-paper.nvim/assets/5199715/cf75d935-d8b4-430c-a1d8-04f453151924) | ![Canvas Palette](https://github.com/thesimonho/kanagawa-paper.nvim/assets/5199715/cf75d935-d8b4-430c-a1d8-04f453151924) |
+| Ink                                                                                             | Canvas                                                                                             |
+| ----------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
+| ![ink](https://github.com/user-attachments/assets/d4e551e2-6091-4638-a584-c11201c6cfbd)         | ![canvas](https://github.com/user-attachments/assets/b1d1965b-63e0-4302-8a66-156882429b3e)         |
+| ![ink_palette](https://github.com/user-attachments/assets/ec7b304f-f318-4a83-a9af-bd44fce36bd2) | ![canvas_palette](https://github.com/user-attachments/assets/7dce8e71-e650-4b85-8efc-139ad6f4f849) |
 
 ## 💡 Motivation
 
@@ -244,7 +244,7 @@ config.color_scheme_dirs = { "~/.config/wezterm/colors" } -- or wherever you wan
 
 Your final wezterm config directories might look something like this:
 
-![wezterm directories]()
+![wezterm_config](https://github.com/user-attachments/assets/a1a85ed9-a88f-42a0-9cc3-966609f5e3f3)
 
 4. Update the `theme_switcher.lua` file with the correct paths to your files:
 
