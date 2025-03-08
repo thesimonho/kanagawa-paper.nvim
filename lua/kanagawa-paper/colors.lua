@@ -1,5 +1,92 @@
----@class PaletteColors
-local palette = {
+local color = require("kanagawa-paper.lib.color")
+local util = require("kanagawa-paper.lib.util")
+local clamp = util.clamp
+local scale_log = util.scale_log
+local scale_log_asymmetric = util.scale_log_asymmetric
+
+local M = {}
+
+---@param opts? KanagawaConfig
+---@return KanagawaColors
+function M.setup(opts)
+	opts = require("kanagawa-paper.config").extend(opts)
+
+	-- Add to and/or override palette_colors
+	local updated_palette_colors = vim.tbl_extend("force", M.palette, opts.colors.palette or {})
+
+	-- Generate the theme according to the updated palette colors
+	local current_theme = util.get_current_theme(opts)
+	local theme_path = "kanagawa-paper.themes." .. current_theme
+	local theme_colors = require(theme_path).get(opts, updated_palette_colors)
+
+	-- Add to and/or override theme_colors
+	local updated_theme_colors = vim.tbl_deep_extend("force", theme_colors, opts.colors.theme[current_theme] or {})
+
+	-- return palette_colors and theme_colors
+	return {
+		theme = updated_theme_colors,
+		palette = updated_palette_colors,
+	}
+end
+
+---@param hex ColorSpec
+---@param offset number
+---@return ColorSpec
+function M.apply_brightness(hex, offset)
+	local clamped_offset = clamp(offset, -1, 1)
+	local rescaled_offset = scale_log(clamped_offset, 3, 0.2)
+	return color(hex):brighten(rescaled_offset):to_hex()
+end
+
+---@param hex ColorSpec
+---@param offset number
+---@return ColorSpec
+function M.apply_saturation(hex, offset)
+	local clamped_offset = clamp(offset, -1, 1)
+	local rescaled_offset = scale_log_asymmetric(clamped_offset, 3, 0.2, 0.5)
+	return color(hex):saturate(rescaled_offset):to_hex()
+end
+
+---@param colors KanagawaColors
+---@param opts KanagawaConfig
+---@return table<number, ColorSpec>
+function M.terminal(colors, opts)
+	local current_theme = util.get_current_theme(opts)
+	for hl, _ in pairs(colors.theme.term) do
+		if opts.color_balance[current_theme].saturation ~= 0 then
+			colors.theme.term[hl] =
+				M.apply_saturation(colors.theme.term[hl], opts.color_balance[current_theme].saturation)
+		end
+		if opts.color_balance[current_theme].brightness ~= 0 then
+			colors.theme.term[hl] =
+				M.apply_brightness(colors.theme.term[hl], opts.color_balance[current_theme].brightness)
+		end
+	end
+
+	return {
+		[0] = colors.theme.term.black,
+		[1] = colors.theme.term.red,
+		[2] = colors.theme.term.green,
+		[3] = colors.theme.term.yellow,
+		[4] = colors.theme.term.blue,
+		[5] = colors.theme.term.magenta,
+		[6] = colors.theme.term.cyan,
+		[7] = colors.theme.term.white,
+		[8] = colors.theme.term.black_bright,
+		[9] = colors.theme.term.red_bright,
+		[10] = colors.theme.term.green_bright,
+		[11] = colors.theme.term.yellow_bright,
+		[12] = colors.theme.term.blue_bright,
+		[13] = colors.theme.term.magenta_bright,
+		[14] = colors.theme.term.cyan_bright,
+		[15] = colors.theme.term.white_bright,
+		[16] = colors.theme.term.indexed1,
+		[17] = colors.theme.term.indexed2,
+	}
+end
+
+---@type PaletteColors
+M.palette = {
 	-- Bg Shades
 	sumiInkn1 = "#0f0f15",
 	sumiInk0 = "#16161D",
@@ -8,7 +95,7 @@ local palette = {
 	sumiInk3 = "#1F1F28",
 	sumiInk4 = "#2A2A37",
 	sumiInk5 = "#363646",
-	sumiInk6 = "#54546D", --fg
+	sumiInk6 = "#54546D",
 
 	-- Popup and Floats
 	waveBlue1 = "#223249",
@@ -36,17 +123,12 @@ local palette = {
 
 	oniViolet = "#957FB8",
 	oniViolet2 = "#b8b4d0",
-	crystalBlue = "#7E9CD8",
 	springViolet1 = "#938AA9",
 	springViolet2 = "#9CABCA",
 	springBlue = "#7FB4CA",
-	lightBlue = "#A3D4D5", -- unused yet
-	waveAqua2 = "#7AA89F", -- improve lightness: desaturated greenish Aqua
-
-	-- waveAqua2  = "#68AD99",
-	-- waveAqua4  = "#7AA880",
-	-- waveAqua5  = "#6CAF95",
-	-- waveAqua3  = "#68AD99",
+	crystalBlue = "#7E9CD8",
+	lightBlue = "#A3D4D5",
+	waveAqua2 = "#7AA89F",
 
 	springGreen = "#98BB6C",
 	boatYellow1 = "#938056",
@@ -68,7 +150,7 @@ local palette = {
 	dragonBlack6 = "#625e5a",
 
 	dragonWhite = "#c5c9c5",
-	dragonGreen = "#87a987",
+	dragonGreen = "#699469",
 	dragonGreen2 = "#8a9a7b",
 	dragonPink = "#a292a3",
 	dragonOrange = "#b6927b",
@@ -76,14 +158,16 @@ local palette = {
 	dragonGray = "#a6a69c",
 	dragonGray2 = "#9e9b93",
 	dragonGray3 = "#7a8382",
-	dragonBlue2 = "#8ba4b0",
+	dragonBlue2 = "#859fac",
+	dragonBlue3 = "#708e9e",
+	dragonBlue4 = "#5d7a88",
+	dragonBlue5 = "#435965",
 	dragonViolet = "#8992a7",
 	dragonRed = "#c4746e",
-	dragonAqua = "#8ea4a2",
+	dragonAqua = "#8ea49e",
 	dragonAsh = "#737c73",
 	dragonTeal = "#949fb5",
-	dragonYellow = "#c4b28a", --"#a99c8b",
-	-- "#8a9aa3",
+	dragonYellow = "#c4b28a",
 
 	lotusInk0 = "#3d3d5e",
 	lotusInk1 = "#545464",
@@ -126,33 +210,50 @@ local palette = {
 	lotusTeal2 = "#6693bf",
 	lotusTeal3 = "#5a7785",
 	lotusCyan = "#d7e3d8",
+
+	canvasAqua = "#57786c",
+	canvasAqua2 = "#5f847c",
+	canvasBlue1 = "#93b5d0",
+	canvasBlue2 = "#719ac2",
+	canvasBlue3 = "#5c71a4",
+	canvasBlue4 = "#526994",
+	canvasBlue5 = "#515797",
+	canvasCyan = "#56a06a",
+	canvasGray0 = "#5d5c54",
+	canvasGray1 = "#858479",
+	canvasGray2 = "#a9a8a0",
+	canvasGray3 = "#b5b5ae",
+	canvasGray4 = "#c1c1bb",
+	canvasGreen = "#73865b",
+	canvasGreen2 = "#718e64",
+	canvasGreen3 = "#a0c991",
+	canvasInk0 = "#4c4c65",
+	canvasInk1 = "#595b62",
+	canvasInk2 = "#484862",
+	canvasOrange = "#b8805e",
+	canvasOrange2 = "#d59260",
+	canvasPink = "#ac7085",
+	canvasRed = "#b35560",
+	canvasRed2 = "#c75758",
+	canvasRed3 = "#c95d5d",
+	canvasRed4 = "#d99a85",
+	canvasTeal1 = "#5f8a9b",
+	canvasTeal2 = "#618bb6",
+	canvasTeal3 = "#526c79",
+	canvasViolet1 = "#c4cbdc",
+	canvasViolet2 = "#a398bf",
+	canvasViolet3 = "#7967a2",
+	canvasViolet4 = "#6f4f9d",
+	canvasWhite0 = "#cbc8bc",
+	canvasWhite1 = "#d3d0c3",
+	canvasWhite2 = "#d8d8d2",
+	canvasWhite3 = "#e1e1de", -- main bg
+	canvasWhite4 = "#e6e6e3",
+	canvasWhite5 = "#ecece8",
+	canvasYellow = "#a67337",
+	canvasYellow2 = "#c08a48",
+	canvasYellow3 = "#d3a56b",
+	canvasYellow4 = "#e0be6d",
 }
-
-local M = {}
---- Generate colors table:
---- * opts:
----   - colors: Table of personalized colors and/or overrides of existing ones.
----     Defaults to KanagawaConfig.colors.
----@param opts? { colors?: table }
----@return { theme: ThemeColors, palette: PaletteColors}
-function M.setup(opts)
-	opts = opts or {}
-	local override_colors = opts.colors or require("kanagawa-paper.config").options.colors
-
-	-- Add to and/or override palette_colors
-	local updated_palette_colors = vim.tbl_extend("force", palette, override_colors.palette or {})
-
-	-- Generate the theme according to the updated palette colors
-	local theme_colors = require("kanagawa-paper.themes")(updated_palette_colors)
-
-	-- Add to and/or override theme_colors
-	local updated_theme_colors = vim.tbl_deep_extend("force", theme_colors, override_colors.theme or {})
-
-	-- return palette_colors AND theme_colors
-	return {
-		theme = updated_theme_colors,
-		palette = updated_palette_colors,
-	}
-end
 
 return M

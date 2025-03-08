@@ -1,0 +1,28 @@
+// -----------------------------------------------------------------------------
+// Kanagawa Paper Ink
+// Upstream: https://github.com/thesimonho/kanagawa-paper.nvim/master/extras/windows_terminal/kanagawa-paper-ink.jsonc
+// URL: https://learn.microsoft.com/en-us/windows/terminal/customize-settings/color-schemes
+// -----------------------------------------------------------------------------
+{
+  "name": "Kanagawa Paper Ink",
+  "cursorColor": "#c4b28a",
+  "selectionBackground": "#766b90",
+  "background": "#1F1F28",
+  "foreground": "#DCD7BA",
+  "black": "#393836",
+  "blue": "#435965",
+  "green": "#699469",
+  "purple": "#a292a3",
+  "red": "#c4746e",
+  "white": "#C8C093",
+  "yellow": "#c4b28a",
+  "cyan": "#8ea49e",
+  "brightBlack": "#aca9a4",
+  "brightBlue": "#698a9b",
+  "brightGreen": "#72a072",
+  "brightPurple": "#b4a7b5",
+  "brightRed": "#cc928e",
+  "brightWhite": "#d5cd9d",
+  "brightYellow": "#d4c196",
+  "brightCyan": "#96ada7",
+}

@@ -1,0 +1,32 @@
+# -----------------------------------------------------------------------------
+# Kanagawa Paper Ink
+# Upstream: https://github.com/thesimonho/kanagawa-paper.nvim/master/extras/lazygit/kanagawa-paper-ink.yml
+# URL: https://github.com/jesseduffield/lazygit
+# -----------------------------------------------------------------------------
+
+gui:
+  theme:
+    activeBorderColor:
+      - "#c4b28a"
+      - "bold"
+    inactiveBorderColor:
+      - "#625e5a"
+    searchingActiveBorderColor:
+      - "#938AA9"
+      - "bold"
+    optionsTextColor:
+      - "#8ea49e"
+    selectedLineBgColor:
+      - "#363646"
+    cherryPickedCommitFgColor:
+      - "#393836"
+    cherryPickedCommitBgColor:
+      - "#c4746e"
+    markedBaseCommitFgColor:
+      - "#393836"
+    markedBaseCommitBgColor:
+      - "#c4b28a"
+    unstagedChangesColor:
+      - "#c4b28a"
+    defaultFgColor:
+      - "#DCD7BA"

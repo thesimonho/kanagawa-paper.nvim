@@ -1,2 +1,7 @@
 images/
+/doc/tags
+.tests
+/extras/**
+!/extras/README.md
+tests/languages/
 .DS_Store

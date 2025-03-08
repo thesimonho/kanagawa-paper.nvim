@@ -1,0 +1,29 @@
+name: Run Tests
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - "**/*.lua"
+  pull_request:
+    types: [closed]
+    paths:
+      - "**/*.lua"
+jobs:
+  tests:
+    name: Run tests
+    runs-on: ubuntu-latest
+    if: github.event_name == 'push' || github.event_name == 'workflow_dispatch' || github.event.pull_request.merged == true
+    steps:
+      - uses: actions/checkout@v4
+      - uses: leafo/gh-actions-lua@v11
+        with:
+          luaVersion: "5.1"
+      - uses: leafo/gh-actions-luarocks@v5
+      - uses: rhysd/action-setup-vim@v1
+        with:
+          neovim: true
+      - name: Set permissions
+        run: chmod +x scripts/test.sh
+      - name: Run test script
+        run: |
+          scripts/test.sh || { echo "❌ Test script failed!"; exit 1; }

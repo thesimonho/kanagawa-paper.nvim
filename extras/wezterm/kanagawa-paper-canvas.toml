@@ -1,0 +1,73 @@
+# -----------------------------------------------------------------------------
+# Kanagawa Paper Canvas
+# Upstream: https://github.com/thesimonho/kanagawa-paper.nvim/master/extras/wezterm/kanagawa-paper-canvas.toml
+# URL: https://wezterm.org/config/appearance.html
+# -----------------------------------------------------------------------------
+
+[colors]
+foreground = "#595b62"
+background = "#e1e1de"
+cursor_bg = "#618bb6"
+cursor_border = "#618bb6"
+cursor_fg = "#e1e1de"
+selection_bg = "#c4cbdc"
+selection_fg = "#484862"
+split = "#c4cbdc"
+compose_cursor = "#5f8a9b"
+scrollbar_thumb = "#a9a8a0"
+
+ansi = [
+  "#4c4c65",
+  "#b35560",
+  "#57786c",
+  "#a67337",
+  "#719ac2",
+  "#ac7085",
+  "#526c79",
+  "#858479",
+]
+brights = [
+  "#5c5c75",
+  "#c75f6b",
+  "#618679",
+  "#b67e3d",
+  "#86aed7",
+  "#b57e91",
+  "#5d7a89",
+  "#919084",
+]
+
+[colors.indexed]
+16 = "#b8805e"
+17 = "#b35560"
+
+[colors.tab_bar]
+background = "#cbc8bc"
+inactive_tab_edge = "#526994"
+
+[colors.tab_bar.active_tab]
+fg_color = "#618bb6"
+bg_color = "#e1e1de"
+intensity = "Bold"
+
+[colors.tab_bar.inactive_tab]
+fg_color = "#858479"
+bg_color = "#cbc8bc"
+
+[colors.tab_bar.inactive_tab_hover]
+fg_color = "#ac7085"
+bg_color = "#e1e1de"
+
+[colors.tab_bar.new_tab]
+fg_color = "#858479"
+bg_color = "#cbc8bc"
+
+[colors.tab_bar.new_tab_hover]
+fg_color = "#ac7085"
+bg_color = "#e1e1de"
+intensity = "Bold"
+
+[metadata]
+name = "kanagawa-paper-canvas"
+author = "Simon Ho"
+origin_url = "https://github.com/thesimonho/kanagawa-paper.nvim/master/extras/wezterm/kanagawa-paper-canvas.toml"

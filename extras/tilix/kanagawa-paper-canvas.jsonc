@@ -1,0 +1,30 @@
+// -----------------------------------------------------------------------------
+// Kanagawa Paper Canvas
+// Upstream: https://github.com/thesimonho/kanagawa-paper.nvim/master/extras/tilix/kanagawa-paper-canvas.jsonc
+// URL: https://github.com/gnunn1/tilix
+// -----------------------------------------------------------------------------
+{
+  "name": "Kanagawa Paper Canvas",
+  "comment": "",
+  "use-theme-colors": false,
+  "foreground-color": "#595b62",
+  "background-color": "#e1e1de",
+  "palette": [
+      "#4c4c65",
+      "#b35560",
+      "#57786c",
+      "#a67337",
+      "#719ac2",
+      "#ac7085",
+      "#526c79",
+      "#858479",
+      "#5c5c75",
+      "#c75f6b",
+      "#618679",
+      "#b67e3d",
+      "#86aed7",
+      "#b57e91",
+      "#5d7a89",
+      "#919084"
+  ]
+}

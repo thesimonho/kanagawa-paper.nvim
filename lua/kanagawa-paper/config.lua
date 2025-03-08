@@ -1,42 +1,110 @@
----@alias ColorSpec string RGB Hex string
----@alias ColorTable table<string, ColorSpec>
----@alias KanagawaColorsSpec { palette: ColorTable, theme: ColorTable }
----@alias KanagawaColors { palette: PaletteColors, theme: ThemeColors }
-
 local M = {}
 
 ---@class KanagawaConfig
-local defaults = {
+M.defaults = {
+	-- (internal) theme variant to use:
+	-- "ink" : dark theme
+	-- "canvas" : light theme
+	-- "auto" : automatically set theme based on background color
+	_theme = "auto",
+
+	-- enable undercurls for underlined text
 	undercurl = true,
+	-- transparent background
 	transparent = false,
+	-- highlight background for the left gutter
 	gutter = false,
-	dimInactive = true, -- disabled when transparent
-	terminalColors = true,
-	commentStyle = { italic = true },
-	functionStyle = { italic = false },
-	keywordStyle = { italic = false, bold = false },
-	statementStyle = { italic = false, bold = false },
-	typeStyle = { italic = false },
-	colors = { theme = {}, palette = {} },
-	---@type fun(colors: KanagawaColorsSpec): table<string, table>
-	overrides = function()
+	-- background for diagnostic virtual text
+	diag_background = true,
+	-- dim inactive windows. disabled when transparent
+	dim_inactive = true,
+	-- set colors for terminal buffers
+	terminal_colors = true,
+	-- cache highlights and colors for faster startup.
+	-- turning this on will require rebuilding the cache whenever you change your config.
+	cache = false,
+
+	styles = {
+		-- style for comments
+		comment = { italic = true },
+		-- style for functions
+		functions = { italic = false },
+		-- style for keywords
+		keyword = { italic = false, bold = false },
+		-- style for statements
+		statement = { italic = false, bold = false },
+		-- style for types
+		type = { italic = false },
+	},
+	-- override default palette and theme colors
+	colors = {
+		palette = {},
+		theme = {
+			ink = {},
+			canvas = {},
+		},
+	},
+	-- adjust overall color balance for each theme [-1, 1]
+	color_balance = {
+		ink = { brightness = 0, saturation = 0 },
+		canvas = { brightness = 0, saturation = 0 },
+	},
+	-- override highlight groups
+	overrides = function(colors)
 		return {}
 	end,
+
+	-- uses lazy.nvim, if installed, to automatically enable needed plugins
+	auto_plugins = true,
+	-- enable highlights for all plugins (disabled if using lazy.nvim)
+	all_plugins = package.loaded.lazy == nil,
+	-- manually enable/disable individual plugins.
+	-- check the `groups/plugins` directory for the exact names
+	plugins = {
+		-- examples:
+		-- rainbow_delimiters = true
+		-- which_key = false
+	},
+
+	-- enable integrations with other applications
+	integrations = {
+		-- automatically set wezterm theme to match the current neovim theme
+		wezterm = {
+			enabled = false,
+			-- neovim will write the theme name to this file
+			-- wezterm will read from this file to know which theme to use
+			path = (os.getenv("TEMP") or "/tmp") .. "/nvim-theme",
+		},
+	},
 }
 
 ---@type KanagawaConfig
-M.options = {}
+M.options = nil
 
----@param options? KanagawaConfig user configuration
+---@param options? KanagawaConfig
 function M.setup(options)
-	M.options = vim.tbl_deep_extend("force", {}, defaults, options or {})
+	M.options = vim.tbl_deep_extend("force", {}, M.defaults, options or {})
+
+	if M.options.integrations.wezterm.enabled then
+		vim.api.nvim_create_autocmd("VimLeavePre", {
+			callback = function()
+				os.remove(vim.fn.expand(M.options.integrations.wezterm.path))
+			end,
+		})
+	end
 end
 
----@param options? KanagawaConfig user configuration
-function M.extend(options)
-	M.options = vim.tbl_deep_extend("force", {}, M.options or defaults, options or {})
+---@param opts? KanagawaConfig
+function M.extend(opts)
+	return opts and vim.tbl_deep_extend("force", {}, M.options, opts) or M.options
 end
 
-M.setup()
+setmetatable(M, {
+	__index = function(_, k)
+		if k == "options" then
+			return M.defaults
+		end
+	end,
+})
 
 return M

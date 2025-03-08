@@ -1,0 +1,32 @@
+# -----------------------------------------------------------------------------
+# Kanagawa Paper Canvas
+# Upstream: https://github.com/thesimonho/kanagawa-paper.nvim/master/extras/lazygit/kanagawa-paper-canvas.yml
+# URL: https://github.com/jesseduffield/lazygit
+# -----------------------------------------------------------------------------
+
+gui:
+  theme:
+    activeBorderColor:
+      - "#618bb6"
+      - "bold"
+    inactiveBorderColor:
+      - "#b5b5ae"
+    searchingActiveBorderColor:
+      - "#c4cbdc"
+      - "bold"
+    optionsTextColor:
+      - "#5f8a9b"
+    selectedLineBgColor:
+      - "#d3d0c3"
+    cherryPickedCommitFgColor:
+      - "#484862"
+    cherryPickedCommitBgColor:
+      - "#b35560"
+    markedBaseCommitFgColor:
+      - "#484862"
+    markedBaseCommitBgColor:
+      - "#618bb6"
+    unstagedChangesColor:
+      - "#c08a48"
+    defaultFgColor:
+      - "#595b62"

@@ -1,0 +1,28 @@
+// -----------------------------------------------------------------------------
+// Kanagawa Paper Canvas
+// Upstream: https://github.com/thesimonho/kanagawa-paper.nvim/master/extras/windows_terminal/kanagawa-paper-canvas.jsonc
+// URL: https://learn.microsoft.com/en-us/windows/terminal/customize-settings/color-schemes
+// -----------------------------------------------------------------------------
+{
+  "name": "Kanagawa Paper Canvas",
+  "cursorColor": "#618bb6",
+  "selectionBackground": "#c4cbdc",
+  "background": "#e1e1de",
+  "foreground": "#595b62",
+  "black": "#4c4c65",
+  "blue": "#719ac2",
+  "green": "#57786c",
+  "purple": "#ac7085",
+  "red": "#b35560",
+  "white": "#858479",
+  "yellow": "#a67337",
+  "cyan": "#526c79",
+  "brightBlack": "#5c5c75",
+  "brightBlue": "#86aed7",
+  "brightGreen": "#618679",
+  "brightPurple": "#b57e91",
+  "brightRed": "#c75f6b",
+  "brightWhite": "#919084",
+  "brightYellow": "#b67e3d",
+  "brightCyan": "#5d7a89",
+}

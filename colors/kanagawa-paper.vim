@@ -1,1 +1,1 @@
-lua require('kanagawa-paper').load()
+lua require("kanagawa-paper").load({ _theme = "auto" })
