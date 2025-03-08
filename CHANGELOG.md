@@ -1,5 +1,91 @@
 # Changelog
 
+## [2.0.0](https://github.com/thesimonho/kanagawa-paper.nvim/compare/v1.8.0...v2.0.0) (2025-03-08)
+
+
+### ⚠ BREAKING CHANGES
+
+* **config:** rename config options for consistency
+* **pywal:** remove pywal extra
+* **fish:** remove fish extra
+* add ability to choose plugin themes to apply
+
+### Features
+
+* add ability to choose plugin themes to apply ([72a85ab](https://github.com/thesimonho/kanagawa-paper.nvim/commit/72a85abca725111b33d916abce5400e567493062))
+* **alacritty:** add template for alacritty extra ([a8d59a1](https://github.com/thesimonho/kanagawa-paper.nvim/commit/a8d59a1e8081a064e60bc58d3caa2eb53f713fab))
+* **canvas:** add canvas palette ([524683a](https://github.com/thesimonho/kanagawa-paper.nvim/commit/524683ad8d13069a0b484e13dec3cfb9bc12625d))
+* **config:** add brightness offset option ([0429b5f](https://github.com/thesimonho/kanagawa-paper.nvim/commit/0429b5fae555bf4bee497193f96657a1cd6982b6))
+* **config:** add option to enable/disable background for virtual text ([71206ee](https://github.com/thesimonho/kanagawa-paper.nvim/commit/71206ee3f4e9b5ba7913f3574628ce5202821dc7))
+* **config:** add saturation offset option ([10075f0](https://github.com/thesimonho/kanagawa-paper.nvim/commit/10075f02e2c5315503614aa211a4871325c2594c))
+* **config:** add theme caching option ([bd5b271](https://github.com/thesimonho/kanagawa-paper.nvim/commit/bd5b2714852c6c6113ba3f63dc8622b9d38eece3))
+* **config:** auto plugin loading option for lazy.nvim ([c19ce6f](https://github.com/thesimonho/kanagawa-paper.nvim/commit/c19ce6f475252eeb9a87ab84b48208f068941b7d))
+* **editor:** add highlight for examples in help files ([ff004f1](https://github.com/thesimonho/kanagawa-paper.nvim/commit/ff004f192dd15631981b7ab595aa8084fea787e6))
+* **extras:** add build process for extras ([ed1119a](https://github.com/thesimonho/kanagawa-paper.nvim/commit/ed1119a9841b04782e31b1673922cfd228b34286))
+* **fish:** remove fish extra ([3e465db](https://github.com/thesimonho/kanagawa-paper.nvim/commit/3e465db0f33bee501135e03bdcb745f1b592d0f1))
+* **fzf:** add template for fzf extra ([f1a86cf](https://github.com/thesimonho/kanagawa-paper.nvim/commit/f1a86cff532e89c3a8c79f37c44828fb39a28b6d))
+* **ghostty:** add template for ghostty theme ([8306edb](https://github.com/thesimonho/kanagawa-paper.nvim/commit/8306edbee319320de020300eb6f634239c0cb89b))
+* **ink:** set scrollbar to shade of the bg ([4c34918](https://github.com/thesimonho/kanagawa-paper.nvim/commit/4c349188c0876b020c08753ee2d9ab38a83a9327))
+* **ink:** use brightened colors for bright ansi colors ([b2a8360](https://github.com/thesimonho/kanagawa-paper.nvim/commit/b2a8360b73d913f8a1c008e78b0ce9c6fee55591))
+* **kitty:** add template for kitty extra ([191a5dc](https://github.com/thesimonho/kanagawa-paper.nvim/commit/191a5dc9f3d3eefc13f315ebdd977d7dde2503b3))
+* **lazygit:** add template for lazygit extra ([c8b7cdf](https://github.com/thesimonho/kanagawa-paper.nvim/commit/c8b7cdf0b488bed83e24cb664c7d5120e55fd7af))
+* **lsp:** using bg highlight for lspreferences ([89f65b7](https://github.com/thesimonho/kanagawa-paper.nvim/commit/89f65b7b9c0b8751318d7e98d58a9a7218afe3ce))
+* **pywal:** remove pywal extra ([4c98a06](https://github.com/thesimonho/kanagawa-paper.nvim/commit/4c98a06c10962ede0f64c483c80c7fcb1702d38a))
+* **terminal:** add template for windows terminal extra ([1524591](https://github.com/thesimonho/kanagawa-paper.nvim/commit/15245916aabae33ff060c66275eca1f17979f5d1))
+* **terminator:** add template for terminator extra ([2f191bf](https://github.com/thesimonho/kanagawa-paper.nvim/commit/2f191bf69dafbf3f5100ad9ffbea631ca4147218))
+* **termux:** add template for termux extra ([e9761e1](https://github.com/thesimonho/kanagawa-paper.nvim/commit/e9761e1dd31efca8fd82bb1713f9a9ba1099e1c3))
+* **theme:** add default lotus colors ([aa96c99](https://github.com/thesimonho/kanagawa-paper.nvim/commit/aa96c99b85201505311d3d56c043c3b8f4b5a597))
+* **theme:** add theme switching ([2220c56](https://github.com/thesimonho/kanagawa-paper.nvim/commit/2220c56a61093e51fe22be0ccfaeac3e25bf4824))
+* **theme:** create new accent color ([651acd8](https://github.com/thesimonho/kanagawa-paper.nvim/commit/651acd83e524d9d8bcdddfce77c6c80a18e2e546))
+* **tilix:** add template for tilix extra ([b246761](https://github.com/thesimonho/kanagawa-paper.nvim/commit/b24676178ccbd3470daca2543f5c272c56277e67))
+* **utils:** add utils lib and hot reload for palette ([ed1119a](https://github.com/thesimonho/kanagawa-paper.nvim/commit/ed1119a9841b04782e31b1673922cfd228b34286))
+* **vscode_terminal:** add template for vscode terminal extra ([d8942ed](https://github.com/thesimonho/kanagawa-paper.nvim/commit/d8942eddd628e3da7c833b78fa79240e73b00bc4))
+* **wezterm_tabline:** add template for wezterm tabline plugin ([bdd93df](https://github.com/thesimonho/kanagawa-paper.nvim/commit/bdd93df0f430f938cd62f740e283d41e71f25591))
+* **wezterm:** add wezterm integration to auto switch the theme ([bd51421](https://github.com/thesimonho/kanagawa-paper.nvim/commit/bd514210dcfef8af4629fb02561420212e7923db))
+* **wezterm:** add wezterm template ([66bae38](https://github.com/thesimonho/kanagawa-paper.nvim/commit/66bae38175261db0df9a0e5e6be397346e72f7b8))
+
+
+### Bug Fixes
+
+* **canvas:** bolder colors ([e7c9255](https://github.com/thesimonho/kanagawa-paper.nvim/commit/e7c92555efe43521add43da0975784e14e0707ca))
+* **canvas:** improve indent colors ([e7c9255](https://github.com/thesimonho/kanagawa-paper.nvim/commit/e7c92555efe43521add43da0975784e14e0707ca))
+* **canvas:** reduce saturation of canvas colors ([0449f68](https://github.com/thesimonho/kanagawa-paper.nvim/commit/0449f68a7963cb82571bb042a3f6e4d9fba2632c))
+* **config:** fix theme overrides for multiple themes ([ad35e0e](https://github.com/thesimonho/kanagawa-paper.nvim/commit/ad35e0ec1a8a85eacb4f48384011fee4fc8113e2))
+* **config:** rename config options for consistency ([908f6a9](https://github.com/thesimonho/kanagawa-paper.nvim/commit/908f6a905cd103cb77f76f5c2e2e4b733b03e81a))
+* **dev:** fix colour indicators during dev mode ([ed1119a](https://github.com/thesimonho/kanagawa-paper.nvim/commit/ed1119a9841b04782e31b1673922cfd228b34286))
+* **editor:** add fg color to visual selections so they're easier to read ([03969da](https://github.com/thesimonho/kanagawa-paper.nvim/commit/03969da8b17a1d47b1c630a96c0654c54e033322))
+* **extras:** building with the wrong theme field ([52e7781](https://github.com/thesimonho/kanagawa-paper.nvim/commit/52e7781985f1c3ca82a6a69336e7b16bddd670e6))
+* **extras:** set execute permissions ([c8ab889](https://github.com/thesimonho/kanagawa-paper.nvim/commit/c8ab889933cdc96e9b2e0c613c71187f0ce1c0dd))
+* **float:** make float and pemu colors more consistent across themes ([d7be442](https://github.com/thesimonho/kanagawa-paper.nvim/commit/d7be44294f58c96759e68377d395e52248103918))
+* **ink:** make diag backgrounds brighter ([3c386ad](https://github.com/thesimonho/kanagawa-paper.nvim/commit/3c386ad2993fb0b9f9acf4e9a0263da53965f6f2))
+* **ink:** make gray more readable ([660e70d](https://github.com/thesimonho/kanagawa-paper.nvim/commit/660e70d33355a34c98c2344a53a2d5700d872258))
+* **lazy:** fix consistency of lazy buttons ([5983df2](https://github.com/thesimonho/kanagawa-paper.nvim/commit/5983df26b5afb7abcf131c29e5f110a67f28ab60))
+* **lsp:** make inlays and refs more subtle ([57363b5](https://github.com/thesimonho/kanagawa-paper.nvim/commit/57363b53976eec468f925cef803d5419e5b17977))
+* **lsp:** unset lsp comment fg to allow TODO notes to show up correctly ([dd3a8d8](https://github.com/thesimonho/kanagawa-paper.nvim/commit/dd3a8d88df800277e1828dc70b90ca993ccc4a7f))
+* **lualine:** add default theme for backward compat ([5ab4d0d](https://github.com/thesimonho/kanagawa-paper.nvim/commit/5ab4d0d6d0db19e15071c4d63a69489d14307ffd))
+* **neotree:** make colors more distinctive ([fe859eb](https://github.com/thesimonho/kanagawa-paper.nvim/commit/fe859eb835d4cf2db7d2ac23ef23be10ab7cedf2))
+* **noice:** fix command line search text readability ([b66f6fc](https://github.com/thesimonho/kanagawa-paper.nvim/commit/b66f6fc5fd331186483402432eb73ae7c91ceb53))
+* **tabline:** make tabline colors easier to read ([9e93947](https://github.com/thesimonho/kanagawa-paper.nvim/commit/9e93947b4fc7bec733e8beaa6f2f18b55050aaac))
+* **telescope:** add missing hlgroups ([917dcb8](https://github.com/thesimonho/kanagawa-paper.nvim/commit/917dcb84f9d72cfb59ad2c92d1d96af19e4fc292))
+* **theme:** fix background changing behavior of static themes ([846941f](https://github.com/thesimonho/kanagawa-paper.nvim/commit/846941f54597f1864e932d5d48be16fbd70f1c9d))
+* **theme:** fix dynamic theme loading ([67101b9](https://github.com/thesimonho/kanagawa-paper.nvim/commit/67101b9fbccd2f5d91c6d584925c7cdd13c3ef0f))
+* **theme:** set relative light and dark colors for diag ([1c7c7e5](https://github.com/thesimonho/kanagawa-paper.nvim/commit/1c7c7e552711014294a01ccfb6e6abbe3888528b))
+* **theme:** use blend for diag backgrounds ([d3dad2b](https://github.com/thesimonho/kanagawa-paper.nvim/commit/d3dad2b25b64450bef23e857c145d13e4110a96f))
+* **treesitter_context:** fix line number coloring ([45ba977](https://github.com/thesimonho/kanagawa-paper.nvim/commit/45ba977cb9ff0fcd50e6c62b7959315c2f631de6))
+* **treesitter:** standardize markdown headers on rainbow ([84511f2](https://github.com/thesimonho/kanagawa-paper.nvim/commit/84511f202e5427528f53ac26cf06d1b14302befa))
+* **ts-context:** improve style of context window ([793dbbd](https://github.com/thesimonho/kanagawa-paper.nvim/commit/793dbbd14c48642a4ae2a8a7b56961f0b0091f15))
+* **vcs:** use new vcs colors instead of base groups ([f5ab058](https://github.com/thesimonho/kanagawa-paper.nvim/commit/f5ab058de5b9b7020a10cf4646c48f29131ae4e4)), closes [#25](https://github.com/thesimonho/kanagawa-paper.nvim/issues/25)
+* **wezterm_tabline:** add tab colors ([fed9212](https://github.com/thesimonho/kanagawa-paper.nvim/commit/fed9212989af02884cb5815c11c672ecc51aa195))
+* **wezterm_tabline:** fix section A fg color ([bdd93df](https://github.com/thesimonho/kanagawa-paper.nvim/commit/bdd93df0f430f938cd62f740e283d41e71f25591))
+* **yanky:** match yank highlight to visual selection color for consistency ([5b3327b](https://github.com/thesimonho/kanagawa-paper.nvim/commit/5b3327b91cc11fa94a949300fc4a1391eaf956d6))
+
+
+### Performance Improvements
+
+* **groups:** use simpler api for listing directory files ([49b7a23](https://github.com/thesimonho/kanagawa-paper.nvim/commit/49b7a23197157c2122030acfa711187d886f36c1))
+* **lib:** cache common function calls ([c63eeb5](https://github.com/thesimonho/kanagawa-paper.nvim/commit/c63eeb54c127e2cc08c9b0801a23361442a12fd1))
+* **plugins:** add cache for plugin lookup ([0095456](https://github.com/thesimonho/kanagawa-paper.nvim/commit/0095456027c0474f0659b8c669ba4c7e6ce7b971))
+
 ## [1.8.0](https://github.com/thesimonho/kanagawa-paper.nvim/compare/v1.7.0...v1.8.0) (2025-02-08)
 
 
