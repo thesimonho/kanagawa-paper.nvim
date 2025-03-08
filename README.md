@@ -2,7 +2,10 @@
 
 Remixed light and dark Kanagawa color scheme with muted colors. For Neovim.
 
-![screenshot](https://github.com/thesimonho/kanagawa-paper.nvim/assets/5199715/cf75d935-d8b4-430c-a1d8-04f453151924)
+| Ink                                                                                                                   | Canvas                                                                                                                   |
+| --------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------ |
+| ![Ink](https://github.com/thesimonho/kanagawa-paper.nvim/assets/5199715/cf75d935-d8b4-430c-a1d8-04f453151924)         | ![Canvas](https://github.com/thesimonho/kanagawa-paper.nvim/assets/5199715/cf75d935-d8b4-430c-a1d8-04f453151924)         |
+| ![Ink Palette](https://github.com/thesimonho/kanagawa-paper.nvim/assets/5199715/cf75d935-d8b4-430c-a1d8-04f453151924) | ![Canvas Palette](https://github.com/thesimonho/kanagawa-paper.nvim/assets/5199715/cf75d935-d8b4-430c-a1d8-04f453151924) |
 
 ## 💡 Motivation
 
@@ -39,11 +42,9 @@ Kanagawa Paper comes in a few variants:
 - `kanagawa-paper-canvas` for sunny days
 - `kanagawa-paper` for automatic theme switching based on `vim.o.background`
 
-Most of the time you'll want to use `kanagawa-paper` for maximum flexibility.
-
 Themes can be changed in a couple of ways:
 
-- Using the `background` option:
+- Using the background option:
   Any change to the value of `vim.o.background` will select the corresponding light or dark theme. If this is unset, the theme will default to the dark theme `ink`.
 - Loading the color scheme directly with:
 
@@ -65,6 +66,9 @@ vim.cmd.colorscheme("kanagawa-paper-canvas")
 
 ## 🛠️ Configuration
 
+> [!NOTE]
+> Config options have changed between v1 and v2 of the color scheme.
+
 > [!IMPORTANT]
 > Set the configuration **BEFORE** loading the color scheme to ensure the settings are applied, otherwise defaults will be used.
 
@@ -85,7 +89,7 @@ require("kanagawa-paper").setup({
  -- set colors for terminal buffers
  terminal_colors = true,
  -- cache highlights and colors for faster startup.
- -- see Cache section in README for more details.
+ -- see Cache section for more details.
  cache = false,
 
  styles = {
@@ -156,7 +160,7 @@ vim.o.background = (hour >= 7 and hour < 19) and "light" or "dark"
 
 The color scheme comes with a cache option that can be used to speed up startup time.
 
-When you set `cache = true` in your config, the theme colors and all of your edits/adjustments will be saved to a file. This is loaded at startup so colors don't need to be recomputed every time.
+When you set `cache = true` in your config, the theme colors and all of your edits/adjustments will be saved to a cache file. This is loaded at startup so colors don't need to be recomputed every time.
 
 Any changes you make to your config (e.g. overriding colors or highlight groups) should automatically invalidate the cache and build a new one.
 
@@ -182,7 +186,7 @@ require("lualine").setup({
 })
 ```
 
-For a more advanced use case you can make use of the background color to set the Lualine theme dynamically. This switches Lualine between light and dark themes based on background color, but only if you're using the auto-switching `kanagawa-paper` main theme.
+For a more advanced use case you can make use of the background color to set the Lualine theme dynamically. This switches Lualine between light and dark themes based on background color:
 
 ```lua
 require("lualine").setup({
@@ -191,7 +195,7 @@ require("lualine").setup({
     -- pcall and fallback theme is to handle the case of theme switching/previewing
     local ok, t = pcall(
       require,
-      "lualine.themes." .. (vim.g.colors_name == "kanagawa-paper" and vim.o.background == "light" and "kanagawa-paper-canvas" or "kanagawa-paper-ink")
+      "lualine.themes." .. (vim.o.background == "light" and "kanagawa-paper-canvas" or "kanagawa-paper-ink")
     )
     if ok then
       theme = t
@@ -238,6 +242,10 @@ config.color_scheme_dirs = { "~/.config/wezterm/colors" } -- or wherever you wan
 
 3. Copy [theme_switcher.lua](lua/wezterm) to where your wezterm config is. Add `require("theme_switcher")` to your wezterm config to load the theme switcher.
 
+Your final wezterm config directories might look something like this:
+
+![wezterm directories]()
+
 4. Update the `theme_switcher.lua` file with the correct paths to your files:
 
 ```lua
@@ -253,6 +261,8 @@ local theme_file = (os.getenv("TEMP") or "/tmp") .. "/nvim-theme"
 -- this is treated as a relative lua module that will be required by the theme switcher
 local tabline_theme_dir = "colors.wezterm_tabline"
 ```
+
+You can see an example of this setup in my dotfiles [here](https://github.com/thesimonho/dotfiles/tree/master/config/wezterm).
 
 ## 🔧 Customizing Colors
 
@@ -319,59 +329,6 @@ You can find a more detailed explanation of color customization [here](https://g
 local colors = require("kanagawa-paper.colors").setup()
 local palette_colors = colors.palette
 local theme_colors = colors.theme
-```
-
-### Common customizations
-
-#### Transparent Floating Windows
-
-This will make floating windows look nicer with default borders.
-
-For this to work, make sure you've set winblend to a non-zero value in your config: `vim.opt.winblend = 30`
-
-```lua
-overrides = function(colors)
-  local theme = colors.theme
-  return {
-    NormalFloat = { bg = "none" },
-    FloatBorder = { bg = "none" },
-    FloatTitle = { bg = "none" },
-
-    -- Save a hlgroup with dark background and dimmed foreground
-    -- so that you can use it where you still want darker windows.
-    -- E.g.: autocmd TermOpen * setlocal winhighlight=Normal:NormalDark
-    NormalDark = { fg = theme.ui.fg_dim, bg = theme.ui.bg_m3 },
-
-    -- Popular plugins that open floats will link to NormalFloat by default;
-    -- set their background accordingly if you wish to keep them dark and borderless
-    LazyNormal = { bg = theme.ui.bg_m3, fg = theme.ui.fg_dim },
-    MasonNormal = { bg = theme.ui.bg_m3, fg = theme.ui.fg_dim },
-  },
-end
-```
-
-If you'd like to keep the floating windows darker, but you're unhappy with how
-borders are rendered, consider using characters that are drawn at the edges of
-the box:
-
-```lua
-{ "🭽", "▔", "🭾", "▕", "🭿", "▁", "🭼", "▏" }
-```
-
-#### Dark completion (popup) menu
-
-More uniform colors for the popup menu.
-
-```lua
-overrides = function(colors)
-  local theme = colors.theme
-  return {
-    Pmenu = { fg = theme.ui.shade0, bg = theme.ui.bg_p1 },  -- add `blend = vim.o.pumblend` to enable transparency
-    PmenuSel = { fg = "NONE", bg = theme.ui.bg_p2 },
-    PmenuSbar = { bg = theme.ui.bg_m1 },
-    PmenuThumb = { bg = theme.ui.bg_p2 },
-  }
-end,
 ```
 
 ## 🍭 Extras

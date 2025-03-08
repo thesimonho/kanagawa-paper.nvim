@@ -14,7 +14,7 @@ local tabline_theme_dir = "colors.wezterm_tabline"
 
 local wezterm = require("wezterm")
 
--- NOTE: file must exist for watch list reloading to work
+-- file must exist for watch list reloading to work
 local f = io.open(theme_file, "r") ~= nil
 if not f then
 	io.open(theme_file, "w"):close()
