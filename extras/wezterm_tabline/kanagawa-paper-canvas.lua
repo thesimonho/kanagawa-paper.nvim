@@ -13,8 +13,8 @@ M.theme_overrides = {
     c = { fg = "#858479", bg = "#cbc8bc" },
   },
   copy_mode = {
-    a = { fg = "#ecece8", bg = "#ba4e5a" },
-    b = { fg = "#ba4e5a", bg = "#ecece8" },
+    a = { fg = "#ecece8", bg = "#b35560" },
+    b = { fg = "#b35560", bg = "#ecece8" },
     c = { fg = "#858479", bg = "#cbc8bc" },
   },
   search_mode = {
@@ -35,7 +35,7 @@ M.theme_overrides = {
   tab = {
     active = { fg = '#618bb6', bg = '#e1e1de', bold = true },
     inactive = { fg = '#858479', bg = '#cbc8bc' },
-    inactive_hover = { fg = '#a85b76', bg = '#e1e1de' },
+    inactive_hover = { fg = '#ac7085', bg = '#e1e1de' },
   }
 }
 
