@@ -13,7 +13,7 @@ cursor = '#c4b28a'
 text = '#1F1F28'
 
 [colors.selection]
-background = '#766b90'
+background = '#363646'
 foreground = '#9e9b93'
 
 [colors.normal]
