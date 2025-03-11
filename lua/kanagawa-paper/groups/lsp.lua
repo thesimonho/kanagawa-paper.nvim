@@ -6,8 +6,8 @@ function M.setup(colors, opts)
 	local theme = colors.theme
 	return {
 		LspReferenceText = { bg = "none", bold = false },
-		LspReferenceRead = { bg = theme.ui.bg_cursorline, bold = false },
-		LspReferenceWrite = { bg = theme.ui.bg_cursorline, bold = false },
+		LspReferenceRead = { bg = theme.ui.bg_visual, bold = false },
+		LspReferenceWrite = { bg = theme.ui.bg_visual, bold = false },
 		LspInlayHint = { fg = theme.ui.fg_gray, bg = theme.accent.invert, italic = true },
 		LspSignatureActiveParameter = { fg = theme.diag.hint },
 		LspCodeLens = { fg = theme.syn.comment, bg = "None", italic = false },

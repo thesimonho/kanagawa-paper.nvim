@@ -7,6 +7,7 @@ function M.get(colors, opts)
 		NvimTreeIndentMarker = { fg = theme.ui.indent },
 		NvimTreeNormal = { link = "Normal" },
 		NvimTreeNormalNC = { link = "NvimTreeNormal" },
+		NvimTreeCursorLine = { bg = theme.ui.bg_cursorline_alt },
 		NvimTreeGitDirty = { fg = theme.vcs.changed },
 		NvimTreeGitNew = { fg = theme.vcs.added },
 		NvimTreeGitDeleted = { fg = theme.vcs.removed },

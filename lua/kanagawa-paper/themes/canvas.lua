@@ -31,6 +31,7 @@ M.get = function(opts, palette)
 			bg_gutter = opts.gutter and palette.canvasWhite4 or "none",
 			bg_search = palette.canvasViolet1,
 			bg_cursorline = palette.canvasWhite1,
+			bg_cursorline_alt = palette.canvasWhite2,
 			bg_visual = palette.canvasViolet1,
 			bg_statusline = palette.canvasWhite0,
 			border = palette.canvasGray3,

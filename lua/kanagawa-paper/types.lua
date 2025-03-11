@@ -278,6 +278,7 @@
 ---@field bg_gutter ColorSpec {Sign,Fold}Column, LineNr
 ---@field bg_search ColorSpec Search background
 ---@field bg_cursorline ColorSpec CursorLine background
+---@field bg_cursorline_alt ColorSpec CursorLine background (alternate)
 ---@field bg_visual ColorSpec Visual selection background
 ---@field bg_statusline ColorSpec Statusline background
 ---@field border ColorSpec Border color

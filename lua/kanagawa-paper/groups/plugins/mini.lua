@@ -41,7 +41,7 @@ function M.get(colors, opts)
 
 		MiniFilesBorder = { link = "FloatBorder" },
 		MiniFilesBorderModified = { link = "DiagnosticFloatingWarn" },
-		MiniFilesCursorLine = { link = "CursorLine" },
+		MiniFilesCursorLine = { bg = theme.ui.bg_cursorline_alt },
 		MiniFilesDirectory = { link = "Directory" },
 		MiniFilesFile = { fg = theme.ui.fg },
 		MiniFilesNormal = { link = "NormalFloat" },

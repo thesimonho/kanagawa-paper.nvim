@@ -32,6 +32,7 @@ M.get = function(opts, palette)
 			bg_gutter = opts.gutter and palette.sumiInk4 or "none",
 			bg_search = palette.springViolet1,
 			bg_cursorline = palette.sumiInk4,
+			bg_cursorline_alt = palette.sumiInk5,
 			bg_visual = palette.sumiInk5,
 			bg_statusline = palette.sumiInk4,
 			border = palette.dragonBlack6,
