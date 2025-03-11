@@ -1,5 +1,15 @@
 # Changelog
 
+## [2.0.1](https://github.com/thesimonho/kanagawa-paper.nvim/compare/v2.0.0...v2.0.1) (2025-03-11)
+
+
+### Bug Fixes
+
+* **cache:** correct scope for encapsulation pattern ([#29](https://github.com/thesimonho/kanagawa-paper.nvim/issues/29)) ([76633c3](https://github.com/thesimonho/kanagawa-paper.nvim/commit/76633c3035aa4c626b00b4487048077786c271d8))
+* **editor:** keep syntax colors on visual selections ([1afb15d](https://github.com/thesimonho/kanagawa-paper.nvim/commit/1afb15de43b6c25930f56eda948c7b4d15906037))
+* **ink:** create better distinction between visual and cursorline ([027aa65](https://github.com/thesimonho/kanagawa-paper.nvim/commit/027aa6587b08d9af31cdd38f99a39ccc0ebc1669))
+* **theme:** add additional cursorline group ([9061ac5](https://github.com/thesimonho/kanagawa-paper.nvim/commit/9061ac50a57a6c5c72b5b26ad3597fc12d80a285))
+
 ## [2.0.0](https://github.com/thesimonho/kanagawa-paper.nvim/compare/v1.8.0...v2.0.0) (2025-03-08)
 
 
