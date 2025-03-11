@@ -1,7 +1,7 @@
 local cache_version = 1.0 -- Bump when the cache format changes to automatically invalidate the cache.
 local util = require("kanagawa-paper.lib.util")
 
-M = {}
+local M = {}
 
 --- Get the cache file path for a given key
 ---@param key string
