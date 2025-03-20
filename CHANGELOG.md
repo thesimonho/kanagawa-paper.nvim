@@ -1,5 +1,17 @@
 # Changelog
 
+## [2.0.2](https://github.com/thesimonho/kanagawa-paper.nvim/compare/v2.0.1...v2.0.2) (2025-03-20)
+
+
+### Bug Fixes
+
+* **snacks:** more consistent cursorline colors for pickers and input ([4f0dbbf](https://github.com/thesimonho/kanagawa-paper.nvim/commit/4f0dbbfd9494408c3518f52da61fe8284a6eb90d))
+
+
+### Reverts
+
+* **config:** dim active should be opt-in ([f283017](https://github.com/thesimonho/kanagawa-paper.nvim/commit/f283017eca5e715f7ea2b17a0c68354fb1ac0e1e))
+
 ## [2.0.1](https://github.com/thesimonho/kanagawa-paper.nvim/compare/v2.0.0...v2.0.1) (2025-03-11)
 
 
