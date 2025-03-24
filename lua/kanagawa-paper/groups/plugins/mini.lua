@@ -108,16 +108,16 @@ function M.get(colors, opts)
 		MiniStarterSection = { fg = theme.ui.header1 },
 		MiniStarterQuery = { fg = theme.diag.info },
 
-		MiniStatuslineDevinfo = { fg = theme.ui.fg_dim, bg = theme.ui.bg_p1 },
-		MiniStatuslineFileinfo = { fg = theme.ui.fg_dim, bg = theme.ui.bg_p1 },
-		MiniStatuslineFilename = { fg = theme.ui.fg_dim, bg = theme.ui.bg_dim },
-		MiniStatuslineInactive = { link = "StatusLineNC" },
 		MiniStatuslineModeCommand = { fg = theme.ui.bg, bg = theme.modes.command, bold = true },
 		MiniStatuslineModeInsert = { fg = theme.ui.bg, bg = theme.modes.insert, bold = true },
-		MiniStatuslineModeNormal = { fg = theme.ui.bg_m3, bg = theme.modes.normal, bold = true },
-		MiniStatuslineModeOther = { fg = theme.ui.bg_m3, bg = theme.modes.normal, bold = true },
+		MiniStatuslineModeNormal = { fg = theme.ui.bg_p2, bg = theme.modes.normal, bold = true },
+		MiniStatuslineModeOther = { fg = theme.ui.bg_p2, bg = theme.modes.normal, bold = true },
 		MiniStatuslineModeReplace = { fg = theme.ui.bg, bg = theme.modes.replace, bold = true },
 		MiniStatuslineModeVisual = { fg = theme.ui.bg, bg = theme.modes.visual, bold = true },
+		MiniStatuslineDevinfo = { fg = theme.ui.fg, bg = theme.ui.bg_p2 },
+		MiniStatuslineFileinfo = { fg = theme.ui.fg_gray, bg = theme.ui.bg_statusline },
+		MiniStatuslineFilename = { link = "MiniStatuslineFileinfo" },
+		MiniStatuslineInactive = { fg = theme.ui.fg_gray, bg = theme.ui.bg_m4 },
 
 		MiniSurround = { link = "IncSearch" },
 
