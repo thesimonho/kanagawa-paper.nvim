@@ -14,7 +14,7 @@ body:
     attributes:
       label: "Is your request related to an external plugin?"
       description: If so, please provide a link to the plugin
-      placeholder: "link to the plugin"
+      placeholder: "https://"
     validations:
       required: false
   - type: textarea
