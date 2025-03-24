@@ -10,10 +10,20 @@ body:
       options:
         - label: I have read all the kanagawa-paper.nvim docs
           required: true
+  - type: dropdown
+    id: plugin
+    attributes:
+      label: Is your request related to an external plugin?
+      multiple: false
+      options:
+        - 'No'
+        - 'Yes'
+      default: 0
+    validations:
+      required: true
   - type: input
     attributes:
-      label: "Is your request related to an external plugin?"
-      description: If so, please provide a link to the plugin
+      label: Please provide the link to the plugin, if applicable
       placeholder: "https://"
     validations:
       required: false

@@ -1,0 +1,17 @@
+policy:
+  - template: [1-bug-report.yml]
+    section:
+      - id: [theme]
+        block-list: []
+        label:
+          - name: 'theme: ink'
+            keys: ['Ink']
+          - name: 'theme: canvas'
+            keys: ['Canvas']
+  - template: [2-feature-request.yml]
+    section:
+      - id: [plugin]
+        block-list: [No]
+        label:
+          - name: 'plugin'
+            keys: ['Yes']

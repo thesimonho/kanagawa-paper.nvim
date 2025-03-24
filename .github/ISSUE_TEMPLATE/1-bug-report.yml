@@ -24,13 +24,14 @@ body:
         - label: I have searched the existing issues of plugins related to this issue
           required: true
   - type: checkboxes
+    id: theme
     attributes:
       label: Does this issue affect a specific theme?
-      description: Check the affected theme(s) below
+      description: Check all that apply
       options:
-        - label: Ink (dark)
+        - label: Ink
           required: false
-        - label: Canvas (light)
+        - label: Canvas
           required: false
   - type: input
     attributes:
