@@ -1,5 +1,24 @@
 # Changelog
 
+## [2.0.2](https://github.com/thesimonho/kanagawa-paper.nvim/compare/v2.0.1...v2.0.2) (2025-03-26)
+
+
+### Bug Fixes
+
+* **mini:** match statusline colors to lualine ([9e4c9aa](https://github.com/thesimonho/kanagawa-paper.nvim/commit/9e4c9aa8ef849e01c74a20c22b23e5356ed19ab2))
+* **snacks:** more consistent cursorline colors for pickers and input ([4f0dbbf](https://github.com/thesimonho/kanagawa-paper.nvim/commit/4f0dbbfd9494408c3518f52da61fe8284a6eb90d))
+* **syntax:** make strings feel less christmasy ([1d670eb](https://github.com/thesimonho/kanagawa-paper.nvim/commit/1d670eb3c87c45d0ea0b00c84887583397952920))
+
+
+### Performance Improvements
+
+* **integrations:** use new theme override api for tabline theme switcher ([c7c5f33](https://github.com/thesimonho/kanagawa-paper.nvim/commit/c7c5f3306ebc420d46ba5812e578bcf24def7fe0))
+
+
+### Reverts
+
+* **config:** dim active should be opt-in ([f283017](https://github.com/thesimonho/kanagawa-paper.nvim/commit/f283017eca5e715f7ea2b17a0c68354fb1ac0e1e))
+
 ## [2.0.1](https://github.com/thesimonho/kanagawa-paper.nvim/compare/v2.0.0...v2.0.1) (2025-03-11)
 
 
