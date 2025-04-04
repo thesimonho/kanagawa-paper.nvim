@@ -17,6 +17,7 @@ function M.get(colors, opts)
 		CmpItemAbbrMatchFuzzy = { link = "CmpItemAbbrMatch" },
 		CmpItemMenu = { fg = theme.ui.fg_dim },
 		CmpGhostText = { fg = theme.syn.comment },
+
 		CmpItemKindDefault = { fg = theme.ui.fg_dim },
 		CmpItemKindText = { fg = theme.ui.fg },
 		CmpItemKindMethod = { link = "@function.method" },
