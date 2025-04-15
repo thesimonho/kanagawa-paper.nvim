@@ -292,7 +292,7 @@ require('kanagawa-paper').setup({
       ink = {
         ui = {
           float = {
-            fg = "#ff0000,
+            fg = "#ff0000",
           },
         },
       },
