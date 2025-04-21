@@ -9,7 +9,7 @@ Remixed light and dark Kanagawa color scheme with muted colors. For Neovim.
 
 ## 💡 Motivation
 
-I love the original [kanagawa.nvim](https://github.com/rebelot/kanagawa.nvim) color scheme, but I found some of the colors a bit too bright and distracting. What I wanted was a more muted theme overall, using less saturated colors inspired by the original theme.
+I love the original [kanagawa.nvim](https://github.com/rebelot/kanagawa.nvim) color scheme, but I found some of the colors a bit too bright and distracting. What I wanted was a more muted theme overall, using less saturated colors inspired by the original theme. You can see a visual preview of the color palette [here](palette_colors.md).
 
 Both a light theme and a dark theme are provided.
 
@@ -278,6 +278,8 @@ to specific `ThemeColors` and the same palette color may be assigned to multiple
 You can change _both_ theme or palette colors using `config.colors`.
 All the palette color names can be found [here](lua/kanagawa-paper/colors.lua),
 while their usage by each theme can be found [here](lua/kanagawa-paper/themes).
+
+You can see a visual preview of the entire color palette [here](palette_colors.md).
 
 ```lua
 require('kanagawa-paper').setup({

@@ -1,0 +1,34 @@
+name: Generate Palette
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - "lua/kanagawa-paper/colors.lua"
+  pull_request:
+    types: [closed]
+    paths:
+      - "lua/kanagawa-paper/colors.lua"
+jobs:
+  generate:
+    name: Generate Palette
+    runs-on: ubuntu-latest
+    if: github.event_name == 'push' || github.event_name == 'workflow_dispatch' || github.event.pull_request.merged == true
+    steps:
+      - uses: actions/checkout@v4
+      - uses: leafo/gh-actions-lua@v11
+        with:
+          luaVersion: "5.1"
+      - name: Run generate script
+        run: lua scripts/generate_palette.lua
+      - name: Stash changes if needed
+        run: |
+          git stash push || echo "No changes to stash"
+      - name: Pull latest changes with rebase
+        run: |
+          git pull --rebase origin ${{ github.ref_name }}
+      - name: Restore stash if needed
+        run: |
+          git stash pop || echo "No changes to restore"
+      - uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "docs(palette): auto generate palette preview"
