@@ -17,27 +17,22 @@ md:write("# Palette Colors\n\n")
 md:write("(this file is auto generated from `lua/kanagawa-paper/colors.lua`)\n\n")
 
 md:write([[
-<div style="display: flex; flex-wrap: wrap; gap: 12px;">
+| Name  | Color  | Hex   |
+| ----- | :----: | :---: |
 ]])
 
 for _, name in ipairs(ordered) do
-	local hex = palette[name]
+	local hex = palette[name]:sub(2)
 	md:write(string.format(
 		[[
-  <div style="flex: 0 0 auto; width: 100px; border: 1px solid #bcbcbc; border-radius: 4px; overflow: hidden; font-family: sans-serif;">
-    <div style="height: 50px; background: %s;"></div>
-    <div style="padding: 4px; font-size: 12px; text-align: center;">
-      <strong>%s</strong><br/>
-      <code>%s</code>
-    </div>
-  </div>
+| **%s** | ![%s](https://placehold.co/40x15/%s/%s.png) | `#%s` |
 ]],
-		hex,
 		name,
+		hex,
+		hex,
+		hex,
 		hex
 	))
 end
-
-md:write("\n</div>\n")
 
 md:close()
