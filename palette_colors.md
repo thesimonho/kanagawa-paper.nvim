@@ -2,1063 +2,156 @@
 
 (this file is auto generated from `lua/kanagawa-paper/colors.lua`)
 
-<div style="display: flex; flex-wrap: wrap; gap: 12px;">
-  <div style="flex: 0 0 auto; width: 100px; border: 1px solid #bcbcbc; border-radius: 4px; overflow: hidden; font-family: sans-serif;">
-    <div style="height: 50px; background: #76946A;"></div>
-    <div style="padding: 4px; font-size: 12px; text-align: center;">
-      <strong>autumnGreen</strong><br/>
-      <code>#76946A</code>
-    </div>
-  </div>
-  <div style="flex: 0 0 auto; width: 100px; border: 1px solid #bcbcbc; border-radius: 4px; overflow: hidden; font-family: sans-serif;">
-    <div style="height: 50px; background: #C34043;"></div>
-    <div style="padding: 4px; font-size: 12px; text-align: center;">
-      <strong>autumnRed</strong><br/>
-      <code>#C34043</code>
-    </div>
-  </div>
-  <div style="flex: 0 0 auto; width: 100px; border: 1px solid #bcbcbc; border-radius: 4px; overflow: hidden; font-family: sans-serif;">
-    <div style="height: 50px; background: #DCA561;"></div>
-    <div style="padding: 4px; font-size: 12px; text-align: center;">
-      <strong>autumnYellow</strong><br/>
-      <code>#DCA561</code>
-    </div>
-  </div>
-  <div style="flex: 0 0 auto; width: 100px; border: 1px solid #bcbcbc; border-radius: 4px; overflow: hidden; font-family: sans-serif;">
-    <div style="height: 50px; background: #938056;"></div>
-    <div style="padding: 4px; font-size: 12px; text-align: center;">
-      <strong>boatYellow1</strong><br/>
-      <code>#938056</code>
-    </div>
-  </div>
-  <div style="flex: 0 0 auto; width: 100px; border: 1px solid #bcbcbc; border-radius: 4px; overflow: hidden; font-family: sans-serif;">
-    <div style="height: 50px; background: #C0A36E;"></div>
-    <div style="padding: 4px; font-size: 12px; text-align: center;">
-      <strong>boatYellow2</strong><br/>
-      <code>#C0A36E</code>
-    </div>
-  </div>
-  <div style="flex: 0 0 auto; width: 100px; border: 1px solid #bcbcbc; border-radius: 4px; overflow: hidden; font-family: sans-serif;">
-    <div style="height: 50px; background: #57786c;"></div>
-    <div style="padding: 4px; font-size: 12px; text-align: center;">
-      <strong>canvasAqua</strong><br/>
-      <code>#57786c</code>
-    </div>
-  </div>
-  <div style="flex: 0 0 auto; width: 100px; border: 1px solid #bcbcbc; border-radius: 4px; overflow: hidden; font-family: sans-serif;">
-    <div style="height: 50px; background: #5f847c;"></div>
-    <div style="padding: 4px; font-size: 12px; text-align: center;">
-      <strong>canvasAqua2</strong><br/>
-      <code>#5f847c</code>
-    </div>
-  </div>
-  <div style="flex: 0 0 auto; width: 100px; border: 1px solid #bcbcbc; border-radius: 4px; overflow: hidden; font-family: sans-serif;">
-    <div style="height: 50px; background: #93b5d0;"></div>
-    <div style="padding: 4px; font-size: 12px; text-align: center;">
-      <strong>canvasBlue1</strong><br/>
-      <code>#93b5d0</code>
-    </div>
-  </div>
-  <div style="flex: 0 0 auto; width: 100px; border: 1px solid #bcbcbc; border-radius: 4px; overflow: hidden; font-family: sans-serif;">
-    <div style="height: 50px; background: #719ac2;"></div>
-    <div style="padding: 4px; font-size: 12px; text-align: center;">
-      <strong>canvasBlue2</strong><br/>
-      <code>#719ac2</code>
-    </div>
-  </div>
-  <div style="flex: 0 0 auto; width: 100px; border: 1px solid #bcbcbc; border-radius: 4px; overflow: hidden; font-family: sans-serif;">
-    <div style="height: 50px; background: #5c71a4;"></div>
-    <div style="padding: 4px; font-size: 12px; text-align: center;">
-      <strong>canvasBlue3</strong><br/>
-      <code>#5c71a4</code>
-    </div>
-  </div>
-  <div style="flex: 0 0 auto; width: 100px; border: 1px solid #bcbcbc; border-radius: 4px; overflow: hidden; font-family: sans-serif;">
-    <div style="height: 50px; background: #526994;"></div>
-    <div style="padding: 4px; font-size: 12px; text-align: center;">
-      <strong>canvasBlue4</strong><br/>
-      <code>#526994</code>
-    </div>
-  </div>
-  <div style="flex: 0 0 auto; width: 100px; border: 1px solid #bcbcbc; border-radius: 4px; overflow: hidden; font-family: sans-serif;">
-    <div style="height: 50px; background: #515797;"></div>
-    <div style="padding: 4px; font-size: 12px; text-align: center;">
-      <strong>canvasBlue5</strong><br/>
-      <code>#515797</code>
-    </div>
-  </div>
-  <div style="flex: 0 0 auto; width: 100px; border: 1px solid #bcbcbc; border-radius: 4px; overflow: hidden; font-family: sans-serif;">
-    <div style="height: 50px; background: #56a06a;"></div>
-    <div style="padding: 4px; font-size: 12px; text-align: center;">
-      <strong>canvasCyan</strong><br/>
-      <code>#56a06a</code>
-    </div>
-  </div>
-  <div style="flex: 0 0 auto; width: 100px; border: 1px solid #bcbcbc; border-radius: 4px; overflow: hidden; font-family: sans-serif;">
-    <div style="height: 50px; background: #5d5c54;"></div>
-    <div style="padding: 4px; font-size: 12px; text-align: center;">
-      <strong>canvasGray0</strong><br/>
-      <code>#5d5c54</code>
-    </div>
-  </div>
-  <div style="flex: 0 0 auto; width: 100px; border: 1px solid #bcbcbc; border-radius: 4px; overflow: hidden; font-family: sans-serif;">
-    <div style="height: 50px; background: #858479;"></div>
-    <div style="padding: 4px; font-size: 12px; text-align: center;">
-      <strong>canvasGray1</strong><br/>
-      <code>#858479</code>
-    </div>
-  </div>
-  <div style="flex: 0 0 auto; width: 100px; border: 1px solid #bcbcbc; border-radius: 4px; overflow: hidden; font-family: sans-serif;">
-    <div style="height: 50px; background: #a9a8a0;"></div>
-    <div style="padding: 4px; font-size: 12px; text-align: center;">
-      <strong>canvasGray2</strong><br/>
-      <code>#a9a8a0</code>
-    </div>
-  </div>
-  <div style="flex: 0 0 auto; width: 100px; border: 1px solid #bcbcbc; border-radius: 4px; overflow: hidden; font-family: sans-serif;">
-    <div style="height: 50px; background: #b5b5ae;"></div>
-    <div style="padding: 4px; font-size: 12px; text-align: center;">
-      <strong>canvasGray3</strong><br/>
-      <code>#b5b5ae</code>
-    </div>
-  </div>
-  <div style="flex: 0 0 auto; width: 100px; border: 1px solid #bcbcbc; border-radius: 4px; overflow: hidden; font-family: sans-serif;">
-    <div style="height: 50px; background: #c1c1bb;"></div>
-    <div style="padding: 4px; font-size: 12px; text-align: center;">
-      <strong>canvasGray4</strong><br/>
-      <code>#c1c1bb</code>
-    </div>
-  </div>
-  <div style="flex: 0 0 auto; width: 100px; border: 1px solid #bcbcbc; border-radius: 4px; overflow: hidden; font-family: sans-serif;">
-    <div style="height: 50px; background: #73865b;"></div>
-    <div style="padding: 4px; font-size: 12px; text-align: center;">
-      <strong>canvasGreen</strong><br/>
-      <code>#73865b</code>
-    </div>
-  </div>
-  <div style="flex: 0 0 auto; width: 100px; border: 1px solid #bcbcbc; border-radius: 4px; overflow: hidden; font-family: sans-serif;">
-    <div style="height: 50px; background: #718e64;"></div>
-    <div style="padding: 4px; font-size: 12px; text-align: center;">
-      <strong>canvasGreen2</strong><br/>
-      <code>#718e64</code>
-    </div>
-  </div>
-  <div style="flex: 0 0 auto; width: 100px; border: 1px solid #bcbcbc; border-radius: 4px; overflow: hidden; font-family: sans-serif;">
-    <div style="height: 50px; background: #a0c991;"></div>
-    <div style="padding: 4px; font-size: 12px; text-align: center;">
-      <strong>canvasGreen3</strong><br/>
-      <code>#a0c991</code>
-    </div>
-  </div>
-  <div style="flex: 0 0 auto; width: 100px; border: 1px solid #bcbcbc; border-radius: 4px; overflow: hidden; font-family: sans-serif;">
-    <div style="height: 50px; background: #4c4c65;"></div>
-    <div style="padding: 4px; font-size: 12px; text-align: center;">
-      <strong>canvasInk0</strong><br/>
-      <code>#4c4c65</code>
-    </div>
-  </div>
-  <div style="flex: 0 0 auto; width: 100px; border: 1px solid #bcbcbc; border-radius: 4px; overflow: hidden; font-family: sans-serif;">
-    <div style="height: 50px; background: #595b62;"></div>
-    <div style="padding: 4px; font-size: 12px; text-align: center;">
-      <strong>canvasInk1</strong><br/>
-      <code>#595b62</code>
-    </div>
-  </div>
-  <div style="flex: 0 0 auto; width: 100px; border: 1px solid #bcbcbc; border-radius: 4px; overflow: hidden; font-family: sans-serif;">
-    <div style="height: 50px; background: #484862;"></div>
-    <div style="padding: 4px; font-size: 12px; text-align: center;">
-      <strong>canvasInk2</strong><br/>
-      <code>#484862</code>
-    </div>
-  </div>
-  <div style="flex: 0 0 auto; width: 100px; border: 1px solid #bcbcbc; border-radius: 4px; overflow: hidden; font-family: sans-serif;">
-    <div style="height: 50px; background: #b8805e;"></div>
-    <div style="padding: 4px; font-size: 12px; text-align: center;">
-      <strong>canvasOrange</strong><br/>
-      <code>#b8805e</code>
-    </div>
-  </div>
-  <div style="flex: 0 0 auto; width: 100px; border: 1px solid #bcbcbc; border-radius: 4px; overflow: hidden; font-family: sans-serif;">
-    <div style="height: 50px; background: #d59260;"></div>
-    <div style="padding: 4px; font-size: 12px; text-align: center;">
-      <strong>canvasOrange2</strong><br/>
-      <code>#d59260</code>
-    </div>
-  </div>
-  <div style="flex: 0 0 auto; width: 100px; border: 1px solid #bcbcbc; border-radius: 4px; overflow: hidden; font-family: sans-serif;">
-    <div style="height: 50px; background: #ac7085;"></div>
-    <div style="padding: 4px; font-size: 12px; text-align: center;">
-      <strong>canvasPink</strong><br/>
-      <code>#ac7085</code>
-    </div>
-  </div>
-  <div style="flex: 0 0 auto; width: 100px; border: 1px solid #bcbcbc; border-radius: 4px; overflow: hidden; font-family: sans-serif;">
-    <div style="height: 50px; background: #b35560;"></div>
-    <div style="padding: 4px; font-size: 12px; text-align: center;">
-      <strong>canvasRed</strong><br/>
-      <code>#b35560</code>
-    </div>
-  </div>
-  <div style="flex: 0 0 auto; width: 100px; border: 1px solid #bcbcbc; border-radius: 4px; overflow: hidden; font-family: sans-serif;">
-    <div style="height: 50px; background: #c75758;"></div>
-    <div style="padding: 4px; font-size: 12px; text-align: center;">
-      <strong>canvasRed2</strong><br/>
-      <code>#c75758</code>
-    </div>
-  </div>
-  <div style="flex: 0 0 auto; width: 100px; border: 1px solid #bcbcbc; border-radius: 4px; overflow: hidden; font-family: sans-serif;">
-    <div style="height: 50px; background: #c95d5d;"></div>
-    <div style="padding: 4px; font-size: 12px; text-align: center;">
-      <strong>canvasRed3</strong><br/>
-      <code>#c95d5d</code>
-    </div>
-  </div>
-  <div style="flex: 0 0 auto; width: 100px; border: 1px solid #bcbcbc; border-radius: 4px; overflow: hidden; font-family: sans-serif;">
-    <div style="height: 50px; background: #d99a85;"></div>
-    <div style="padding: 4px; font-size: 12px; text-align: center;">
-      <strong>canvasRed4</strong><br/>
-      <code>#d99a85</code>
-    </div>
-  </div>
-  <div style="flex: 0 0 auto; width: 100px; border: 1px solid #bcbcbc; border-radius: 4px; overflow: hidden; font-family: sans-serif;">
-    <div style="height: 50px; background: #5f8a9b;"></div>
-    <div style="padding: 4px; font-size: 12px; text-align: center;">
-      <strong>canvasTeal1</strong><br/>
-      <code>#5f8a9b</code>
-    </div>
-  </div>
-  <div style="flex: 0 0 auto; width: 100px; border: 1px solid #bcbcbc; border-radius: 4px; overflow: hidden; font-family: sans-serif;">
-    <div style="height: 50px; background: #618bb6;"></div>
-    <div style="padding: 4px; font-size: 12px; text-align: center;">
-      <strong>canvasTeal2</strong><br/>
-      <code>#618bb6</code>
-    </div>
-  </div>
-  <div style="flex: 0 0 auto; width: 100px; border: 1px solid #bcbcbc; border-radius: 4px; overflow: hidden; font-family: sans-serif;">
-    <div style="height: 50px; background: #526c79;"></div>
-    <div style="padding: 4px; font-size: 12px; text-align: center;">
-      <strong>canvasTeal3</strong><br/>
-      <code>#526c79</code>
-    </div>
-  </div>
-  <div style="flex: 0 0 auto; width: 100px; border: 1px solid #bcbcbc; border-radius: 4px; overflow: hidden; font-family: sans-serif;">
-    <div style="height: 50px; background: #c4cbdc;"></div>
-    <div style="padding: 4px; font-size: 12px; text-align: center;">
-      <strong>canvasViolet1</strong><br/>
-      <code>#c4cbdc</code>
-    </div>
-  </div>
-  <div style="flex: 0 0 auto; width: 100px; border: 1px solid #bcbcbc; border-radius: 4px; overflow: hidden; font-family: sans-serif;">
-    <div style="height: 50px; background: #a398bf;"></div>
-    <div style="padding: 4px; font-size: 12px; text-align: center;">
-      <strong>canvasViolet2</strong><br/>
-      <code>#a398bf</code>
-    </div>
-  </div>
-  <div style="flex: 0 0 auto; width: 100px; border: 1px solid #bcbcbc; border-radius: 4px; overflow: hidden; font-family: sans-serif;">
-    <div style="height: 50px; background: #7967a2;"></div>
-    <div style="padding: 4px; font-size: 12px; text-align: center;">
-      <strong>canvasViolet3</strong><br/>
-      <code>#7967a2</code>
-    </div>
-  </div>
-  <div style="flex: 0 0 auto; width: 100px; border: 1px solid #bcbcbc; border-radius: 4px; overflow: hidden; font-family: sans-serif;">
-    <div style="height: 50px; background: #6f4f9d;"></div>
-    <div style="padding: 4px; font-size: 12px; text-align: center;">
-      <strong>canvasViolet4</strong><br/>
-      <code>#6f4f9d</code>
-    </div>
-  </div>
-  <div style="flex: 0 0 auto; width: 100px; border: 1px solid #bcbcbc; border-radius: 4px; overflow: hidden; font-family: sans-serif;">
-    <div style="height: 50px; background: #cbc8bc;"></div>
-    <div style="padding: 4px; font-size: 12px; text-align: center;">
-      <strong>canvasWhite0</strong><br/>
-      <code>#cbc8bc</code>
-    </div>
-  </div>
-  <div style="flex: 0 0 auto; width: 100px; border: 1px solid #bcbcbc; border-radius: 4px; overflow: hidden; font-family: sans-serif;">
-    <div style="height: 50px; background: #d3d0c3;"></div>
-    <div style="padding: 4px; font-size: 12px; text-align: center;">
-      <strong>canvasWhite1</strong><br/>
-      <code>#d3d0c3</code>
-    </div>
-  </div>
-  <div style="flex: 0 0 auto; width: 100px; border: 1px solid #bcbcbc; border-radius: 4px; overflow: hidden; font-family: sans-serif;">
-    <div style="height: 50px; background: #d8d8d2;"></div>
-    <div style="padding: 4px; font-size: 12px; text-align: center;">
-      <strong>canvasWhite2</strong><br/>
-      <code>#d8d8d2</code>
-    </div>
-  </div>
-  <div style="flex: 0 0 auto; width: 100px; border: 1px solid #bcbcbc; border-radius: 4px; overflow: hidden; font-family: sans-serif;">
-    <div style="height: 50px; background: #e1e1de;"></div>
-    <div style="padding: 4px; font-size: 12px; text-align: center;">
-      <strong>canvasWhite3</strong><br/>
-      <code>#e1e1de</code>
-    </div>
-  </div>
-  <div style="flex: 0 0 auto; width: 100px; border: 1px solid #bcbcbc; border-radius: 4px; overflow: hidden; font-family: sans-serif;">
-    <div style="height: 50px; background: #e6e6e3;"></div>
-    <div style="padding: 4px; font-size: 12px; text-align: center;">
-      <strong>canvasWhite4</strong><br/>
-      <code>#e6e6e3</code>
-    </div>
-  </div>
-  <div style="flex: 0 0 auto; width: 100px; border: 1px solid #bcbcbc; border-radius: 4px; overflow: hidden; font-family: sans-serif;">
-    <div style="height: 50px; background: #ecece8;"></div>
-    <div style="padding: 4px; font-size: 12px; text-align: center;">
-      <strong>canvasWhite5</strong><br/>
-      <code>#ecece8</code>
-    </div>
-  </div>
-  <div style="flex: 0 0 auto; width: 100px; border: 1px solid #bcbcbc; border-radius: 4px; overflow: hidden; font-family: sans-serif;">
-    <div style="height: 50px; background: #a67337;"></div>
-    <div style="padding: 4px; font-size: 12px; text-align: center;">
-      <strong>canvasYellow</strong><br/>
-      <code>#a67337</code>
-    </div>
-  </div>
-  <div style="flex: 0 0 auto; width: 100px; border: 1px solid #bcbcbc; border-radius: 4px; overflow: hidden; font-family: sans-serif;">
-    <div style="height: 50px; background: #c08a48;"></div>
-    <div style="padding: 4px; font-size: 12px; text-align: center;">
-      <strong>canvasYellow2</strong><br/>
-      <code>#c08a48</code>
-    </div>
-  </div>
-  <div style="flex: 0 0 auto; width: 100px; border: 1px solid #bcbcbc; border-radius: 4px; overflow: hidden; font-family: sans-serif;">
-    <div style="height: 50px; background: #d3a56b;"></div>
-    <div style="padding: 4px; font-size: 12px; text-align: center;">
-      <strong>canvasYellow3</strong><br/>
-      <code>#d3a56b</code>
-    </div>
-  </div>
-  <div style="flex: 0 0 auto; width: 100px; border: 1px solid #bcbcbc; border-radius: 4px; overflow: hidden; font-family: sans-serif;">
-    <div style="height: 50px; background: #e0be6d;"></div>
-    <div style="padding: 4px; font-size: 12px; text-align: center;">
-      <strong>canvasYellow4</strong><br/>
-      <code>#e0be6d</code>
-    </div>
-  </div>
-  <div style="flex: 0 0 auto; width: 100px; border: 1px solid #bcbcbc; border-radius: 4px; overflow: hidden; font-family: sans-serif;">
-    <div style="height: 50px; background: #E6C384;"></div>
-    <div style="padding: 4px; font-size: 12px; text-align: center;">
-      <strong>carpYellow</strong><br/>
-      <code>#E6C384</code>
-    </div>
-  </div>
-  <div style="flex: 0 0 auto; width: 100px; border: 1px solid #bcbcbc; border-radius: 4px; overflow: hidden; font-family: sans-serif;">
-    <div style="height: 50px; background: #7E9CD8;"></div>
-    <div style="padding: 4px; font-size: 12px; text-align: center;">
-      <strong>crystalBlue</strong><br/>
-      <code>#7E9CD8</code>
-    </div>
-  </div>
-  <div style="flex: 0 0 auto; width: 100px; border: 1px solid #bcbcbc; border-radius: 4px; overflow: hidden; font-family: sans-serif;">
-    <div style="height: 50px; background: #8ea49e;"></div>
-    <div style="padding: 4px; font-size: 12px; text-align: center;">
-      <strong>dragonAqua</strong><br/>
-      <code>#8ea49e</code>
-    </div>
-  </div>
-  <div style="flex: 0 0 auto; width: 100px; border: 1px solid #bcbcbc; border-radius: 4px; overflow: hidden; font-family: sans-serif;">
-    <div style="height: 50px; background: #737c73;"></div>
-    <div style="padding: 4px; font-size: 12px; text-align: center;">
-      <strong>dragonAsh</strong><br/>
-      <code>#737c73</code>
-    </div>
-  </div>
-  <div style="flex: 0 0 auto; width: 100px; border: 1px solid #bcbcbc; border-radius: 4px; overflow: hidden; font-family: sans-serif;">
-    <div style="height: 50px; background: #0d0c0c;"></div>
-    <div style="padding: 4px; font-size: 12px; text-align: center;">
-      <strong>dragonBlack0</strong><br/>
-      <code>#0d0c0c</code>
-    </div>
-  </div>
-  <div style="flex: 0 0 auto; width: 100px; border: 1px solid #bcbcbc; border-radius: 4px; overflow: hidden; font-family: sans-serif;">
-    <div style="height: 50px; background: #12120f;"></div>
-    <div style="padding: 4px; font-size: 12px; text-align: center;">
-      <strong>dragonBlack1</strong><br/>
-      <code>#12120f</code>
-    </div>
-  </div>
-  <div style="flex: 0 0 auto; width: 100px; border: 1px solid #bcbcbc; border-radius: 4px; overflow: hidden; font-family: sans-serif;">
-    <div style="height: 50px; background: #1D1C19;"></div>
-    <div style="padding: 4px; font-size: 12px; text-align: center;">
-      <strong>dragonBlack2</strong><br/>
-      <code>#1D1C19</code>
-    </div>
-  </div>
-  <div style="flex: 0 0 auto; width: 100px; border: 1px solid #bcbcbc; border-radius: 4px; overflow: hidden; font-family: sans-serif;">
-    <div style="height: 50px; background: #181616;"></div>
-    <div style="padding: 4px; font-size: 12px; text-align: center;">
-      <strong>dragonBlack3</strong><br/>
-      <code>#181616</code>
-    </div>
-  </div>
-  <div style="flex: 0 0 auto; width: 100px; border: 1px solid #bcbcbc; border-radius: 4px; overflow: hidden; font-family: sans-serif;">
-    <div style="height: 50px; background: #282727;"></div>
-    <div style="padding: 4px; font-size: 12px; text-align: center;">
-      <strong>dragonBlack4</strong><br/>
-      <code>#282727</code>
-    </div>
-  </div>
-  <div style="flex: 0 0 auto; width: 100px; border: 1px solid #bcbcbc; border-radius: 4px; overflow: hidden; font-family: sans-serif;">
-    <div style="height: 50px; background: #393836;"></div>
-    <div style="padding: 4px; font-size: 12px; text-align: center;">
-      <strong>dragonBlack5</strong><br/>
-      <code>#393836</code>
-    </div>
-  </div>
-  <div style="flex: 0 0 auto; width: 100px; border: 1px solid #bcbcbc; border-radius: 4px; overflow: hidden; font-family: sans-serif;">
-    <div style="height: 50px; background: #625e5a;"></div>
-    <div style="padding: 4px; font-size: 12px; text-align: center;">
-      <strong>dragonBlack6</strong><br/>
-      <code>#625e5a</code>
-    </div>
-  </div>
-  <div style="flex: 0 0 auto; width: 100px; border: 1px solid #bcbcbc; border-radius: 4px; overflow: hidden; font-family: sans-serif;">
-    <div style="height: 50px; background: #658594;"></div>
-    <div style="padding: 4px; font-size: 12px; text-align: center;">
-      <strong>dragonBlue</strong><br/>
-      <code>#658594</code>
-    </div>
-  </div>
-  <div style="flex: 0 0 auto; width: 100px; border: 1px solid #bcbcbc; border-radius: 4px; overflow: hidden; font-family: sans-serif;">
-    <div style="height: 50px; background: #859fac;"></div>
-    <div style="padding: 4px; font-size: 12px; text-align: center;">
-      <strong>dragonBlue2</strong><br/>
-      <code>#859fac</code>
-    </div>
-  </div>
-  <div style="flex: 0 0 auto; width: 100px; border: 1px solid #bcbcbc; border-radius: 4px; overflow: hidden; font-family: sans-serif;">
-    <div style="height: 50px; background: #708e9e;"></div>
-    <div style="padding: 4px; font-size: 12px; text-align: center;">
-      <strong>dragonBlue3</strong><br/>
-      <code>#708e9e</code>
-    </div>
-  </div>
-  <div style="flex: 0 0 auto; width: 100px; border: 1px solid #bcbcbc; border-radius: 4px; overflow: hidden; font-family: sans-serif;">
-    <div style="height: 50px; background: #5d7a88;"></div>
-    <div style="padding: 4px; font-size: 12px; text-align: center;">
-      <strong>dragonBlue4</strong><br/>
-      <code>#5d7a88</code>
-    </div>
-  </div>
-  <div style="flex: 0 0 auto; width: 100px; border: 1px solid #bcbcbc; border-radius: 4px; overflow: hidden; font-family: sans-serif;">
-    <div style="height: 50px; background: #435965;"></div>
-    <div style="padding: 4px; font-size: 12px; text-align: center;">
-      <strong>dragonBlue5</strong><br/>
-      <code>#435965</code>
-    </div>
-  </div>
-  <div style="flex: 0 0 auto; width: 100px; border: 1px solid #bcbcbc; border-radius: 4px; overflow: hidden; font-family: sans-serif;">
-    <div style="height: 50px; background: #a6a69c;"></div>
-    <div style="padding: 4px; font-size: 12px; text-align: center;">
-      <strong>dragonGray</strong><br/>
-      <code>#a6a69c</code>
-    </div>
-  </div>
-  <div style="flex: 0 0 auto; width: 100px; border: 1px solid #bcbcbc; border-radius: 4px; overflow: hidden; font-family: sans-serif;">
-    <div style="height: 50px; background: #9e9b93;"></div>
-    <div style="padding: 4px; font-size: 12px; text-align: center;">
-      <strong>dragonGray2</strong><br/>
-      <code>#9e9b93</code>
-    </div>
-  </div>
-  <div style="flex: 0 0 auto; width: 100px; border: 1px solid #bcbcbc; border-radius: 4px; overflow: hidden; font-family: sans-serif;">
-    <div style="height: 50px; background: #7a8382;"></div>
-    <div style="padding: 4px; font-size: 12px; text-align: center;">
-      <strong>dragonGray3</strong><br/>
-      <code>#7a8382</code>
-    </div>
-  </div>
-  <div style="flex: 0 0 auto; width: 100px; border: 1px solid #bcbcbc; border-radius: 4px; overflow: hidden; font-family: sans-serif;">
-    <div style="height: 50px; background: #699469;"></div>
-    <div style="padding: 4px; font-size: 12px; text-align: center;">
-      <strong>dragonGreen</strong><br/>
-      <code>#699469</code>
-    </div>
-  </div>
-  <div style="flex: 0 0 auto; width: 100px; border: 1px solid #bcbcbc; border-radius: 4px; overflow: hidden; font-family: sans-serif;">
-    <div style="height: 50px; background: #8a9a7b;"></div>
-    <div style="padding: 4px; font-size: 12px; text-align: center;">
-      <strong>dragonGreen2</strong><br/>
-      <code>#8a9a7b</code>
-    </div>
-  </div>
-  <div style="flex: 0 0 auto; width: 100px; border: 1px solid #bcbcbc; border-radius: 4px; overflow: hidden; font-family: sans-serif;">
-    <div style="height: 50px; background: #b6927b;"></div>
-    <div style="padding: 4px; font-size: 12px; text-align: center;">
-      <strong>dragonOrange</strong><br/>
-      <code>#b6927b</code>
-    </div>
-  </div>
-  <div style="flex: 0 0 auto; width: 100px; border: 1px solid #bcbcbc; border-radius: 4px; overflow: hidden; font-family: sans-serif;">
-    <div style="height: 50px; background: #b98d7b;"></div>
-    <div style="padding: 4px; font-size: 12px; text-align: center;">
-      <strong>dragonOrange2</strong><br/>
-      <code>#b98d7b</code>
-    </div>
-  </div>
-  <div style="flex: 0 0 auto; width: 100px; border: 1px solid #bcbcbc; border-radius: 4px; overflow: hidden; font-family: sans-serif;">
-    <div style="height: 50px; background: #a292a3;"></div>
-    <div style="padding: 4px; font-size: 12px; text-align: center;">
-      <strong>dragonPink</strong><br/>
-      <code>#a292a3</code>
-    </div>
-  </div>
-  <div style="flex: 0 0 auto; width: 100px; border: 1px solid #bcbcbc; border-radius: 4px; overflow: hidden; font-family: sans-serif;">
-    <div style="height: 50px; background: #c4746e;"></div>
-    <div style="padding: 4px; font-size: 12px; text-align: center;">
-      <strong>dragonRed</strong><br/>
-      <code>#c4746e</code>
-    </div>
-  </div>
-  <div style="flex: 0 0 auto; width: 100px; border: 1px solid #bcbcbc; border-radius: 4px; overflow: hidden; font-family: sans-serif;">
-    <div style="height: 50px; background: #949fb5;"></div>
-    <div style="padding: 4px; font-size: 12px; text-align: center;">
-      <strong>dragonTeal</strong><br/>
-      <code>#949fb5</code>
-    </div>
-  </div>
-  <div style="flex: 0 0 auto; width: 100px; border: 1px solid #bcbcbc; border-radius: 4px; overflow: hidden; font-family: sans-serif;">
-    <div style="height: 50px; background: #8992a7;"></div>
-    <div style="padding: 4px; font-size: 12px; text-align: center;">
-      <strong>dragonViolet</strong><br/>
-      <code>#8992a7</code>
-    </div>
-  </div>
-  <div style="flex: 0 0 auto; width: 100px; border: 1px solid #bcbcbc; border-radius: 4px; overflow: hidden; font-family: sans-serif;">
-    <div style="height: 50px; background: #c5c9c5;"></div>
-    <div style="padding: 4px; font-size: 12px; text-align: center;">
-      <strong>dragonWhite</strong><br/>
-      <code>#c5c9c5</code>
-    </div>
-  </div>
-  <div style="flex: 0 0 auto; width: 100px; border: 1px solid #bcbcbc; border-radius: 4px; overflow: hidden; font-family: sans-serif;">
-    <div style="height: 50px; background: #c4b28a;"></div>
-    <div style="padding: 4px; font-size: 12px; text-align: center;">
-      <strong>dragonYellow</strong><br/>
-      <code>#c4b28a</code>
-    </div>
-  </div>
-  <div style="flex: 0 0 auto; width: 100px; border: 1px solid #bcbcbc; border-radius: 4px; overflow: hidden; font-family: sans-serif;">
-    <div style="height: 50px; background: #727169;"></div>
-    <div style="padding: 4px; font-size: 12px; text-align: center;">
-      <strong>fujiGray</strong><br/>
-      <code>#727169</code>
-    </div>
-  </div>
-  <div style="flex: 0 0 auto; width: 100px; border: 1px solid #bcbcbc; border-radius: 4px; overflow: hidden; font-family: sans-serif;">
-    <div style="height: 50px; background: #DCD7BA;"></div>
-    <div style="padding: 4px; font-size: 12px; text-align: center;">
-      <strong>fujiWhite</strong><br/>
-      <code>#DCD7BA</code>
-    </div>
-  </div>
-  <div style="flex: 0 0 auto; width: 100px; border: 1px solid #bcbcbc; border-radius: 4px; overflow: hidden; font-family: sans-serif;">
-    <div style="height: 50px; background: #717C7C;"></div>
-    <div style="padding: 4px; font-size: 12px; text-align: center;">
-      <strong>katanaGray</strong><br/>
-      <code>#717C7C</code>
-    </div>
-  </div>
-  <div style="flex: 0 0 auto; width: 100px; border: 1px solid #bcbcbc; border-radius: 4px; overflow: hidden; font-family: sans-serif;">
-    <div style="height: 50px; background: #A3D4D5;"></div>
-    <div style="padding: 4px; font-size: 12px; text-align: center;">
-      <strong>lightBlue</strong><br/>
-      <code>#A3D4D5</code>
-    </div>
-  </div>
-  <div style="flex: 0 0 auto; width: 100px; border: 1px solid #bcbcbc; border-radius: 4px; overflow: hidden; font-family: sans-serif;">
-    <div style="height: 50px; background: #597b75;"></div>
-    <div style="padding: 4px; font-size: 12px; text-align: center;">
-      <strong>lotusAqua</strong><br/>
-      <code>#597b75</code>
-    </div>
-  </div>
-  <div style="flex: 0 0 auto; width: 100px; border: 1px solid #bcbcbc; border-radius: 4px; overflow: hidden; font-family: sans-serif;">
-    <div style="height: 50px; background: #5e857a;"></div>
-    <div style="padding: 4px; font-size: 12px; text-align: center;">
-      <strong>lotusAqua2</strong><br/>
-      <code>#5e857a</code>
-    </div>
-  </div>
-  <div style="flex: 0 0 auto; width: 100px; border: 1px solid #bcbcbc; border-radius: 4px; overflow: hidden; font-family: sans-serif;">
-    <div style="height: 50px; background: #c7d7e0;"></div>
-    <div style="padding: 4px; font-size: 12px; text-align: center;">
-      <strong>lotusBlue1</strong><br/>
-      <code>#c7d7e0</code>
-    </div>
-  </div>
-  <div style="flex: 0 0 auto; width: 100px; border: 1px solid #bcbcbc; border-radius: 4px; overflow: hidden; font-family: sans-serif;">
-    <div style="height: 50px; background: #b5cbd2;"></div>
-    <div style="padding: 4px; font-size: 12px; text-align: center;">
-      <strong>lotusBlue2</strong><br/>
-      <code>#b5cbd2</code>
-    </div>
-  </div>
-  <div style="flex: 0 0 auto; width: 100px; border: 1px solid #bcbcbc; border-radius: 4px; overflow: hidden; font-family: sans-serif;">
-    <div style="height: 50px; background: #9fb5c9;"></div>
-    <div style="padding: 4px; font-size: 12px; text-align: center;">
-      <strong>lotusBlue3</strong><br/>
-      <code>#9fb5c9</code>
-    </div>
-  </div>
-  <div style="flex: 0 0 auto; width: 100px; border: 1px solid #bcbcbc; border-radius: 4px; overflow: hidden; font-family: sans-serif;">
-    <div style="height: 50px; background: #4d699b;"></div>
-    <div style="padding: 4px; font-size: 12px; text-align: center;">
-      <strong>lotusBlue4</strong><br/>
-      <code>#4d699b</code>
-    </div>
-  </div>
-  <div style="flex: 0 0 auto; width: 100px; border: 1px solid #bcbcbc; border-radius: 4px; overflow: hidden; font-family: sans-serif;">
-    <div style="height: 50px; background: #5d57a3;"></div>
-    <div style="padding: 4px; font-size: 12px; text-align: center;">
-      <strong>lotusBlue5</strong><br/>
-      <code>#5d57a3</code>
-    </div>
-  </div>
-  <div style="flex: 0 0 auto; width: 100px; border: 1px solid #bcbcbc; border-radius: 4px; overflow: hidden; font-family: sans-serif;">
-    <div style="height: 50px; background: #d7e3d8;"></div>
-    <div style="padding: 4px; font-size: 12px; text-align: center;">
-      <strong>lotusCyan</strong><br/>
-      <code>#d7e3d8</code>
-    </div>
-  </div>
-  <div style="flex: 0 0 auto; width: 100px; border: 1px solid #bcbcbc; border-radius: 4px; overflow: hidden; font-family: sans-serif;">
-    <div style="height: 50px; background: #dcd7ba;"></div>
-    <div style="padding: 4px; font-size: 12px; text-align: center;">
-      <strong>lotusGray</strong><br/>
-      <code>#dcd7ba</code>
-    </div>
-  </div>
-  <div style="flex: 0 0 auto; width: 100px; border: 1px solid #bcbcbc; border-radius: 4px; overflow: hidden; font-family: sans-serif;">
-    <div style="height: 50px; background: #716e61;"></div>
-    <div style="padding: 4px; font-size: 12px; text-align: center;">
-      <strong>lotusGray2</strong><br/>
-      <code>#716e61</code>
-    </div>
-  </div>
-  <div style="flex: 0 0 auto; width: 100px; border: 1px solid #bcbcbc; border-radius: 4px; overflow: hidden; font-family: sans-serif;">
-    <div style="height: 50px; background: #8a8980;"></div>
-    <div style="padding: 4px; font-size: 12px; text-align: center;">
-      <strong>lotusGray3</strong><br/>
-      <code>#8a8980</code>
-    </div>
-  </div>
-  <div style="flex: 0 0 auto; width: 100px; border: 1px solid #bcbcbc; border-radius: 4px; overflow: hidden; font-family: sans-serif;">
-    <div style="height: 50px; background: #6f894e;"></div>
-    <div style="padding: 4px; font-size: 12px; text-align: center;">
-      <strong>lotusGreen</strong><br/>
-      <code>#6f894e</code>
-    </div>
-  </div>
-  <div style="flex: 0 0 auto; width: 100px; border: 1px solid #bcbcbc; border-radius: 4px; overflow: hidden; font-family: sans-serif;">
-    <div style="height: 50px; background: #6e915f;"></div>
-    <div style="padding: 4px; font-size: 12px; text-align: center;">
-      <strong>lotusGreen2</strong><br/>
-      <code>#6e915f</code>
-    </div>
-  </div>
-  <div style="flex: 0 0 auto; width: 100px; border: 1px solid #bcbcbc; border-radius: 4px; overflow: hidden; font-family: sans-serif;">
-    <div style="height: 50px; background: #b7d0ae;"></div>
-    <div style="padding: 4px; font-size: 12px; text-align: center;">
-      <strong>lotusGreen3</strong><br/>
-      <code>#b7d0ae</code>
-    </div>
-  </div>
-  <div style="flex: 0 0 auto; width: 100px; border: 1px solid #bcbcbc; border-radius: 4px; overflow: hidden; font-family: sans-serif;">
-    <div style="height: 50px; background: #3d3d5e;"></div>
-    <div style="padding: 4px; font-size: 12px; text-align: center;">
-      <strong>lotusInk0</strong><br/>
-      <code>#3d3d5e</code>
-    </div>
-  </div>
-  <div style="flex: 0 0 auto; width: 100px; border: 1px solid #bcbcbc; border-radius: 4px; overflow: hidden; font-family: sans-serif;">
-    <div style="height: 50px; background: #545464;"></div>
-    <div style="padding: 4px; font-size: 12px; text-align: center;">
-      <strong>lotusInk1</strong><br/>
-      <code>#545464</code>
-    </div>
-  </div>
-  <div style="flex: 0 0 auto; width: 100px; border: 1px solid #bcbcbc; border-radius: 4px; overflow: hidden; font-family: sans-serif;">
-    <div style="height: 50px; background: #43436c;"></div>
-    <div style="padding: 4px; font-size: 12px; text-align: center;">
-      <strong>lotusInk2</strong><br/>
-      <code>#43436c</code>
-    </div>
-  </div>
-  <div style="flex: 0 0 auto; width: 100px; border: 1px solid #bcbcbc; border-radius: 4px; overflow: hidden; font-family: sans-serif;">
-    <div style="height: 50px; background: #cc6d00;"></div>
-    <div style="padding: 4px; font-size: 12px; text-align: center;">
-      <strong>lotusOrange</strong><br/>
-      <code>#cc6d00</code>
-    </div>
-  </div>
-  <div style="flex: 0 0 auto; width: 100px; border: 1px solid #bcbcbc; border-radius: 4px; overflow: hidden; font-family: sans-serif;">
-    <div style="height: 50px; background: #e98a00;"></div>
-    <div style="padding: 4px; font-size: 12px; text-align: center;">
-      <strong>lotusOrange2</strong><br/>
-      <code>#e98a00</code>
-    </div>
-  </div>
-  <div style="flex: 0 0 auto; width: 100px; border: 1px solid #bcbcbc; border-radius: 4px; overflow: hidden; font-family: sans-serif;">
-    <div style="height: 50px; background: #b35b79;"></div>
-    <div style="padding: 4px; font-size: 12px; text-align: center;">
-      <strong>lotusPink</strong><br/>
-      <code>#b35b79</code>
-    </div>
-  </div>
-  <div style="flex: 0 0 auto; width: 100px; border: 1px solid #bcbcbc; border-radius: 4px; overflow: hidden; font-family: sans-serif;">
-    <div style="height: 50px; background: #c84053;"></div>
-    <div style="padding: 4px; font-size: 12px; text-align: center;">
-      <strong>lotusRed</strong><br/>
-      <code>#c84053</code>
-    </div>
-  </div>
-  <div style="flex: 0 0 auto; width: 100px; border: 1px solid #bcbcbc; border-radius: 4px; overflow: hidden; font-family: sans-serif;">
-    <div style="height: 50px; background: #d7474b;"></div>
-    <div style="padding: 4px; font-size: 12px; text-align: center;">
-      <strong>lotusRed2</strong><br/>
-      <code>#d7474b</code>
-    </div>
-  </div>
-  <div style="flex: 0 0 auto; width: 100px; border: 1px solid #bcbcbc; border-radius: 4px; overflow: hidden; font-family: sans-serif;">
-    <div style="height: 50px; background: #e82424;"></div>
-    <div style="padding: 4px; font-size: 12px; text-align: center;">
-      <strong>lotusRed3</strong><br/>
-      <code>#e82424</code>
-    </div>
-  </div>
-  <div style="flex: 0 0 auto; width: 100px; border: 1px solid #bcbcbc; border-radius: 4px; overflow: hidden; font-family: sans-serif;">
-    <div style="height: 50px; background: #d9a594;"></div>
-    <div style="padding: 4px; font-size: 12px; text-align: center;">
-      <strong>lotusRed4</strong><br/>
-      <code>#d9a594</code>
-    </div>
-  </div>
-  <div style="flex: 0 0 auto; width: 100px; border: 1px solid #bcbcbc; border-radius: 4px; overflow: hidden; font-family: sans-serif;">
-    <div style="height: 50px; background: #4e8ca2;"></div>
-    <div style="padding: 4px; font-size: 12px; text-align: center;">
-      <strong>lotusTeal1</strong><br/>
-      <code>#4e8ca2</code>
-    </div>
-  </div>
-  <div style="flex: 0 0 auto; width: 100px; border: 1px solid #bcbcbc; border-radius: 4px; overflow: hidden; font-family: sans-serif;">
-    <div style="height: 50px; background: #6693bf;"></div>
-    <div style="padding: 4px; font-size: 12px; text-align: center;">
-      <strong>lotusTeal2</strong><br/>
-      <code>#6693bf</code>
-    </div>
-  </div>
-  <div style="flex: 0 0 auto; width: 100px; border: 1px solid #bcbcbc; border-radius: 4px; overflow: hidden; font-family: sans-serif;">
-    <div style="height: 50px; background: #5a7785;"></div>
-    <div style="padding: 4px; font-size: 12px; text-align: center;">
-      <strong>lotusTeal3</strong><br/>
-      <code>#5a7785</code>
-    </div>
-  </div>
-  <div style="flex: 0 0 auto; width: 100px; border: 1px solid #bcbcbc; border-radius: 4px; overflow: hidden; font-family: sans-serif;">
-    <div style="height: 50px; background: #a09cac;"></div>
-    <div style="padding: 4px; font-size: 12px; text-align: center;">
-      <strong>lotusViolet1</strong><br/>
-      <code>#a09cac</code>
-    </div>
-  </div>
-  <div style="flex: 0 0 auto; width: 100px; border: 1px solid #bcbcbc; border-radius: 4px; overflow: hidden; font-family: sans-serif;">
-    <div style="height: 50px; background: #766b90;"></div>
-    <div style="padding: 4px; font-size: 12px; text-align: center;">
-      <strong>lotusViolet2</strong><br/>
-      <code>#766b90</code>
-    </div>
-  </div>
-  <div style="flex: 0 0 auto; width: 100px; border: 1px solid #bcbcbc; border-radius: 4px; overflow: hidden; font-family: sans-serif;">
-    <div style="height: 50px; background: #c9cbd1;"></div>
-    <div style="padding: 4px; font-size: 12px; text-align: center;">
-      <strong>lotusViolet3</strong><br/>
-      <code>#c9cbd1</code>
-    </div>
-  </div>
-  <div style="flex: 0 0 auto; width: 100px; border: 1px solid #bcbcbc; border-radius: 4px; overflow: hidden; font-family: sans-serif;">
-    <div style="height: 50px; background: #624c83;"></div>
-    <div style="padding: 4px; font-size: 12px; text-align: center;">
-      <strong>lotusViolet4</strong><br/>
-      <code>#624c83</code>
-    </div>
-  </div>
-  <div style="flex: 0 0 auto; width: 100px; border: 1px solid #bcbcbc; border-radius: 4px; overflow: hidden; font-family: sans-serif;">
-    <div style="height: 50px; background: #d5cea3;"></div>
-    <div style="padding: 4px; font-size: 12px; text-align: center;">
-      <strong>lotusWhite0</strong><br/>
-      <code>#d5cea3</code>
-    </div>
-  </div>
-  <div style="flex: 0 0 auto; width: 100px; border: 1px solid #bcbcbc; border-radius: 4px; overflow: hidden; font-family: sans-serif;">
-    <div style="height: 50px; background: #dcd5ac;"></div>
-    <div style="padding: 4px; font-size: 12px; text-align: center;">
-      <strong>lotusWhite1</strong><br/>
-      <code>#dcd5ac</code>
-    </div>
-  </div>
-  <div style="flex: 0 0 auto; width: 100px; border: 1px solid #bcbcbc; border-radius: 4px; overflow: hidden; font-family: sans-serif;">
-    <div style="height: 50px; background: #e5ddb0;"></div>
-    <div style="padding: 4px; font-size: 12px; text-align: center;">
-      <strong>lotusWhite2</strong><br/>
-      <code>#e5ddb0</code>
-    </div>
-  </div>
-  <div style="flex: 0 0 auto; width: 100px; border: 1px solid #bcbcbc; border-radius: 4px; overflow: hidden; font-family: sans-serif;">
-    <div style="height: 50px; background: #f2ecbc;"></div>
-    <div style="padding: 4px; font-size: 12px; text-align: center;">
-      <strong>lotusWhite3</strong><br/>
-      <code>#f2ecbc</code>
-    </div>
-  </div>
-  <div style="flex: 0 0 auto; width: 100px; border: 1px solid #bcbcbc; border-radius: 4px; overflow: hidden; font-family: sans-serif;">
-    <div style="height: 50px; background: #e7dba0;"></div>
-    <div style="padding: 4px; font-size: 12px; text-align: center;">
-      <strong>lotusWhite4</strong><br/>
-      <code>#e7dba0</code>
-    </div>
-  </div>
-  <div style="flex: 0 0 auto; width: 100px; border: 1px solid #bcbcbc; border-radius: 4px; overflow: hidden; font-family: sans-serif;">
-    <div style="height: 50px; background: #e4d794;"></div>
-    <div style="padding: 4px; font-size: 12px; text-align: center;">
-      <strong>lotusWhite5</strong><br/>
-      <code>#e4d794</code>
-    </div>
-  </div>
-  <div style="flex: 0 0 auto; width: 100px; border: 1px solid #bcbcbc; border-radius: 4px; overflow: hidden; font-family: sans-serif;">
-    <div style="height: 50px; background: #77713f;"></div>
-    <div style="padding: 4px; font-size: 12px; text-align: center;">
-      <strong>lotusYellow</strong><br/>
-      <code>#77713f</code>
-    </div>
-  </div>
-  <div style="flex: 0 0 auto; width: 100px; border: 1px solid #bcbcbc; border-radius: 4px; overflow: hidden; font-family: sans-serif;">
-    <div style="height: 50px; background: #836f4a;"></div>
-    <div style="padding: 4px; font-size: 12px; text-align: center;">
-      <strong>lotusYellow2</strong><br/>
-      <code>#836f4a</code>
-    </div>
-  </div>
-  <div style="flex: 0 0 auto; width: 100px; border: 1px solid #bcbcbc; border-radius: 4px; overflow: hidden; font-family: sans-serif;">
-    <div style="height: 50px; background: #de9800;"></div>
-    <div style="padding: 4px; font-size: 12px; text-align: center;">
-      <strong>lotusYellow3</strong><br/>
-      <code>#de9800</code>
-    </div>
-  </div>
-  <div style="flex: 0 0 auto; width: 100px; border: 1px solid #bcbcbc; border-radius: 4px; overflow: hidden; font-family: sans-serif;">
-    <div style="height: 50px; background: #f9d791;"></div>
-    <div style="padding: 4px; font-size: 12px; text-align: center;">
-      <strong>lotusYellow4</strong><br/>
-      <code>#f9d791</code>
-    </div>
-  </div>
-  <div style="flex: 0 0 auto; width: 100px; border: 1px solid #bcbcbc; border-radius: 4px; overflow: hidden; font-family: sans-serif;">
-    <div style="height: 50px; background: #C8C093;"></div>
-    <div style="padding: 4px; font-size: 12px; text-align: center;">
-      <strong>oldWhite</strong><br/>
-      <code>#C8C093</code>
-    </div>
-  </div>
-  <div style="flex: 0 0 auto; width: 100px; border: 1px solid #bcbcbc; border-radius: 4px; overflow: hidden; font-family: sans-serif;">
-    <div style="height: 50px; background: #957FB8;"></div>
-    <div style="padding: 4px; font-size: 12px; text-align: center;">
-      <strong>oniViolet</strong><br/>
-      <code>#957FB8</code>
-    </div>
-  </div>
-  <div style="flex: 0 0 auto; width: 100px; border: 1px solid #bcbcbc; border-radius: 4px; overflow: hidden; font-family: sans-serif;">
-    <div style="height: 50px; background: #b8b4d0;"></div>
-    <div style="padding: 4px; font-size: 12px; text-align: center;">
-      <strong>oniViolet2</strong><br/>
-      <code>#b8b4d0</code>
-    </div>
-  </div>
-  <div style="flex: 0 0 auto; width: 100px; border: 1px solid #bcbcbc; border-radius: 4px; overflow: hidden; font-family: sans-serif;">
-    <div style="height: 50px; background: #FF5D62;"></div>
-    <div style="padding: 4px; font-size: 12px; text-align: center;">
-      <strong>peachRed</strong><br/>
-      <code>#FF5D62</code>
-    </div>
-  </div>
-  <div style="flex: 0 0 auto; width: 100px; border: 1px solid #bcbcbc; border-radius: 4px; overflow: hidden; font-family: sans-serif;">
-    <div style="height: 50px; background: #FF9E3B;"></div>
-    <div style="padding: 4px; font-size: 12px; text-align: center;">
-      <strong>roninYellow</strong><br/>
-      <code>#FF9E3B</code>
-    </div>
-  </div>
-  <div style="flex: 0 0 auto; width: 100px; border: 1px solid #bcbcbc; border-radius: 4px; overflow: hidden; font-family: sans-serif;">
-    <div style="height: 50px; background: #D27E99;"></div>
-    <div style="padding: 4px; font-size: 12px; text-align: center;">
-      <strong>sakuraPink</strong><br/>
-      <code>#D27E99</code>
-    </div>
-  </div>
-  <div style="flex: 0 0 auto; width: 100px; border: 1px solid #bcbcbc; border-radius: 4px; overflow: hidden; font-family: sans-serif;">
-    <div style="height: 50px; background: #E82424;"></div>
-    <div style="padding: 4px; font-size: 12px; text-align: center;">
-      <strong>samuraiRed</strong><br/>
-      <code>#E82424</code>
-    </div>
-  </div>
-  <div style="flex: 0 0 auto; width: 100px; border: 1px solid #bcbcbc; border-radius: 4px; overflow: hidden; font-family: sans-serif;">
-    <div style="height: 50px; background: #7FB4CA;"></div>
-    <div style="padding: 4px; font-size: 12px; text-align: center;">
-      <strong>springBlue</strong><br/>
-      <code>#7FB4CA</code>
-    </div>
-  </div>
-  <div style="flex: 0 0 auto; width: 100px; border: 1px solid #bcbcbc; border-radius: 4px; overflow: hidden; font-family: sans-serif;">
-    <div style="height: 50px; background: #98BB6C;"></div>
-    <div style="padding: 4px; font-size: 12px; text-align: center;">
-      <strong>springGreen</strong><br/>
-      <code>#98BB6C</code>
-    </div>
-  </div>
-  <div style="flex: 0 0 auto; width: 100px; border: 1px solid #bcbcbc; border-radius: 4px; overflow: hidden; font-family: sans-serif;">
-    <div style="height: 50px; background: #938AA9;"></div>
-    <div style="padding: 4px; font-size: 12px; text-align: center;">
-      <strong>springViolet1</strong><br/>
-      <code>#938AA9</code>
-    </div>
-  </div>
-  <div style="flex: 0 0 auto; width: 100px; border: 1px solid #bcbcbc; border-radius: 4px; overflow: hidden; font-family: sans-serif;">
-    <div style="height: 50px; background: #9CABCA;"></div>
-    <div style="padding: 4px; font-size: 12px; text-align: center;">
-      <strong>springViolet2</strong><br/>
-      <code>#9CABCA</code>
-    </div>
-  </div>
-  <div style="flex: 0 0 auto; width: 100px; border: 1px solid #bcbcbc; border-radius: 4px; overflow: hidden; font-family: sans-serif;">
-    <div style="height: 50px; background: #16161D;"></div>
-    <div style="padding: 4px; font-size: 12px; text-align: center;">
-      <strong>sumiInk0</strong><br/>
-      <code>#16161D</code>
-    </div>
-  </div>
-  <div style="flex: 0 0 auto; width: 100px; border: 1px solid #bcbcbc; border-radius: 4px; overflow: hidden; font-family: sans-serif;">
-    <div style="height: 50px; background: #181820;"></div>
-    <div style="padding: 4px; font-size: 12px; text-align: center;">
-      <strong>sumiInk1</strong><br/>
-      <code>#181820</code>
-    </div>
-  </div>
-  <div style="flex: 0 0 auto; width: 100px; border: 1px solid #bcbcbc; border-radius: 4px; overflow: hidden; font-family: sans-serif;">
-    <div style="height: 50px; background: #1a1a22;"></div>
-    <div style="padding: 4px; font-size: 12px; text-align: center;">
-      <strong>sumiInk2</strong><br/>
-      <code>#1a1a22</code>
-    </div>
-  </div>
-  <div style="flex: 0 0 auto; width: 100px; border: 1px solid #bcbcbc; border-radius: 4px; overflow: hidden; font-family: sans-serif;">
-    <div style="height: 50px; background: #1F1F28;"></div>
-    <div style="padding: 4px; font-size: 12px; text-align: center;">
-      <strong>sumiInk3</strong><br/>
-      <code>#1F1F28</code>
-    </div>
-  </div>
-  <div style="flex: 0 0 auto; width: 100px; border: 1px solid #bcbcbc; border-radius: 4px; overflow: hidden; font-family: sans-serif;">
-    <div style="height: 50px; background: #2A2A37;"></div>
-    <div style="padding: 4px; font-size: 12px; text-align: center;">
-      <strong>sumiInk4</strong><br/>
-      <code>#2A2A37</code>
-    </div>
-  </div>
-  <div style="flex: 0 0 auto; width: 100px; border: 1px solid #bcbcbc; border-radius: 4px; overflow: hidden; font-family: sans-serif;">
-    <div style="height: 50px; background: #363646;"></div>
-    <div style="padding: 4px; font-size: 12px; text-align: center;">
-      <strong>sumiInk5</strong><br/>
-      <code>#363646</code>
-    </div>
-  </div>
-  <div style="flex: 0 0 auto; width: 100px; border: 1px solid #bcbcbc; border-radius: 4px; overflow: hidden; font-family: sans-serif;">
-    <div style="height: 50px; background: #54546D;"></div>
-    <div style="padding: 4px; font-size: 12px; text-align: center;">
-      <strong>sumiInk6</strong><br/>
-      <code>#54546D</code>
-    </div>
-  </div>
-  <div style="flex: 0 0 auto; width: 100px; border: 1px solid #bcbcbc; border-radius: 4px; overflow: hidden; font-family: sans-serif;">
-    <div style="height: 50px; background: #0f0f15;"></div>
-    <div style="padding: 4px; font-size: 12px; text-align: center;">
-      <strong>sumiInkn1</strong><br/>
-      <code>#0f0f15</code>
-    </div>
-  </div>
-  <div style="flex: 0 0 auto; width: 100px; border: 1px solid #bcbcbc; border-radius: 4px; overflow: hidden; font-family: sans-serif;">
-    <div style="height: 50px; background: #FFA066;"></div>
-    <div style="padding: 4px; font-size: 12px; text-align: center;">
-      <strong>surimiOrange</strong><br/>
-      <code>#FFA066</code>
-    </div>
-  </div>
-  <div style="flex: 0 0 auto; width: 100px; border: 1px solid #bcbcbc; border-radius: 4px; overflow: hidden; font-family: sans-serif;">
-    <div style="height: 50px; background: #6A9589;"></div>
-    <div style="padding: 4px; font-size: 12px; text-align: center;">
-      <strong>waveAqua1</strong><br/>
-      <code>#6A9589</code>
-    </div>
-  </div>
-  <div style="flex: 0 0 auto; width: 100px; border: 1px solid #bcbcbc; border-radius: 4px; overflow: hidden; font-family: sans-serif;">
-    <div style="height: 50px; background: #7AA89F;"></div>
-    <div style="padding: 4px; font-size: 12px; text-align: center;">
-      <strong>waveAqua2</strong><br/>
-      <code>#7AA89F</code>
-    </div>
-  </div>
-  <div style="flex: 0 0 auto; width: 100px; border: 1px solid #bcbcbc; border-radius: 4px; overflow: hidden; font-family: sans-serif;">
-    <div style="height: 50px; background: #223249;"></div>
-    <div style="padding: 4px; font-size: 12px; text-align: center;">
-      <strong>waveBlue1</strong><br/>
-      <code>#223249</code>
-    </div>
-  </div>
-  <div style="flex: 0 0 auto; width: 100px; border: 1px solid #bcbcbc; border-radius: 4px; overflow: hidden; font-family: sans-serif;">
-    <div style="height: 50px; background: #2D4F67;"></div>
-    <div style="padding: 4px; font-size: 12px; text-align: center;">
-      <strong>waveBlue2</strong><br/>
-      <code>#2D4F67</code>
-    </div>
-  </div>
-  <div style="flex: 0 0 auto; width: 100px; border: 1px solid #bcbcbc; border-radius: 4px; overflow: hidden; font-family: sans-serif;">
-    <div style="height: 50px; background: #E46876;"></div>
-    <div style="padding: 4px; font-size: 12px; text-align: center;">
-      <strong>waveRed</strong><br/>
-      <code>#E46876</code>
-    </div>
-  </div>
-  <div style="flex: 0 0 auto; width: 100px; border: 1px solid #bcbcbc; border-radius: 4px; overflow: hidden; font-family: sans-serif;">
-    <div style="height: 50px; background: #252535;"></div>
-    <div style="padding: 4px; font-size: 12px; text-align: center;">
-      <strong>winterBlue</strong><br/>
-      <code>#252535</code>
-    </div>
-  </div>
-  <div style="flex: 0 0 auto; width: 100px; border: 1px solid #bcbcbc; border-radius: 4px; overflow: hidden; font-family: sans-serif;">
-    <div style="height: 50px; background: #2B3328;"></div>
-    <div style="padding: 4px; font-size: 12px; text-align: center;">
-      <strong>winterGreen</strong><br/>
-      <code>#2B3328</code>
-    </div>
-  </div>
-  <div style="flex: 0 0 auto; width: 100px; border: 1px solid #bcbcbc; border-radius: 4px; overflow: hidden; font-family: sans-serif;">
-    <div style="height: 50px; background: #43242B;"></div>
-    <div style="padding: 4px; font-size: 12px; text-align: center;">
-      <strong>winterRed</strong><br/>
-      <code>#43242B</code>
-    </div>
-  </div>
-  <div style="flex: 0 0 auto; width: 100px; border: 1px solid #bcbcbc; border-radius: 4px; overflow: hidden; font-family: sans-serif;">
-    <div style="height: 50px; background: #49443C;"></div>
-    <div style="padding: 4px; font-size: 12px; text-align: center;">
-      <strong>winterYellow</strong><br/>
-      <code>#49443C</code>
-    </div>
-  </div>
-
-</div>
+| Name  | Color  | Hex   |
+| ----- | :----: | :---: |
+| **autumnGreen** | ![76946A](https://placehold.co/40x15/76946A/76946A.png) | `#76946A` |
+| **autumnRed** | ![C34043](https://placehold.co/40x15/C34043/C34043.png) | `#C34043` |
+| **autumnYellow** | ![DCA561](https://placehold.co/40x15/DCA561/DCA561.png) | `#DCA561` |
+| **boatYellow1** | ![938056](https://placehold.co/40x15/938056/938056.png) | `#938056` |
+| **boatYellow2** | ![C0A36E](https://placehold.co/40x15/C0A36E/C0A36E.png) | `#C0A36E` |
+| **canvasAqua** | ![57786c](https://placehold.co/40x15/57786c/57786c.png) | `#57786c` |
+| **canvasAqua2** | ![5f847c](https://placehold.co/40x15/5f847c/5f847c.png) | `#5f847c` |
+| **canvasBlue1** | ![93b5d0](https://placehold.co/40x15/93b5d0/93b5d0.png) | `#93b5d0` |
+| **canvasBlue2** | ![719ac2](https://placehold.co/40x15/719ac2/719ac2.png) | `#719ac2` |
+| **canvasBlue3** | ![5c71a4](https://placehold.co/40x15/5c71a4/5c71a4.png) | `#5c71a4` |
+| **canvasBlue4** | ![526994](https://placehold.co/40x15/526994/526994.png) | `#526994` |
+| **canvasBlue5** | ![515797](https://placehold.co/40x15/515797/515797.png) | `#515797` |
+| **canvasCyan** | ![56a06a](https://placehold.co/40x15/56a06a/56a06a.png) | `#56a06a` |
+| **canvasGray0** | ![5d5c54](https://placehold.co/40x15/5d5c54/5d5c54.png) | `#5d5c54` |
+| **canvasGray1** | ![858479](https://placehold.co/40x15/858479/858479.png) | `#858479` |
+| **canvasGray2** | ![a9a8a0](https://placehold.co/40x15/a9a8a0/a9a8a0.png) | `#a9a8a0` |
+| **canvasGray3** | ![b5b5ae](https://placehold.co/40x15/b5b5ae/b5b5ae.png) | `#b5b5ae` |
+| **canvasGray4** | ![c1c1bb](https://placehold.co/40x15/c1c1bb/c1c1bb.png) | `#c1c1bb` |
+| **canvasGreen** | ![73865b](https://placehold.co/40x15/73865b/73865b.png) | `#73865b` |
+| **canvasGreen2** | ![718e64](https://placehold.co/40x15/718e64/718e64.png) | `#718e64` |
+| **canvasGreen3** | ![a0c991](https://placehold.co/40x15/a0c991/a0c991.png) | `#a0c991` |
+| **canvasInk0** | ![4c4c65](https://placehold.co/40x15/4c4c65/4c4c65.png) | `#4c4c65` |
+| **canvasInk1** | ![595b62](https://placehold.co/40x15/595b62/595b62.png) | `#595b62` |
+| **canvasInk2** | ![484862](https://placehold.co/40x15/484862/484862.png) | `#484862` |
+| **canvasOrange** | ![b8805e](https://placehold.co/40x15/b8805e/b8805e.png) | `#b8805e` |
+| **canvasOrange2** | ![d59260](https://placehold.co/40x15/d59260/d59260.png) | `#d59260` |
+| **canvasPink** | ![ac7085](https://placehold.co/40x15/ac7085/ac7085.png) | `#ac7085` |
+| **canvasRed** | ![b35560](https://placehold.co/40x15/b35560/b35560.png) | `#b35560` |
+| **canvasRed2** | ![c75758](https://placehold.co/40x15/c75758/c75758.png) | `#c75758` |
+| **canvasRed3** | ![c95d5d](https://placehold.co/40x15/c95d5d/c95d5d.png) | `#c95d5d` |
+| **canvasRed4** | ![d99a85](https://placehold.co/40x15/d99a85/d99a85.png) | `#d99a85` |
+| **canvasTeal1** | ![5f8a9b](https://placehold.co/40x15/5f8a9b/5f8a9b.png) | `#5f8a9b` |
+| **canvasTeal2** | ![618bb6](https://placehold.co/40x15/618bb6/618bb6.png) | `#618bb6` |
+| **canvasTeal3** | ![526c79](https://placehold.co/40x15/526c79/526c79.png) | `#526c79` |
+| **canvasViolet1** | ![c4cbdc](https://placehold.co/40x15/c4cbdc/c4cbdc.png) | `#c4cbdc` |
+| **canvasViolet2** | ![a398bf](https://placehold.co/40x15/a398bf/a398bf.png) | `#a398bf` |
+| **canvasViolet3** | ![7967a2](https://placehold.co/40x15/7967a2/7967a2.png) | `#7967a2` |
+| **canvasViolet4** | ![6f4f9d](https://placehold.co/40x15/6f4f9d/6f4f9d.png) | `#6f4f9d` |
+| **canvasWhite0** | ![cbc8bc](https://placehold.co/40x15/cbc8bc/cbc8bc.png) | `#cbc8bc` |
+| **canvasWhite1** | ![d3d0c3](https://placehold.co/40x15/d3d0c3/d3d0c3.png) | `#d3d0c3` |
+| **canvasWhite2** | ![d8d8d2](https://placehold.co/40x15/d8d8d2/d8d8d2.png) | `#d8d8d2` |
+| **canvasWhite3** | ![e1e1de](https://placehold.co/40x15/e1e1de/e1e1de.png) | `#e1e1de` |
+| **canvasWhite4** | ![e6e6e3](https://placehold.co/40x15/e6e6e3/e6e6e3.png) | `#e6e6e3` |
+| **canvasWhite5** | ![ecece8](https://placehold.co/40x15/ecece8/ecece8.png) | `#ecece8` |
+| **canvasYellow** | ![a67337](https://placehold.co/40x15/a67337/a67337.png) | `#a67337` |
+| **canvasYellow2** | ![c08a48](https://placehold.co/40x15/c08a48/c08a48.png) | `#c08a48` |
+| **canvasYellow3** | ![d3a56b](https://placehold.co/40x15/d3a56b/d3a56b.png) | `#d3a56b` |
+| **canvasYellow4** | ![e0be6d](https://placehold.co/40x15/e0be6d/e0be6d.png) | `#e0be6d` |
+| **carpYellow** | ![E6C384](https://placehold.co/40x15/E6C384/E6C384.png) | `#E6C384` |
+| **crystalBlue** | ![7E9CD8](https://placehold.co/40x15/7E9CD8/7E9CD8.png) | `#7E9CD8` |
+| **dragonAqua** | ![8ea49e](https://placehold.co/40x15/8ea49e/8ea49e.png) | `#8ea49e` |
+| **dragonAsh** | ![737c73](https://placehold.co/40x15/737c73/737c73.png) | `#737c73` |
+| **dragonBlack0** | ![0d0c0c](https://placehold.co/40x15/0d0c0c/0d0c0c.png) | `#0d0c0c` |
+| **dragonBlack1** | ![12120f](https://placehold.co/40x15/12120f/12120f.png) | `#12120f` |
+| **dragonBlack2** | ![1D1C19](https://placehold.co/40x15/1D1C19/1D1C19.png) | `#1D1C19` |
+| **dragonBlack3** | ![181616](https://placehold.co/40x15/181616/181616.png) | `#181616` |
+| **dragonBlack4** | ![282727](https://placehold.co/40x15/282727/282727.png) | `#282727` |
+| **dragonBlack5** | ![393836](https://placehold.co/40x15/393836/393836.png) | `#393836` |
+| **dragonBlack6** | ![625e5a](https://placehold.co/40x15/625e5a/625e5a.png) | `#625e5a` |
+| **dragonBlue** | ![658594](https://placehold.co/40x15/658594/658594.png) | `#658594` |
+| **dragonBlue2** | ![859fac](https://placehold.co/40x15/859fac/859fac.png) | `#859fac` |
+| **dragonBlue3** | ![708e9e](https://placehold.co/40x15/708e9e/708e9e.png) | `#708e9e` |
+| **dragonBlue4** | ![5d7a88](https://placehold.co/40x15/5d7a88/5d7a88.png) | `#5d7a88` |
+| **dragonBlue5** | ![435965](https://placehold.co/40x15/435965/435965.png) | `#435965` |
+| **dragonGray** | ![a6a69c](https://placehold.co/40x15/a6a69c/a6a69c.png) | `#a6a69c` |
+| **dragonGray2** | ![9e9b93](https://placehold.co/40x15/9e9b93/9e9b93.png) | `#9e9b93` |
+| **dragonGray3** | ![7a8382](https://placehold.co/40x15/7a8382/7a8382.png) | `#7a8382` |
+| **dragonGreen** | ![699469](https://placehold.co/40x15/699469/699469.png) | `#699469` |
+| **dragonGreen2** | ![8a9a7b](https://placehold.co/40x15/8a9a7b/8a9a7b.png) | `#8a9a7b` |
+| **dragonOrange** | ![b6927b](https://placehold.co/40x15/b6927b/b6927b.png) | `#b6927b` |
+| **dragonOrange2** | ![b98d7b](https://placehold.co/40x15/b98d7b/b98d7b.png) | `#b98d7b` |
+| **dragonPink** | ![a292a3](https://placehold.co/40x15/a292a3/a292a3.png) | `#a292a3` |
+| **dragonRed** | ![c4746e](https://placehold.co/40x15/c4746e/c4746e.png) | `#c4746e` |
+| **dragonTeal** | ![949fb5](https://placehold.co/40x15/949fb5/949fb5.png) | `#949fb5` |
+| **dragonViolet** | ![8992a7](https://placehold.co/40x15/8992a7/8992a7.png) | `#8992a7` |
+| **dragonWhite** | ![c5c9c5](https://placehold.co/40x15/c5c9c5/c5c9c5.png) | `#c5c9c5` |
+| **dragonYellow** | ![c4b28a](https://placehold.co/40x15/c4b28a/c4b28a.png) | `#c4b28a` |
+| **fujiGray** | ![727169](https://placehold.co/40x15/727169/727169.png) | `#727169` |
+| **fujiWhite** | ![DCD7BA](https://placehold.co/40x15/DCD7BA/DCD7BA.png) | `#DCD7BA` |
+| **katanaGray** | ![717C7C](https://placehold.co/40x15/717C7C/717C7C.png) | `#717C7C` |
+| **lightBlue** | ![A3D4D5](https://placehold.co/40x15/A3D4D5/A3D4D5.png) | `#A3D4D5` |
+| **lotusAqua** | ![597b75](https://placehold.co/40x15/597b75/597b75.png) | `#597b75` |
+| **lotusAqua2** | ![5e857a](https://placehold.co/40x15/5e857a/5e857a.png) | `#5e857a` |
+| **lotusBlue1** | ![c7d7e0](https://placehold.co/40x15/c7d7e0/c7d7e0.png) | `#c7d7e0` |
+| **lotusBlue2** | ![b5cbd2](https://placehold.co/40x15/b5cbd2/b5cbd2.png) | `#b5cbd2` |
+| **lotusBlue3** | ![9fb5c9](https://placehold.co/40x15/9fb5c9/9fb5c9.png) | `#9fb5c9` |
+| **lotusBlue4** | ![4d699b](https://placehold.co/40x15/4d699b/4d699b.png) | `#4d699b` |
+| **lotusBlue5** | ![5d57a3](https://placehold.co/40x15/5d57a3/5d57a3.png) | `#5d57a3` |
+| **lotusCyan** | ![d7e3d8](https://placehold.co/40x15/d7e3d8/d7e3d8.png) | `#d7e3d8` |
+| **lotusGray** | ![dcd7ba](https://placehold.co/40x15/dcd7ba/dcd7ba.png) | `#dcd7ba` |
+| **lotusGray2** | ![716e61](https://placehold.co/40x15/716e61/716e61.png) | `#716e61` |
+| **lotusGray3** | ![8a8980](https://placehold.co/40x15/8a8980/8a8980.png) | `#8a8980` |
+| **lotusGreen** | ![6f894e](https://placehold.co/40x15/6f894e/6f894e.png) | `#6f894e` |
+| **lotusGreen2** | ![6e915f](https://placehold.co/40x15/6e915f/6e915f.png) | `#6e915f` |
+| **lotusGreen3** | ![b7d0ae](https://placehold.co/40x15/b7d0ae/b7d0ae.png) | `#b7d0ae` |
+| **lotusInk0** | ![3d3d5e](https://placehold.co/40x15/3d3d5e/3d3d5e.png) | `#3d3d5e` |
+| **lotusInk1** | ![545464](https://placehold.co/40x15/545464/545464.png) | `#545464` |
+| **lotusInk2** | ![43436c](https://placehold.co/40x15/43436c/43436c.png) | `#43436c` |
+| **lotusOrange** | ![cc6d00](https://placehold.co/40x15/cc6d00/cc6d00.png) | `#cc6d00` |
+| **lotusOrange2** | ![e98a00](https://placehold.co/40x15/e98a00/e98a00.png) | `#e98a00` |
+| **lotusPink** | ![b35b79](https://placehold.co/40x15/b35b79/b35b79.png) | `#b35b79` |
+| **lotusRed** | ![c84053](https://placehold.co/40x15/c84053/c84053.png) | `#c84053` |
+| **lotusRed2** | ![d7474b](https://placehold.co/40x15/d7474b/d7474b.png) | `#d7474b` |
+| **lotusRed3** | ![e82424](https://placehold.co/40x15/e82424/e82424.png) | `#e82424` |
+| **lotusRed4** | ![d9a594](https://placehold.co/40x15/d9a594/d9a594.png) | `#d9a594` |
+| **lotusTeal1** | ![4e8ca2](https://placehold.co/40x15/4e8ca2/4e8ca2.png) | `#4e8ca2` |
+| **lotusTeal2** | ![6693bf](https://placehold.co/40x15/6693bf/6693bf.png) | `#6693bf` |
+| **lotusTeal3** | ![5a7785](https://placehold.co/40x15/5a7785/5a7785.png) | `#5a7785` |
+| **lotusViolet1** | ![a09cac](https://placehold.co/40x15/a09cac/a09cac.png) | `#a09cac` |
+| **lotusViolet2** | ![766b90](https://placehold.co/40x15/766b90/766b90.png) | `#766b90` |
+| **lotusViolet3** | ![c9cbd1](https://placehold.co/40x15/c9cbd1/c9cbd1.png) | `#c9cbd1` |
+| **lotusViolet4** | ![624c83](https://placehold.co/40x15/624c83/624c83.png) | `#624c83` |
+| **lotusWhite0** | ![d5cea3](https://placehold.co/40x15/d5cea3/d5cea3.png) | `#d5cea3` |
+| **lotusWhite1** | ![dcd5ac](https://placehold.co/40x15/dcd5ac/dcd5ac.png) | `#dcd5ac` |
+| **lotusWhite2** | ![e5ddb0](https://placehold.co/40x15/e5ddb0/e5ddb0.png) | `#e5ddb0` |
+| **lotusWhite3** | ![f2ecbc](https://placehold.co/40x15/f2ecbc/f2ecbc.png) | `#f2ecbc` |
+| **lotusWhite4** | ![e7dba0](https://placehold.co/40x15/e7dba0/e7dba0.png) | `#e7dba0` |
+| **lotusWhite5** | ![e4d794](https://placehold.co/40x15/e4d794/e4d794.png) | `#e4d794` |
+| **lotusYellow** | ![77713f](https://placehold.co/40x15/77713f/77713f.png) | `#77713f` |
+| **lotusYellow2** | ![836f4a](https://placehold.co/40x15/836f4a/836f4a.png) | `#836f4a` |
+| **lotusYellow3** | ![de9800](https://placehold.co/40x15/de9800/de9800.png) | `#de9800` |
+| **lotusYellow4** | ![f9d791](https://placehold.co/40x15/f9d791/f9d791.png) | `#f9d791` |
+| **oldWhite** | ![C8C093](https://placehold.co/40x15/C8C093/C8C093.png) | `#C8C093` |
+| **oniViolet** | ![957FB8](https://placehold.co/40x15/957FB8/957FB8.png) | `#957FB8` |
+| **oniViolet2** | ![b8b4d0](https://placehold.co/40x15/b8b4d0/b8b4d0.png) | `#b8b4d0` |
+| **peachRed** | ![FF5D62](https://placehold.co/40x15/FF5D62/FF5D62.png) | `#FF5D62` |
+| **roninYellow** | ![FF9E3B](https://placehold.co/40x15/FF9E3B/FF9E3B.png) | `#FF9E3B` |
+| **sakuraPink** | ![D27E99](https://placehold.co/40x15/D27E99/D27E99.png) | `#D27E99` |
+| **samuraiRed** | ![E82424](https://placehold.co/40x15/E82424/E82424.png) | `#E82424` |
+| **springBlue** | ![7FB4CA](https://placehold.co/40x15/7FB4CA/7FB4CA.png) | `#7FB4CA` |
+| **springGreen** | ![98BB6C](https://placehold.co/40x15/98BB6C/98BB6C.png) | `#98BB6C` |
+| **springViolet1** | ![938AA9](https://placehold.co/40x15/938AA9/938AA9.png) | `#938AA9` |
+| **springViolet2** | ![9CABCA](https://placehold.co/40x15/9CABCA/9CABCA.png) | `#9CABCA` |
+| **sumiInk0** | ![16161D](https://placehold.co/40x15/16161D/16161D.png) | `#16161D` |
+| **sumiInk1** | ![181820](https://placehold.co/40x15/181820/181820.png) | `#181820` |
+| **sumiInk2** | ![1a1a22](https://placehold.co/40x15/1a1a22/1a1a22.png) | `#1a1a22` |
+| **sumiInk3** | ![1F1F28](https://placehold.co/40x15/1F1F28/1F1F28.png) | `#1F1F28` |
+| **sumiInk4** | ![2A2A37](https://placehold.co/40x15/2A2A37/2A2A37.png) | `#2A2A37` |
+| **sumiInk5** | ![363646](https://placehold.co/40x15/363646/363646.png) | `#363646` |
+| **sumiInk6** | ![54546D](https://placehold.co/40x15/54546D/54546D.png) | `#54546D` |
+| **sumiInkn1** | ![0f0f15](https://placehold.co/40x15/0f0f15/0f0f15.png) | `#0f0f15` |
+| **surimiOrange** | ![FFA066](https://placehold.co/40x15/FFA066/FFA066.png) | `#FFA066` |
+| **waveAqua1** | ![6A9589](https://placehold.co/40x15/6A9589/6A9589.png) | `#6A9589` |
+| **waveAqua2** | ![7AA89F](https://placehold.co/40x15/7AA89F/7AA89F.png) | `#7AA89F` |
+| **waveBlue1** | ![223249](https://placehold.co/40x15/223249/223249.png) | `#223249` |
+| **waveBlue2** | ![2D4F67](https://placehold.co/40x15/2D4F67/2D4F67.png) | `#2D4F67` |
+| **waveRed** | ![E46876](https://placehold.co/40x15/E46876/E46876.png) | `#E46876` |
+| **winterBlue** | ![252535](https://placehold.co/40x15/252535/252535.png) | `#252535` |
+| **winterGreen** | ![2B3328](https://placehold.co/40x15/2B3328/2B3328.png) | `#2B3328` |
+| **winterRed** | ![43242B](https://placehold.co/40x15/43242B/43242B.png) | `#43242B` |
+| **winterYellow** | ![49443C](https://placehold.co/40x15/49443C/49443C.png) | `#49443C` |
