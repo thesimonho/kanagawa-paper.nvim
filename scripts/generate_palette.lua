@@ -1,4 +1,6 @@
+package.path = "lua/?.lua;lua/?/init.lua;lua/?/?.lua;" .. package.path
 local palette = require("kanagawa-paper.colors").palette
+
 local ordered = {}
 for name in pairs(palette) do
 	table.insert(ordered, name)
