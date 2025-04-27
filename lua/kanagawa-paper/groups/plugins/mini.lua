@@ -1,5 +1,7 @@
 local M = {}
 
+---@param colors KanagawaColors
+---@param opts KanagawaConfig
 function M.get(colors, opts)
 	local theme = colors.theme
 
@@ -68,10 +70,10 @@ function M.get(colors, opts)
 
 		MiniJump = { link = "SpellRare" },
 
-		MiniJump2dDim = { link = "Comment" },
-		MiniJump2dSpot = { fg = theme.syn.constant, bold = true, nocombine = true },
-		MiniJump2dSpotAhead = { fg = theme.diag.hint, bg = theme.ui.bg_dim, nocombine = true },
-		MiniJump2dSpotUnique = { fg = theme.syn.special1, bold = true, nocombine = true },
+		MiniJump2dDim = { fg = theme.syn.comment },
+		MiniJump2dSpot = { fg = theme.ui.picker, bold = true, nocombine = true },
+		MiniJump2dSpotUnique = { link = "MiniJump2dSpot" },
+		MiniJump2dSpotAhead = { fg = theme.ui.picker, bold = false, nocombine = true },
 
 		MiniMapNormal = { link = "NormalFloat" },
 		MiniMapSymbolCount = { link = "Special" },
