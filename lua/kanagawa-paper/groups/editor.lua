@@ -62,6 +62,7 @@ function M.setup(colors, opts)
 		CursorLineNr = { fg = theme.diag.warning, bg = theme.ui.bg_gutter, bold = true },
 		-- CursorLineFold	Like FoldColumn when 'cursorline' is set for the cursor line.
 		-- CursorLineSign	Like SignColumn when 'cursorline' is set for the cursor line.
+		Mark = { fg = theme.ui.mark },
 		-- MatchParen	Character under the cursor or just before it, if it is a paired bracket, and its match. |pi_paren.txt|
 		MatchParen = { fg = theme.diag.warning, bold = true },
 		-- ModeMsg		'showmode' message (e.g., "-- INSERT --").
