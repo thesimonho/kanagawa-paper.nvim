@@ -1,5 +1,18 @@
 # Changelog
 
+## [2.1.0](https://github.com/thesimonho/kanagawa-paper.nvim/compare/v2.0.2...v2.1.0) (2025-05-18)
+
+
+### Features
+
+* **editor:** add group for marks ([a038398](https://github.com/thesimonho/kanagawa-paper.nvim/commit/a038398036be89002094a40dea656537be64db55))
+* **leap:** add groups for jump motion plugins ([4f41353](https://github.com/thesimonho/kanagawa-paper.nvim/commit/4f41353f6a2bf9f25b2466a0f1eb6883d8fd09c1))
+
+
+### Bug Fixes
+
+* **syntax:** better distinction between member and variable colors ([d1b21ab](https://github.com/thesimonho/kanagawa-paper.nvim/commit/d1b21ab79dc31c592f3fde20e9f81512c836d19d)), closes [#38](https://github.com/thesimonho/kanagawa-paper.nvim/issues/38)
+
 ## [2.0.2](https://github.com/thesimonho/kanagawa-paper.nvim/compare/v2.0.1...v2.0.2) (2025-04-21)
 
 
