@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.1.1](https://github.com/thesimonho/kanagawa-paper.nvim/compare/v2.1.0...v2.1.1) (2025-05-21)
+
+
+### Bug Fixes
+
+* **fzf:** change fzf extension to rc ([9be1baa](https://github.com/thesimonho/kanagawa-paper.nvim/commit/9be1baa6bfbc543c698d351e60fb63c6bb837804))
+
 ## [2.1.0](https://github.com/thesimonho/kanagawa-paper.nvim/compare/v2.0.2...v2.1.0) (2025-05-18)
 
 
