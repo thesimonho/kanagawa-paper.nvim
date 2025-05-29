@@ -64,6 +64,20 @@ vim.cmd.colorscheme("kanagawa-paper-ink")
 vim.cmd.colorscheme("kanagawa-paper-canvas")
 ```
 
+A full plugin spec example using [lazy.nvim](https://github.com/folke/lazy.nvim):
+
+```lua
+return {
+  "thesimonho/kanagawa-paper.nvim",
+  lazy = false,
+  priority = 1000,
+  init = function()
+    vim.cmd.colorscheme("kanagawa-paper-ink")
+  end,
+  opts = {...},
+}
+```
+
 ## 🛠️ Configuration
 
 > [!NOTE]
@@ -326,11 +340,38 @@ You can find a more detailed explanation of color customization [here](https://g
 
 ### Extracting colors
 
+You can get the palette and theme colors from the colors module like this:
+
 ```lua
 -- Get the colors for the current theme
-local colors = require("kanagawa-paper.colors").setup()
+local colors = require("kanagawa-paper.colors")
 local palette_colors = colors.palette
 local theme_colors = colors.theme
+```
+
+and use them in your `opts` function. Example:
+
+```lua
+{
+  "thesimonho/kanagawa-paper.nvim",
+  lazy = false,
+  priority = 1000,
+  opts = function()
+    local colors = require("kanagawa-paper.colors")
+    local palette_colors = colors.palette
+    return {
+      colors = {
+        theme = {
+          ink = {
+            ui = {
+              bg_dim = palette_colors.boatYellow2,
+            },
+          },
+        },
+      },
+    }
+  end
+}
 ```
 
 ## 🍭 Extras
