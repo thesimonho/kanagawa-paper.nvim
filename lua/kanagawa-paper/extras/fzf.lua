@@ -15,7 +15,7 @@ function M.generate(colors)
 #       See the URL above for more information.
 # -----------------------------------------------------------------------------
 
---color=bg:-1,bg+:${ui.bg_cursorline},fg:-1,fg+:${ui.fg},hl:${ui.bg_search},hl+:${syn.symbol}
+--color=bg:-1,bg+:${ui.bg_cursorline},fg:-1,fg+:${ui.fg},hl:${modes.visual},hl+:${syn.symbol}
 --color=header:${ui.header2},info:${diag.info},pointer:${ui.mark}
 --color=marker:${ui.mark},prompt:${ui.picker},spinner:${ui.special}
 ]],
