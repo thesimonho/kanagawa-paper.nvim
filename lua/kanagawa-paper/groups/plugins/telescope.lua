@@ -15,10 +15,10 @@ function M.get(colors, opts)
 		TelescopeResultsField = { link = "@field" },
 		TelescopeResultsMethod = { link = "Function" },
 		TelescopeResultsVariable = { link = "@variable" },
-		TeleScopeResultsTitle = { fg = theme.ui.fg_dark, bg = theme.accent.accent2, bold = true },
+		TelescopeResultsTitle = { fg = theme.ui.fg_dark, bg = theme.accent.accent2, bold = true },
 		TelescopeResultsNormal = { fg = theme.ui.fg, bg = theme.ui.bg_p1 },
 		TelescopeResultsBorder = { fg = theme.ui.bg_p2, bg = theme.ui.bg_p1 },
-		TeleScopePreviewTitle = { fg = theme.ui.fg_dark, bg = theme.accent.accent3, bold = true },
+		TelescopePreviewTitle = { fg = theme.ui.fg_dark, bg = theme.accent.accent3, bold = true },
 		TelescopePreviewNormal = { bg = theme.ui.bg },
 		TelescopePreviewBorder = { bg = theme.ui.bg, fg = theme.ui.bg_p2 },
 	}
