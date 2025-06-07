@@ -8,8 +8,12 @@ jobs:
   generate:
     name: Generate Palette
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
     steps:
       - uses: actions/checkout@v4
+        with:
+          ssh-key: ${{ secrets.DEPLOY_KEY }}
       - uses: leafo/gh-actions-lua@v11
         with:
           luaVersion: "5.1"
