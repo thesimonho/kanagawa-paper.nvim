@@ -1,13 +1,8 @@
 name: Run Tests
 on:
   workflow_dispatch:
-  push:
-    paths:
-      - "**/*.lua"
   pull_request:
     types: [opened, synchronize, reopened]
-    paths:
-      - "**/*.lua"
 jobs:
   tests:
     name: Run tests
@@ -16,15 +11,33 @@ jobs:
       - uses: actions/checkout@v4
         with:
           ssh-key: ${{ secrets.DEPLOY_KEY }}
+      - name: Check for Lua file changes
+        id: lua-changes
+        run: |
+          echo "Checking for .lua file changes..."
+          git fetch origin ${{ github.base_ref }}
+          if git diff --name-only origin/${{ github.base_ref }}...HEAD | grep -E '\.lua$'; then
+            echo "run-tests=true" >> $GITHUB_OUTPUT
+          else
+            echo "run-tests=false" >> $GITHUB_OUTPUT
+          fi
       - uses: leafo/gh-actions-lua@v11
+        if: steps.lua-changes.outputs.run-tests == 'true'
         with:
           luaVersion: "5.1"
       - uses: leafo/gh-actions-luarocks@v5
+        if: steps.lua-changes.outputs.run-tests == 'true'
       - uses: rhysd/action-setup-vim@v1
+        if: steps.lua-changes.outputs.run-tests == 'true'
         with:
           neovim: true
       - name: Set permissions
+        if: steps.lua-changes.outputs.run-tests == 'true'
         run: chmod +x scripts/test.sh
       - name: Run test script
+        if: steps.lua-changes.outputs.run-tests == 'true'
         run: |
           scripts/test.sh || { echo "❌ Test script failed!"; exit 1; }
+      - name: Mark test as skipped
+        if: steps.lua-changes.outputs.run-tests == 'false'
+        run: echo "✅ No .lua file changes, skipping tests."

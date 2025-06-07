@@ -2,6 +2,8 @@ name: Build Extras
 on:
   workflow_dispatch:
   push:
+    branches:
+      - master
     paths:
       - "lua/kanagawa-paper/extras/**"
       - "lua/kanagawa-paper/themes/**"
