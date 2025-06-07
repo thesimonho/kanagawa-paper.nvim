@@ -24,7 +24,7 @@ urls = ${syn.special3}
 search-box-no-match = ${term.black_bright} ${term.red_bright}
 search-box-match = ${term.blue_bright} ${term.black_bright}
 
-jump-labels = ${modes.normal} ${yellow_bright}
+jump-labels = ${modes.normal} ${term.yellow_bright}
 
 # Normal colors
 color0 = ${term.black}
