@@ -1,9 +1,10 @@
-*kanagawa-paper.nvim.txt*       For NVIM v0.8.0       Last change: 2025 May 29
+*kanagawa-paper.nvim.txt*       For NVIM v0.8.0      Last change: 2025 June 07
 
 ==============================================================================
 Table of Contents                      *kanagawa-paper.nvim-table-of-contents*
 
 1. kanagawa-paper.nvim               |kanagawa-paper.nvim-kanagawa-paper.nvim|
+  - Glamour Shots                          |kanagawa-paper.nvim-glamour-shots|
   - Motivation                                |kanagawa-paper.nvim-motivation|
   - Requirements                            |kanagawa-paper.nvim-requirements|
   - Installation                            |kanagawa-paper.nvim-installation|
@@ -20,6 +21,13 @@ Table of Contents                      *kanagawa-paper.nvim-table-of-contents*
 1. kanagawa-paper.nvim               *kanagawa-paper.nvim-kanagawa-paper.nvim*
 
 Remixed light and dark Kanagawa color scheme with muted colors. For Neovim.
+
+
+
+
+
+
+GLAMOUR SHOTS                              *kanagawa-paper.nvim-glamour-shots*
 
   -----------------------------------------------------------------------
   Ink                                Canvas
