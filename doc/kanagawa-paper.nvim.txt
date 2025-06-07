@@ -27,6 +27,8 @@ Remixed light and dark Kanagawa color scheme with muted colors. For Neovim.
 
 
 
+
+
 GLAMOUR SHOTS                              *kanagawa-paper.nvim-glamour-shots*
 
   -----------------------------------------------------------------------
