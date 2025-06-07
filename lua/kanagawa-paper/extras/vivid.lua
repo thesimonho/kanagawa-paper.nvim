@@ -18,14 +18,14 @@ colors:
   green: '${term.green}'
   yellow: '${term.yellow}'
   blue: '${term.blue}'
-  pink: '${term.magneta}'
+  pink: '${term.magenta}'
   cyan: '${term.cyan}'
 
   light_red: '${term.red_bright}'
   light_green: '${term.green_bright}'
   light_blue: '${term.blue_bright}'
-  light_pink: '${term.magneta_bright}'
-  light_cyan: '$term.cyan_bright}'
+  light_pink: '${term.magenta_bright}'
+  light_cyan: '${term.cyan_bright}'
 
   black: '${ui.bg_m4}'
   gray: '${ui.bg_m1}'
