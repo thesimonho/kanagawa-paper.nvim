@@ -1,5 +1,18 @@
 # Changelog
 
+## [2.2.0](https://github.com/thesimonho/kanagawa-paper.nvim/compare/v2.1.0...v2.2.0) (2025-06-07)
+
+
+### Features
+
+* **foot:** add extra theme for foot ([be6dcc4](https://github.com/thesimonho/kanagawa-paper.nvim/commit/be6dcc4ed8da2e6b0f567f1dc0661ff3daea821e))
+
+
+### Bug Fixes
+
+* **canvas:** make fzf highlights more readable ([1947ab5](https://github.com/thesimonho/kanagawa-paper.nvim/commit/1947ab58e37f412119248e87a30450ea9f3ab567))
+* **fzf:** change fzf extension to rc ([9be1baa](https://github.com/thesimonho/kanagawa-paper.nvim/commit/9be1baa6bfbc543c698d351e60fb63c6bb837804))
+
 ## [2.1.0](https://github.com/thesimonho/kanagawa-paper.nvim/compare/v2.0.2...v2.1.0) (2025-05-18)
 
 
