@@ -1,6 +1,20 @@
 # 🌊 kanagawa-paper.nvim
 
+<p align="center">
 Remixed light and dark Kanagawa color scheme with muted colors. For Neovim.
+</p>
+
+<p align="center">
+<img alt="GitHub Repo stars" src="https://img.shields.io/github/stars/thesimonho/kanagawa-paper.nvim?style=for-the-badge&labelColor=1F1F28&color=c4b28a">
+
+<img alt="GitHub Release" src="https://img.shields.io/github/v/release/thesimonho/kanagawa-paper.nvim?style=for-the-badge&labelColor=1F1F28&color=887389">
+
+<img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/thesimonho/kanagawa-paper.nvim?style=for-the-badge&labelColor=1F1F28&color=5d7a88">
+
+<img alt="GitHub branch check runs" src="https://img.shields.io/github/check-runs/thesimonho/kanagawa-paper.nvim/master?style=for-the-badge&label=build&labelColor=1F1F28&color=699469">
+</p>
+
+## ✨ Glamour Shots
 
 | Ink                                                                                             | Canvas                                                                                             |
 | ----------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
