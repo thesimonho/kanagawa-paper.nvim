@@ -2,6 +2,8 @@ name: Generate Palette
 on:
   workflow_dispatch:
   push:
+    branches:
+      - master
     paths:
       - "lua/kanagawa-paper/colors.lua"
 jobs:
