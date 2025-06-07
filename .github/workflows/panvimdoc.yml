@@ -4,21 +4,14 @@ on:
   push:
     paths:
       - "README.md"
-  pull_request:
-    types: [closed]
-    paths:
-      - "README.md"
 jobs:
   docs:
     name: pandoc to vimdoc
     runs-on: ubuntu-latest
-    if: github.event_name == 'push' || github.event_name == 'workflow_dispatch' || (github.event_name == 'pull_request' && github.event.pull_request.merged == true)
     permissions:
       contents: write
     steps:
       - uses: actions/checkout@v4
-        with:
-          ref: ${{ github.event_name == 'pull_request' && github.event.pull_request.merged && github.event.pull_request.base.ref || github.ref_name }}
       - name: panvimdoc
         uses: kdheepak/panvimdoc@v4.0.1
         with:
@@ -40,7 +33,7 @@ jobs:
           git stash push || echo "No changes to stash"
       - name: Pull latest changes with rebase
         run: |
-          git pull --rebase origin ${{ github.ref_name }}
+          git pull --rebase origin HEAD
       - name: Restore stash if needed
         run: |
           git stash pop || echo "No changes to restore"

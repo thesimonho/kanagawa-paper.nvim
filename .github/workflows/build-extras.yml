@@ -8,19 +8,10 @@ on:
       - "lua/kanagawa-paper/lib/**"
       - "lua/kanagawa-paper/colors.lua"
       - "lua/scripts/**"
-  pull_request:
-    types: [closed]
-    paths:
-      - "lua/kanagawa-paper/extras/**"
-      - "lua/kanagawa-paper/themes/**"
-      - "lua/kanagawa-paper/lib/**"
-      - "lua/kanagawa-paper/colors.lua"
-      - "lua/scripts/**"
 jobs:
   extras:
     name: Build Extras
     runs-on: ubuntu-latest
-    if: github.event_name == 'push' || github.event_name == 'workflow_dispatch' || github.event.pull_request.merged == true
     permissions:
       contents: write
     steps:
@@ -39,7 +30,7 @@ jobs:
           git stash push || echo "No changes to stash"
       - name: Pull latest changes with rebase
         run: |
-          git pull --rebase origin ${{ github.ref_name }}
+          git pull --rebase origin HEAD
       - name: Restore stash if needed
         run: |
           git stash pop || echo "No changes to restore"

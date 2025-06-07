@@ -5,14 +5,13 @@ on:
     paths:
       - "**/*.lua"
   pull_request:
-    types: [closed]
+    types: [opened, synchronize, reopened]
     paths:
       - "**/*.lua"
 jobs:
   tests:
     name: Run tests
     runs-on: ubuntu-latest
-    if: github.event_name == 'push' || github.event_name == 'workflow_dispatch' || github.event.pull_request.merged == true
     steps:
       - uses: actions/checkout@v4
       - uses: leafo/gh-actions-lua@v11
