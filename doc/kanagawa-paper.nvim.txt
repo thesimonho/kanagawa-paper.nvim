@@ -4,7 +4,6 @@
 Table of Contents                      *kanagawa-paper.nvim-table-of-contents*
 
 1. kanagawa-paper.nvim               |kanagawa-paper.nvim-kanagawa-paper.nvim|
-  - Glamour Shots                          |kanagawa-paper.nvim-glamour-shots|
   - Motivation                                |kanagawa-paper.nvim-motivation|
   - Requirements                            |kanagawa-paper.nvim-requirements|
   - Installation                            |kanagawa-paper.nvim-installation|
@@ -29,16 +28,6 @@ Remixed light and dark Kanagawa color scheme with muted colors. For Neovim.
 
 
 
-GLAMOUR SHOTS                              *kanagawa-paper.nvim-glamour-shots*
-
-  -----------------------------------------------------------------------
-  Ink                                Canvas
-  ---------------------------------- ------------------------------------
-  [ink]                              [canvas]
-
-  [ink_palette]                      [canvas_palette]
-  -----------------------------------------------------------------------
-
 MOTIVATION                                    *kanagawa-paper.nvim-motivation*
 
 I love the original kanagawa.nvim <https://github.com/rebelot/kanagawa.nvim>
@@ -52,6 +41,13 @@ Both a light theme and a dark theme are provided.
 I have also ported the color scheme to VSCode, which you can find here:
 kanagawa-paper.vscode <https://github.com/thesimonho/kanagawa-paper.vscode>
 
+  -----------------------------------------------------------------------
+  Ink                                Canvas
+  ---------------------------------- ------------------------------------
+  [ink]                              [canvas]
+
+  [ink_palette]                      [canvas_palette]
+  -----------------------------------------------------------------------
 
 REQUIREMENTS                                *kanagawa-paper.nvim-requirements*
 
