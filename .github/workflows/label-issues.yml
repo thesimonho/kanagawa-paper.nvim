@@ -16,6 +16,8 @@ jobs:
         template: [1-bug-report.yml, 2-feature-request.yml]
     steps:
       - uses: actions/checkout@v4
+        with:
+          ssh-key: ${{ secrets.DEPLOY_KEY }}
       - name: Parse issue form
         uses: stefanbuck/github-issue-parser@v3
         id: issue-parser

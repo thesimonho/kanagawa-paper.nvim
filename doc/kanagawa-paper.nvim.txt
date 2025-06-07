@@ -1,4 +1,4 @@
-*kanagawa-paper.nvim.txt*       For NVIM v0.8.0       Last change: 2025 May 29
+*kanagawa-paper.nvim.txt*       For NVIM v0.8.0      Last change: 2025 June 07
 
 ==============================================================================
 Table of Contents                      *kanagawa-paper.nvim-table-of-contents*
@@ -21,13 +21,12 @@ Table of Contents                      *kanagawa-paper.nvim-table-of-contents*
 
 Remixed light and dark Kanagawa color scheme with muted colors. For Neovim.
 
-  -----------------------------------------------------------------------
-  Ink                                Canvas
-  ---------------------------------- ------------------------------------
-  [ink]                              [canvas]
 
-  [ink_palette]                      [canvas_palette]
-  -----------------------------------------------------------------------
+
+
+
+
+
 
 MOTIVATION                                    *kanagawa-paper.nvim-motivation*
 
@@ -42,6 +41,13 @@ Both a light theme and a dark theme are provided.
 I have also ported the color scheme to VSCode, which you can find here:
 kanagawa-paper.vscode <https://github.com/thesimonho/kanagawa-paper.vscode>
 
+  -----------------------------------------------------------------------
+  Ink                                Canvas
+  ---------------------------------- ------------------------------------
+  [ink]                              [canvas]
+
+  [ink_palette]                      [canvas_palette]
+  -----------------------------------------------------------------------
 
 REQUIREMENTS                                *kanagawa-paper.nvim-requirements*
 

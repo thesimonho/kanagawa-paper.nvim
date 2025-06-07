@@ -11,13 +11,15 @@ function M.generate(colors)
 # Upstream: ${_upstream_url}
 # URL: ${_url}
 # -----------------------------------------------------------------------------
+[cursor]
+color = ${modes.insert} ${modes.normal}
+
+[colors]
 background = ${ui.bg}
 foreground = ${ui.fg}
 selection-background = ${ui.bg_visual}
 selection-foreground = ${ui.fg_gray}
 urls = ${syn.special3}
-
-cursor = ${modes.normal} ${ui.bg}
 
 search-box-no-match = ${term.black_bright} ${term.red_bright}
 search-box-match = ${term.blue_bright} ${term.black_bright}
@@ -50,6 +52,8 @@ color15 = ${term.white_bright}
 ]],
 		colors
 	)
+
+	foot = foot:gsub("#(%x%x%x%x%x%x)", "%1")
 	return foot
 end
 
