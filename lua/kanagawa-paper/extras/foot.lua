@@ -5,7 +5,7 @@ local M = {}
 --- @param colors ThemeColors
 function M.generate(colors)
 	local foot = util.template(
-		[=[
+		[[
 # -----------------------------------------------------------------------------
 # ${_style_name}
 # Upstream: ${_upstream_url}
@@ -47,7 +47,7 @@ color15 = ${term.white_bright}
 # Extended colors
 16 = ${term.indexed1}
 17 = ${term.indexed2}
-]=],
+]],
 		colors
 	)
 	return foot
