@@ -18,6 +18,7 @@ M.mapping = {
   wezterm_tabline  = { ext = "lua", url = "https://github.com/michaelbrusegard/tabline.wez", label = "Wezterm Tabline" },
   windows_terminal = { ext = "jsonc", url = "https://learn.microsoft.com/en-us/windows/terminal/customize-settings/color-schemes", label = "Windows Terminal" },
   vscode_terminal  = { ext = "jsonc", url = "https://code.visualstudio.com/api/references/theme-color", label = "VSCode Terminal" },
+  foot             = { ext = "ini", url= "https://codeberg.org/dnkl/foot", label = "Foot" },
 }
 
 function M.setup()
