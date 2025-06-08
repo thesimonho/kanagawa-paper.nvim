@@ -11,12 +11,16 @@ jobs:
       - uses: actions/checkout@v4
         with:
           ssh-key: ${{ secrets.DEPLOY_KEY }}
+      - name: Fetch PR merge commit (only on PR)
+        if: github.event_name == 'pull_request'
+        run: git fetch origin +refs/pull/${{ github.event.pull_request.number }}/merge
       - name: Check for Lua file changes
         id: lua-changes
         run: |
           echo "Checking for .lua file changes..."
-          git fetch origin ${{ github.base_ref }}
-          if git diff --name-only origin/${{ github.base_ref }}...HEAD | grep -E '\.lua$'; then
+          if [[ "${{ github.event_name }}" == "workflow_dispatch" ]]; then
+            echo "run-tests=true" >> $GITHUB_OUTPUT
+          elif git diff --name-only FETCH_HEAD^1 FETCH_HEAD | grep -E '\.lua$'; then
             echo "run-tests=true" >> $GITHUB_OUTPUT
           else
             echo "run-tests=false" >> $GITHUB_OUTPUT
