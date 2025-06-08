@@ -19,6 +19,7 @@ M.mapping = {
   windows_terminal = { ext = "jsonc", url = "https://learn.microsoft.com/en-us/windows/terminal/customize-settings/color-schemes", label = "Windows Terminal" },
   vscode_terminal  = { ext = "jsonc", url = "https://code.visualstudio.com/api/references/theme-color", label = "VSCode Terminal" },
   foot             = { ext = "ini", url= "https://codeberg.org/dnkl/foot", label = "Foot" },
+  vivid            = { ext = "yml", url= "https://github.com/sharkdp/vivid", label = "Vivid" },
 }
 
 function M.setup()
