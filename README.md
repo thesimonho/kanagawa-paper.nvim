@@ -11,7 +11,7 @@ Remixed light and dark Kanagawa color scheme with muted colors. For Neovim.
 
 <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/thesimonho/kanagawa-paper.nvim?style=for-the-badge&labelColor=1F1F28&color=5d7a88">
 
-<img alt="GitHub branch check runs" src="https://img.shields.io/github/check-runs/thesimonho/kanagawa-paper.nvim/master?style=for-the-badge&labelColor=1F1F28&color=699469">
+<img alt="GitHub branch check runs" src="https://img.shields.io/github/check-runs/thesimonho/kanagawa-paper.nvim/master?style=for-the-badge&label=build&labelColor=1F1F28&color=699469">
 
 </p>
 
@@ -172,15 +172,6 @@ require("kanagawa-paper").setup({
   },
  },
 })
-```
-
-If you want to switch between `canvas` and `ink` themes within a Neovim session, you can change `vim.o.background` to `light` or `dark`.
-
-This can also be mapped to the time of day via an autocommand or dynamically setting `vim.o.background` at startup. For example:
-
-```lua
-local hour = os.date("*t").hour
-vim.o.background = (hour >= 7 and hour < 19) and "light" or "dark"
 ```
 
 ### Cache
