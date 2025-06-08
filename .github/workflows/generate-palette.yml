@@ -16,9 +16,8 @@ jobs:
       - uses: actions/checkout@v4
         with:
           ssh-key: ${{ secrets.DEPLOY_KEY }}
-      - uses: leafo/gh-actions-lua@v11
-        with:
-          luaVersion: "5.1"
+      - name: Install Lua
+        run: "sudo apt-get install lua5.1"
       - name: Run generate script
         run: lua scripts/generate_palette.lua
       - name: Stash changes if needed

@@ -25,12 +25,11 @@ jobs:
           else
             echo "run-tests=false" >> $GITHUB_OUTPUT
           fi
-      - uses: leafo/gh-actions-lua@v11
+      - name: Install Lua
         if: steps.lua-changes.outputs.run-tests == 'true'
-        with:
-          luaVersion: "5.1"
-      - uses: leafo/gh-actions-luarocks@v5
-        if: steps.lua-changes.outputs.run-tests == 'true'
+        run: |
+          sudo apt-get install lua5.1 luarocks
+          sudo luarocks install busted
       - uses: rhysd/action-setup-vim@v1
         if: steps.lua-changes.outputs.run-tests == 'true'
         with:
