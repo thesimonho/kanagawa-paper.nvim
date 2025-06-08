@@ -198,17 +198,6 @@ The default configuration can be found here <lua/kanagawa-paper/config.lua>
     })
 <
 
-If you want to switch between `canvas` and `ink` themes within a Neovim
-session, you can change `vim.o.background` to `light` or `dark`.
-
-This can also be mapped to the time of day via an autocommand or dynamically
-setting `vim.o.background` at startup. For example:
-
->lua
-    local hour = os.date("*t").hour
-    vim.o.background = (hour >= 7 and hour < 19) and "light" or "dark"
-<
-
 
 CACHE ~
 
