@@ -20,6 +20,7 @@ M.mapping = {
   vscode_terminal  = { ext = "jsonc", url = "https://code.visualstudio.com/api/references/theme-color", label = "VSCode Terminal" },
   foot             = { ext = "ini", url= "https://codeberg.org/dnkl/foot", label = "Foot" },
   vivid            = { ext = "yml", url= "https://github.com/sharkdp/vivid", label = "Vivid" },
+  nushell          = { ext = "nu", url = "https://www.nushell.sh/", label = "Nushell" },
 }
 
 function M.setup()
