@@ -406,6 +406,8 @@ and use them in your `opts` function. Example:
 
 Pull requests are welcome for theme fixes, new features, and new extras.
 
+Using the [Conventional Commits](https://www.conventionalcommits.org/) format for commit messages is recommended. PRs will then automatically be added to the next Release Notes and [CHANGELOG](CHANGELOG.md).
+
 For the [extras](extras/), we use a simple template system that can be used to generate styles for the different themes.
 
 How to add a new extra template:
