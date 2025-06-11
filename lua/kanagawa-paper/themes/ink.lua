@@ -134,10 +134,10 @@ M.get = function(opts, palette)
 			text_light = color(palette.dragonBlue):blend(palette.sumiInk3, 0.9):to_hex(),
 		},
 		diag = {
-			error = palette.dragonRed,
-			error_light = color(palette.dragonRed):blend(palette.sumiInk3, 0.9):to_hex(),
 			ok = palette.dragonGreen,
 			ok_light = color(palette.dragonGreen):blend(palette.sumiInk3, 0.9):to_hex(),
+			error = palette.dragonRed,
+			error_light = color(palette.dragonRed):blend(palette.sumiInk3, 0.9):to_hex(),
 			warning = palette.dragonYellow,
 			warning_light = color(palette.dragonYellow):blend(palette.sumiInk3, 0.9):to_hex(),
 			info = palette.dragonBlue,
