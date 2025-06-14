@@ -48,13 +48,13 @@ M.get = function(opts, palette)
 			scrollbar = palette.canvasGray2,
 			tabline = {
 				bg = palette.canvasWhite1,
-				fg_selected = palette.canvasGray1,
+				fg_selected = palette.canvasGray3,
 				bg_selected = palette.canvasWhite4,
 				fg_inactive = palette.canvasGray2,
-				bg_inactive = palette.canvasWhite2,
+				bg_inactive = palette.canvasWhite1,
 				fg_alternate = palette.canvasPink1,
-				bg_alternate = palette.canvasWhite2,
-				indicator = palette.canvasBlue4,
+				bg_alternate = palette.canvasWhite1,
+				indicator = palette.canvasTeal1,
 			},
 			pmenu = {
 				fg = palette.canvasGray1,
