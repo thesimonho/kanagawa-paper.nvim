@@ -249,8 +249,8 @@
 
 ---@class UIElements
 ---@field fg ColorSpec Default foreground
----@field fg_gray ColorSpec Slightly darker, offwhite
----@field fg_dim ColorSpec Dimmed foreground
+---@field fg_dim ColorSpec Dimmed versions of foreground
+---@field fg_dimmer ColorSpec Even dimmer
 ---@field fg_dark ColorSpec Dark foreground text
 ---@field fg_reverse ColorSpec Reversed foreground text
 ---@field bg_dim ColorSpec Dimmed background

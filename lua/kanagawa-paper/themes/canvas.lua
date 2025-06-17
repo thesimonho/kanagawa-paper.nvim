@@ -16,8 +16,8 @@ M.get = function(opts, palette)
 		},
 		ui = {
 			fg = palette.canvasGray3,
-			fg_gray = palette.canvasGray2,
-			fg_dim = palette.canvasGray1,
+			fg_dim = palette.canvasGray2,
+			fg_dimmer = palette.canvasGray1,
 			fg_dark = palette.canvasAsh1,
 			fg_reverse = palette.canvasWhite5,
 			bg_m4 = palette.canvasGray2,

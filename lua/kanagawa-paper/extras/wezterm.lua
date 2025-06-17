@@ -59,7 +59,7 @@ bg_color = "${ui.tabline.bg_selected}"
 intensity = "Bold"
 
 [colors.tab_bar.inactive_tab]
-fg_color = "${ui.fg_gray}"
+fg_color = "${ui.fg_dim}"
 bg_color = "${ui.bg_statusline}"
 
 [colors.tab_bar.inactive_tab_hover]
@@ -67,7 +67,7 @@ fg_color = "${ui.tabline.fg_alternate}"
 bg_color = "${ui.tabline.bg_selected}"
 
 [colors.tab_bar.new_tab]
-fg_color = "${ui.fg_gray}"
+fg_color = "${ui.fg_dim}"
 bg_color = "${ui.bg_statusline}"
 
 [colors.tab_bar.new_tab_hover]

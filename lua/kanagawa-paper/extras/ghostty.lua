@@ -27,7 +27,7 @@ background = ${ui.bg}
 foreground = ${ui.fg}
 cursor-color = ${modes.normal}
 selection-background = ${ui.bg_visual}
-selection-foreground = ${ui.fg_gray}
+selection-foreground = ${ui.fg_dim}
 ]],
 		colors
 	)

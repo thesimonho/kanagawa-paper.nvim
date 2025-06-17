@@ -15,7 +15,7 @@ function M.generate(colors)
 background ${ui.bg}
 foreground ${ui.fg}
 selection_background ${ui.bg_visual}
-selection_foreground ${ui.fg_gray}
+selection_foreground ${ui.fg_dim}
 url_color ${syn.special3}
 cursor ${modes.normal}
 cursor_text_color ${ui.bg}
@@ -24,7 +24,7 @@ cursor_text_color ${ui.bg}
 active_tab_background ${ui.tabline.bg_selected}
 active_tab_foreground ${modes.normal}
 inactive_tab_background ${ui.bg_statusline}
-inactive_tab_foreground ${ui.fg_gray}
+inactive_tab_foreground ${ui.fg_dim}
 tab_bar_background ${ui.bg_statusline}
 
 # normal

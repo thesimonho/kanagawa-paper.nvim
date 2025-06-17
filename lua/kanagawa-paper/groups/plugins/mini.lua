@@ -117,9 +117,9 @@ function M.get(colors, opts)
 		MiniStatuslineModeReplace = { fg = theme.ui.bg, bg = theme.modes.replace, bold = true },
 		MiniStatuslineModeVisual = { fg = theme.ui.bg, bg = theme.modes.visual, bold = true },
 		MiniStatuslineDevinfo = { fg = theme.ui.fg, bg = theme.ui.bg_p2 },
-		MiniStatuslineFileinfo = { fg = theme.ui.fg_gray, bg = theme.ui.bg_statusline },
+		MiniStatuslineFileinfo = { fg = theme.ui.fg_dim, bg = theme.ui.bg_statusline },
 		MiniStatuslineFilename = { link = "MiniStatuslineFileinfo" },
-		MiniStatuslineInactive = { fg = theme.ui.fg_gray, bg = theme.ui.bg_m4 },
+		MiniStatuslineInactive = { fg = theme.ui.fg_dim, bg = theme.ui.bg_m4 },
 
 		MiniSurround = { link = "IncSearch" },
 

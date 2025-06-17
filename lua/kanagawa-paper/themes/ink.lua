@@ -17,8 +17,8 @@ M.get = function(opts, palette)
 		},
 		ui = {
 			fg = palette.fujiWhite,
-			fg_gray = palette.dragonGray2,
-			fg_dim = palette.dragonBlack5,
+			fg_dim = palette.dragonGray2,
+			fg_dimmer = palette.dragonBlack5,
 			fg_dark = palette.dragonBlack3,
 			fg_reverse = palette.dragonBlack2,
 			bg_m4 = palette.sumiInkn1,

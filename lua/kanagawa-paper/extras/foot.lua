@@ -18,7 +18,7 @@ color = ${modes.insert} ${modes.normal}
 background = ${ui.bg}
 foreground = ${ui.fg}
 selection-background = ${ui.bg_visual}
-selection-foreground = ${ui.fg_gray}
+selection-foreground = ${ui.fg_dim}
 urls = ${syn.special3}
 
 search-box-no-match = ${term.black_bright} ${term.red_bright}
