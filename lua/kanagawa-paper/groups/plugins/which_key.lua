@@ -7,7 +7,7 @@ function M.get(colors, opts)
 		WhichKey = { fg = theme.ui.picker },
 		WhichKeyBorder = { bg = theme.ui.float.bg, fg = theme.ui.float.fg_border },
 		WhichKeyIcon = { link = "Label" },
-		WhichKeyTitle = { bg = theme.ui.picker, fg = theme.ui.fg_dark, bold = true },
+		WhichKeyTitle = { bg = theme.ui.picker, fg = theme.ui.fg_reverse, bold = true },
 	}
 end
 
