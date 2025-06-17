@@ -28,6 +28,7 @@ function M.get(colors, opts)
 		NeoTreeIndentMarker = { fg = theme.ui.indent },
 		NeoTreeFileNameOpened = { fg = theme.ui.special, italic = true },
 		NeoTreeSymbolicLinkTarget = { link = "Type" },
+		NeoTreeDotfile = { fg = theme.syn.comment },
 	}
 end
 

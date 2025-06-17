@@ -6,7 +6,7 @@
 
 local M = {}
 
-M.theme_overrides = {
+M = {
   normal_mode = {
     a = { fg = "#363646", bg = "#c4b28a" },
     b = { fg = "#c4b28a", bg = "#363646" },
@@ -36,7 +36,27 @@ M.theme_overrides = {
     active = { fg = '#c4b28a', bg = '#1F1F28', bold = true },
     inactive = { fg = '#9e9b93', bg = '#2A2A37' },
     inactive_hover = { fg = '#a292a3', bg = '#1F1F28' },
-  }
+  },
+  ansi = {
+    "#393836",
+    "#c4746e",
+    "#699469",
+    "#c4b28a",
+    "#435965",
+    "#a292a3",
+    "#8ea49e",
+    "#C8C093",
+  },
+  brights = {
+    "#aca9a4",
+    "#cc928e",
+    "#72a072",
+    "#d4c196",
+    "#698a9b",
+    "#b4a7b5",
+    "#96ada7",
+    "#d5cd9d",
+  },
 }
 
 return M

@@ -55,9 +55,9 @@ end
 
 function M.apply_tabline_theme(theme)
 	if tabline and theme == "kanagawa-paper-ink" then
-		tabline.set_theme(M.ink.theme_overrides)
+		tabline.set_theme(M.ink)
 	elseif tabline and theme == "kanagawa-paper-canvas" then
-		tabline.set_theme(M.canvas.theme_overrides)
+		tabline.set_theme(M.canvas)
 	end
 end
 

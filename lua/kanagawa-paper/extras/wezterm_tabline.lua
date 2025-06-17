@@ -14,7 +14,7 @@ function M.generate(colors)
 
 local M = {}
 
-M.theme_overrides = {
+M = {
   normal_mode = {
     a = { fg = "${ui.bg_p2}", bg = "${modes.normal}" },
     b = { fg = "${modes.normal}", bg = "${ui.bg_p2}" },
@@ -44,7 +44,27 @@ M.theme_overrides = {
     active = { fg = '${modes.normal}', bg = '${ui.tabline.bg_selected}', bold = true },
     inactive = { fg = '${ui.fg_gray}', bg = '${ui.bg_statusline}' },
     inactive_hover = { fg = '${ui.tabline.fg_alternate}', bg = '${ui.tabline.bg_selected}' },
-  }
+  },
+  ansi = {
+    "${term.black}",
+    "${term.red}",
+    "${term.green}",
+    "${term.yellow}",
+    "${term.blue}",
+    "${term.magenta}",
+    "${term.cyan}",
+    "${term.white}",
+  },
+  brights = {
+    "${term.black_bright}",
+    "${term.red_bright}",
+    "${term.green_bright}",
+    "${term.yellow_bright}",
+    "${term.blue_bright}",
+    "${term.magenta_bright}",
+    "${term.cyan_bright}",
+    "${term.white_bright}",
+  },
 }
 
 return M
