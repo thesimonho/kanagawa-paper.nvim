@@ -120,9 +120,12 @@
 ---@field canvasOrange1? ColorSpec
 ---@field canvasOrange2? ColorSpec
 ---@field canvasPink1? ColorSpec
+---@field canvasPink2? ColorSpec
+---@field canvasPink3? ColorSpec
 ---@field canvasRed1? ColorSpec
 ---@field canvasTeal1? ColorSpec
 ---@field canvasViolet1? ColorSpec
+---@field canvasViolet2? ColorSpec
 ---@field canvasWhite1? ColorSpec
 ---@field canvasWhite2? ColorSpec
 ---@field canvasWhite3? ColorSpec
