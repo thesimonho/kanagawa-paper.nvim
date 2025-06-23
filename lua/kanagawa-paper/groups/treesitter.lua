@@ -131,7 +131,8 @@ function M.setup(colors, opts)
 		--
 		["@markup.link"] = { link = "Underlined" },
 		["@markup.link.url"] = { link = "Underlined" },
-		-- @markup.link.label      link, reference descriptions
+		-- @markup.link.label      links in reference descriptions
+		["@markup.link.label"] = { fg = theme.syn.special3, underline = false },
 		-- @markup.raw             literal or verbatim text (e.g. inline code)
 		["@markup.raw"] = { fg = theme.syn.string },
 		-- @markup.raw.block       literal or verbatim text as a stand-alone block
