@@ -66,7 +66,7 @@ function M.setup(colors, opts)
 		--  Debug		debugging statements
 
 		-- *Underlined	text that stands out, HTML links
-		Underlined = { fg = theme.syn.special1, sp = theme.syn.special1, underline = true },
+		Underlined = { fg = theme.syn.special3, sp = theme.syn.special3, underline = true },
 		Bold = { bold = true },
 		Italic = { italic = true },
 

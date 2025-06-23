@@ -36,7 +36,7 @@ function M.setup(colors, opts)
 		["@string.special.symbol"] = { fg = theme.syn.symbol },
 		-- @string.special.path    filenames
 		-- @string.special.url (Underlined)     URIs (e.g. hyperlinks)
-		["@string.special.url"] = { fg = theme.syn.special3, sp = theme.syn.special3, underline = true },
+		["@string.special.url"] = { link = "Underlined" },
 		-- @character              character literals
 		-- @character.special      special characters (e.g. wildcards)
 		--
@@ -129,8 +129,8 @@ function M.setup(colors, opts)
 		-- @markup.environment     environments (e.g. in LaTeX)
 		["@markup.environment"] = { fg = theme.syn.keyword },
 		--
-		["@markup.link"] = { fg = theme.syn.special3 },
-		["@markup.link.url"] = { fg = theme.syn.special3 },
+		["@markup.link"] = { link = "Underlined" },
+		["@markup.link.url"] = { link = "Underlined" },
 		-- @markup.link.label      link, reference descriptions
 		-- @markup.raw             literal or verbatim text (e.g. inline code)
 		["@markup.raw"] = { fg = theme.syn.string },
