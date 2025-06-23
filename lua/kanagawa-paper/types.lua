@@ -133,6 +133,7 @@
 ---@field canvasWhite5? ColorSpec
 ---@field canvasWhite6? ColorSpec
 ---@field canvasYellow1? ColorSpec
+---@field canvasYellow2? ColorSpec
 ---@field lotusInk0? ColorSpec
 ---@field lotusInk1? ColorSpec
 ---@field lotusInk2? ColorSpec

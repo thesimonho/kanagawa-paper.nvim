@@ -197,6 +197,7 @@ M.palette = {
 	canvasWhite5 = "#e6e6e3",
 	canvasWhite6 = "#ecece8",
 	canvasYellow1 = "#b8a67c",
+	canvasYellow2 = "#c6bba1",
 
 	lotusInk0 = "#3d3d5e",
 	lotusInk1 = "#545464",

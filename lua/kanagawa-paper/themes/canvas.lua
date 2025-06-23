@@ -124,13 +124,13 @@ M.get = function(opts, palette)
 		},
 		diff = {
 			add = palette.canvasGreen2,
-			add_light = color(palette.canvasGreen2):blend(palette.canvasWhite4, 0.9):to_hex(),
+			add_light = color(palette.canvasGreen2):blend(palette.canvasWhite4, 0.8):to_hex(),
 			delete = palette.canvasRed1,
-			delete_light = color(palette.canvasRed1):blend(palette.canvasWhite4, 0.9):to_hex(),
-			change = palette.canvasYellow1,
-			change_light = color(palette.canvasYellow1):blend(palette.canvasWhite4, 0.9):to_hex(),
+			delete_light = color(palette.canvasRed1):blend(palette.canvasWhite4, 0.8):to_hex(),
+			change = palette.canvasYellow2,
+			change_light = color(palette.canvasYellow2):blend(palette.canvasWhite4, 0.8):to_hex(),
 			text = palette.canvasTeal1,
-			text_light = color(palette.canvasTeal1):blend(palette.canvasWhite4, 0.9):to_hex(),
+			text_light = color(palette.canvasTeal1):blend(palette.canvasWhite4, 0.8):to_hex(),
 		},
 		diag = {
 			ok = palette.canvasGreen2,
