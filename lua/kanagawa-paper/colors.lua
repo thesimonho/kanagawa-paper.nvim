@@ -170,9 +170,9 @@ M.palette = {
 
 	canvasAqua1 = "#8ea49e",
 	canvasAsh1 = "#737c73",
-	canvasBlue1 = "#658594",
-	canvasBlue2 = "#859fac",
-	canvasBlue3 = "#708e9e",
+	canvasBlue1 = "#94abb6",
+	canvasBlue2 = "#7c98a6",
+	canvasBlue3 = "#658594",
 	canvasBlue4 = "#5d7a88",
 	canvasBlue5 = "#435965",
 	canvasCyan1 = "#56a06a",
