@@ -15,7 +15,7 @@ function M.get(colors, opts)
 		GrugFarInputLabel = { link = "Identifier" },
 		GrugFarInputPlaceholder = { link = "Comment" },
 
-		GrugFarResultsHeader = { fg = theme.ui.fg_gray },
+		GrugFarResultsHeader = { fg = theme.ui.fg_dim },
 		GrugFarResultsStats = { link = "Comment" },
 		GrugFarResultsActionMessage = { link = "ModeMsg" },
 

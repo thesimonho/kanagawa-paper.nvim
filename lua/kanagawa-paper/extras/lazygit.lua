@@ -27,11 +27,11 @@ gui:
     selectedLineBgColor:
       - "${ui.bg_cursorline}"
     cherryPickedCommitFgColor:
-      - "${ui.fg_dim}"
+      - "${ui.fg_dimmer}"
     cherryPickedCommitBgColor:
       - "${modes.replace}"
     markedBaseCommitFgColor:
-      - "${ui.fg_dim}"
+      - "${ui.fg_dimmer}"
     markedBaseCommitBgColor:
       - "${modes.normal}"
     unstagedChangesColor:

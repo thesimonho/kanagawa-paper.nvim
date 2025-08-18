@@ -6,7 +6,7 @@ function M.get(colors, opts)
 	return {
 		NeoTreeNormal = { link = "NormalFloat" },
 		NeoTreeNormalNC = { link = "NormalFloat" },
-		NeoTreeFloatTitle = { fg = theme.ui.bg_m1, bg = theme.accent.accent1, bold = true },
+		NeoTreeFloatTitle = { fg = theme.ui.fg_reverse, bg = theme.accent.accent1, bold = true },
 		NeoTreeFloatBorder = { fg = theme.ui.bg_dim, bg = theme.ui.float.bg_border },
 		NeoTreeCursorLine = { bg = theme.ui.bg_cursorline_alt },
 		NeoTreeWinSeparator = { link = "WinSeparator" },

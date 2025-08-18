@@ -7,7 +7,7 @@ function M.get(colors, opts)
 		BufferlineFill = { bg = theme.ui.tabline.bg },
 		BufferlineNumbers = {
 			bg = not opts.transparent and theme.ui.tabline.bg or "NONE",
-			fg = theme.ui.fg_dim,
+			fg = theme.ui.fg_dimmer,
 			bold = true,
 		},
 		BufferlineNumbersSelected = { fg = theme.ui.tabline.indicator, bold = true },
@@ -25,7 +25,7 @@ function M.get(colors, opts)
 		BufferlineModifiedSelected = { fg = theme.vcs.changed, bg = theme.ui.tabline.bg_selected },
 		BufferlineCloseButton = {
 			bg = not opts.transparent and theme.ui.tabline.bg or "NONE",
-			fg = theme.ui.fg_dim,
+			fg = theme.ui.fg_dimmer,
 			bold = false,
 		},
 		BufferlineCloseButtonSelected = { fg = theme.ui.picker, bold = true },

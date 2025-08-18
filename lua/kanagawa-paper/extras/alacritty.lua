@@ -22,7 +22,7 @@ text = '${ui.bg}'
 
 [colors.selection]
 background = '${ui.bg_visual}'
-foreground = '${ui.fg_gray}'
+foreground = '${ui.fg_dim}'
 
 [colors.normal]
 black = '${term.black}'

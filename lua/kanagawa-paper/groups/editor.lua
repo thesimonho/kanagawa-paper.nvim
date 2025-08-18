@@ -51,7 +51,7 @@ function M.setup(colors, opts)
 		-- SignColumn	Column where |signs| are displayed.
 		SignColumn = { fg = theme.ui.special, bg = theme.ui.bg_gutter },
 		-- IncSearch	'incsearch' highlighting; also used for the text replaced with ":s///c".
-		IncSearch = { fg = theme.ui.fg_reverse, bg = theme.diag.warning },
+		IncSearch = { fg = theme.ui.fg_reverse, bg = theme.ui.bg_search },
 		-- Substitute	|:substitute| replacement text highlighting.
 		Substitute = { fg = theme.ui.fg, bg = theme.vcs.removed },
 		-- LineNr		Line number for ":number" and ":#" commands, and when 'number' or 'relativenumber' option is set.
@@ -69,7 +69,7 @@ function M.setup(colors, opts)
 		ModeMsg = { fg = theme.diag.warning, bold = true },
 		-- MsgArea		Area for messages and cmdline.
 		MsgArea = vim.o.cmdheight == 0 and { link = "StatusLine" }
-			or { fg = theme.ui.fg_gray, bg = not opts.transparent and theme.ui.bg or "NONE" },
+			or { fg = theme.ui.fg_dim, bg = not opts.transparent and theme.ui.bg or "NONE" },
 		-- MsgSeparator	Separator for scrolled messages |msgsep|.
 		MsgSeparator = { bg = vim.o.cmdheight == 0 and theme.ui.bg or theme.ui.bg_m3 },
 		-- MoreMsg		|more-prompt|
@@ -94,9 +94,9 @@ function M.setup(colors, opts)
 		-- PmenuSel	Popup menu: Selected item.
 		PmenuSel = { fg = theme.ui.pmenu.fg_sel, bg = theme.ui.pmenu.bg_sel },
 		-- PmenuKind	Popup menu: Normal item "kind".
-		PmenuKind = { fg = theme.ui.fg_dim, bg = theme.ui.pmenu.bg },
+		PmenuKind = { fg = theme.ui.fg_dimmer, bg = theme.ui.pmenu.bg },
 		-- PmenuKindSel	Popup menu: Selected item "kind".
-		PmenuKindSel = { fg = theme.ui.fg_dim, bg = theme.ui.pmenu.bg_sel },
+		PmenuKindSel = { fg = theme.ui.fg_dimmer, bg = theme.ui.pmenu.bg_sel },
 		-- PmenuExtra	Popup menu: Normal item "extra text".
 		PmenuExtra = { fg = theme.ui.special, bg = theme.ui.pmenu.bg },
 		-- PmenuExtraSel	Popup menu: Selected item "extra text".
@@ -110,7 +110,7 @@ function M.setup(colors, opts)
 		-- QuickFixLine	Current |quickfix| item in the quickfix window. Combined with |hl-CursorLine| when the cursor is there.
 		QuickFixLine = { bg = theme.ui.bg_p1 },
 		-- Search		Last search pattern highlighting (see 'hlsearch'). Also used for similar items that need to stand out.
-		Search = { fg = theme.ui.fg_dark, bg = theme.ui.bg_search },
+		Search = { fg = theme.ui.fg_reverse, bg = theme.ui.bg_search },
 		-- SpecialKey	Unprintable characters: Text displayed differently from what it really is. But not 'listchars' whitespace. |hl-Whitespace|
 		SpecialKey = { fg = theme.ui.special },
 		-- SpellBad	Word that is not recognized by the spellchecker. |spell| Combined with the highlighting used otherwise.
@@ -122,7 +122,7 @@ function M.setup(colors, opts)
 		-- SpellRare	Word that is recognized by the spellchecker as one that is hardly ever used. |spell| Combined with the highlighting used otherwise.
 		SpellRare = { undercurl = opts.undercurl, underline = not opts.undercurl, sp = theme.diag.warning },
 		-- StatusLine	Status line of current window.
-		StatusLine = { fg = theme.ui.fg_gray, bg = theme.ui.bg_statusline },
+		StatusLine = { fg = theme.ui.fg_dim, bg = theme.ui.bg_statusline },
 		-- StatusLineNC	Status lines of not-current windows. Note: If this is equal to "StatusLine", Vim will use "^^^" in the status line of the current window.
 		StatusLineNC = { fg = theme.ui.nontext, bg = theme.ui.bg_m4 },
 		-- TabLine		Tab pages line, not active tab page label.
@@ -144,9 +144,9 @@ function M.setup(colors, opts)
 		-- WildMenu	Current match in 'wildmenu' completion.
 		WildMenu = { link = "Pmenu" },
 		-- WinBar		Window bar of current window.
-		WinBar = { fg = theme.ui.fg_dim, bg = "NONE" },
+		WinBar = { fg = theme.ui.fg_dimmer, bg = "NONE" },
 		-- WinBarNC	Window bar of not-current windows.
-		WinBarNC = { fg = theme.ui.fg_dim, bg = opts.dim_inactive and theme.ui.bg_dim or "NONE" },
+		WinBarNC = { fg = theme.ui.fg_dimmer, bg = opts.dim_inactive and theme.ui.bg_dim or "NONE" },
 
 		DiagnosticError = { fg = theme.diag.error },
 		DiagnosticWarn = { fg = theme.diag.warning },
@@ -219,7 +219,7 @@ function M.setup(colors, opts)
 		healthSuccess = { fg = theme.diag.ok },
 		healthWarning = { fg = theme.diag.warning },
 
-		helpExample = { fg = theme.ui.fg_gray },
+		helpExample = { fg = theme.ui.fg_dim },
 
 		qfLineNr = { link = "lineNr" },
 		qfFileName = { link = "Directory" },
