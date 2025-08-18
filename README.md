@@ -381,11 +381,14 @@ and use them in your `opts` function. Example:
 ## 🍭 Extras
 
 - [alacritty](extras/alacritty)
+- [foot](extras/foot)
 - [ghostty](extras/ghostty)
 - [kitty](extras/kitty)
+- [nushell](extras/nushell)
 - [terminator](extras/terminator)
 - [termux](extras/termux)
 - [tilix](extras/tilix)
+- [vivid](extras/vivid)
 - [vscode](https://github.com/thesimonho/kanagawa-paper.vscode) (official port)
 - [vscode terminal](extras/vscode_terminal) (guide: [Visual Studio Code Theme Color](https://code.visualstudio.com/api/references/theme-color))
 - [fzf](extras/fzf) (guide: [fzf color schemes](https://github.com/junegunn/fzf/wiki/Color-schemes))
