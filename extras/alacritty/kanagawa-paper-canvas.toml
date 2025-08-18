@@ -6,40 +6,40 @@
 
 [colors.primary]
 background = '#e1e1de'
-foreground = '#595b62'
+foreground = '#84908e'
 
 [colors.cursor]
-cursor = '#618bb6'
+cursor = '#929fb9'
 text = '#e1e1de'
 
 [colors.selection]
-background = '#c4cbdc'
-foreground = '#858479'
+background = '#d4cdd4'
+foreground = '#9d9992'
 
 [colors.normal]
-black = '#4c4c65'
-red = '#b35560'
-green = '#57786c'
-yellow = '#a67337'
-blue = '#719ac2'
-magenta = '#ac7085'
-cyan = '#526c79'
-white = '#858479'
+black = '#b7b7a9'
+red = '#c58c89'
+green = '#8ba59e'
+yellow = '#b9a679'
+blue = '#91acb8'
+magenta = '#a690a8'
+cyan = '#929fb9'
+white = '#b7b7a9'
 
 [colors.bright]
-black = '#5c5c75'
-red = '#c75f6b'
-green = '#618679'
-yellow = '#b67e3d'
-blue = '#86aed7'
-magenta = '#b57e91'
-cyan = '#5d7a89'
-white = '#919084'
+black = '#bebeb0'
+red = '#c99895'
+green = '#93aea7'
+yellow = '#c2ae7f'
+blue = '#a0bdca'
+magenta = '#af9bb0'
+cyan = '#9da8c0'
+white = '#bebeb0'
 
 [[colors.indexed_colors]]
 index = 16
-color = '#b8805e'
+color = '#c39e87'
 
 [[colors.indexed_colors]]
 index = 17
-color = '#b35560'
+color = '#c58c89'

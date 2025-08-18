@@ -7,6 +7,6 @@
 #       See the URL above for more information.
 # -----------------------------------------------------------------------------
 
---color=bg:-1,bg+:#d3d0c3,fg:-1,fg+:#595b62,hl:#a398bf,hl+:#ac7085
---color=header:#b8805e,info:#5f8a9b,pointer:#526994
---color=marker:#526994,prompt:#b35560,spinner:#5f8a9b
+--color=bg:-1,bg+:#d8d8d2,fg:-1,fg+:#84908e,hl:#c1b4c1,hl+:#c58c89
+--color=header:#c39e87,info:#91acb8,pointer:#5b7a89
+--color=marker:#5b7a89,prompt:#c58c89,spinner:#929fb9

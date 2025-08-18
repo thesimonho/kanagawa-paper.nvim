@@ -5,24 +5,24 @@
 # -----------------------------------------------------------------------------
 colors:
   background_color: 'e1e1de'
-  white: '858479'
-  red: 'b35560'
-  green: '57786c'
-  yellow: 'a67337'
-  blue: '719ac2'
-  pink: 'ac7085'
-  cyan: '526c79'
+  white: 'b7b7a9'
+  red: 'c58c89'
+  green: '8ba59e'
+  yellow: 'b9a679'
+  blue: '91acb8'
+  pink: 'a690a8'
+  cyan: '929fb9'
 
-  light_red: 'c75f6b'
-  light_green: '618679'
-  light_blue: '86aed7'
-  light_pink: 'b57e91'
-  light_cyan: '5d7a89'
+  light_red: 'c99895'
+  light_green: '93aea7'
+  light_blue: 'a0bdca'
+  light_pink: 'af9bb0'
+  light_cyan: '9da8c0'
 
-  black: 'b5b5ae'
-  gray: 'd8d8d2'
-  darkgray: 'd3d0c3'
-  darkergray: 'cbc8bc'
+  black: '9d9992'
+  gray: 'd1cfc5'
+  darkgray: 'cbc8bc'
+  darkergray: 'b7b7a9'
 
 core:
   normal_text: {}
