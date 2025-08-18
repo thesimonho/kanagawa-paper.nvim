@@ -1,5 +1,28 @@
 # Changelog
 
+## [3.0.0](https://github.com/thesimonho/kanagawa-paper.nvim/compare/v2.1.0...v3.0.0) (2025-08-18)
+
+
+### ⚠ BREAKING CHANGES
+
+* **canvas:** Update canvas colors ([#58](https://github.com/thesimonho/kanagawa-paper.nvim/issues/58))
+* **wezterm_tabline:** use theme instead of overrides ([#55](https://github.com/thesimonho/kanagawa-paper.nvim/issues/55))
+
+### Features
+
+* **canvas:** Update canvas colors ([#58](https://github.com/thesimonho/kanagawa-paper.nvim/issues/58)) ([f7be5e6](https://github.com/thesimonho/kanagawa-paper.nvim/commit/f7be5e60678a09b86f44266f540d578526731a5d))
+* **extras:** add extras/nushell ([#51](https://github.com/thesimonho/kanagawa-paper.nvim/issues/51)) ([e8ca337](https://github.com/thesimonho/kanagawa-paper.nvim/commit/e8ca337d906542cae45cfae14d8103eb70631029))
+* **foot:** add extra theme for foot ([be6dcc4](https://github.com/thesimonho/kanagawa-paper.nvim/commit/be6dcc4ed8da2e6b0f567f1dc0661ff3daea821e))
+* **mcphub:** add colors for mcphub ([#57](https://github.com/thesimonho/kanagawa-paper.nvim/issues/57)) ([b0df20c](https://github.com/thesimonho/kanagawa-paper.nvim/commit/b0df20cca3b7087c06f241983b488190cc8e23af))
+* **wezterm_tabline:** use theme instead of overrides ([#55](https://github.com/thesimonho/kanagawa-paper.nvim/issues/55)) ([c44f951](https://github.com/thesimonho/kanagawa-paper.nvim/commit/c44f951ec55dbc2451d3ce75f0cef6dfa66ba51a))
+
+
+### Bug Fixes
+
+* **canvas:** make fzf highlights more readable ([1947ab5](https://github.com/thesimonho/kanagawa-paper.nvim/commit/1947ab58e37f412119248e87a30450ea9f3ab567))
+* **fzf:** change fzf extension to rc ([9be1baa](https://github.com/thesimonho/kanagawa-paper.nvim/commit/9be1baa6bfbc543c698d351e60fb63c6bb837804))
+* **neo-tree:** add missing group for hidden and dotfiles ([#54](https://github.com/thesimonho/kanagawa-paper.nvim/issues/54)) ([f7b1ef3](https://github.com/thesimonho/kanagawa-paper.nvim/commit/f7b1ef3766081cf6f3d989f8fd67ae861d8e89fa))
+
 ## [2.1.0](https://github.com/thesimonho/kanagawa-paper.nvim/compare/v2.0.2...v2.1.0) (2025-05-18)
 
 
