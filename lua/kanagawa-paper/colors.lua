@@ -166,7 +166,7 @@ M.palette = {
 	dragonTeal = "#949fb5",
 	dragonViolet = "#8992a7",
 	dragonWhite = "#c5c9c5",
-	dragonYellow = "#c4b28a", -- ink primary
+	dragonYellow = "#c4b28a", -- ink primary accent
 
 	canvasAqua1 = "#8ba59e",
 	canvasAsh1 = "#707d70",
@@ -187,7 +187,7 @@ M.palette = {
 	canvasPink2 = "#c1b4c1",
 	canvasPink3 = "#d4cdd4",
 	canvasRed1 = "#c58c89",
-	canvasTeal1 = "#929fb9", -- canvas primary
+	canvasTeal1 = "#929fb9", -- canvas primary accent
 	canvasViolet1 = "#888eac",
 	canvasViolet2 = "#b0b4c9",
 	canvasWhite1 = "#cbc8bc",
