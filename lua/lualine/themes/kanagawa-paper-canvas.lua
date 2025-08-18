@@ -24,8 +24,8 @@ return {
 		b = { bg = theme.ui.bg_p2, fg = theme.modes.replace },
 	},
 	inactive = {
-		a = { bg = theme.ui.bg_m3, fg = theme.ui.fg_dim },
-		b = { bg = theme.ui.bg_m3, fg = theme.ui.fg_dim, gui = "bold" },
-		c = { bg = theme.ui.bg_m3, fg = theme.ui.fg_dim },
+		a = { bg = theme.ui.bg_m3, fg = theme.ui.fg_dark },
+		b = { bg = theme.ui.bg_m3, fg = theme.ui.fg_dark, gui = "bold" },
+		c = { bg = theme.ui.bg_m3, fg = theme.ui.fg_dark },
 	},
 }
