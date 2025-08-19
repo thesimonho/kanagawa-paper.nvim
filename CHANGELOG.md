@@ -1,5 +1,12 @@
 # Changelog
 
+## [3.0.1](https://github.com/thesimonho/kanagawa-paper.nvim/compare/v3.0.0...v3.0.1) (2025-08-19)
+
+
+### Bug Fixes
+
+* **canvas:** fix terminal black color ([#59](https://github.com/thesimonho/kanagawa-paper.nvim/issues/59)) ([b1e745e](https://github.com/thesimonho/kanagawa-paper.nvim/commit/b1e745e4d7a079408e4fdba02155868b7a30f6c0))
+
 ## [3.0.0](https://github.com/thesimonho/kanagawa-paper.nvim/compare/v2.1.0...v3.0.0) (2025-08-18)
 
 
