@@ -38,7 +38,7 @@ M = {
     inactive_hover = { fg = '#a690a8', bg = '#e1e1de' },
   },
   ansi = {
-    "#b7b7a9",
+    "#9d9992",
     "#c58c89",
     "#8ba59e",
     "#b9a679",
@@ -48,7 +48,7 @@ M = {
     "#b7b7a9",
   },
   brights = {
-    "#bebeb0",
+    "#a7a39b",
     "#c99895",
     "#93aea7",
     "#c2ae7f",
