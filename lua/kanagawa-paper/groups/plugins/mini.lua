@@ -92,11 +92,11 @@ function M.get(colors, opts)
 		MiniPickIconDirectory = { link = "Directory" },
 		MiniPickIconFile = { link = "MiniPickNormal" },
 		MiniPickHeader = { link = "DiagnosticFloatingHint" },
-		MiniPickMatchCurrent = { link = "CursorLine" },
+		MiniPickMatchCurrent = { link = "CursorLineAlt" },
 		MiniPickMatchMarked = { link = "Visual" },
 		MiniPickMatchRanges = { link = "DiagnosticFloatingHint" },
 		MiniPickNormal = { link = "NormalFloat" },
-		MiniPickPreviewLine = { link = "CursorLine" },
+		MiniPickPreviewLine = { link = "CursorLineAlt" },
 		MiniPickPreviewRegion = { link = "IncSearch" },
 		MiniPickPrompt = { fg = theme.syn.fun, bg = theme.ui.float.bg_border },
 

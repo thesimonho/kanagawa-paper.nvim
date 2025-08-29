@@ -7,9 +7,10 @@ function M.get(colors, opts)
 		SnacksIndent = { fg = theme.ui.indent },
 		SnacksIndentScope = { fg = theme.ui.indent_scope },
 		SnacksIndentChunk = { fg = theme.ui.indent_scope },
-		SnacksPickerCursorLine = { bg = theme.ui.float.bg },
-		SnacksPickerListCursorLine = { bg = theme.ui.bg_cursorline_alt },
-		SnacksPickerPreviewCursorLine = { bg = theme.ui.bg_cursorline_alt },
+		SnacksPickerInputCursorLine = { bg = theme.ui.float.bg },
+		SnacksPickerCursorLine = { link = "CursorLineAlt" },
+		SnacksPickerListCursorLine = { link = "CursorLineAlt" },
+		SnacksPickerPreviewCursorLine = { link = "CursorLineAlt" },
 	}
 end
 
