@@ -1,5 +1,13 @@
 # Changelog
 
+## [3.0.2](https://github.com/thesimonho/kanagawa-paper.nvim/compare/v3.0.1...v3.0.2) (2025-08-29)
+
+
+### Bug Fixes
+
+* **picker:** fix cursor/current line color for pickers ([#62](https://github.com/thesimonho/kanagawa-paper.nvim/issues/62)) ([1d8ebc5](https://github.com/thesimonho/kanagawa-paper.nvim/commit/1d8ebc5b02f306139ae439ec5e6fb85bbafcf45c)), closes [#61](https://github.com/thesimonho/kanagawa-paper.nvim/issues/61)
+* **telescope:** match telescope colors to other pickers ([#64](https://github.com/thesimonho/kanagawa-paper.nvim/issues/64)) ([643aad0](https://github.com/thesimonho/kanagawa-paper.nvim/commit/643aad0ab04f67e3d4e366f27be3116d752496fd))
+
 ## [3.0.1](https://github.com/thesimonho/kanagawa-paper.nvim/compare/v3.0.0...v3.0.1) (2025-08-19)
 
 
