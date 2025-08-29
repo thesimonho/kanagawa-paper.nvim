@@ -6,7 +6,7 @@ function M.get(colors, opts)
 	return {
 		TelescopeTitle = { fg = theme.ui.fg_dark, bg = theme.accent.accent1, bold = true },
 		TelescopeBorder = { fg = theme.ui.float.fg_border, bg = theme.ui.bg },
-		TelescopeSelection = { link = "CursorLine" },
+		TelescopeSelection = { link = "CursorLineAlt" },
 		TelescopeSelectionCaret = { link = "CursorLineNr" },
 		TelescopePromptNormal = { bg = theme.ui.bg_p2 },
 		TelescopePromptBorder = { fg = theme.ui.bg_p2, bg = theme.ui.bg_p2 },
