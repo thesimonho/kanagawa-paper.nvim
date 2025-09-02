@@ -168,36 +168,37 @@ M.palette = {
 	dragonWhite = "#c5c9c5",
 	dragonYellow = "#c4b28a", -- ink primary accent
 
-	canvasAqua1 = "#8ba59e",
-	canvasAsh1 = "#707d70",
-	canvasBlue1 = "#91acb8",
-	canvasBlue2 = "#7998a8",
-	canvasBlue3 = "#638595",
-	canvasBlue4 = "#5b7a89",
-	canvasBlue5 = "#415966",
-	canvasCyan1 = "#54a069",
+	canvasAqua1 = "#7b958e",
+	canvasAsh1 = "#637263",
+	canvasBlue1 = "#809ba7",
+	canvasBlue2 = "#6b8998",
+	canvasBlue3 = "#577888",
+	canvasBlue4 = "#516e7d",
+	canvasBlue5 = "#3a515e",
+	canvasCyan1 = "#4a905d",
+	canvasGray2 = "#8e8a80",
+	canvasGray3 = "#758380",
+	canvasGreen1 = "#759975",
+	canvasGreen2 = "#7a8c6a",
+	canvasOrange1 = "#b28d77",
+	canvasOrange2 = "#a8826a",
+	canvasPink1 = "#9e7e98",
+	canvasRed1 = "#c27672",
+	canvasTeal1 = "#7e8faf",
+	canvasViolet1 = "#7880a5",
+	canvasViolet2 = "#9ba1bf",
+	canvasYellow1 = "#a7956a",
+	canvasYellow2 = "#b4a88a",
+
 	canvasGray1 = "#b7b7a9",
-	canvasGray2 = "#9d9992",
-	canvasGray3 = "#84908e", -- canvas fg
-	canvasGreen1 = "#84a984",
-	canvasGreen2 = "#899b78",
-	canvasOrange1 = "#c39e87",
-	canvasOrange2 = "#b89178",
-	canvasPink1 = "#a690a8",
 	canvasPink2 = "#c1b4c1",
 	canvasPink3 = "#d4cdd4",
-	canvasRed1 = "#c58c89",
-	canvasTeal1 = "#929fb9", -- canvas primary accent
-	canvasViolet1 = "#888eac",
-	canvasViolet2 = "#b0b4c9",
 	canvasWhite1 = "#cbc8bc",
 	canvasWhite2 = "#d1cfc5",
 	canvasWhite3 = "#d8d8d2",
 	canvasWhite4 = "#e1e1de", -- canvas bg
 	canvasWhite5 = "#e6e6e3",
 	canvasWhite6 = "#ecece8",
-	canvasYellow1 = "#b9a679",
-	canvasYellow2 = "#c7bb9d",
 
 	lotusInk0 = "#3d3d5e",
 	lotusInk1 = "#545464",
@@ -243,3 +244,39 @@ M.palette = {
 }
 
 return M
+
+-- local colors = {
+-- 	canvasAqua1 = "#8ba59e",
+-- 	canvasAsh1 = "#707d70",
+-- 	canvasBlue1 = "#91acb8",
+-- 	canvasBlue2 = "#7998a8",
+-- 	canvasBlue3 = "#638595",
+-- 	canvasBlue4 = "#5b7a89",
+-- 	canvasBlue5 = "#415966",
+-- 	canvasCyan1 = "#54a069",
+-- 	canvasGray1 = "#b7b7a9",
+-- 	canvasGray2 = "#9d9992",
+-- 	canvasGray3 = "#84908e", -- canvas fg
+-- 	canvasGreen1 = "#84a984",
+-- 	canvasGreen2 = "#899b78",
+-- 	canvasOrange1 = "#c39e87",
+-- 	canvasOrange2 = "#b89178",
+-- 	canvasPink1 = "#a690a8",
+-- 	canvasPink2 = "#c1b4c1",
+-- 	canvasPink3 = "#d4cdd4",
+-- 	canvasRed1 = "#c58c89",
+-- 	canvasTeal1 = "#929fb9", -- canvas primary accent
+-- 	canvasViolet1 = "#888eac",
+-- 	canvasViolet2 = "#b0b4c9",
+-- 	canvasYellow1 = "#b9a679",
+-- 	canvasYellow2 = "#c7bb9d",
+-- }
+--
+-- local mod = require("kanagawa-paper.colors")
+-- local new = {}
+-- for k, v in pairs(colors) do
+-- 	local newc = mod.apply_brightness(v, -0.5)
+-- 	newc = mod.apply_saturation(newc, 0.1)
+-- 	new[k] = newc
+-- end
+-- dd(new)

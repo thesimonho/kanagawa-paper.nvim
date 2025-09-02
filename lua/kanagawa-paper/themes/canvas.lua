@@ -10,7 +10,7 @@ M.get = function(opts, palette)
 		modes = {
 			normal = palette.canvasTeal1,
 			insert = palette.canvasRed1,
-			visual = palette.canvasPink2,
+			visual = palette.canvasPink1,
 			replace = palette.canvasRed1,
 			command = palette.canvasTeal1,
 		},
