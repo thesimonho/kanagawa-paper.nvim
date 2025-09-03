@@ -44,6 +44,7 @@ M.get = function(opts, palette)
 			indent = palette.canvasWhite2,
 			indent_scope = palette.canvasGray1,
 			picker = palette.canvasRed1,
+			yank = palette.canvasPink2,
 			mark = palette.canvasBlue4,
 			scrollbar = palette.canvasGray1,
 			tabline = {

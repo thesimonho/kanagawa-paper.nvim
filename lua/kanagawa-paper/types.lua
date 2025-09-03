@@ -278,6 +278,7 @@
 ---@field indent ColorSpec Indent line character
 ---@field indent_scope ColorSpec Indent scope character
 ---@field picker ColorSpec Color of picker letters e.g. bufferline pick buffer
+---@field yank ColorSpec Color of bg for yanked text
 ---@field mark ColorSpec Color of mark indicators
 ---@field scrollbar ColorSpec Color of scrollbar
 ---@field tabline TabElements Tabline colors

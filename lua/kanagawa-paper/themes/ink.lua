@@ -45,6 +45,7 @@ M.get = function(opts, palette)
 			indent = palette.sumiInk5,
 			indent_scope = palette.dragonViolet,
 			picker = palette.dragonRed,
+			yank = palette.sumiInk6,
 			mark = palette.waveAqua2,
 			scrollbar = palette.sumiInk5,
 			tabline = {
