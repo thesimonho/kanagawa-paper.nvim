@@ -1,5 +1,12 @@
 # Changelog
 
+## [3.0.3](https://github.com/thesimonho/kanagawa-paper.nvim/compare/v3.0.2...v3.0.3) (2025-09-13)
+
+
+### Bug Fixes
+
+* **canvas:** reduce brightness of the canvas palette ([#65](https://github.com/thesimonho/kanagawa-paper.nvim/issues/65)) ([e0f27dc](https://github.com/thesimonho/kanagawa-paper.nvim/commit/e0f27dc4aec36eee9d9f0df3a30ec8852fdd1035))
+
 ## [3.0.2](https://github.com/thesimonho/kanagawa-paper.nvim/compare/v3.0.1...v3.0.2) (2025-08-29)
 
 
