@@ -14,7 +14,7 @@ selection_bg = "#d4cdd4"
 selection_fg = "#758380"
 split = "#9ba1bf"
 compose_cursor = "#7e8faf"
-scrollbar_thumb = "#b7b7a9"
+scrollbar_thumb = "#cbc8bc"
 
 ansi = [
   "#8e8a80",
