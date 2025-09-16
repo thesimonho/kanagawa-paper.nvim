@@ -1,5 +1,17 @@
 # Changelog
 
+## [3.1.0](https://github.com/thesimonho/kanagawa-paper.nvim/compare/v3.0.3...v3.1.0) (2025-09-16)
+
+
+### Features
+
+* **scrollview:** add colors for nvim-scrollview ([#67](https://github.com/thesimonho/kanagawa-paper.nvim/issues/67)) ([d76be62](https://github.com/thesimonho/kanagawa-paper.nvim/commit/d76be620c662b56f76169b6e458292e63d2045b8))
+
+
+### Bug Fixes
+
+* **editor:** make folded lines match NC color ([#69](https://github.com/thesimonho/kanagawa-paper.nvim/issues/69)) ([ec8af01](https://github.com/thesimonho/kanagawa-paper.nvim/commit/ec8af01c782e4d2664bea953b2d14ba5b7d34b6b))
+
 ## [3.0.3](https://github.com/thesimonho/kanagawa-paper.nvim/compare/v3.0.2...v3.0.3) (2025-09-13)
 
 
