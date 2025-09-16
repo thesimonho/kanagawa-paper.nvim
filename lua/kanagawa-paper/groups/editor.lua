@@ -45,7 +45,7 @@ function M.setup(colors, opts)
 		WinSeparator = { fg = theme.ui.win_separator, bg = "NONE" },
 		VertSplit = { link = "WinSeparator" },
 		-- Folded		Line used for closed folds.
-		Folded = { fg = theme.ui.special, bg = theme.ui.bg_p1 },
+		Folded = { fg = theme.ui.special, bg = theme.ui.bg_dim },
 		-- FoldColumn	'foldcolumn'
 		FoldColumn = { fg = theme.ui.nontext, bg = theme.ui.bg_gutter },
 		-- SignColumn	Column where |signs| are displayed.
