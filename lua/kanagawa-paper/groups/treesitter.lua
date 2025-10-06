@@ -94,16 +94,17 @@ function M.setup(colors, opts)
 		["@punctuation.bracket"] = { fg = theme.syn.punct },
 		-- @punctuation.special    special symbols (e.g. `{}` in string interpolation)
 		["@punctuation.special"] = { fg = theme.syn.symbol },
-		--
 		-- @comment                line and block comments
 		-- @comment.documentation  comments documenting code
-		-- @comment.error          error-type comments (e.g. `ERROR`, `FIXME`, `DEPRECATED`)
-		["@comment.error"] = { fg = theme.ui.fg_dimmer, bg = theme.diag.error, bold = true },
+		-- @comment.error          error-type comments (e.g. `ERROR`, `FIXME`)
+		["@comment.error"] = { fg = theme.ui.bg, bg = theme.diag.error, bold = true },
 		-- @comment.warning        warning-type comments (e.g. `WARNING`, `FIX`, `HACK`)
-		["@comment.warning"] = { fg = theme.ui.fg_dimmer, bg = theme.diag.warning, bold = true },
+		["@comment.warning"] = { fg = theme.ui.bg, bg = theme.diag.warning, bold = true },
 		-- @comment.note           note-type comments (e.g. `NOTE`, `INFO`, `XXX`)
-		["@comment.note"] = { fg = theme.ui.fg_dimmer, bg = theme.diag.info, bold = true },
-		--
+		["@comment.note"] = { fg = theme.ui.bg, bg = theme.diag.hint, bold = true },
+		-- @comment.todo           todo-type comments (e.g. `TODO`)
+		["@comment.todo"] = { fg = theme.ui.bg, bg = theme.diag.info, bold = true },
+
 		-- @markup.strong          bold text
 		["@markup.strong"] = { bold = true },
 		-- @markup.italic          italic text
