@@ -1,5 +1,13 @@
 # Changelog
 
+## [3.1.1](https://github.com/thesimonho/kanagawa-paper.nvim/compare/v3.1.0...v3.1.1) (2025-10-06)
+
+
+### Bug Fixes
+
+* **treesitter:** align todo colors with todo-comments plugin ([#72](https://github.com/thesimonho/kanagawa-paper.nvim/issues/72)) ([b0c4d7c](https://github.com/thesimonho/kanagawa-paper.nvim/commit/b0c4d7ce2d3671ff3188030e585cc0c0a7b5e3a3))
+* **trouble:** fix NC background color ([#70](https://github.com/thesimonho/kanagawa-paper.nvim/issues/70)) ([3e3af86](https://github.com/thesimonho/kanagawa-paper.nvim/commit/3e3af861916b9f822584c80f1bc5c2dc6f3feabf))
+
 ## [3.1.0](https://github.com/thesimonho/kanagawa-paper.nvim/compare/v3.0.3...v3.1.0) (2025-09-16)
 
 
