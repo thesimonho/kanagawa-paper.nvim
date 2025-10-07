@@ -47,6 +47,17 @@ Install the theme with your preferred package manager, such as [lazy.nvim](https
 }
 ```
 
+Install the theme with [Nuwa.nvim](https://github.com/alyxshang/nuwa.nvim) in the following way:
+
+```lua
+nuwa.installPackage(
+  "https://github.com",
+  "thesimonho",
+  "kanagawa-paper.nvim"
+)
+```
+
+
 ## 🚀 Usage
 
 Kanagawa Paper comes in a few variants:
