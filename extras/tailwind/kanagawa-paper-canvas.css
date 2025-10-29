@@ -1,0 +1,61 @@
+/* ----------------------------------------------------------------------------- */
+/* Kanagawa Paper Canvas */
+/* Upstream: https://github.com/thesimonho/kanagawa-paper.nvim/master/extras/tailwind/kanagawa-paper-canvas.css */
+/* URL: https://tailwindcss.com/ */
+/* ----------------------------------------------------------------------------- */
+
+@theme inline {
+  --color-kanagawa-paper-canvas-foreground: oklch(from #758380 l c h);
+  --color-kanagawa-paper-canvas-background: oklch(from #e1e1de l c h);
+  --color-kanagawa-paper-canvas-divider: oklch(from #758380 l c h);
+  --color-kanagawa-paper-canvas-focus: oklch(from #c1b4c1 l c h);
+  --color-kanagawa-paper-canvas-highlight: oklch(from #d4cdd4 l c h);
+  --color-kanagawa-paper-canvas-comment: oklch(from #b7b7a9 l c h);
+
+  --color-kanagawa-paper-canvas-primary: oklch(from #7e8faf l c h);
+  --color-kanagawa-paper-canvas-secondary: oklch(from #c27672 l c h);
+  --color-kanagawa-paper-canvas-tertiary: oklch(from #9e7e98 l c h);
+
+  --color-kanagawa-paper-canvas-success: oklch(from #7a8c6a l c h);
+  --color-kanagawa-paper-canvas-warning: oklch(from #b28d77 l c h);
+  --color-kanagawa-paper-canvas-danger: oklch(from #c27672 l c h);
+  --color-kanagawa-paper-canvas-info: oklch(from #809ba7 l c h);
+  
+  --color-kanagawa-paper-canvas-content1: oklch(from #e1e1de l c h);
+  --color-kanagawa-paper-canvas-content2: oklch(from #d1cfc5 l c h);
+  --color-kanagawa-paper-canvas-content3: oklch(from #cbc8bc l c h);
+  --color-kanagawa-paper-canvas-content4: oklch(from #b7b7a9 l c h);
+  --color-kanagawa-paper-canvas-content5: oklch(from #8e8a80 l c h);
+  --color-kanagawa-paper-canvas-panel: oklch(from #ecece8 l c h);
+
+  --color-kanagawa-paper-canvas-rainbow1: oklch(from #c27672 l c h);
+  --color-kanagawa-paper-canvas-rainbow2: oklch(from #9e7e98 l c h);
+  --color-kanagawa-paper-canvas-rainbow3: oklch(from #809ba7 l c h);
+  --color-kanagawa-paper-canvas-rainbow4: oklch(from #a8826a l c h);
+  --color-kanagawa-paper-canvas-rainbow5: oklch(from #7e9579 l c h);
+  --color-kanagawa-paper-canvas-rainbow6: oklch(from #637263 l c h);
+  --color-kanagawa-paper-canvas-rainbow7: oklch(from #7e8faf l c h);
+
+  --color-kanagawa-paper-canvas-accent1: oklch(from #7e8faf l c h);
+  --color-kanagawa-paper-canvas-accent2: oklch(from #b28d77 l c h);
+  --color-kanagawa-paper-canvas-accent3: oklch(from #7b958e l c h);
+  --color-kanagawa-paper-canvas-accent4: oklch(from #8e8a80 l c h);
+  --color-kanagawa-paper-canvas-accent5: oklch(from #c27672 l c h);
+
+  --color-kanagawa-paper-canvas-black: oklch(from #8e8a80 l c h);
+  --color-kanagawa-paper-canvas-black-bright: oklch(from #99958a l c h);
+  --color-kanagawa-paper-canvas-red: oklch(from #c27672 l c h);
+  --color-kanagawa-paper-canvas-red-bright: oklch(from #c68582 l c h);
+  --color-kanagawa-paper-canvas-green: oklch(from #7b958e l c h);
+  --color-kanagawa-paper-canvas-green-bright: oklch(from #84a098 l c h);
+  --color-kanagawa-paper-canvas-yellow: oklch(from #a7956a l c h);
+  --color-kanagawa-paper-canvas-yellow-bright: oklch(from #b29f71 l c h);
+  --color-kanagawa-paper-canvas-blue: oklch(from #809ba7 l c h);
+  --color-kanagawa-paper-canvas-blue-bright: oklch(from #91b0bd l c h);
+  --color-kanagawa-paper-canvas-magenta: oklch(from #9e7e98 l c h);
+  --color-kanagawa-paper-canvas-magenta-bright: oklch(from #a989a3 l c h);
+  --color-kanagawa-paper-canvas-cyan: oklch(from #7e8faf l c h);
+  --color-kanagawa-paper-canvas-cyan-bright: oklch(from #8a9ab8 l c h);
+  --color-kanagawa-paper-canvas-white: oklch(from #b7b7a9 l c h);
+  --color-kanagawa-paper-canvas-white-bright: oklch(from #bebeb0 l c h);
+}
