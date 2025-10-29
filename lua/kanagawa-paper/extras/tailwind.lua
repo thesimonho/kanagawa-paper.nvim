@@ -1,5 +1,27 @@
 local util = require("kanagawa-paper.lib.util")
 
+local function build_palette_map(palette)
+	-- sort keys for stable output
+	local keys = {}
+	for k in pairs(palette) do
+		if k:sub(1, 1) ~= "_" then
+			table.insert(keys, k)
+		end
+	end
+	table.sort(keys, function(a, b)
+		return a:lower() < b:lower()
+	end)
+
+	package = palette["_package_name"]:lower():gsub("%s+", "-")
+	local lines = {}
+	for _, name in ipairs(keys) do
+		local var = "--color-" .. package .. "-" .. util.to_kebab_case(name)
+		table.insert(lines, string.format("  %s: oklch(from ${%s} l c h);", var, name))
+	end
+
+	return table.concat(lines, "\n")
+end
+
 local M = {}
 
 --- @param colors ThemeColors
@@ -70,6 +92,26 @@ function M.generate(colors)
 ]],
 		colors
 	)
+	return tailwind
+end
+
+function M.generate_palette(colors)
+	local template = string.format(
+		[[
+/* ----------------------------------------------------------------------------- */
+/* ${_style_name} */
+/* Upstream: ${_upstream_url} */
+/* URL: ${_url} */
+/* ----------------------------------------------------------------------------- */
+
+@theme inline {
+%s
+}
+]],
+		build_palette_map(colors)
+	)
+
+	local tailwind = util.template(template, colors)
 	return tailwind
 end
 

@@ -9,6 +9,13 @@ describe("extra is loadable", function()
 				assert.is_function(extra.generate)
 			end)
 
+			it(name .. " has a generate palette function if applicable", function()
+				local extra = require("kanagawa-paper.extras." .. name)
+				if extras.mapping[name].palette then
+					assert.is_function(extra.generate_palette)
+				end
+			end)
+
 			it(name .. " has a mapping", function()
 				assert.is_true(extras.mapping[name] ~= nil)
 			end)
