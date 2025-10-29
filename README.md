@@ -385,6 +385,7 @@ and use them in your `opts` function. Example:
 - [ghostty](extras/ghostty)
 - [kitty](extras/kitty)
 - [nushell](extras/nushell)
+- [tailwind](extras/tailwind)
 - [terminator](extras/terminator)
 - [termux](extras/termux)
 - [tilix](extras/tilix)
