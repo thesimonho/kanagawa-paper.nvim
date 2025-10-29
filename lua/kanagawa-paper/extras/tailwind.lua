@@ -12,10 +12,10 @@ local function build_palette_map(palette)
 		return a:lower() < b:lower()
 	end)
 
-	package = palette["_package_name"]:lower():gsub("%s+", "-")
+	local pkg = palette["_package_name"]:lower():gsub("%s+", "-")
 	local lines = {}
 	for _, name in ipairs(keys) do
-		local var = "--color-" .. package .. "-" .. util.to_kebab_case(name)
+		local var = "--color-" .. pkg .. "-" .. util.to_kebab_case(name)
 		table.insert(lines, string.format("  %s: oklch(from ${%s} l c h);", var, name))
 	end
 
