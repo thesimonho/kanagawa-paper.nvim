@@ -3,6 +3,10 @@ local cache = require("kanagawa-paper.lib.cache")
 local M = {}
 M.plugins = nil
 
+local function has_lazy()
+	return pcall(require, "lazy.core.config")
+end
+
 -- Get and store all available plugins
 function M.get_all_plugins()
 	if M.plugins then
@@ -13,6 +17,7 @@ function M.get_all_plugins()
 	if cache_data and cache_data.plugin_root then
 		local stat = vim.uv.fs_stat(cache_data.plugin_root)
 		if stat and stat.mtime.sec <= cache_data.mtime then
+			M.plugins = cache_data.plugins
 			return cache_data.plugins
 		end
 	end
@@ -51,6 +56,10 @@ end
 ---@return KanagawaGroups, table
 function M.setup(colors, opts)
 	opts = opts or require("kanagawa-paper.config").options
+	opts.plugins = opts.plugins or {}
+	opts.overrides = opts.overrides or function()
+		return {}
+	end
 
 	---@type KanagawaGroups
 	local groups = {}
@@ -70,7 +79,7 @@ function M.setup(colors, opts)
 		for _, plugin in ipairs(M.plugins) do
 			enabled_plugins[plugin] = true
 		end
-	elseif opts.auto_plugins and package.loaded.lazy then
+	elseif opts.auto_plugins and has_lazy() then
 		local installed = {}
 		for plugin, _ in pairs(require("lazy.core.config").plugins) do
 			table.insert(installed, plugin)
