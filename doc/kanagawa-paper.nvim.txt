@@ -1,4 +1,4 @@
-*kanagawa-paper.nvim.txt*     For NVIM v0.8.0     Last change: 2025 October 29
+*kanagawa-paper.nvim.txt*     For NVIM v0.8.0     Last change: 2025 October 30
 
 ==============================================================================
 Table of Contents                      *kanagawa-paper.nvim-table-of-contents*
@@ -436,6 +436,7 @@ EXTRAS                                            *kanagawa-paper.nvim-extras*
 - termux <extras/termux>
 - tilix <extras/tilix>
 - vivid <extras/vivid>
+- zellij <extras/zellij>
 - vscode <https://github.com/thesimonho/kanagawa-paper.vscode> (official port)
 - vscode terminal <extras/vscode_terminal> (guide: Visual Studio Code Theme Color <https://code.visualstudio.com/api/references/theme-color>)
 - fzf <extras/fzf> (guide: fzf color schemes <https://github.com/junegunn/fzf/wiki/Color-schemes>)
