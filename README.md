@@ -390,6 +390,7 @@ and use them in your `opts` function. Example:
 - [termux](extras/termux)
 - [tilix](extras/tilix)
 - [vivid](extras/vivid)
+- [zellij](extras/zellij)
 - [vscode](https://github.com/thesimonho/kanagawa-paper.vscode) (official port)
 - [vscode terminal](extras/vscode_terminal) (guide: [Visual Studio Code Theme Color](https://code.visualstudio.com/api/references/theme-color))
 - [fzf](extras/fzf) (guide: [fzf color schemes](https://github.com/junegunn/fzf/wiki/Color-schemes))
