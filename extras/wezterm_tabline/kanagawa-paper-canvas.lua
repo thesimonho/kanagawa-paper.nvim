@@ -32,6 +32,11 @@ M = {
     b = { fg = "#b28d77", bg = "#ecece8" },
     c = { fg = "#8e8a80", bg = "#d1cfc5" },
   },
+  tab_mode = {
+    a = { fg = "#ecece8", bg = "#7b958e" },
+    b = { fg = "#7b958e", bg = "#ecece8" },
+    c = { fg = "#8e8a80", bg = "#d1cfc5" },
+  },
   tab = {
     active = { fg = '#7e8faf', bg = '#e1e1de', bold = true },
     inactive = { fg = '#8e8a80', bg = '#d1cfc5' },
