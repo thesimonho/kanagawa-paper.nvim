@@ -45,6 +45,11 @@ M = {
     b = { fg = "${accent.accent3}", bg = "${ui.bg_p2}" },
     c = { fg = "${ui.fg_dim}", bg = "${ui.bg_statusline}" },
   },
+  default_mode = {
+    a = { fg = "${ui.bg_p2}", bg = "${accent.accent5}" },
+    b = { fg = "${accent.accent5}", bg = "${ui.bg_p2}" },
+    c = { fg = "${ui.fg_dim}", bg = "${ui.bg_statusline}" },
+  },
   tab = {
     active = { fg = '${modes.normal}', bg = '${ui.tabline.bg_selected}', bold = true },
     inactive = { fg = '${ui.fg_dim}', bg = '${ui.bg_statusline}' },
