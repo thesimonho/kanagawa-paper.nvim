@@ -9,7 +9,7 @@ function M.setup(colors, opts)
 		LspReferenceRead = { bg = theme.ui.bg_visual, bold = false },
 		LspReferenceWrite = { bg = theme.ui.bg_visual, bold = false },
 		LspInlayHint = { fg = theme.ui.fg_dim, bg = theme.accent.invert, italic = true },
-		LspSignatureActiveParameter = { fg = theme.diag.hint },
+		LspSignatureActiveParameter = { fg = theme.modes.insert, bold = true, italic = true },
 		LspCodeLens = { fg = theme.syn.comment, bg = "None", italic = false },
 
 		-- ["@lsp.type.class"] = { link = "Structure" },
