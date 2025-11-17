@@ -13,6 +13,10 @@ function M.get(colors, opts)
 		ScrollViewFolds = { fg = theme.ui.nontext },
 		ScrollViewSearch = { fg = theme.ui.bg_search },
 
+		ScrollViewConflictsTop = { fg = theme.diag.error },
+		ScrollViewConflictsMiddle = { fg = theme.diag.error },
+		ScrollViewConflictsBottom = { fg = theme.diag.error },
+
 		ScrollViewKeywordsFix = { link = "DiagnosticSignError" },
 		ScrollViewKeywordsHack = { link = "DiagnosticSignWarn" },
 		ScrollViewKeywordsTodo = { link = "DiagnosticSignHint" },
