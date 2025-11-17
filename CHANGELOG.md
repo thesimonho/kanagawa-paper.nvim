@@ -1,5 +1,30 @@
 # Changelog
 
+## [3.2.0](https://github.com/thesimonho/kanagawa-paper.nvim/compare/v3.1.0...v3.2.0) (2025-11-17)
+
+
+### Features
+
+* **tabline:** add default mode colors for wezterm tabline ([#79](https://github.com/thesimonho/kanagawa-paper.nvim/issues/79)) ([22472d4](https://github.com/thesimonho/kanagawa-paper.nvim/commit/22472d47d1fcb5a858846a5090a0d246ab7b084c))
+* **tabline:** add tab mode to wezterm tabline theme ([#78](https://github.com/thesimonho/kanagawa-paper.nvim/issues/78)) ([860503c](https://github.com/thesimonho/kanagawa-paper.nvim/commit/860503c0bc716d92a4390b18a697e26e6b7a0e33))
+* **tailwind:** add extra for tailwind ([#76](https://github.com/thesimonho/kanagawa-paper.nvim/issues/76)) ([86ddc9f](https://github.com/thesimonho/kanagawa-paper.nvim/commit/86ddc9f560d2577c0263ea2785c5e9184363da78))
+* **zellij:** add extra for zellij ([#77](https://github.com/thesimonho/kanagawa-paper.nvim/issues/77)) ([11ffa49](https://github.com/thesimonho/kanagawa-paper.nvim/commit/11ffa4969db19616fc3ecb6bb6bb8b8ece7bc212))
+
+
+### Bug Fixes
+
+* **canvas:** more neutral gray ([#82](https://github.com/thesimonho/kanagawa-paper.nvim/issues/82)) ([0567515](https://github.com/thesimonho/kanagawa-paper.nvim/commit/0567515289dc5cba6cd9f8493658a01704f3faea))
+* **lsp:** make active signature parameter easier to identify ([#80](https://github.com/thesimonho/kanagawa-paper.nvim/issues/80)) ([b3b204a](https://github.com/thesimonho/kanagawa-paper.nvim/commit/b3b204ae0c419c8a4a120bac80f231cb417350ef))
+* **scrollview:** add highlights for merge conflicts ([#83](https://github.com/thesimonho/kanagawa-paper.nvim/issues/83)) ([075c35e](https://github.com/thesimonho/kanagawa-paper.nvim/commit/075c35ea22ddb65399f80e81285558aea53542bb))
+* **todo-comments:** fix the fg color of todo highlights ([#74](https://github.com/thesimonho/kanagawa-paper.nvim/issues/74)) ([3ed25ea](https://github.com/thesimonho/kanagawa-paper.nvim/commit/3ed25ea76837f6990bb7d9c7eef99001060d5a85))
+* **treesitter:** align todo colors with todo-comments plugin ([#72](https://github.com/thesimonho/kanagawa-paper.nvim/issues/72)) ([b0c4d7c](https://github.com/thesimonho/kanagawa-paper.nvim/commit/b0c4d7ce2d3671ff3188030e585cc0c0a7b5e3a3))
+* **trouble:** fix NC background color ([#70](https://github.com/thesimonho/kanagawa-paper.nvim/issues/70)) ([3e3af86](https://github.com/thesimonho/kanagawa-paper.nvim/commit/3e3af861916b9f822584c80f1bc5c2dc6f3feabf))
+
+
+### Reverts
+
+* **todo-comments:** Remove the todo-comments group ([#75](https://github.com/thesimonho/kanagawa-paper.nvim/issues/75)) ([6bdf6ae](https://github.com/thesimonho/kanagawa-paper.nvim/commit/6bdf6ae3e4d51560f8a08c232003526c08e4af95))
+
 ## [3.1.0](https://github.com/thesimonho/kanagawa-paper.nvim/compare/v3.0.3...v3.1.0) (2025-09-16)
 
 
