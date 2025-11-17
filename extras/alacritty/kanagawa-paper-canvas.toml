@@ -6,7 +6,7 @@
 
 [colors.primary]
 background = '#e1e1de'
-foreground = '#758380'
+foreground = '#73787d'
 
 [colors.cursor]
 cursor = '#7e8faf'
@@ -24,7 +24,7 @@ yellow = '#a7956a'
 blue = '#809ba7'
 magenta = '#9e7e98'
 cyan = '#7e8faf'
-white = '#b7b7a9'
+white = '#b4b4ac'
 
 [colors.bright]
 black = '#99958a'
@@ -34,7 +34,7 @@ yellow = '#b29f71'
 blue = '#91b0bd'
 magenta = '#a989a3'
 cyan = '#8a9ab8'
-white = '#bebeb0'
+white = '#bbbbb3'
 
 [[colors.indexed_colors]]
 index = 16

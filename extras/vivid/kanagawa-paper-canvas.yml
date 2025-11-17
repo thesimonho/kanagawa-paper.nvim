@@ -5,7 +5,7 @@
 # -----------------------------------------------------------------------------
 colors:
   background_color: 'e1e1de'
-  white: 'b7b7a9'
+  white: 'b4b4ac'
   red: 'c27672'
   green: '7b958e'
   yellow: 'a7956a'
@@ -22,7 +22,7 @@ colors:
   black: '8e8a80'
   gray: 'd1cfc5'
   darkgray: 'cbc8bc'
-  darkergray: 'b7b7a9'
+  darkergray: 'b4b4ac'
 
 core:
   normal_text: {}

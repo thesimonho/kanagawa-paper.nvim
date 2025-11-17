@@ -5,13 +5,13 @@
 # -----------------------------------------------------------------------------
 
 [colors]
-foreground = "#758380"
+foreground = "#73787d"
 background = "#e1e1de"
 cursor_bg = "#7e8faf"
 cursor_border = "#7e8faf"
 cursor_fg = "#e1e1de"
 selection_bg = "#d4cdd4"
-selection_fg = "#758380"
+selection_fg = "#73787d"
 split = "#9ba1bf"
 compose_cursor = "#7e8faf"
 scrollbar_thumb = "#cbc8bc"
@@ -24,7 +24,7 @@ ansi = [
   "#809ba7",
   "#9e7e98",
   "#7e8faf",
-  "#b7b7a9",
+  "#b4b4ac",
 ]
 brights = [
   "#99958a",
@@ -34,7 +34,7 @@ brights = [
   "#91b0bd",
   "#a989a3",
   "#8a9ab8",
-  "#bebeb0",
+  "#bbbbb3",
 ]
 
 [colors.indexed]

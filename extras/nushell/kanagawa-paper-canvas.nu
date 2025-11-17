@@ -9,12 +9,12 @@ export def main [] {
     return {
         binary: '#c27672'
         block: '#809ba7'
-        cell-path: '#b7b7a9'
+        cell-path: '#b4b4ac'
         closure: '#7e8faf'
-        custom: '#b7b7a9'
+        custom: '#b4b4ac'
         duration: '#a7956a'
         float: '#c68582'
-        glob: '#b7b7a9'
+        glob: '#b4b4ac'
         int: '#c27672'
         list: '#7e8faf'
         nothing: '#c27672'
@@ -44,7 +44,7 @@ export def main [] {
 
         filesize: {|e|
             if $e == 0b {
-                '#b7b7a9'
+                '#b4b4ac'
             } else if $e < 1mb {
                 '#7e8faf'
             } else {{ fg: '#809ba7' }}
@@ -79,7 +79,7 @@ export def main [] {
         shape_or: { fg: '#c27672' attr: 'b' }
         shape_pipe: { fg: '#c27672' attr: 'b' }
         shape_range: { fg: '#a7956a' attr: 'b' }
-        shape_raw_string: { fg: '#b7b7a9' attr: 'b' }
+        shape_raw_string: { fg: '#b4b4ac' attr: 'b' }
         shape_record: { fg: '#7e8faf' attr: 'b' }
         shape_redirection: { fg: '#c27672' attr: 'b' }
         shape_signature: { fg: '#7b958e' attr: 'b' }
@@ -89,17 +89,17 @@ export def main [] {
         shape_vardecl: { fg: '#809ba7' attr: 'u' }
         shape_variable: '#c27672'
 
-        foreground: '#758380'
+        foreground: '#73787d'
         background: '#e1e1de'
         cursor: '#7e8faf'
 
         empty: '#809ba7'
         header: { fg: '#7b958e' attr: 'b' }
-        hints: '#b7b7a9'
+        hints: '#b4b4ac'
         leading_trailing_space_bg: { attr: 'n' }
         row_index: { fg: '#7b958e' attr: 'b' }
-        search_result: { fg: '#c27672' bg: '#b7b7a9' }
-        separator: '#b7b7a9'
+        search_result: { fg: '#c27672' bg: '#b4b4ac' }
+        separator: '#b4b4ac'
     }
 }
 

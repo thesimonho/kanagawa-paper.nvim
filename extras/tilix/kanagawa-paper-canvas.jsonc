@@ -7,7 +7,7 @@
   "name": "Kanagawa Paper Canvas",
   "comment": "",
   "use-theme-colors": false,
-  "foreground-color": "#758380",
+  "foreground-color": "#73787d",
   "background-color": "#e1e1de",
   "palette": [
       "#8e8a80",
@@ -17,7 +17,7 @@
       "#809ba7",
       "#9e7e98",
       "#7e8faf",
-      "#b7b7a9",
+      "#b4b4ac",
       "#99958a",
       "#c68582",
       "#84a098",
@@ -25,6 +25,6 @@
       "#91b0bd",
       "#a989a3",
       "#8a9ab8",
-      "#bebeb0"
+      "#bbbbb3"
   ]
 }

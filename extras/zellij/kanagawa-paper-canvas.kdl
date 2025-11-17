@@ -7,7 +7,7 @@
 themes {
     kanagawa-paper-canvas {
         text_unselected {
-            base 117 131 128
+            base 115 120 125
             background 0
             emphasis_0 194 118 114
             emphasis_1 158 126 152
@@ -15,7 +15,7 @@ themes {
             emphasis_3 168 130 106
         }
         text_selected {
-            base 117 131 128
+            base 115 120 125
             background 216 216 210
             emphasis_0 194 118 114
             emphasis_1 158 126 152
@@ -39,7 +39,7 @@ themes {
             emphasis_3 168 130 106
         }
         table_title {
-            base 117 131 128
+            base 115 120 125
             background 0
             emphasis_0 194 118 114
             emphasis_1 158 126 152
@@ -47,7 +47,7 @@ themes {
             emphasis_3 168 130 106
         }
         table_cell_selected {
-            base 117 131 128
+            base 115 120 125
             background 216 216 210
             emphasis_0 194 118 114
             emphasis_1 158 126 152
@@ -55,7 +55,7 @@ themes {
             emphasis_3 168 130 106
         }
         table_cell_unselected {
-            base 117 131 128
+            base 115 120 125
             background 0
             emphasis_0 194 118 114
             emphasis_1 158 126 152
@@ -63,7 +63,7 @@ themes {
             emphasis_3 168 130 106
         }
         list_selected {
-            base 117 131 128
+            base 115 120 125
             background 216 216 210
             emphasis_0 194 118 114
             emphasis_1 158 126 152
@@ -71,7 +71,7 @@ themes {
             emphasis_3 168 130 106
         }
         list_unselected {
-            base 117 131 128
+            base 115 120 125
             background 0
             emphasis_0 194 118 114
             emphasis_1 158 126 152
