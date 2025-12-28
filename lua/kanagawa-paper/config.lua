@@ -65,17 +65,6 @@ M.defaults = {
 		-- rainbow_delimiters = true
 		-- which_key = false
 	},
-
-	-- enable integrations with other applications
-	integrations = {
-		-- automatically set wezterm theme to match the current neovim theme
-		wezterm = {
-			enabled = false,
-			-- neovim will write the theme name to this file
-			-- wezterm will read from this file to know which theme to use
-			path = (os.getenv("TEMP") or "/tmp") .. "/nvim-theme",
-		},
-	},
 }
 
 ---@type KanagawaConfig
@@ -84,14 +73,6 @@ M.options = nil
 ---@param options? KanagawaConfig
 function M.setup(options)
 	M.options = vim.tbl_deep_extend("force", {}, M.defaults, options or {})
-
-	if M.options.integrations.wezterm.enabled then
-		vim.api.nvim_create_autocmd("VimLeavePre", {
-			callback = function()
-				os.remove(vim.fn.expand(M.options.integrations.wezterm.path))
-			end,
-		})
-	end
 end
 
 ---@param opts? KanagawaConfig
