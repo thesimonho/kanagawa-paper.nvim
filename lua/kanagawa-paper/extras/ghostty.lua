@@ -28,6 +28,7 @@ foreground = ${ui.fg}
 cursor-color = ${modes.normal}
 selection-background = ${ui.bg_visual}
 selection-foreground = ${ui.fg_dim}
+split-divider-color = ${ui.win_separator}
 ]],
 		colors
 	)
