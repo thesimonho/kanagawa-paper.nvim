@@ -32,7 +32,7 @@ function M.setup(colors, opts)
 		-- DiffChange	Diff mode: Changed line. |diff.txt|
 		DiffChange = { bg = theme.diff.change_light },
 		-- DiffDelete	Diff mode: Deleted line. |diff.txt|
-		DiffDelete = { bg = theme.diff.delete_light, fg = theme.vcs.removed },
+		DiffDelete = { bg = theme.diff.delete_light, fg = theme.vcs.removed, strikethrough = true },
 		-- DiffText	Diff mode: Changed text within a changed line. |diff.txt|
 		DiffText = { bg = theme.diff.change_light, fg = theme.diff.change, bold = true },
 		-- EndOfBuffer	Filler lines (~) after the end of the buffer. By default, this is highlighted like |hl-NonText|.
@@ -207,12 +207,12 @@ function M.setup(colors, opts)
 		Added = { fg = theme.vcs.added },
 		Removed = { fg = theme.vcs.removed },
 		Changed = { fg = theme.vcs.changed },
-		diffAdded = { fg = theme.vcs.added },
-		diffRemoved = { fg = theme.vcs.removed },
-		diffDeleted = { fg = theme.vcs.removed },
-		diffChanged = { fg = theme.vcs.changed },
-		diffOldFile = { fg = theme.vcs.removed },
-		diffNewFile = { fg = theme.vcs.added },
+		diffAdded = { fg = theme.diff.add },
+		diffRemoved = { fg = theme.diff.delete },
+		diffDeleted = { fg = theme.diff.delete },
+		diffChanged = { fg = theme.diff.change },
+		diffOldFile = { fg = theme.diff.delete },
+		diffNewFile = { fg = theme.diff.add },
 
 		-- health
 		healthError = { fg = theme.diag.error },
