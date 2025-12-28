@@ -11,11 +11,11 @@ function M.get(colors, opts)
 		ScrollViewCursor = { fg = theme.ui.fg },
 		ScrollViewMarks = { fg = theme.ui.mark },
 		ScrollViewFolds = { fg = theme.ui.nontext },
-		ScrollViewSearch = { fg = theme.ui.bg_search },
+		ScrollViewSearch = { fg = theme.ui.bg_search, bold = true },
 
-		ScrollViewConflictsTop = { fg = theme.diag.error },
-		ScrollViewConflictsMiddle = { fg = theme.diag.error },
-		ScrollViewConflictsBottom = { fg = theme.diag.error },
+		ScrollViewConflictsTop = { fg = theme.diag.error, bold = true },
+		ScrollViewConflictsMiddle = { fg = theme.diag.error, bold = true },
+		ScrollViewConflictsBottom = { fg = theme.diag.error, bold = true },
 
 		ScrollViewKeywordsFix = { link = "DiagnosticSignError" },
 		ScrollViewKeywordsHack = { link = "DiagnosticSignWarn" },
