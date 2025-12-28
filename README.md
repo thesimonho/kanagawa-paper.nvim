@@ -160,17 +160,6 @@ require("kanagawa-paper").setup({
   -- rainbow_delimiters = true
   -- which_key = false
  },
-
- -- enable integrations with other applications
- integrations = {
-  -- automatically set wezterm theme to match the current neovim theme
-  wezterm = {
-   enabled = false,
-   -- neovim will write the theme name to this file
-   -- wezterm will read from this file to know which theme to use
-   path = (os.getenv("TEMP") or "/tmp") .. "/nvim-theme",
-  },
- },
 })
 ```
 
@@ -185,6 +174,14 @@ Any changes you make to your config (e.g. overriding colors or highlight groups)
 In rare cases where this doesn't happen and you notice your changes aren't being applied, you can manually rebuild the cache by running `:KanagawaPaperCache`.
 
 ## 👥 Integrations
+
+### Terminals
+
+Matching colorschemes for a number of terminals are provided (e.g. WezTerm, ghostty, etc; see [Extras](https://github.com/thesimonho/kanagawa-paper.nvim#-extras)).
+
+The automatic variant of `kanagawa-paper` switches between light and dark mode based on the value of `vim.o.background`. This value will generally follow the color mode of your terminal, i.e. if your terminal is set to dark mode via your OS, neovim will pick that up and the theme will automatically be changed to `kanagawa-paper-ink`.
+
+Tip: if this auto switching is not working for you, the _first_ thing to check is whether the value of `vim.o.background` is what you expect it to be.
 
 ### [Lualine](https://github.com/nvim-lualine/lualine.nvim)
 
@@ -233,54 +230,9 @@ Examples of situations where this might be useful:
 - You want to change background color mid-session (either by manually setting `vim.o.background` or with something like dark background toggle in LazyVim)
 - You use a plugin for live previews of color schemes
 
-### [WezTerm](https://wezfurlong.org/wezterm/) and [WezTerm Tabline](https://github.com/michaelbrusegard/tabline.wez)
+### [WezTerm](https://wezfurlong.org/wezterm/) and [WezTerm Tabline](https://github.com/michaelbrusegard/tabline.wez) (deprecated)
 
-If you use WezTerm and/or WezTerm Tabline, you can use the `wezterm` integration to automatically switch themes based on the current Neovim theme. This feature requires Wezterm [automatic reload config](https://wezterm.org/config/lua/config/automatically_reload_config.html) to be turned on.
-
-There are a few things to set up for this to work:
-
-1. Enable the integration in your Neovim configuration:
-
-```lua
-require("kanagawa-paper").setup({
- integrations = {
-  wezterm = {
-   enabled = true,
-   path = (os.getenv("TEMP") or "/tmp") .. "/nvim-theme"
-  },
- },
-})
-```
-
-2. Place the [wezterm](extras/wezterm) and [wezterm tabline](extras/wezterm_tabline) extras in the wezterm color scheme directory. Point wezterms config to that directory:
-
-```lua
-config.color_scheme_dirs = { "~/.config/wezterm/colors" } -- or wherever you want to store the themes
-```
-
-3. Copy [theme_switcher.lua](lua/wezterm) to where your wezterm config is. Add `require("theme_switcher")` to your wezterm config to load the theme switcher.
-
-Your final wezterm config directories might look something like this:
-
-![wezterm_config](https://github.com/user-attachments/assets/a1a85ed9-a88f-42a0-9cc3-966609f5e3f3)
-
-4. Update the `theme_switcher.lua` file with the correct paths to your files:
-
-```lua
--- default colorscheme after neovim exits
-local theme_default = "kanagawa-paper-ink"
-
--- this should match the path set in the neovim config
--- it's best to use a temporary directory for this
-local theme_file = (os.getenv("TEMP") or "/tmp") .. "/nvim-theme"
-
--- relative path to the directory containing the tabline themes
--- e.g. if I have placed the tabline extra themes in ./colors/wezterm_tabline then this would be "colors.wezterm_tabline"
--- this is treated as a relative lua module that will be required by the theme switcher
-local tabline_theme_dir = "colors.wezterm_tabline"
-```
-
-You can see an example of this setup in my dotfiles [here](https://github.com/thesimonho/dotfiles/tree/master/config/wezterm).
+This feature has been deprecated. If you'd like to use it, you can still find the old script and instructions (README) in [v3.1](https://github.com/thesimonho/kanagawa-paper.nvim/tree/v3.1?tab=readme-ov-file#-integrations)
 
 ## 🔧 Customizing Colors
 
