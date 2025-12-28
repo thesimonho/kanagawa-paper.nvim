@@ -25,7 +25,7 @@ function M.generate(colors)
 	formatted.rainbow = format_colors(colors.rainbow)
 	formatted.diag = format_colors(colors.diag)
 
-	local wezterm = util.template(
+	local zellij = util.template(
 		[[
 // -----------------------------------------------------------------------------
 // ${_style_name}
@@ -157,7 +157,7 @@ themes {
 ]],
 		formatted
 	)
-	return wezterm
+	return zellij
 end
 
 return M
