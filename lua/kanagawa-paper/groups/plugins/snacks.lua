@@ -11,6 +11,7 @@ function M.get(colors, opts)
 		SnacksPickerCursorLine = { link = "CursorLineAlt" },
 		SnacksPickerListCursorLine = { link = "CursorLineAlt" },
 		SnacksPickerPreviewCursorLine = { link = "CursorLineAlt" },
+		SnacksPickerMatch = { link = "Search" },
 	}
 end
 
