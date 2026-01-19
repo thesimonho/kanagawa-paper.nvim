@@ -95,7 +95,9 @@ function M.setup(colors, opts)
 		-- @punctuation.special    special symbols (e.g. `{}` in string interpolation)
 		["@punctuation.special"] = { fg = theme.syn.symbol },
 		-- @comment                line and block comments
+		["@comment"] = { fg = theme.syn.comment },
 		-- @comment.documentation  comments documenting code
+		["@comment.documentation"] = { fg = theme.syn.docstring, italic = true },
 		-- @comment.error          error-type comments (e.g. `ERROR`, `FIXME`)
 		["@comment.error"] = { fg = theme.ui.bg, bg = theme.diag.error, bold = true },
 		-- @comment.warning        warning-type comments (e.g. `WARNING`, `FIX`, `HACK`)
