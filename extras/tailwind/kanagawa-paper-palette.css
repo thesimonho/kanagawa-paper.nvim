@@ -18,11 +18,12 @@
   --color-kanagawa-paper-canvas-blue4: oklch(from #516e7d l c h);
   --color-kanagawa-paper-canvas-blue5: oklch(from #3a515e l c h);
   --color-kanagawa-paper-canvas-cyan1: oklch(from #4a905d l c h);
-  --color-kanagawa-paper-canvas-gray1: oklch(from #b4b4ac l c h);
+  --color-kanagawa-paper-canvas-gray1: oklch(from #aeaea6 l c h);
   --color-kanagawa-paper-canvas-gray2: oklch(from #8e8a80 l c h);
   --color-kanagawa-paper-canvas-gray3: oklch(from #73787d l c h);
   --color-kanagawa-paper-canvas-green1: oklch(from #7e9579 l c h);
   --color-kanagawa-paper-canvas-green2: oklch(from #7a8c6a l c h);
+  --color-kanagawa-paper-canvas-green3: oklch(from #9ba98e l c h);
   --color-kanagawa-paper-canvas-orange1: oklch(from #b28d77 l c h);
   --color-kanagawa-paper-canvas-orange2: oklch(from #a8826a l c h);
   --color-kanagawa-paper-canvas-pink1: oklch(from #9e7e98 l c h);
@@ -61,6 +62,7 @@
   --color-kanagawa-paper-dragon-gray3: oklch(from #7a8382 l c h);
   --color-kanagawa-paper-dragon-green: oklch(from #699469 l c h);
   --color-kanagawa-paper-dragon-green2: oklch(from #8a9a7b l c h);
+  --color-kanagawa-paper-dragon-green3: oklch(from #717e67 l c h);
   --color-kanagawa-paper-dragon-orange: oklch(from #b6927b l c h);
   --color-kanagawa-paper-dragon-orange2: oklch(from #b98d7b l c h);
   --color-kanagawa-paper-dragon-pink: oklch(from #a292a3 l c h);

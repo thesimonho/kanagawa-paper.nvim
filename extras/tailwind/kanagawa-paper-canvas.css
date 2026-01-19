@@ -10,7 +10,7 @@
   --color-kanagawa-paper-canvas-divider: oklch(from #73787d l c h);
   --color-kanagawa-paper-canvas-focus: oklch(from #c1b4c1 l c h);
   --color-kanagawa-paper-canvas-highlight: oklch(from #d4cdd4 l c h);
-  --color-kanagawa-paper-canvas-comment: oklch(from #b4b4ac l c h);
+  --color-kanagawa-paper-canvas-comment: oklch(from #aeaea6 l c h);
 
   --color-kanagawa-paper-canvas-primary: oklch(from #7e8faf l c h);
   --color-kanagawa-paper-canvas-secondary: oklch(from #c27672 l c h);
@@ -24,7 +24,7 @@
   --color-kanagawa-paper-canvas-content1: oklch(from #e1e1de l c h);
   --color-kanagawa-paper-canvas-content2: oklch(from #d1cfc5 l c h);
   --color-kanagawa-paper-canvas-content3: oklch(from #cbc8bc l c h);
-  --color-kanagawa-paper-canvas-content4: oklch(from #b4b4ac l c h);
+  --color-kanagawa-paper-canvas-content4: oklch(from #aeaea6 l c h);
   --color-kanagawa-paper-canvas-content5: oklch(from #8e8a80 l c h);
   --color-kanagawa-paper-canvas-panel: oklch(from #ecece8 l c h);
 
@@ -56,6 +56,6 @@
   --color-kanagawa-paper-canvas-magenta-bright: oklch(from #a989a3 l c h);
   --color-kanagawa-paper-canvas-cyan: oklch(from #7e8faf l c h);
   --color-kanagawa-paper-canvas-cyan-bright: oklch(from #8a9ab8 l c h);
-  --color-kanagawa-paper-canvas-white: oklch(from #b4b4ac l c h);
-  --color-kanagawa-paper-canvas-white-bright: oklch(from #bbbbb3 l c h);
+  --color-kanagawa-paper-canvas-white: oklch(from #aeaea6 l c h);
+  --color-kanagawa-paper-canvas-white-bright: oklch(from #b6b6ae l c h);
 }

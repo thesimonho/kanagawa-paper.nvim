@@ -9,12 +9,12 @@ export def main [] {
     return {
         binary: '#c27672'
         block: '#809ba7'
-        cell-path: '#b4b4ac'
+        cell-path: '#aeaea6'
         closure: '#7e8faf'
-        custom: '#b4b4ac'
+        custom: '#aeaea6'
         duration: '#a7956a'
         float: '#c68582'
-        glob: '#b4b4ac'
+        glob: '#aeaea6'
         int: '#c27672'
         list: '#7e8faf'
         nothing: '#c27672'
@@ -44,7 +44,7 @@ export def main [] {
 
         filesize: {|e|
             if $e == 0b {
-                '#b4b4ac'
+                '#aeaea6'
             } else if $e < 1mb {
                 '#7e8faf'
             } else {{ fg: '#809ba7' }}
@@ -79,7 +79,7 @@ export def main [] {
         shape_or: { fg: '#c27672' attr: 'b' }
         shape_pipe: { fg: '#c27672' attr: 'b' }
         shape_range: { fg: '#a7956a' attr: 'b' }
-        shape_raw_string: { fg: '#b4b4ac' attr: 'b' }
+        shape_raw_string: { fg: '#aeaea6' attr: 'b' }
         shape_record: { fg: '#7e8faf' attr: 'b' }
         shape_redirection: { fg: '#c27672' attr: 'b' }
         shape_signature: { fg: '#7b958e' attr: 'b' }
@@ -95,11 +95,11 @@ export def main [] {
 
         empty: '#809ba7'
         header: { fg: '#7b958e' attr: 'b' }
-        hints: '#b4b4ac'
+        hints: '#aeaea6'
         leading_trailing_space_bg: { attr: 'n' }
         row_index: { fg: '#7b958e' attr: 'b' }
-        search_result: { fg: '#c27672' bg: '#b4b4ac' }
-        separator: '#b4b4ac'
+        search_result: { fg: '#c27672' bg: '#aeaea6' }
+        separator: '#aeaea6'
     }
 }
 
