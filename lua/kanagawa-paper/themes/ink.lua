@@ -95,6 +95,7 @@ M.get = function(opts, palette)
 		syn = {
 			attribute = palette.dragonYellow,
 			comment = palette.fujiGray,
+			docstring = palette.dragonGreen3,
 			constant = palette.dragonOrange,
 			deprecated = palette.katanaGray,
 			fun = palette.dragonBlue2,

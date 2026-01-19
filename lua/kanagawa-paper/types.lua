@@ -95,6 +95,7 @@
 ---@field dragonGray3? ColorSpec
 ---@field dragonGreen? ColorSpec
 ---@field dragonGreen2? ColorSpec
+---@field dragonGreen3? ColorSpec
 ---@field dragonOrange? ColorSpec
 ---@field dragonOrange2? ColorSpec
 ---@field dragonPink? ColorSpec
@@ -116,6 +117,7 @@
 ---@field canvasGray3? ColorSpec
 ---@field canvasGreen1? ColorSpec
 ---@field canvasGreen2? ColorSpec
+---@field canvasGreen3? ColorSpec
 ---@field canvasOrange1? ColorSpec
 ---@field canvasOrange2? ColorSpec
 ---@field canvasPink1? ColorSpec
@@ -205,6 +207,7 @@
 ---@field regex ColorSpec
 ---@field deprecated ColorSpec
 ---@field comment ColorSpec
+---@field docstring ColorSpec
 ---@field punct ColorSpec
 ---@field special1 ColorSpec
 ---@field special2 ColorSpec
