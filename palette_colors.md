@@ -17,11 +17,12 @@
 | **canvasBlue4** | ![516e7d](https://placehold.co/40x15/516e7d/516e7d.png) | `#516e7d` |
 | **canvasBlue5** | ![3a515e](https://placehold.co/40x15/3a515e/3a515e.png) | `#3a515e` |
 | **canvasCyan1** | ![4a905d](https://placehold.co/40x15/4a905d/4a905d.png) | `#4a905d` |
-| **canvasGray1** | ![b4b4ac](https://placehold.co/40x15/b4b4ac/b4b4ac.png) | `#b4b4ac` |
+| **canvasGray1** | ![aeaea6](https://placehold.co/40x15/aeaea6/aeaea6.png) | `#aeaea6` |
 | **canvasGray2** | ![8e8a80](https://placehold.co/40x15/8e8a80/8e8a80.png) | `#8e8a80` |
 | **canvasGray3** | ![73787d](https://placehold.co/40x15/73787d/73787d.png) | `#73787d` |
 | **canvasGreen1** | ![7e9579](https://placehold.co/40x15/7e9579/7e9579.png) | `#7e9579` |
 | **canvasGreen2** | ![7a8c6a](https://placehold.co/40x15/7a8c6a/7a8c6a.png) | `#7a8c6a` |
+| **canvasGreen3** | ![9ba98e](https://placehold.co/40x15/9ba98e/9ba98e.png) | `#9ba98e` |
 | **canvasOrange1** | ![b28d77](https://placehold.co/40x15/b28d77/b28d77.png) | `#b28d77` |
 | **canvasOrange2** | ![a8826a](https://placehold.co/40x15/a8826a/a8826a.png) | `#a8826a` |
 | **canvasPink1** | ![9e7e98](https://placehold.co/40x15/9e7e98/9e7e98.png) | `#9e7e98` |
@@ -60,6 +61,7 @@
 | **dragonGray3** | ![7a8382](https://placehold.co/40x15/7a8382/7a8382.png) | `#7a8382` |
 | **dragonGreen** | ![699469](https://placehold.co/40x15/699469/699469.png) | `#699469` |
 | **dragonGreen2** | ![8a9a7b](https://placehold.co/40x15/8a9a7b/8a9a7b.png) | `#8a9a7b` |
+| **dragonGreen3** | ![717e67](https://placehold.co/40x15/717e67/717e67.png) | `#717e67` |
 | **dragonOrange** | ![b6927b](https://placehold.co/40x15/b6927b/b6927b.png) | `#b6927b` |
 | **dragonOrange2** | ![b98d7b](https://placehold.co/40x15/b98d7b/b98d7b.png) | `#b98d7b` |
 | **dragonPink** | ![a292a3](https://placehold.co/40x15/a292a3/a292a3.png) | `#a292a3` |
