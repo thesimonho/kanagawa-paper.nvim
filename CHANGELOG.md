@@ -1,5 +1,18 @@
 # Changelog
 
+## [4.1.0](https://github.com/thesimonho/kanagawa-paper.nvim/compare/v4.0.0...v4.1.0) (2026-01-28)
+
+
+### Features
+
+* **resolve:** add colors for resolve and merge conflicts ([#94](https://github.com/thesimonho/kanagawa-paper.nvim/issues/94)) ([dd4792e](https://github.com/thesimonho/kanagawa-paper.nvim/commit/dd4792eb8bb463285eb550dfda8f17bff1ad0630))
+* **treesitter:** add separate highlights for docstrings and comments ([#92](https://github.com/thesimonho/kanagawa-paper.nvim/issues/92)) ([d5525bd](https://github.com/thesimonho/kanagawa-paper.nvim/commit/d5525bd17ce32298e0addef68628f064b63c4d95))
+
+
+### Bug Fixes
+
+* **snacks:** align picker matches with search highlight ([#89](https://github.com/thesimonho/kanagawa-paper.nvim/issues/89)) ([1352e3c](https://github.com/thesimonho/kanagawa-paper.nvim/commit/1352e3cb3a5a017cb1ab49056643ae4d2fddb0cf))
+
 ## [4.0.0](https://github.com/thesimonho/kanagawa-paper.nvim/compare/v3.1.0...v4.0.0) (2025-12-28)
 
 
