@@ -13,9 +13,9 @@ function M.get(colors, opts)
 		ScrollViewFolds = { fg = theme.ui.nontext },
 		ScrollViewSearch = { fg = theme.ui.bg_search, bold = true },
 
-		ScrollViewConflictsTop = { fg = theme.diag.error, bold = true },
-		ScrollViewConflictsMiddle = { fg = theme.diag.error, bold = true },
-		ScrollViewConflictsBottom = { fg = theme.diag.error, bold = true },
+		ScrollViewConflictsTop = { fg = theme.diff.conflict_ours, bold = true },
+		ScrollViewConflictsMiddle = { fg = theme.diff.conflict_ancestor, bold = true },
+		ScrollViewConflictsBottom = { fg = theme.diff.conflict_theirs, bold = true },
 
 		ScrollViewKeywordsFix = { link = "DiagnosticSignError" },
 		ScrollViewKeywordsHack = { link = "DiagnosticSignWarn" },

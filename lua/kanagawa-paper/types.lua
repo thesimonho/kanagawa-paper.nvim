@@ -234,6 +234,9 @@
 ---@field delete_light ColorSpec
 ---@field change_light ColorSpec
 ---@field text_light ColorSpec
+---@field conflict_ours ColorSpec
+---@field conflict_theirs ColorSpec
+---@field conflict_ancestor ColorSpec
 
 ---@class VCSElements
 ---@field added ColorSpec

@@ -133,6 +133,9 @@ M.get = function(opts, palette)
 			change_light = color(palette.canvasYellow2):blend(palette.canvasWhite4, 0.8):to_hex(),
 			text = palette.canvasTeal1,
 			text_light = color(palette.canvasTeal1):blend(palette.canvasWhite4, 0.8):to_hex(),
+			conflict_ours = palette.canvasGreen3,
+			conflict_theirs = palette.canvasBlue1,
+			conflict_ancestor = palette.canvasOrange1,
 		},
 		diag = {
 			ok = palette.canvasGreen2,
