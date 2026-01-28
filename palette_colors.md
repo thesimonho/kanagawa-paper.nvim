@@ -63,7 +63,7 @@
 | **dragonGreen2** | ![8a9a7b](https://placehold.co/40x15/8a9a7b/8a9a7b.png) | `#8a9a7b` |
 | **dragonGreen3** | ![717e67](https://placehold.co/40x15/717e67/717e67.png) | `#717e67` |
 | **dragonOrange** | ![b6927b](https://placehold.co/40x15/b6927b/b6927b.png) | `#b6927b` |
-| **dragonOrange2** | ![b98d7b](https://placehold.co/40x15/b98d7b/b98d7b.png) | `#b98d7b` |
+| **dragonOrange2** | ![9d7665](https://placehold.co/40x15/9d7665/9d7665.png) | `#9d7665` |
 | **dragonPink** | ![a292a3](https://placehold.co/40x15/a292a3/a292a3.png) | `#a292a3` |
 | **dragonRed** | ![c4746e](https://placehold.co/40x15/c4746e/c4746e.png) | `#c4746e` |
 | **dragonTeal** | ![949fb5](https://placehold.co/40x15/949fb5/949fb5.png) | `#949fb5` |
