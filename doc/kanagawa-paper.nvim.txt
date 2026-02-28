@@ -1,4 +1,4 @@
-*kanagawa-paper.nvim.txt*     For NVIM v0.8.0    Last change: 2025 December 28
+*kanagawa-paper.nvim.txt*     For NVIM v0.8.0    Last change: 2026 February 28
 
 ==============================================================================
 Table of Contents                      *kanagawa-paper.nvim-table-of-contents*
@@ -388,6 +388,7 @@ EXTRAS                                            *kanagawa-paper.nvim-extras*
 - foot <extras/foot>
 - ghostty <extras/ghostty>
 - kitty <extras/kitty>
+- nchat <extras/nchat>
 - nushell <extras/nushell>
 - tailwind <extras/tailwind>
 - terminator <extras/terminator>
