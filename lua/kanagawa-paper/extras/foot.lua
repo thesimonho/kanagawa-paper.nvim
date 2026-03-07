@@ -11,15 +11,14 @@ function M.generate(colors)
 # Upstream: ${_upstream_url}
 # URL: ${_url}
 # -----------------------------------------------------------------------------
-[cursor]
-color = ${modes.insert} ${modes.normal}
-
-[colors]
+[colors-dark]
 background = ${ui.bg}
 foreground = ${ui.fg}
 selection-background = ${ui.bg_visual}
 selection-foreground = ${ui.fg_dim}
 urls = ${syn.special3}
+
+cursor = ${modes.insert} ${modes.normal}
 
 search-box-no-match = ${term.black_bright} ${term.red_bright}
 search-box-match = ${term.blue_bright} ${term.black_bright}
