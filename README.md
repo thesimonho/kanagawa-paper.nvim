@@ -336,6 +336,7 @@ and use them in your `opts` function. Example:
 - [foot](extras/foot)
 - [ghostty](extras/ghostty)
 - [kitty](extras/kitty)
+- [nchat](extras/nchat)
 - [nushell](extras/nushell)
 - [tailwind](extras/tailwind)
 - [terminator](extras/terminator)

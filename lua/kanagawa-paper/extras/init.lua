@@ -12,6 +12,7 @@ M.mapping = {
   ghostty          = { ext = "", url = "https://github.com/ghostty-org/ghostty", label = "Ghostty" },
   kitty            = { ext = "conf", url = "https://sw.kovidgoyal.net/kitty/conf.html", label = "Kitty" },
   lazygit          = { ext = "yml", url = "https://github.com/jesseduffield/lazygit", label = "lazygit" },
+  nchat            = { ext = "conf", url = "https://github.com/d99kris/nchat", label = "nchat"},
   nushell          = { ext = "nu", url = "https://www.nushell.sh/", label = "Nushell" },
   tailwind         = { ext = "css", url = "https://tailwindcss.com/", label = "tailwind", palette = true },
   terminator       = { ext = "conf", url = "https://gnome-terminator.readthedocs.io/en/latest/config.html", label = "Terminator" },
@@ -81,11 +82,32 @@ function M.setup()
 				t["_style_name"] = "Kanagawa Paper " .. theme_name
 				t["_name"] = "kanagawa-paper-" .. theme
 				t["_theme"] = theme
-				print("[write] " .. filename)
 
 				local ok_gen, out = pcall(plugin.generate, t, groups, kopts)
-				if ok_gen then
-					Util.write(path, out)
+				if ok_gen and out then
+					if type(out) == "table" then
+						-- Handle multiple files returned as a table: { ["suffix"] = "content" }
+						for suffix, content in pairs(out) do
+							local multi_filename = extra
+								.. (info.subdir and "/" .. info.subdir .. "/" or "")
+								.. "/kanagawa-paper"
+								.. (info.sep or "-")
+								.. theme
+								.. (info.sep or "-")
+								.. suffix
+								.. "."
+								.. info.ext
+							multi_filename = string.gsub(multi_filename, "%.$", "")
+							local multi_path = vim.fn.expand("%:p:h") .. "/extras/" .. multi_filename
+
+							print("[write] " .. multi_filename)
+							Util.write(multi_path, content)
+						end
+					elseif type(out) == "string" then
+						-- Fallback for single files
+						print("[write] " .. filename)
+						Util.write(path, out)
+					end
 				end
 			end
 			::continue_theme::
@@ -118,8 +140,28 @@ function M.setup()
 				print("[write] " .. filename)
 
 				local ok_genp, outp = pcall(plugin.generate_palette, p, groups, kopts)
-				if ok_genp then
-					Util.write(path, outp)
+				if ok_genp and outp then
+					if type(outp) == "table" then
+						for suffix, content in pairs(outp) do
+							local multi_filename = extra
+								.. (info.subdir and "/" .. info.subdir .. "/" or "")
+								.. "/kanagawa-paper"
+								.. (info.sep or "-")
+								.. "palette"
+								.. (info.sep or "-")
+								.. suffix
+								.. "."
+								.. info.ext
+							multi_filename = string.gsub(multi_filename, "%.$", "")
+							local multi_path = vim.fn.expand("%:p:h") .. "/extras/" .. multi_filename
+
+							print("[write] " .. multi_filename)
+							Util.write(multi_path, content)
+						end
+					elseif type(outp) == "string" then
+						print("[write] " .. filename)
+						Util.write(path, outp)
+					end
 				end
 			end
 			::continue_palette::
