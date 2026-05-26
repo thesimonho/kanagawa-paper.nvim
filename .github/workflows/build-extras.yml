@@ -9,7 +9,9 @@ on:
       - "lua/kanagawa-paper/themes/**"
       - "lua/kanagawa-paper/lib/**"
       - "lua/kanagawa-paper/colors.lua"
-      - "lua/scripts/**"
+      - "scripts/bootstrap.lua"
+      - "scripts/build.lua"
+      - "scripts/build.sh"
 jobs:
   extras:
     name: Build Extras
