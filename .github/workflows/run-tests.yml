@@ -14,33 +14,28 @@ jobs:
       - name: Fetch PR merge commit (only on PR)
         if: github.event_name == 'pull_request'
         run: git fetch origin +refs/pull/${{ github.event.pull_request.number }}/merge
-      - name: Check for Lua file changes
-        id: lua-changes
+      - name: Check for test-relevant changes
+        id: test-changes
         run: |
-          echo "Checking for .lua file changes..."
+          echo "Checking for test-relevant changes..."
           if [[ "${{ github.event_name }}" == "workflow_dispatch" ]]; then
             echo "run-tests=true" >> $GITHUB_OUTPUT
-          elif git diff --name-only FETCH_HEAD^1 FETCH_HEAD | grep -E '\.lua$'; then
+          elif git diff --name-only FETCH_HEAD^1 FETCH_HEAD | grep -E '(^scripts/test\.sh$|^\.github/workflows/run-tests\.yml$|\.lua$)'; then
             echo "run-tests=true" >> $GITHUB_OUTPUT
           else
             echo "run-tests=false" >> $GITHUB_OUTPUT
           fi
-      - name: Install Lua
-        if: steps.lua-changes.outputs.run-tests == 'true'
-        run: |
-          sudo apt-get install lua5.1 luarocks
-          sudo luarocks install busted
       - uses: rhysd/action-setup-vim@v1
-        if: steps.lua-changes.outputs.run-tests == 'true'
+        if: steps.test-changes.outputs.run-tests == 'true'
         with:
           neovim: true
       - name: Set permissions
-        if: steps.lua-changes.outputs.run-tests == 'true'
+        if: steps.test-changes.outputs.run-tests == 'true'
         run: chmod +x scripts/test.sh
       - name: Run test script
-        if: steps.lua-changes.outputs.run-tests == 'true'
+        if: steps.test-changes.outputs.run-tests == 'true'
         run: |
           scripts/test.sh || { echo "❌ Test script failed!"; exit 1; }
       - name: Mark test as skipped
-        if: steps.lua-changes.outputs.run-tests == 'false'
-        run: echo "✅ No .lua file changes, skipping tests."
+        if: steps.test-changes.outputs.run-tests == 'false'
+        run: echo "✅ No test-relevant changes, skipping tests."

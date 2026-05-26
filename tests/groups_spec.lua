@@ -10,7 +10,7 @@ describe("group is loadable", function()
 		name = name:match("(.+)%.lua$")
 		it(name .. " has a plugin mapping", function()
 			local mapping = false
-			for _, v in pairs(Groups.plugins) do
+			for _, v in pairs(Groups.get_all_plugins()) do
 				if v == name then
 					mapping = true
 					break
@@ -25,7 +25,7 @@ describe("group config", function()
 	it("does all plugins", function()
 		local opts = Config.extend({ all_plugins = true, auto_plugins = false })
 		local all = {}
-		for _, name in pairs(Groups.plugins) do
+		for _, name in pairs(Groups.get_all_plugins()) do
 			all[name] = true
 		end
 		local colors = require("kanagawa-paper.colors").setup(opts)
