@@ -8,3 +8,7 @@ test *args:
 
 test-targets:
     @scripts/test.sh tests/targets_spec.lua
+
+# Open the compact syntax specimen using your normal Neovim configuration.
+syntax-specimen:
+    @nvim -c 'lua dofile([[{{justfile_directory()}}/scripts/syntax-specimen.lua]])'
