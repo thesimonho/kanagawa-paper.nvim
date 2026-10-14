@@ -1,6 +1,3 @@
--- Open from Neovim: :luafile /home/simon/Projects/kanagawa-paper.nvim/scripts/syntax-specimen.lua
--- Each sample has one space of Normal text on either side. Theme reloads update
--- the existing highlight groups automatically; no parser or language server is used.
 local samples = {
 	{ "foreground", "plain", "Normal" },
 	{ "attribute", "@property", "@attribute" },
