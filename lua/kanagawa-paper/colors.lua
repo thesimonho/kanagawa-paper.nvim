@@ -6,24 +6,6 @@ local scale_log_asymmetric = util.scale_log_asymmetric
 
 local M = {}
 
-local canvas_darken_amount = 0.15
-
---- TODO: temporary. darken the actual hex values after testing
----@param hex ColorSpec
----@return ColorSpec
-local function darken_canvas_color(hex)
-	local red, green, blue = hex:match("^#(%x%x)(%x%x)(%x%x)$")
-	if not red then
-		return hex
-	end
-
-	local function darken_channel(channel)
-		return math.floor(tonumber(channel, 16) * (1 - canvas_darken_amount) + 0.5)
-	end
-
-	return string.format("#%02x%02x%02x", darken_channel(red), darken_channel(green), darken_channel(blue))
-end
-
 ---@param opts? KanagawaConfig
 ---@return KanagawaColors
 function M.setup(opts)
@@ -187,31 +169,31 @@ M.palette = {
 	dragonWhite = "#c5c9c5",
 	dragonYellow = "#c4b28a", -- ink primary accent
 
-	canvasAqua1 = darken_canvas_color("#7b958e"),
-	canvasAsh1 = darken_canvas_color("#637263"),
-	canvasBlue1 = darken_canvas_color("#809ba7"),
-	canvasBlue2 = darken_canvas_color("#6b8998"),
-	canvasBlue3 = darken_canvas_color("#577888"),
-	canvasBlue4 = darken_canvas_color("#516e7d"),
-	canvasBlue5 = darken_canvas_color("#3a515e"),
-	canvasCyan1 = darken_canvas_color("#4a905d"),
-	canvasGray1 = darken_canvas_color("#aeaea6"),
-	canvasGray2 = darken_canvas_color("#8e8a80"),
-	canvasGray3 = darken_canvas_color("#73787d"),
-	canvasGreen1 = darken_canvas_color("#7e9579"),
-	canvasGreen2 = darken_canvas_color("#7a8c6a"),
-	canvasGreen3 = darken_canvas_color("#9ba98e"),
-	canvasOrange1 = darken_canvas_color("#b28d77"),
-	canvasOrange2 = darken_canvas_color("#a8826a"),
-	canvasPink1 = darken_canvas_color("#9e7e98"),
-	canvasPink2 = darken_canvas_color("#c1b4c1"),
-	canvasPink3 = darken_canvas_color("#d4cdd4"),
-	canvasRed1 = darken_canvas_color("#c27672"),
-	canvasTeal1 = darken_canvas_color("#7e8faf"), -- canvas primary accent
-	canvasViolet1 = darken_canvas_color("#7880a5"),
-	canvasViolet2 = darken_canvas_color("#9ba1bf"),
-	canvasYellow1 = darken_canvas_color("#a7956a"),
-	canvasYellow2 = darken_canvas_color("#b4a88a"),
+	canvasAqua1 = "#5c8388",
+	canvasAsh1 = "#536053",
+	canvasBlue1 = "#6c828c",
+	canvasBlue2 = "#5a7380",
+	canvasBlue3 = "#496572",
+	canvasBlue4 = "#445c69",
+	canvasBlue5 = "#31444f",
+	canvasCyan1 = "#3e794e",
+	canvasGray1 = "#92928b",
+	canvasGray2 = "#77746c",
+	canvasGray3 = "#616569",
+	canvasGreen1 = "#6a7d66",
+	canvasGreen2 = "#667659",
+	canvasGreen3 = "#828e77",
+	canvasOrange1 = "#a1805e",
+	canvasOrange2 = "#8d6d59",
+	canvasPink1 = "#947992",
+	canvasPink2 = "#a297a2",
+	canvasPink3 = "#b2acb2",
+	canvasRed1 = "#a36360",
+	canvasTeal1 = "#6a7893", -- canvas primary accent
+	canvasViolet1 = "#656c8b",
+	canvasViolet2 = "#8287a0",
+	canvasYellow1 = "#91825e",
+	canvasYellow2 = "#978d74",
 	canvasWhite1 = "#cbc8bc",
 	canvasWhite2 = "#d1cfc5",
 	canvasWhite3 = "#d8d8d2",
