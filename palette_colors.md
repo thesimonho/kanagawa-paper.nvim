@@ -1,4 +1,4 @@
-# Palette Colors (CI regeneration smoke test)
+# Palette Colors
 
 (this file is auto generated from `shared/lua/kanagawa-paper/palette.lua`)
 
