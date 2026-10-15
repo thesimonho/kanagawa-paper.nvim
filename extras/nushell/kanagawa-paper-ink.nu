@@ -1,6 +1,6 @@
 # -----------------------------------------------------------------------------
 # Kanagawa Paper Ink
-# Upstream: https://github.com/thesimonho/kanagawa-paper.nvim/master/extras/nushell/kanagawa-paper-ink.nu
+# Upstream: https://github.com/thesimonho/kanagawa-paper/tree/main/extras/nushell/kanagawa-paper-ink.nu
 # URL: https://www.nushell.sh/
 # -----------------------------------------------------------------------------
 

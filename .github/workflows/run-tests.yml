@@ -1,41 +1,45 @@
-name: Run Tests
+name: Validate
 on:
   workflow_dispatch:
   pull_request:
-    types: [opened, synchronize, reopened]
+  push:
+    branches: [main, automation/release]
+permissions:
+  contents: read
 jobs:
-  tests:
-    name: Run tests
+  checks:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v6
         with:
-          ssh-key: ${{ secrets.DEPLOY_KEY }}
-      - name: Fetch PR merge commit (only on PR)
-        if: github.event_name == 'pull_request'
-        run: git fetch origin +refs/pull/${{ github.event.pull_request.number }}/merge
-      - name: Check for test-relevant changes
-        id: test-changes
-        run: |
-          echo "Checking for test-relevant changes..."
-          if [[ "${{ github.event_name }}" == "workflow_dispatch" ]]; then
-            echo "run-tests=true" >> $GITHUB_OUTPUT
-          elif git diff --name-only FETCH_HEAD^1 FETCH_HEAD | grep -E '(^scripts/test\.sh$|^\.github/workflows/run-tests\.yml$|\.lua$)'; then
-            echo "run-tests=true" >> $GITHUB_OUTPUT
-          else
-            echo "run-tests=false" >> $GITHUB_OUTPUT
-          fi
+          fetch-depth: 0
+      - uses: actions/setup-python@v6
+        with:
+          python-version: '3.12'
+      - uses: actions/setup-node@v6
+        with:
+          node-version: '22'
+          cache: npm
+          cache-dependency-path: scripts/release/package-lock.json
       - uses: rhysd/action-setup-vim@v1
-        if: steps.test-changes.outputs.run-tests == 'true'
         with:
           neovim: true
-      - name: Set permissions
-        if: steps.test-changes.outputs.run-tests == 'true'
-        run: chmod +x scripts/test.sh
-      - name: Run test script
-        if: steps.test-changes.outputs.run-tests == 'true'
+          version: v0.11.5
+      - run: pip install -r scripts/release/requirements.txt
+      - run: npm ci --prefix scripts/release --ignore-scripts
+      - run: scripts/test.sh
+      - run: python -m unittest discover -s tests -p 'test_*.py'
+      - run: python scripts/assemble.py
+      - name: Package VS Code
+        working-directory: dist/vscode
+        run: ../../scripts/release/node_modules/.bin/vsce package --out ../vscode.vsix
+      - name: Check release freshness
+        if: github.head_ref == 'automation/release' || github.ref == 'refs/heads/automation/release'
         run: |
-          scripts/test.sh || { echo "❌ Test script failed!"; exit 1; }
-      - name: Mark test as skipped
-        if: steps.test-changes.outputs.run-tests == 'false'
-        run: echo "✅ No test-relevant changes, skipping tests."
+          git fetch origin main
+          RELEASE_BASE_SHA=$(git rev-parse origin/main) python scripts/release/coordinator.py check-plan
+      - name: Check generated extras and palette
+        run: |
+          scripts/build.sh
+          nvim --headless --clean -l scripts/generate_palette.lua
+          git diff --exit-code -- extras palette_colors.md

@@ -20,7 +20,15 @@ function M.setup()
 
 	for _, directory in ipairs({ "packages/neovim", "shared", "generators" }) do
 		vim.opt.runtimepath:prepend(cwd .. "/" .. directory)
-		package.path = cwd .. "/" .. directory .. "/lua/?.lua;" .. cwd .. "/" .. directory .. "/lua/?/init.lua;" .. package.path
+		package.path = cwd
+			.. "/"
+			.. directory
+			.. "/lua/?.lua;"
+			.. cwd
+			.. "/"
+			.. directory
+			.. "/lua/?/init.lua;"
+			.. package.path
 	end
 	vim.opt.packpath = vim.opt.runtimepath:get()
 	vim.opt.loadplugins = false

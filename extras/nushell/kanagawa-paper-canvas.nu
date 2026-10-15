@@ -1,6 +1,6 @@
 # -----------------------------------------------------------------------------
 # Kanagawa Paper Canvas
-# Upstream: https://github.com/thesimonho/kanagawa-paper.nvim/master/extras/nushell/kanagawa-paper-canvas.nu
+# Upstream: https://github.com/thesimonho/kanagawa-paper/tree/main/extras/nushell/kanagawa-paper-canvas.nu
 # URL: https://www.nushell.sh/
 # -----------------------------------------------------------------------------
 

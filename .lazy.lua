@@ -56,7 +56,14 @@ vim.api.nvim_create_autocmd("BufWritePost", {
 
 return {
 	{
+		"thesimonho/kanagawa-paper",
+		optional = true,
+		dir = root .. "/packages/neovim",
+		dev = false,
+	},
+	{
 		"thesimonho/kanagawa-paper.nvim",
+		optional = true,
 		name = "kanagawa-paper.nvim",
 		dir = root .. "/packages/neovim",
 		dev = false,

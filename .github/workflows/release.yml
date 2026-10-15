@@ -1,0 +1,40 @@
+name: Application releases
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+concurrency:
+  group: application-releases
+  cancel-in-progress: false
+permissions:
+  contents: write
+  pull-requests: write
+  deployments: write
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          fetch-depth: 0
+          # Pushes made with this key trigger validation on automation/release.
+          ssh-key: ${{ secrets.DEPLOY_KEY }}
+      - uses: actions/setup-python@v6
+        with:
+          python-version: '3.12'
+      - uses: actions/setup-node@v6
+        with:
+          node-version: '22'
+          cache: npm
+          cache-dependency-path: scripts/release/package-lock.json
+      - uses: rhysd/action-setup-vim@v1
+        with:
+          neovim: true
+          version: v0.11.5
+      - run: pip install -r scripts/release/requirements.txt
+      - run: npm ci --prefix scripts/release --ignore-scripts
+      - name: Reconcile publication and prepare combined release PR
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          VSCE_PAT: ${{ secrets.VSCE_PAT }}
+        run: python scripts/release/coordinator.py run

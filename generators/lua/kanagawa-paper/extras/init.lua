@@ -38,7 +38,8 @@ local function load_colors(opts)
 	return colors, groups, kopts, nil
 end
 
-function M.setup()
+function M.setup(output)
+	output = output or (vim.uv.cwd() .. "/extras")
 	vim.o.background = "dark"
 
 	local themes = {
@@ -73,11 +74,11 @@ function M.setup()
 					.. "."
 					.. info.ext
 				filename = string.gsub(filename, "%.$", "") -- remove trailing dot when no extension
-				local path = vim.fn.expand("%:p:h") .. "/extras/" .. filename
+				local path = output .. "/" .. filename
 
 				local t = vim.deepcopy(colors.theme)
 				t["_url"] = info.url
-				t["_upstream_url"] = "https://github.com/thesimonho/kanagawa-paper.nvim/master/extras/" .. filename
+				t["_upstream_url"] = "https://github.com/thesimonho/kanagawa-paper/tree/main/extras/" .. filename
 				t["_package_name"] = "Kanagawa Paper"
 				t["_style_name"] = "Kanagawa Paper " .. theme_name
 				t["_name"] = "kanagawa-paper-" .. theme
@@ -98,7 +99,7 @@ function M.setup()
 								.. "."
 								.. info.ext
 							multi_filename = string.gsub(multi_filename, "%.$", "")
-							local multi_path = vim.fn.expand("%:p:h") .. "/extras/" .. multi_filename
+							local multi_path = output .. "/" .. multi_filename
 
 							print("[write] " .. multi_filename)
 							Util.write(multi_path, content)
@@ -129,11 +130,11 @@ function M.setup()
 					.. "."
 					.. info.ext
 				filename = string.gsub(filename, "%.$", "") -- remove trailing dot when no extension
-				local path = vim.fn.expand("%:p:h") .. "/extras/" .. filename
+				local path = output .. "/" .. filename
 
 				local p = vim.deepcopy(colors.palette)
 				p["_url"] = info.url
-				p["_upstream_url"] = "https://github.com/thesimonho/kanagawa-paper.nvim/master/extras/" .. filename
+				p["_upstream_url"] = "https://github.com/thesimonho/kanagawa-paper/tree/main/extras/" .. filename
 				p["_package_name"] = "Kanagawa Paper"
 				p["_style_name"] = "Kanagawa Paper Palette"
 				p["_name"] = "kanagawa-paper-palette"
@@ -153,7 +154,7 @@ function M.setup()
 								.. "."
 								.. info.ext
 							multi_filename = string.gsub(multi_filename, "%.$", "")
-							local multi_path = vim.fn.expand("%:p:h") .. "/extras/" .. multi_filename
+							local multi_path = output .. "/" .. multi_filename
 
 							print("[write] " .. multi_filename)
 							Util.write(multi_path, content)

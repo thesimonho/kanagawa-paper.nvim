@@ -376,11 +376,12 @@ How to add a new extra template:
 3. To check that your template compiles properly, run `./scripts/build.sh` and check the newly compiled styles in the root [extras](https://github.com/thesimonho/kanagawa-paper/tree/main/extras/) directory.
 
 > [!IMPORTANT]
-> Please DO NOT commit the compiled files, as they are already automatically built by the CI.
+> Run `just generate` after changing shared colors or generators. Include changed extras and palette documentation in the same source change. CI checks that these outputs are current.
 
 ## 👏 Acknowledgements
 
-- [Kanagawa](https://github.com/rebelot/kanagawa.nvim)
+- [Kanagawa for Neovim](https://github.com/rebelot/kanagawa.nvim)
+- [Kanagawa for VS Code](https://github.com/barklan/kanagawa.vscode)
 - [Tokyo Night](https://github.com/folke/tokyonight.nvim)
 
 ## Development

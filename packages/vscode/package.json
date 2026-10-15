@@ -48,6 +48,6 @@
     "README.md",
     "CHANGELOG.md",
     "LICENSE",
-    "source.json"
+    "*.json"
   ]
 }
