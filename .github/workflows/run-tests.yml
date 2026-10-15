@@ -27,7 +27,7 @@ jobs:
           version: v0.11.5
       - run: pip install -r scripts/release/requirements.txt
       - run: npm ci --prefix scripts/release --ignore-scripts
-      - run: scripts/test.sh
+      - run: bash scripts/test.sh
       - run: python -m unittest discover -s tests -p 'test_*.py'
       - run: python scripts/assemble.py
       - name: Package VS Code
@@ -40,6 +40,6 @@ jobs:
           RELEASE_BASE_SHA=$(git rev-parse origin/main) python scripts/release/coordinator.py check-plan
       - name: Check generated extras and palette
         run: |
-          scripts/build.sh
+          bash scripts/build.sh
           nvim --headless --clean -l scripts/generate_palette.lua
           git diff --exit-code -- extras palette_colors.md
