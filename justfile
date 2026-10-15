@@ -4,7 +4,7 @@ default:
     @just --list
 
 test *args:
-    @scripts/test.sh {{ args }}
+    @bash scripts/test.sh {{ args }}
 
 test-targets:
     @python3 -m unittest discover -s tests -p "test_*.py"
@@ -17,12 +17,12 @@ syntax-specimen:
 build target="all":
     @python3 scripts/assemble.py {{ target }}
 
-# Refresh checked-in extras and palette documentation before committing input changes.
+# Optionally preview the generated files that PR automation maintains.
 generate:
-    @scripts/build.sh
+    @bash scripts/build.sh
     @nvim --headless --clean -l scripts/generate_palette.lua
 
 check:
-    @scripts/test.sh
+    @bash scripts/test.sh
     @python3 -m unittest discover -s tests -p "test_*.py"
     @python3 scripts/assemble.py
