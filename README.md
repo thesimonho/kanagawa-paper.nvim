@@ -376,7 +376,7 @@ How to add a new extra template:
 3. To check that your template compiles properly, run `./scripts/build.sh` and check the newly compiled styles in the root [extras](https://github.com/thesimonho/kanagawa-paper/tree/main/extras/) directory.
 
 > [!IMPORTANT]
-> CI automatically updates extras and the palette preview on pull requests from this repository, then validates the generated commit. Local generation is optional. For fork contributions that need generated updates, a maintainer moves the contribution to a repository branch so CI can commit them.
+> Run `just generate` after changing shared colors or generators. Include changed extras and palette documentation in the same source change. CI checks that these outputs are current.
 
 ## 👏 Acknowledgements
 

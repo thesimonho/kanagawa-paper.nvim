@@ -7,55 +7,9 @@ on:
 permissions:
   contents: read
 jobs:
-  generate:
-    if: github.event_name == 'pull_request' && github.event.pull_request.head.repo.full_name == github.repository
-    runs-on: ubuntu-latest
-    outputs:
-      changed: ${{ steps.commit.outputs.changed }}
-    steps:
-      - uses: actions/checkout@v6
-        with:
-          ref: ${{ github.event.pull_request.head.sha }}
-          ssh-key: ${{ secrets.DEPLOY_KEY }}
-      - uses: rhysd/action-setup-vim@v1
-        with:
-          neovim: true
-          version: v0.11.5
-      - name: Generate extras and palette
-        run: |
-          bash scripts/build.sh
-          nvim --headless --clean -l scripts/generate_palette.lua
-      - name: Commit generated files to the PR branch
-        id: commit
-        env:
-          PR_BRANCH: ${{ github.head_ref }}
-          DEFAULT_BRANCH: ${{ github.event.repository.default_branch }}
-        run: |
-          if [[ "$PR_BRANCH" == "$DEFAULT_BRANCH" || "$PR_BRANCH" == main || "$PR_BRANCH" == master ]]; then
-            echo "Refusing to write generated files to a default branch"
-            exit 1
-          fi
-          git add -A -- extras palette_colors.md
-          if git diff --cached --quiet; then
-            echo "changed=false" >> "$GITHUB_OUTPUT"
-            exit 0
-          fi
-          git config user.name 'github-actions[bot]'
-          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git commit -m 'chore: refresh generated extras and palette'
-          # A normal push rejects concurrent source edits; never overwrite them.
-          # The deploy key triggers validation again on the generated commit.
-          git push origin "HEAD:refs/heads/$PR_BRANCH"
-          echo "changed=true" >> "$GITHUB_OUTPUT"
   checks:
-    needs: generate
-    if: >-
-      always() && !cancelled() && needs.generate.outputs.changed != 'true'
     runs-on: ubuntu-latest
     steps:
-      - name: Require successful generation
-        if: needs.generate.result != 'success' && needs.generate.result != 'skipped'
-        run: exit 1
       - uses: actions/checkout@v6
         with:
           fetch-depth: 0
@@ -88,4 +42,4 @@ jobs:
         run: |
           bash scripts/build.sh
           nvim --headless --clean -l scripts/generate_palette.lua
-          test -z "$(git status --porcelain -- extras palette_colors.md)"
+          git diff --exit-code -- extras palette_colors.md
