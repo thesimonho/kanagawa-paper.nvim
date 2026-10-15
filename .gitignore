@@ -1,8 +1,12 @@
 images/
-/doc/tags
+/packages/neovim/doc/tags
 .lua
 .tests
 /extras/**
 !/extras/README.md
 tests/languages/
 .DS_Store
+
+/dist/
+/.venv/
+**/__pycache__/

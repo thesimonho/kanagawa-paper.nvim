@@ -18,7 +18,10 @@ function M.setup()
 	ensure_directory(vim.env.XDG_DATA_HOME)
 	ensure_directory(vim.env.XDG_STATE_HOME)
 
-	vim.opt.runtimepath:prepend(cwd)
+	for _, directory in ipairs({ "packages/neovim", "shared", "generators" }) do
+		vim.opt.runtimepath:prepend(cwd .. "/" .. directory)
+		package.path = cwd .. "/" .. directory .. "/lua/?.lua;" .. cwd .. "/" .. directory .. "/lua/?/init.lua;" .. package.path
+	end
 	vim.opt.packpath = vim.opt.runtimepath:get()
 	vim.opt.loadplugins = false
 	vim.opt.shadafile = "NONE"

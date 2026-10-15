@@ -1,7 +1,7 @@
 describe("extra is loadable", function()
 	local extras = require("kanagawa-paper.extras")
 
-	for name in vim.fs.dir("lua/kanagawa-paper/extras") do
+	for name in vim.fs.dir("generators/lua/kanagawa-paper/extras") do
 		name = name:match("(.+)%.lua$")
 		if name ~= "init" then
 			it(name .. " has a generate function", function()

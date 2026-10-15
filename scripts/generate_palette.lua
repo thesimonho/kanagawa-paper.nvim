@@ -1,5 +1,5 @@
-package.path = "lua/?.lua;lua/?/init.lua;lua/?/?.lua;" .. package.path
-local palette = require("kanagawa-paper.colors").palette
+package.path = "shared/lua/?.lua;" .. package.path
+local palette = require("kanagawa-paper.palette")
 
 local ordered = {}
 for name in pairs(palette) do
@@ -14,7 +14,7 @@ if not md then
 end
 
 md:write("# Palette Colors\n\n")
-md:write("(this file is auto generated from `lua/kanagawa-paper/colors.lua`)\n\n")
+md:write("(this file is auto generated from `shared/lua/kanagawa-paper/palette.lua`)\n\n")
 
 md:write([[
 | Name  | Color  | Hex   |

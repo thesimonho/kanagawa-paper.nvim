@@ -1,5 +1,6 @@
 # Changelog
 
+<!-- version list -->
 ## [4.1.0](https://github.com/thesimonho/kanagawa-paper.nvim/compare/v4.0.0...v4.1.0) (2026-10-14)
 
 

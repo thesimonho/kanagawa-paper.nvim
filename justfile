@@ -7,8 +7,12 @@ test *args:
     @scripts/test.sh {{ args }}
 
 test-targets:
-    @scripts/test.sh tests/targets_spec.lua
+    @python3 -m unittest discover -s tests -p "test_*.py"
 
 # Open the compact syntax specimen using your normal Neovim configuration.
 syntax-specimen:
     @nvim -c 'lua dofile([[{{ justfile_directory() }}/scripts/syntax_specimen.lua]])'
+
+# Assemble installable application trees.
+build target="all":
+    @python3 scripts/assemble.py {{ target }}

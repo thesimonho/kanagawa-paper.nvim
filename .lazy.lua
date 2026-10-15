@@ -1,7 +1,11 @@
+local spec = assert(vim.fs.find(".lazy.lua", { upward = true, path = vim.uv.cwd() })[1])
+local root = vim.fn.fnamemodify(spec, ":p:h")
+vim.opt.runtimepath:prepend(root .. "/shared")
+
 local M = {
 	module = "kanagawa-paper",
 	colorscheme = "kanagawa-paper-canvas",
-	opts = { _theme = "canvas", all_plugins = true },
+	opts = { _theme = "canvas", all_plugins = true, cache = false },
 	globals = { vim = vim },
 	cache = {}, ---@type table<string, boolean>
 }
@@ -21,7 +25,7 @@ end
 local function reload()
 	print("🚀 Reloading " .. M.module)
 	for k in pairs(package.loaded) do
-		if k:find("^" .. M.module) then
+		if k:sub(1, #M.module) == M.module then
 			package.loaded[k] = nil
 		end
 	end
@@ -29,7 +33,7 @@ local function reload()
 	require(M.module).setup(M.opts)
 	M.reset()
 	local colorscheme = vim.g.colors_name or M.colorscheme
-	colorscheme = colorscheme:find(M.colorscheme) and colorscheme or M.colorscheme
+	colorscheme = colorscheme:find(M.colorscheme, 1, true) and colorscheme or M.colorscheme
 	vim.cmd.colorscheme(colorscheme)
 	local hi = require("mini.hipatterns")
 	for _, buf in ipairs(require("mini.hipatterns").get_enabled_buffers()) do
@@ -51,6 +55,12 @@ vim.api.nvim_create_autocmd("BufWritePost", {
 })
 
 return {
+	{
+		"thesimonho/kanagawa-paper.nvim",
+		name = "kanagawa-paper.nvim",
+		dir = root .. "/packages/neovim",
+		dev = false,
+	},
 	{
 		"nvim-mini/mini.hipatterns",
 		opts = function(_, opts)

@@ -1,0 +1,674 @@
+{
+  "$schema": "vscode://schemas/color-theme",
+  "name": "Ink",
+  "type": "dark",
+  "semanticHighlighting": true,
+  "colors": {
+    "actionBar.toggledBackground": "@palette.sumiInk6",
+    "activityBar.activeBorder": "@palette.dragonBlue",
+    "activityBar.background": "@palette.sumiInk0",
+    "activityBar.border": "@palette.sumiInk4",
+    "activityBar.foreground": "@palette.dragonBlue",
+    "activityBar.inactiveForeground": "@palette.dragonAsh",
+    "activityBarBadge.background": "@palette.dragonBlue",
+    "activityBarBadge.foreground": "@palette.fujiWhite",
+    "badge.background": "@palette.katanaGray",
+    "badge.foreground": "@palette.fujiWhite",
+    "button.background": "@palette.dragonBlue",
+    "button.border": "#00000000",
+    "button.foreground": "@palette.fujiWhite",
+    "button.hoverBackground": "@palette.dragonBlue4",
+    "button.secondaryBackground": "@palette.sumiInk3",
+    "button.secondaryForeground": "@palette.dragonWhite",
+    "button.secondaryHoverBackground": "@palette.sumiInk4",
+    "chat.editedFileForeground": "@palette.boatYellow2",
+    "chat.slashCommandBackground": "@palette.dragonBlue5",
+    "chat.slashCommandForeground": "@palette.springViolet2",
+    "checkbox.background": "@palette.sumiInk2",
+    "checkbox.border": "@palette.sumiInk5",
+    "debugToolBar.background": "@palette.sumiInk0",
+    "descriptionForeground": "@palette.dragonWhite",
+    "dropdown.background": "@palette.sumiInk2",
+    "dropdown.border": "@palette.sumiInk5",
+    "dropdown.foreground": "@palette.dragonWhite",
+    "dropdown.listBackground": "@palette.sumiInk3",
+    "diffEditor.insertedTextBackground": "@palette.winterGreen:80",
+    "editor.background": "@palette.sumiInk3",
+    "editorBracketMatch.background": "@palette.sumiInk0",
+    "editorBracketMatch.border": "@palette.sumiInk6",
+    "editorCursor.background": "@palette.sumiInk3",
+    "editorCursor.foreground": "@palette.oldWhite",
+    "editor.findMatchBackground": "@palette.boatYellow1",
+    "editor.findMatchBorder": "@palette.boatYellow2",
+    "editor.findMatchHighlightBackground": "@palette.dragonBlue5:80",
+    "editor.foreground": "@palette.dragonWhite",
+    "editorHoverWidget.background": "@palette.sumiInk3",
+    "editorHoverWidget.border": "@palette.sumiInk4",
+    "editorHoverWidget.highlightForeground": "@palette.dragonBlue",
+    "editorInlayHint.background": "@palette.sumiInk3",
+    "editorInlayHint.foreground": "@palette.fujiGray",
+    "editorMarkerNavigation.background": "@palette.sumiInk5",
+    "editorRuler.foreground": "@palette.sumiInk5",
+    "editor.selectionBackground": "@palette.sumiInk5:80",
+    "editor.selectionHighlightBorder": "@palette.sumiInk6",
+    "editor.lineHighlightBackground": "@palette.sumiInk4",
+    "editorSuggestWidget.background": "@palette.waveBlue1",
+    "editorSuggestWidget.border": "@palette.waveBlue1",
+    "editorSuggestWidget.selectedBackground": "@palette.waveBlue2",
+    "editorWhitespace.foreground": "@palette.sumiInk4",
+    "editor.wordHighlightBackground": "@palette.sumiInk5:4d",
+    "editor.wordHighlightBorder": "@palette.sumiInk6",
+    "editor.wordHighlightStrongBackground": "@palette.sumiInk5:4d",
+    "editor.wordHighlightStrongBorder": "@palette.sumiInk6",
+    "editor.inactiveSelectionBackground": "@theme.ui.bg_visual:80",
+    "editor.selectionHighlightBackground": "@theme.ui.bg_visual:80",
+    "editorGroup.border": "@palette.dragonBlack6",
+    "editorGroupHeader.tabsBackground": "@palette.sumiInk0",
+    "editorGroupHeader.tabsBorder": "@palette.sumiInk4",
+    "editorGutter.addedBackground": "@palette.dragonGreen",
+    "editorGutter.deletedBackground": "@palette.waveRed",
+    "editorGutter.modifiedBackground": "@palette.dragonYellow",
+    "editorIndentGuide.activeBackground1": "@palette.dragonViolet",
+    "editorIndentGuide.background1": "@palette.sumiInk5",
+    "editorBracketHighlight.foreground1": "@palette.dragonRed",
+    "editorBracketHighlight.foreground2": "@palette.dragonPink",
+    "editorBracketHighlight.foreground3": "@palette.dragonBlue",
+    "editorBracketHighlight.foreground4": "@palette.dragonOrange2",
+    "editorBracketHighlight.foreground5": "@palette.dragonGreen",
+    "editorBracketHighlight.foreground6": "@palette.dragonAsh",
+    "editorBracketHighlight.unexpectedBracket.foreground": "@palette.dragonRed",
+    "editorBracketPairGuide.activeBackground1": "@palette.dragonRed",
+    "editorBracketPairGuide.activeBackground2": "@palette.dragonPink",
+    "editorBracketPairGuide.activeBackground3": "@palette.dragonBlue",
+    "editorBracketPairGuide.activeBackground4": "@palette.dragonOrange2",
+    "editorBracketPairGuide.activeBackground5": "@palette.dragonGreen",
+    "editorBracketPairGuide.activeBackground6": "@palette.dragonAsh",
+    "editorBracketPairGuide.background1": "@palette.dragonRed:66",
+    "editorBracketPairGuide.background2": "@palette.dragonPink:66",
+    "editorBracketPairGuide.background3": "@palette.dragonBlue:66",
+    "editorBracketPairGuide.background4": "@palette.dragonOrange2:66",
+    "editorBracketPairGuide.background5": "@palette.dragonGreen:66",
+    "editorBracketPairGuide.background6": "@palette.dragonAsh:66",
+    "editorLineNumber.activeForeground": "@palette.dragonWhite",
+    "editorLineNumber.foreground": "@palette.dragonGray3",
+    "editorOverviewRuler.border": "@palette.dragonBlack1",
+    "editorWidget.background": "@palette.sumiInk4",
+    "editorError.foreground": "@palette.waveRed",
+    "editorWarning.foreground": "@palette.dragonYellow",
+    "errorForeground": "@palette.waveRed",
+    "focusBorder": "@palette.dragonBlue",
+    "foreground": "@palette.dragonWhite",
+    "gitDecoration.addedResourceForeground": "@palette.dragonGreen",
+    "gitDecoration.conflictingResourceForeground": "@palette.boatYellow2",
+    "gitDecoration.deletedResourceForeground": "@palette.waveRed",
+    "gitDecoration.ignoredResourceForeground": "@palette.fujiGray",
+    "gitDecoration.modifiedResourceForeground": "@palette.dragonYellow",
+    "gitDecoration.untrackedResourceForeground": "@palette.dragonGreen",
+    "icon.foreground": "@palette.dragonWhite",
+    "input.background": "@palette.sumiInk2",
+    "input.border": "@palette.sumiInk5",
+    "input.foreground": "@palette.dragonWhite",
+    "input.placeholderForeground": "@palette.dragonGray3",
+    "inputOption.activeBackground": "@palette.dragonBlue3",
+    "inputOption.activeBorder": "@palette.dragonBlue2",
+    "keybindingLabel.foreground": "@palette.dragonWhite",
+    "list.activeSelectionBackground": "@palette.sumiInk5",
+    "list.activeSelectionForeground": "@palette.dragonWhite",
+    "list.activeSelectionIconForeground": "@palette.fujiWhite",
+    "list.dropBackground": "@palette.sumiInk5",
+    "list.warningForeground": "@palette.dragonYellow",
+    "list.errorForeground": "@palette.waveRed",
+    "list.focusBackground": "@palette.sumiInk4",
+    "list.focusForeground": "@palette.dragonWhite",
+    "list.highlightForeground": "@palette.dragonBlue2",
+    "list.hoverBackground": "@palette.sumiInk5",
+    "list.hoverForeground": "@palette.dragonWhite",
+    "list.inactiveSelectionBackground": "@palette.sumiInk4",
+    "list.inactiveSelectionForeground": "@palette.dragonWhite",
+    "menu.background": "@palette.sumiInk3",
+    "menu.border": "@palette.dragonBlack6",
+    "menu.foreground": "@palette.dragonWhite",
+    "menu.selectionBackground": "@palette.dragonBlue",
+    "menu.selectionForeground": "@palette.fujiWhite",
+    "menu.separatorBackground": "@palette.dragonBlack6",
+    "minimapGutter.addedBackground": "@palette.dragonGreen",
+    "minimapGutter.deletedBackground": "@palette.waveRed",
+    "minimapGutter.modifiedBackground": "@palette.dragonYellow",
+    "notificationCenterHeader.background": "@palette.sumiInk3",
+    "notificationCenterHeader.foreground": "@palette.dragonWhite",
+    "notifications.background": "@palette.sumiInk3",
+    "notifications.border": "@palette.sumiInk4",
+    "notifications.foreground": "@palette.dragonWhite",
+    "panel.background": "@palette.sumiInk0",
+    "panel.border": "@palette.sumiInk4",
+    "panelSectionHeader.background": "@palette.sumiInk0",
+    "panelInput.border": "@palette.sumiInk4",
+    "panelTitle.activeBorder": "@palette.dragonBlue",
+    "panelTitle.activeForeground": "@palette.dragonWhite",
+    "panelTitle.inactiveForeground": "@palette.dragonWhite",
+    "peekViewEditor.background": "@palette.sumiInk3",
+    "peekViewEditor.matchHighlightBackground": "@palette.dragonOrange2",
+    "peekViewResult.background": "@palette.sumiInk3",
+    "peekViewResult.matchHighlightBackground": "@palette.dragonOrange2",
+    "peekView.border": "@palette.sumiInk6",
+    "pickerGroup.border": "@palette.sumiInk5",
+    "ports.iconRunningProcessForeground": "@palette.autumnGreen",
+    "progressBar.background": "@palette.dragonBlue",
+    "quickInput.background": "@palette.dragonBlack4",
+    "quickInput.foreground": "@palette.dragonWhite",
+    "quickInputList.focusBackground": "@palette.sumiInk4",
+    "quickInputList.focusForeground": "@palette.dragonWhite",
+    "quickInputList.focusIconForeground": "@palette.dragonWhite",
+    "scrollbar.shadow": "@palette.sumiInk5",
+    "scrollbarSlider.activeBackground": "@palette.sumiInk6:80",
+    "scrollbarSlider.background": "@palette.sumiInk6:66",
+    "scrollbarSlider.hoverBackground": "@palette.sumiInk6:80",
+    "settings.dropdownBackground": "@palette.sumiInk2",
+    "settings.dropdownBorder": "@palette.sumiInk5",
+    "settings.focusedRowBackground": "@palette.sumiInk5",
+    "settings.headerForeground": "@palette.fujiWhite",
+    "settings.modifiedItemIndicator": "@palette.dragonOrange2",
+    "sideBar.background": "@palette.sumiInk2",
+    "sideBar.border": "@palette.sumiInk4",
+    "sideBar.foreground": "@palette.dragonWhite",
+    "sideBarSectionHeader.background": "@palette.sumiInk2",
+    "sideBarSectionHeader.border": "@palette.sumiInk4",
+    "sideBarSectionHeader.foreground": "@palette.dragonWhite",
+    "sideBarTitle.foreground": "@palette.dragonWhite",
+    "statusBar.background": "@palette.sumiInk0",
+    "statusBar.border": "@palette.sumiInk4",
+    "statusBar.debuggingBackground": "@palette.dragonBlue",
+    "statusBar.debuggingBorder": "@palette.dragonViolet",
+    "statusBar.debuggingForeground": "@palette.fujiWhite",
+    "statusBar.focusBorder": "@palette.dragonBlue",
+    "statusBar.foreground": "@palette.dragonYellow",
+    "statusBar.noFolderBackground": "@palette.sumiInk3",
+    "statusBarItem.focusBorder": "@palette.dragonBlue",
+    "statusBarItem.hoverBackground": "@palette.sumiInk5",
+    "statusBarItem.hoverForeground": "@palette.dragonWhite",
+    "statusBarItem.prominentBackground": "@palette.dragonBlue",
+    "statusBarItem.prominentForeground": "@palette.fujiWhite",
+    "statusBarItem.remoteBackground": "@palette.dragonBlue",
+    "statusBarItem.remoteForeground": "@palette.fujiWhite",
+    "statusBarItem.warningBackground": "@palette.dragonYellow",
+    "statusBarItem.errorBackground": "@palette.waveRed",
+    "tab.activeBackground": "@palette.sumiInk3",
+    "tab.activeBorder": "@palette.sumiInk3",
+    "tab.activeBorderTop": "@palette.dragonBlue",
+    "tab.activeModifiedBorder": "@palette.dragonYellow",
+    "tab.activeForeground": "@palette.dragonWhite",
+    "tab.border": "@palette.sumiInk4",
+    "tab.hoverBackground": "@palette.sumiInk3",
+    "tab.inactiveBackground": "@palette.sumiInk0",
+    "tab.inactiveForeground": "@palette.dragonWhite",
+    "tab.inactiveModifiedBorder": "@palette.dragonYellow",
+    "tab.lastPinnedBorder": "@palette.dragonGray2",
+    "tab.selectedBackground": "@palette.dragonBlack4",
+    "tab.selectedBorderTop": "@palette.springViolet2",
+    "tab.selectedForeground": "@palette.dragonWhite",
+    "tab.unfocusedActiveBorder": "@palette.sumiInk3",
+    "tab.unfocusedActiveBorderTop": "@palette.sumiInk4",
+    "tab.unfocusedActiveModifiedBorder": "@palette.dragonYellow",
+    "tab.unfocusedHoverBackground": "@palette.sumiInk3",
+    "tab.unfocusedInactiveModifiedBorder": "@palette.dragonYellow",
+    "terminal.ansiBlack": "@palette.dragonBlack5",
+    "terminal.ansiBlue": "@palette.dragonBlue5",
+    "terminal.ansiBrightBlack": "@palette.dragonBlack6",
+    "terminal.ansiBrightBlue": "@palette.dragonBlue",
+    "terminal.ansiBrightCyan": "@palette.dragonAqua",
+    "terminal.ansiBrightGreen": "@palette.dragonGreen2",
+    "terminal.ansiBrightMagenta": "@palette.dragonPink",
+    "terminal.ansiBrightRed": "@palette.dragonRed",
+    "terminal.ansiBrightWhite": "@palette.oldWhite",
+    "terminal.ansiBrightYellow": "@palette.dragonYellow",
+    "terminal.ansiCyan": "@palette.dragonAqua",
+    "terminal.ansiGreen": "@palette.dragonGreen",
+    "terminal.ansiMagenta": "@palette.dragonPink",
+    "terminal.ansiRed": "@palette.dragonRed",
+    "terminal.ansiWhite": "@palette.dragonWhite",
+    "terminal.ansiYellow": "@palette.dragonYellow",
+    "terminal.background": "@palette.sumiInk3",
+    "terminal.border": "@palette.sumiInk4",
+    "terminal.foreground": "@palette.dragonWhite",
+    "terminal.inactiveSelectionBackground": "@palette.dragonBlack4",
+    "terminal.selectionBackground": "@palette.sumiInk5:80",
+    "terminal.tab.activeBorder": "@palette.dragonBlue",
+    "textBlockQuote.background": "@palette.sumiInk4",
+    "textBlockQuote.border": "@palette.katanaGray",
+    "textCodeBlock.background": "@palette.sumiInk4",
+    "textLink.activeForeground": "@palette.springBlue",
+    "textLink.foreground": "@palette.springBlue",
+    "textPreformat.background": "@palette.sumiInk5",
+    "textPreformat.foreground": "@palette.oldWhite",
+    "textSeparator.foreground": "@palette.sumiInk5",
+    "titleBar.activeBackground": "@palette.sumiInk0",
+    "titleBar.activeForeground": "@palette.dragonWhite",
+    "titleBar.border": "@palette.sumiInk4",
+    "titleBar.inactiveBackground": "@palette.sumiInk0",
+    "titleBar.inactiveForeground": "@palette.dragonWhite",
+    "welcomePage.progress.foreground": "@palette.dragonBlue",
+    "welcomePage.tileBackground": "@palette.sumiInk4",
+    "walkThrough.embeddedEditorBackground": "@palette.sumiInk3",
+    "widget.border": "@palette.dragonBlack5"
+  },
+  "tokenColors": [
+    {
+      "name": "Comments",
+      "scope": [
+        "comment",
+        "punctuation.definition.comment"
+      ],
+      "settings": {
+        "fontStyle": "italic",
+        "foreground": "@palette.fujiGray"
+      }
+    },
+    {
+      "name": "Comments: Documentation",
+      "scope": [
+        "comment.documentation",
+        "comment.block.documentation"
+      ],
+      "settings": {
+        "foreground": "@palette.dragonGreen3"
+      }
+    },
+    {
+      "name": "Invalid - Illegal",
+      "scope": "invalid.illegal",
+      "settings": {
+        "foreground": "@palette.autumnRed"
+      }
+    },
+    {
+      "name": "Operators",
+      "scope": "keyword.operator",
+      "settings": {
+        "foreground": "@palette.dragonRed"
+      }
+    },
+    {
+      "name": "Keywords",
+      "scope": [
+        "keyword",
+        "storage"
+      ],
+      "settings": {
+        "foreground": "@palette.dragonPink"
+      }
+    },
+    {
+      "name": "Types",
+      "scope": [
+        "storage.type",
+        "support.type"
+      ],
+      "settings": {
+        "foreground": "@palette.oniViolet"
+      }
+    },
+    {
+      "name": "Language Constants",
+      "scope": [
+        "constant.language",
+        "support.constant",
+        "variable.language"
+      ],
+      "settings": {
+        "foreground": "@palette.dragonOrange"
+      }
+    },
+    {
+      "name": "Variables",
+      "scope": [
+        "variable",
+        "support.variable"
+      ],
+      "settings": {
+        "foreground": "@palette.oniViolet"
+      }
+    },
+    {
+      "name": "Functions",
+      "scope": [
+        "entity.name.function",
+        "support.function"
+      ],
+      "settings": {
+        "fontStyle": "bold",
+        "foreground": "@palette.waveRed"
+      }
+    },
+    {
+      "name": "Classes",
+      "scope": [
+        "entity.name.type",
+        "entity.other.inherited-class",
+        "support.class"
+      ],
+      "settings": {
+        "fontStyle": "bold",
+        "foreground": "@palette.oniViolet"
+      }
+    },
+    {
+      "name": "Exceptions",
+      "scope": "entity.name.exception",
+      "settings": {
+        "foreground": "@palette.autumnRed"
+      }
+    },
+    {
+      "name": "Sections",
+      "scope": "entity.name.section",
+      "settings": {
+        "fontStyle": "bold"
+      }
+    },
+    {
+      "name": "Numbers, Characters",
+      "scope": [
+        "constant.numeric",
+        "constant.character",
+        "constant"
+      ],
+      "settings": {
+        "foreground": "@palette.dragonPink"
+      }
+    },
+    {
+      "name": "Strings",
+      "scope": "string",
+      "settings": {
+        "foreground": "@palette.dragonGreen2"
+      }
+    },
+    {
+      "name": "Strings: Escape Sequences",
+      "scope": "constant.character.escape",
+      "settings": {
+        "foreground": "@palette.dragonGray2"
+      }
+    },
+    {
+      "name": "Strings: Regular Expressions",
+      "scope": [
+        "string.regexp",
+        "constant.regexp"
+      ],
+      "settings": {
+        "foreground": "@palette.dragonRed"
+      }
+    },
+    {
+      "name": "Strings: Symbols",
+      "scope": "constant.other.symbol",
+      "settings": {
+        "foreground": "@palette.dragonRed"
+      }
+    },
+    {
+      "name": "Punctuation",
+      "scope": "punctuation",
+      "settings": {
+        "foreground": "@palette.dragonGray2"
+      }
+    },
+    {
+      "name": "HTML: Doctype Declaration",
+      "scope": [
+        "meta.tag.sgml.doctype",
+        "meta.tag.sgml.doctype string",
+        "meta.tag.sgml.doctype entity.name.tag",
+        "meta.tag.sgml punctuation.definition.tag.html"
+      ],
+      "settings": {
+        "foreground": "@palette.dragonWhite"
+      }
+    },
+    {
+      "name": "HTML: Tags",
+      "scope": [
+        "meta.tag",
+        "punctuation.definition.tag.html",
+        "punctuation.definition.tag.begin.html",
+        "punctuation.definition.tag.end.html"
+      ],
+      "settings": {
+        "foreground": "@palette.dragonBlue3"
+      }
+    },
+    {
+      "name": "HTML: Tag Names",
+      "scope": "entity.name.tag",
+      "settings": {
+        "foreground": "@palette.crystalBlue"
+      }
+    },
+    {
+      "name": "HTML: Attribute Names",
+      "scope": [
+        "meta.tag entity.other.attribute-name",
+        "entity.other.attribute-name.html"
+      ],
+      "settings": {
+        "fontStyle": "italic",
+        "foreground": "@palette.dragonBlue3"
+      }
+    },
+    {
+      "name": "HTML: Entities",
+      "scope": [
+        "constant.character.entity",
+        "punctuation.definition.entity"
+      ],
+      "settings": {
+        "foreground": "@palette.dragonOrange"
+      }
+    },
+    {
+      "name": "CSS: Selectors",
+      "scope": [
+        "meta.selector",
+        "meta.selector entity",
+        "meta.selector entity punctuation",
+        "entity.name.tag.css"
+      ],
+      "settings": {
+        "foreground": "@palette.oniViolet"
+      }
+    },
+    {
+      "name": "CSS: Property Names",
+      "scope": [
+        "meta.property-name",
+        "support.type.property-name"
+      ],
+      "settings": {
+        "foreground": "@palette.dragonOrange"
+      }
+    },
+    {
+      "name": "CSS: Property Values",
+      "scope": [
+        "meta.property-value",
+        "meta.property-value constant.other",
+        "support.constant.property-value"
+      ],
+      "settings": {
+        "foreground": "@palette.dragonGreen2"
+      }
+    },
+    {
+      "name": "CSS: Important Keyword",
+      "scope": "keyword.other.important",
+      "settings": {
+        "fontStyle": "bold"
+      }
+    },
+    {
+      "name": "Markup: Changed",
+      "scope": "markup.changed",
+      "settings": {
+        "foreground": "@palette.dragonYellow"
+      }
+    },
+    {
+      "name": "Markup: Deletion",
+      "scope": "markup.deleted",
+      "settings": {
+        "foreground": "@palette.dragonRed"
+      }
+    },
+    {
+      "name": "Markup: Error",
+      "scope": "markup.error",
+      "settings": {
+        "foreground": "@palette.autumnRed"
+      }
+    },
+    {
+      "name": "Markup: Insertion",
+      "scope": "markup.inserted",
+      "settings": {
+        "foreground": "@palette.dragonGreen"
+      }
+    },
+    {
+      "name": "Markup: Link",
+      "scope": "meta.link",
+      "settings": {
+        "foreground": "@palette.crystalBlue"
+      }
+    },
+    {
+      "name": "Markup: Output",
+      "scope": [
+        "markup.output",
+        "markup.raw"
+      ],
+      "settings": {
+        "foreground": "@palette.dragonGray2"
+      }
+    },
+    {
+      "name": "Markup: Prompt",
+      "scope": "markup.prompt",
+      "settings": {
+        "foreground": "@palette.dragonGray2"
+      }
+    },
+    {
+      "name": "Markup: Heading",
+      "scope": "markup.heading",
+      "settings": {
+        "foreground": "@palette.dragonRed"
+      }
+    },
+    {
+      "name": "Markup: Traceback",
+      "scope": "markup.traceback",
+      "settings": {
+        "foreground": "@palette.autumnRed"
+      }
+    },
+    {
+      "name": "Markup: Underline",
+      "scope": "markup.underline",
+      "settings": {
+        "fontStyle": "underline"
+      }
+    },
+    {
+      "name": "Markup Quote",
+      "scope": "markup.quote",
+      "settings": {
+        "foreground": "@palette.dragonPink"
+      }
+    },
+    {
+      "name": "Markup Lists",
+      "scope": "markup.list",
+      "settings": {
+        "foreground": "@palette.dragonBlue"
+      }
+    },
+    {
+      "name": "Markup Styling",
+      "scope": [
+        "markup.bold",
+        "markup.italic"
+      ],
+      "settings": {
+        "foreground": "@palette.dragonOrange2"
+      }
+    },
+    {
+      "name": "Markup Inline",
+      "scope": "markup.inline.raw",
+      "settings": {
+        "fontStyle": "",
+        "foreground": "@palette.dragonGreen"
+      }
+    },
+    {
+      "name": "Extra: Diff Range",
+      "scope": [
+        "meta.diff.range",
+        "meta.diff.index",
+        "meta.separator"
+      ],
+      "settings": {
+        "foreground": "@palette.dragonBlack6"
+      }
+    },
+    {
+      "name": "Extra: Diff From",
+      "scope": "meta.diff.header.from-file",
+      "settings": {
+        "foreground": "@palette.dragonBlack6"
+      }
+    },
+    {
+      "name": "Extra: Diff To",
+      "scope": "meta.diff.header.to-file",
+      "settings": {
+        "foreground": "@palette.dragonBlack6"
+      }
+    }
+  ],
+  "semanticTokenColors": {
+    "arithmetic": "@palette.sakuraPink",
+    "class": "@palette.dragonBlue2",
+    "class.defaultLibrary": "@palette.dragonBlue2",
+    "enum": "@palette.dragonBlue2",
+    "enumMember": "@palette.lightBlue",
+    "event": "@palette.oldWhite",
+    "function": "@palette.dragonBlue2",
+    "function.defaultLibrary": "@palette.dragonBlue2",
+    "interface": "@palette.dragonBlue2",
+    "keyword.controlFlow": {
+      "foreground": "@palette.dragonViolet",
+      "fontStyle": "bold"
+    },
+    "macro": "@palette.dragonRed",
+    "method": "@palette.dragonBlue2",
+    "namespace": "@palette.oldWhite",
+    "newOperator": "@palette.dragonWhite",
+    "numberLiteral": "@palette.dragonPink",
+    "operator": "@palette.dragonRed",
+    "parameter": "@palette.dragonGray",
+    "parameter.declaration": "@palette.boatYellow2",
+    "parameter.definition": "@palette.boatYellow2",
+    "property": "@palette.dragonRed",
+    "property.readonly": "@palette.dragonOrange",
+    "stringLiteral": "@palette.surimiOrange",
+    "struct": "@palette.dragonBlue2",
+    "type": "@palette.dragonAqua",
+    "type.defaultLibrary": "@palette.dragonBlue2",
+    "typeParameter": "@palette.dragonWhite",
+    "variable": "@palette.dragonYellow",
+    "variable.readonly": "@palette.dragonOrange",
+    "variable.readonly.defaultLibrary": "@palette.dragonBlue2"
+  }
+}

@@ -6,7 +6,7 @@ before_each(function()
 end)
 
 describe("group is loadable", function()
-	for name in vim.fs.dir("lua/kanagawa-paper/groups/plugins") do
+	for name in vim.fs.dir("packages/neovim/lua/kanagawa-paper/groups/plugins") do
 		name = name:match("(.+)%.lua$")
 		it(name .. " has a plugin mapping", function()
 			local mapping = false
