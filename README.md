@@ -373,10 +373,10 @@ How to add a new extra template:
 
 1. Create a new template file in [generators/lua/kanagawa-paper/extras](https://github.com/thesimonho/kanagawa-paper/tree/main/generators/lua/kanagawa-paper/extras).
 2. Add the name and output file extension to the `extras` table in [generators/lua/kanagawa-paper/extras/init.lua](https://github.com/thesimonho/kanagawa-paper/blob/main/generators/lua/kanagawa-paper/extras/init.lua).
-3. To check that your template compiles properly, run `./scripts/build.sh` and check the newly compiled styles in the root [extras](https://github.com/thesimonho/kanagawa-paper/tree/main/extras/) directory.
+3. Open a PR. CI checks that the extras and palette generators run successfully. For an optional local preview, run `just generate`.
 
 > [!IMPORTANT]
-> Run `just generate` after changing shared colors or generators. Include changed extras and palette documentation in the same source change. CI checks that these outputs are current.
+> After merge, automation generates and commits the extras and palette preview to the default branch. You do not need to generate or commit these outputs locally, including when contributing from a fork.
 
 ## 👏 Acknowledgements
 

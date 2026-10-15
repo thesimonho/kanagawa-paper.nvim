@@ -1,4 +1,4 @@
-name: Application releases
+name: Generate files and release applications
 on:
   workflow_dispatch:
   push:
@@ -11,11 +11,27 @@ permissions:
   pull-requests: write
   deployments: write
 jobs:
-  release:
+  generate:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v6
         with:
+          # Use the latest reviewed source, including any earlier bot update.
+          ref: main
+          ssh-key: ${{ secrets.DEPLOY_KEY }}
+      - uses: rhysd/action-setup-vim@v1
+        with:
+          neovim: true
+          version: v0.11.5
+      - name: Publish generated extras and palette
+        run: bash scripts/publish-generated.sh
+  release:
+    needs: generate
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          ref: main
           fetch-depth: 0
           # Pushes made with this key trigger validation on automation/release.
           ssh-key: ${{ secrets.DEPLOY_KEY }}

@@ -38,8 +38,7 @@ jobs:
         run: |
           git fetch origin main
           RELEASE_BASE_SHA=$(git rev-parse origin/main) python scripts/release/coordinator.py check-plan
-      - name: Check generated extras and palette
+      - name: Build extras and palette
         run: |
           bash scripts/build.sh
           nvim --headless --clean -l scripts/generate_palette.lua
-          git diff --exit-code -- extras palette_colors.md
