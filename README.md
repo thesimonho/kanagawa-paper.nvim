@@ -1,5 +1,8 @@
 # 🌊 kanagawa-paper.nvim
 
+> [!IMPORTANT]
+> `master` is now the compatibility branch for existing Neovim installations. Use [`main`](https://github.com/thesimonho/kanagawa-paper.nvim/tree/main) for future updates and current documentation. Follow the installation instructions on `main` to move to the new release track; Neovim installations use the `neovim` distribution branch.
+
 <p align="center">
 Remixed light and dark Kanagawa color scheme with muted colors. For Neovim.
 </p>
